@@ -15,20 +15,20 @@
   "sentences": [
     {
       "start": 0.0,
-      "end": 2.4,
+      "end": 1.2,
       "who": "KATI",
       "en": "So cute.",
       "ko": "너무 귀엽다."
     },
     {
-      "start": 2.4,
-      "end": 4.0,
+      "start": 1.2,
+      "end": 3.2,
       "who": "ISABEL",
       "en": "They should be framed or something.",
       "ko": "액자에 넣어두든가 해야겠어."
     },
     {
-      "start": 4.0,
+      "start": 3.2,
       "end": 7.4,
       "who": "BLAIR",
       "en": "Not bad work. And here's yours, as promised.",
