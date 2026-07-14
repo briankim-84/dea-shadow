@@ -78,8 +78,25 @@
   .topbar .t{min-width:0;}
   .topbar .t .s{font-size:9.5px;color:var(--lip);letter-spacing:2.5px;text-transform:uppercase;font-weight:800;}
   .topbar .t h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px;}
-  .videowrap{margin:6px 10px;border:1px solid var(--hair);overflow:hidden;background:#000;}
+  .videowrap{margin:6px 10px;border:1px solid var(--hair);overflow:hidden;background:#000;position:relative;}
   video{width:100%;display:block;aspect-ratio:4/3;background:#000;}
+  /* 영상 위 자막 오버레이 */
+  .capbox{position:absolute;left:0;right:0;bottom:0;padding:0 14px 16px;pointer-events:none;
+    text-align:center;z-index:3;}
+  .capbox .cap{display:inline-block;max-width:94%;padding:7px 14px;border-radius:6px;
+    background:rgba(0,0,0,.62);backdrop-filter:blur(3px);
+    line-height:1.4;transition:opacity .15s;}
+  .capbox .cap.en{font-family:var(--serif);font-style:italic;font-size:19px;color:#fff;}
+  .capbox .cap.ko{font-size:15px;color:#F2EDE1;letter-spacing:.2px;}
+  .capbox.empty{opacity:0;}
+  /* 자막 토글 버튼 */
+  .captoggle{display:flex;justify-content:center;gap:0;margin:8px 10px 2px;}
+  .captoggle button{background:none;border:1px solid var(--hair);color:var(--sub);
+    font-size:11.5px;font-weight:700;letter-spacing:.8px;padding:7px 16px;cursor:pointer;
+    transition:.15s;text-transform:uppercase;}
+  .captoggle button:first-child{border-radius:20px 0 0 20px;}
+  .captoggle button:last-child{border-radius:0 20px 20px 0;border-left:none;}
+  .captoggle button.on{background:var(--champ);color:#14110C;border-color:var(--champ);}
   .novid{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:13px;
     font-family:var(--serif);font-style:italic;letter-spacing:.5px;}
   .lyr{display:flex;margin:16px 18px 4px;border-bottom:1px solid var(--hair);}
@@ -89,6 +106,9 @@
 
   /* Layer 1 — script style */
   .sents{padding:10px 18px 50px;}
+  .scenehint{padding:22px 8px 40px;text-align:center;color:var(--sub);font-size:14px;line-height:1.7;}
+  .scenehint b{color:var(--paper);font-weight:700;}
+  .scenehint .xo{font-family:var(--serif);font-style:italic;color:var(--champ);font-size:16px;}
   .sent{padding:15px 4px 16px;border-bottom:1px solid var(--hair);cursor:pointer;transition:.12s;position:relative;}
   .sent:active{opacity:.7;}
   .sent .who{font-size:9.5px;font-weight:800;letter-spacing:2.5px;color:var(--champ);text-transform:uppercase;
@@ -165,6 +185,7 @@
       <button id="lyr1" class="on" onclick="showLayer(1)">Ⅰ · The Scene</button>
       <button id="lyr2" onclick="showLayer(2)">Ⅱ · Line by Line</button>
     </div>
+    <div class="captoggle" id="captoggle"></div>
     <div class="sents" id="sents"></div>
     <div class="focus hidden" id="focus"></div>
   </div>
@@ -190,6 +211,9 @@ const DEMO_SCENE={id:"demo",title:"The Photo Shoot",sub:"DEMO · SAMPLE SCENE",c
  ]};
 
 let INDEX=null, SCENE=null, layer=1, fi=0, cat="전체";
+let capMode="ko"; /* 자막 모드: ko(한글) → en(영어) → off(없음) */
+const CAP_ORDER=["ko","en","off"];
+const CAP_LABEL={ko:"한글",en:"ENG",off:"없음"};
 let looping=false, speed=1, segTimer=null;
 const $=id=>document.getElementById(id);
 
@@ -257,30 +281,75 @@ async function openScene(id){
   $("scTitle").textContent='“'+sc.title+'”';
   $("scSub").textContent=sc.sub||sc.category||'';
   $("vidwrap").innerHTML = sc.video
-    ? `<video id="vid" src="${CONTENT_BASE}${sc.id}/${sc.video}" controls playsinline preload="metadata"></video>`
+    ? `<video id="vid" src="${CONTENT_BASE}${sc.id}/${sc.video}" controls playsinline preload="metadata"></video><div class="capbox empty" id="capbox"></div>`
     : `<div class="novid">— clip coming soon · line practice below —</div>`;
+  if(sc.video){
+    const v=vid();
+    v.addEventListener('timeupdate',updateCap);
+    v.addEventListener('seeked',updateCap);
+    v.addEventListener('pause',updateCap);
+  }
   showLayer(1);
   window.scrollTo(0,0);
 }
 function goHome(){ stopSeg(); $("scene").classList.add("hidden"); $("home").classList.remove("hidden"); renderList(); }
 function vid(){ return $("vid"); }
 
+/* ---- 영상 위 자막 오버레이 ---- */
+function curSentIdx(){
+  const v=vid(); if(!v||!SCENE)return -1;
+  const t=v.currentTime;
+  for(let i=0;i<SCENE.sentences.length;i++){
+    const s=SCENE.sentences[i];
+    if(s.end>s.start && t>=s.start && t<s.end) return i;
+  }
+  return -1;
+}
+function updateCap(){
+  const box=$("capbox"); if(!box)return;
+  if(capMode==="off"){ box.className="capbox empty"; box.innerHTML=""; return; }
+  const i=curSentIdx();
+  if(i<0){ box.className="capbox empty"; box.innerHTML=""; return; }
+  const s=SCENE.sentences[i];
+  const txt = capMode==="ko" ? (s.ko||"") : (s.en||"");
+  if(!txt){ box.className="capbox empty"; box.innerHTML=""; return; }
+  box.className="capbox";
+  box.innerHTML=`<span class="cap ${capMode}">${txt}</span>`;
+}
+function cycleCap(){
+  const idx=CAP_ORDER.indexOf(capMode);
+  capMode=CAP_ORDER[(idx+1)%CAP_ORDER.length];
+  renderCapToggle();
+  updateCap();
+}
+function renderCapToggle(){
+  const el=$("captoggle"); if(!el)return;
+  el.innerHTML=CAP_ORDER.map(m=>`<button class="${m===capMode?'on':''}" onclick="setCap2('${m}')">${CAP_LABEL[m]}</button>`).join('');
+}
+function setCap2(m){ capMode=m; renderCapToggle(); updateCap(); }
+
 function showLayer(n){
   layer=n; stopSeg();
   $("lyr1").classList.toggle("on",n===1); $("lyr2").classList.toggle("on",n===2);
   $("sents").classList.toggle("hidden",n!==1); $("focus").classList.toggle("hidden",n!==2);
-  if(n===1) renderSents(); else renderFocus();
+  /* 자막 토글은 THE SCENE(1)에서만, 클립 있을 때만 */
+  const ct=$("captoggle");
+  if(ct){ ct.style.display=(n===1 && SCENE && SCENE.video)?'flex':'none'; }
+  if(n===1){ renderCapToggle(); renderSents(); updateCap(); }
+  else renderFocus();
 }
 
-/* ---- Layer 1 ---- */
+/* ---- Layer 1 (THE SCENE) — 영상+오버레이 자막 몰입, 문장 리스트 없음 ---- */
 function renderSents(){
-  $("sents").innerHTML=SCENE.sentences.map((s,i)=>`
-    <div class="sent ${PROG[i]?'prd':''}" id="sent-${i}" onclick="tapSent(${i})">
-      <div class="who"><span>${s.who||''}</span><span class="num">${String(i+1).padStart(2,'0')}</span></div>
-      <div class="en">${s.en}</div>
-      <div class="ko">${s.ko||''}</div>
-      <div class="pr">✓ PRACTICED</div>
-    </div>`).join('');
+  if(!SCENE.video){
+    $("sents").innerHTML=`<div class="scenehint">클립이 준비되면 여기서 장면을 감상할 수 있어요.<br><span class="xo">xoxo</span></div>`;
+    return;
+  }
+  $("sents").innerHTML=`<div class="scenehint">
+    ▶︎ 영상을 재생하고, 위 버튼으로 자막을 바꿔보세요 — <b>한글</b>로 뜻 잡고 → <b>영어</b>로 따라 하고 → <b>없음</b>으로 소리만 듣기.<br><br>
+    문장 하나하나 훈련은 <b onclick="showLayer(2)" style="color:var(--champ);cursor:pointer;text-decoration:underline;">Ⅱ · Line by Line</b> 탭에서.<br>
+    <span class="xo">xoxo</span>
+  </div>`;
 }
 function tapSent(i){
   const s=SCENE.sentences[i];
