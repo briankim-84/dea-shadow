@@ -1,0 +1,44 @@
+{
+  "_readme": "video: 클립 파일명. start/end는 클립 기준 초. ★가 핵심 표현.",
+  "id": "gg-s1-ep07-no-hard-feelings",
+  "title": "EP.07 — no hard feelings",
+  "sub": "GOSSIP GIRL · S1E3 · Poison Ivy",
+  "category": "유머·티키타카",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP07"
+  ],
+  "expression": "no hard feelings",
+  "meaning": "감정 상한 거 없기예요·서운해 말기",
+  "video": "no_hard_feelings.mp4",
+  "sentences": [
+    {
+      "start": 0,
+      "end": 0,
+      "who": "NATE",
+      "en": "Hey. You get the one you wanted?",
+      "ko": "야. 원하던 자리 얻었어?"
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "DAN",
+      "en": "No. No, actually, you did.",
+      "ko": "아니. 사실, 네가 가져갔지."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "DAN",
+      "en": "★ No hard feelings, huh?",
+      "ko": "★ 서운해하진 말자, 응?"
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "NATE",
+      "en": "Why should there be?",
+      "ko": "서운할 게 뭐 있어?"
+    }
+  ]
+}

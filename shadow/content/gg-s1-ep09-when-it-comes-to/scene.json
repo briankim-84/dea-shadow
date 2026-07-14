@@ -1,0 +1,37 @@
+{
+  "_readme": "video: 클립 파일명. start/end는 클립 기준 초. ★가 핵심 표현.",
+  "id": "gg-s1-ep09-when-it-comes-to",
+  "title": "EP.09 — when it comes to ~",
+  "sub": "GOSSIP GIRL · S1E3 · Poison Ivy",
+  "category": "일상대화",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP09"
+  ],
+  "expression": "when it comes to ~",
+  "meaning": "~에 관해서라면·~ 얘기가 나오면",
+  "video": "when_it_comes_to.mp4",
+  "sentences": [
+    {
+      "start": 0,
+      "end": 0,
+      "who": "GOSSIP GIRL (V.O.)",
+      "en": "There's plenty of upside to being the spawn of the fabulously wealthy.",
+      "ko": "엄청난 부자의 자식으로 사는 건 좋은 점이 많지."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "GOSSIP GIRL (V.O.)",
+      "en": "But the downside? Super successful parents expect nothing less from their offspring.",
+      "ko": "하지만 단점은? 성공한 부모는 자식에게도 그만큼을 기대한다는 거."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "GOSSIP GIRL (V.O.)",
+      "en": "★ And when it comes to college, that means the Ivies.",
+      "ko": "★ 그리고 대학 얘기가 나오면, 그건 곧 아이비리그를 뜻하지."
+    }
+  ]
+}

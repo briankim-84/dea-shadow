@@ -1,0 +1,44 @@
+{
+  "_readme": "video: 클립 파일명. start/end는 클립 기준 초. ★가 핵심 표현.",
+  "id": "gg-s1-ep05-for-the-best",
+  "title": "EP.05 — for the best",
+  "sub": "GOSSIP GIRL · S1E1 · Pilot",
+  "category": "감정·리액션",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP05"
+  ],
+  "expression": "for the best",
+  "meaning": "차라리 그게 낫다",
+  "video": "for_the_best.mp4",
+  "sentences": [
+    {
+      "start": 0,
+      "end": 0,
+      "who": "HOWIE",
+      "en": "You seem upbeat this morning. Did you have fun with Blair last night?",
+      "ko": "오늘 아침 기분 좋아 보이네. 어젯밤 블레어랑 즐거웠어?"
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "NATE",
+      "en": "Actually, we got into a pretty big fight.",
+      "ko": "사실, 꽤 크게 싸웠어요."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "NATE",
+      "en": "★ I don't know. I think it may be for the best.",
+      "ko": "★ 모르겠어요. 차라리 이게 나을지도 몰라요."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "HOWIE",
+      "en": "Wait a minute, you guys broke up?",
+      "ko": "잠깐, 너희 헤어진 거야?"
+    }
+  ]
+}

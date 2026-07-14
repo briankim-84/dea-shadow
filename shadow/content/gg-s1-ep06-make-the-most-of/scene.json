@@ -1,0 +1,44 @@
+{
+  "_readme": "video: 클립 파일명. start/end는 클립 기준 초. ★가 핵심 표현.",
+  "id": "gg-s1-ep06-make-the-most-of",
+  "title": "EP.06 — make the most of",
+  "sub": "GOSSIP GIRL · S1E1 · Pilot",
+  "category": "일상대화",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP06"
+  ],
+  "expression": "make the most of",
+  "meaning": "최대한 누리다·활용하다",
+  "video": "make_the_most_of.mp4",
+  "sentences": [
+    {
+      "start": 0,
+      "end": 0,
+      "who": "BLAIR",
+      "en": "Why do you care so much?",
+      "ko": "왜 그렇게까지 신경 써요?"
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "ELEANOR",
+      "en": "Because I love you.",
+      "ko": "널 사랑하니까."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "ELEANOR",
+      "en": "You will never be more beautiful or thin or happy than you are right now.",
+      "ko": "넌 지금보다 더 예쁘거나 날씬하거나 행복할 순 없을 거야."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "ELEANOR",
+      "en": "★ I just want you to make the most of it.",
+      "ko": "★ 그저 이 순간을 최대한 누리길 바랄 뿐이야."
+    }
+  ]
+}
