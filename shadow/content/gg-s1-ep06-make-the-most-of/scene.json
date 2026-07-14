@@ -13,32 +13,25 @@
   "video": "make_the_most_of.mp4",
   "sentences": [
     {
-      "start": 0,
-      "end": 0,
-      "who": "BLAIR",
-      "en": "Why do you care so much?",
-      "ko": "왜 그렇게까지 신경 써요?"
-    },
-    {
-      "start": 0,
-      "end": 0,
+      "start": 0.27,
+      "end": 5.37,
       "who": "ELEANOR",
-      "en": "Because I love you.",
-      "ko": "널 사랑하니까."
+      "en": "Blair, you will never be more beautiful or thin or happy than you are right now.",
+      "ko": "블레어, 넌 지금보다 더 예쁘거나 날씬하거나 행복할 순 없을 거야."
     },
     {
-      "start": 0,
-      "end": 0,
-      "who": "ELEANOR",
-      "en": "You will never be more beautiful or thin or happy than you are right now.",
-      "ko": "넌 지금보다 더 예쁘거나 날씬하거나 행복할 순 없을 거야."
-    },
-    {
-      "start": 0,
-      "end": 0,
+      "start": 6.77,
+      "end": 9.0,
       "who": "ELEANOR",
       "en": "★ I just want you to make the most of it.",
       "ko": "★ 그저 이 순간을 최대한 누리길 바랄 뿐이야."
+    },
+    {
+      "start": 12.63,
+      "end": 13.0,
+      "who": "BLAIR",
+      "en": "Guess I have time to change.",
+      "ko": "갈아입을 시간은 있겠네요."
     }
   ]
 }

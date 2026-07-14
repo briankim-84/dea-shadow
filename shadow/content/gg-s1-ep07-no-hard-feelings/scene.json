@@ -13,30 +13,37 @@
   "video": "no_hard_feelings.mp4",
   "sentences": [
     {
-      "start": 0,
-      "end": 0,
+      "start": 2.03,
+      "end": 4.0,
       "who": "NATE",
-      "en": "Hey. You get the one you wanted?",
-      "ko": "야. 원하던 자리 얻었어?"
+      "en": "Hey, you get the one you wanted?",
+      "ko": "야, 원하던 자리 얻었어?"
     },
     {
-      "start": 0,
-      "end": 0,
+      "start": 7.17,
+      "end": 10.17,
       "who": "DAN",
-      "en": "No. No, actually, you did.",
-      "ko": "아니. 사실, 네가 가져갔지."
+      "en": "No, no. Actually, you did.",
+      "ko": "아니, 아니. 사실, 네가 가져갔지."
     },
     {
-      "start": 0,
-      "end": 0,
+      "start": 12.43,
+      "end": 21.07,
       "who": "DAN",
+      "en": "Which makes total sense, because I'm second in our class and you're somewhere around — what, I don't know, last?",
+      "ko": "완전 말 되지, 난 반에서 2등이고 넌 대충 그— 뭐랄까, 꼴찌쯤이니까?"
+    },
+    {
+      "start": 21.43,
+      "end": 22.37,
+      "who": "NATE",
       "en": "★ No hard feelings, huh?",
       "ko": "★ 서운해하진 말자, 응?"
     },
     {
-      "start": 0,
-      "end": 0,
-      "who": "NATE",
+      "start": 22.37,
+      "end": 23.4,
+      "who": "DAN",
       "en": "Why should there be?",
       "ko": "서운할 게 뭐 있어?"
     }
