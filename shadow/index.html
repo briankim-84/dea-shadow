@@ -79,6 +79,7 @@
   .topbar .t .s{font-size:9.5px;color:var(--lip);letter-spacing:2.5px;text-transform:uppercase;font-weight:800;}
   .topbar .t h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px;}
   .videowrap{margin:6px 10px;border:1px solid var(--hair);overflow:hidden;background:#000;position:relative;}
+  .videowrap.sticky{position:sticky;top:0;z-index:20;margin:0;border-left:none;border-right:none;}
   video{width:100%;display:block;aspect-ratio:4/3;background:#000;}
   /* 영상 위 자막 오버레이 */
   .capbox{position:absolute;left:0;right:0;bottom:0;padding:0 14px 16px;pointer-events:none;
@@ -288,6 +289,16 @@ async function openScene(id){
     v.addEventListener('timeupdate',updateCap);
     v.addEventListener('seeked',updateCap);
     v.addEventListener('pause',updateCap);
+    /* LINE BY LINE(layer 2): 영상 자체 재생 버튼을 눌러도 현재 라인 구간만 */
+    v.addEventListener('play',()=>{
+      if(layer===2 && !segTimer){
+        const s=SCENE.sentences[fi];
+        if(s && s.end>s.start){
+          if(v.currentTime < s.start-0.05 || v.currentTime >= s.end-0.05){ v.currentTime=s.start; }
+          armLineStop(s.end);
+        }
+      }
+    });
   }
   showLayer(1);
   window.scrollTo(0,0);
@@ -307,7 +318,8 @@ function curSentIdx(){
 }
 function updateCap(){
   const box=$("capbox"); if(!box)return;
-  if(capMode==="off"){ box.className="capbox empty"; box.innerHTML=""; return; }
+  /* LINE BY LINE(layer 2)에선 오버레이 자막 항상 끔 */
+  if(capMode==="off" || layer!==1){ box.className="capbox empty"; box.innerHTML=""; return; }
   const i=curSentIdx();
   if(i<0){ box.className="capbox empty"; box.innerHTML=""; return; }
   const s=SCENE.sentences[i];
@@ -330,13 +342,17 @@ function setCap2(m){ capMode=m; renderCapToggle(); updateCap(); }
 
 function showLayer(n){
   layer=n; stopSeg();
+  if(typeof lineStopTimer!=='undefined') clearInterval(lineStopTimer);
   $("lyr1").classList.toggle("on",n===1); $("lyr2").classList.toggle("on",n===2);
   $("sents").classList.toggle("hidden",n!==1); $("focus").classList.toggle("hidden",n!==2);
+  /* LINE BY LINE에선 영상 상단 고정(sticky) */
+  const vw=$("vidwrap");
+  if(vw){ vw.classList.toggle("sticky",n===2); }
   /* 자막 토글은 THE SCENE(1)에서만, 클립 있을 때만 */
   const ct=$("captoggle");
   if(ct){ ct.style.display=(n===1 && SCENE && SCENE.video)?'flex':'none'; }
   if(n===1){ renderCapToggle(); renderSents(); updateCap(); }
-  else renderFocus();
+  else { renderFocus(); updateCap(); }
 }
 
 /* ---- Layer 1 (THE SCENE) — 영상+오버레이 자막 몰입, 문장 리스트 없음 ---- */
@@ -375,6 +391,17 @@ function playSegment(a,b,rate,loop){
   },50);
 }
 function stopSeg(){ clearInterval(segTimer); segTimer=null; const v=vid(); if(v)v.pause(); }
+
+/* LINE BY LINE에서 영상 기본 컨트롤로 재생 시, 현재 라인 끝에서 자동 정지 */
+let lineStopTimer=null;
+function armLineStop(end){
+  clearInterval(lineStopTimer);
+  const v=vid(); if(!v)return;
+  lineStopTimer=setInterval(()=>{
+    if(layer!==2){ clearInterval(lineStopTimer); return; }
+    if(v.currentTime>=end-0.03){ v.pause(); clearInterval(lineStopTimer); }
+  },40);
+}
 
 /* ---- Layer 2 ---- */
 let blurred=false;
