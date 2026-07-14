@@ -10,29 +10,43 @@
   ],
   "expression": "bail on",
   "meaning": "약속을 펑크내다·저버리다",
-  "scene_note": "약속을 저버리는 것에 대한 대화",
-  "video": null,
+  "scene_note": "블레어의 파티 다음, 세레나가 90초 만에 자리를 뜬 것에 대한 대화 + 내레이션",
+  "video": "bail_on.mp4",
   "sentences": [
     {
-      "start": 0,
-      "end": 0,
-      "who": "",
-      "en": "(앞 대사 — 클립 보며 채우기)",
-      "ko": "(뜻)"
+      "start": 0.0,
+      "end": 1.47,
+      "who": "KATI",
+      "en": "Didn't you know she was coming?",
+      "ko": "세레나 오는 거 몰랐어?"
     },
     {
-      "start": 0,
-      "end": 0,
-      "who": "",
-      "en": "★ You're not going to bail on me, are you?",
-      "ko": "★ 너 나 펑크내는 거 아니지?"
+      "start": 2.23,
+      "end": 3.4,
+      "who": "BLAIR",
+      "en": "Of course I did.",
+      "ko": "당연히 알았지."
     },
     {
-      "start": 0,
-      "end": 0,
-      "who": "",
-      "en": "(뒤 대사 — 클립 보며 채우기)",
-      "ko": "(뜻)"
+      "start": 4.03,
+      "end": 6.27,
+      "who": "BLAIR",
+      "en": "I just wanted it to be a surprise.",
+      "ko": "그냥 깜짝 등장이었으면 했던 거야."
+    },
+    {
+      "start": 6.43,
+      "end": 10.4,
+      "who": "KRISTEN (V.O.)",
+      "en": "★ Word is that S bailed on B's party in under 90 seconds",
+      "ko": "★ 소문에 의하면 S가 90초도 안 돼서 B의 파티를 째고 나갔대"
+    },
+    {
+      "start": 10.4,
+      "end": 12.53,
+      "who": "KRISTEN (V.O.)",
+      "en": "and didn't even have one limoncello.",
+      "ko": "리몬첼로 한 잔도 안 마시고."
     }
   ]
 }
