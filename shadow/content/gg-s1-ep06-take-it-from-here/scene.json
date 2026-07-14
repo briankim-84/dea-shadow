@@ -1,0 +1,38 @@
+{
+  "_readme": "video: 이 폴더에 올린 클립 파일명 (예: clip.mp4). 아직 없으면 null. sentences의 start/end는 클립 기준 초 단위 (예: 12.5). end가 start보다 크면 구간 재생·반복이 활성화됩니다. who는 화자 표시용. ★표현이 핵심 표현이니 그 문장은 꼭 넣고, 앞뒤 대사를 클립 보면서 채우세요.",
+  "id": "gg-s1-ep06-take-it-from-here",
+  "title": "EP.06 — take it from here",
+  "sub": "GOSSIP GIRL · S1 후반 · Serena",
+  "category": "회의·업무",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP06"
+  ],
+  "expression": "take it from here",
+  "meaning": "여기부턴 내가 맡을게",
+  "scene_note": "세레나 간호/작전 장면, 역할을 넘겨받는 순간",
+  "video": null,
+  "sentences": [
+    {
+      "start": 0,
+      "end": 0,
+      "who": "",
+      "en": "(앞 대사 — 클립 보며 채우기)",
+      "ko": "(뜻)"
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "",
+      "en": "★ I'll take it from here.",
+      "ko": "★ 여기부턴 내가 할게."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "",
+      "en": "(뒤 대사 — 클립 보며 채우기)",
+      "ko": "(뜻)"
+    }
+  ]
+}

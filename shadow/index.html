@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070709">
+<title>Listen & Shadow — Do English with Brian</title>
+<style>
+  :root{
+    --bg:#070709; --panel:#101014; --panel2:#15151B;
+    --paper:#F5F2EC;             /* GG 포스터의 화이트 세리프 */
+    --champ:#D9BC8C;             /* 샴페인 */
+    --gold:#E7B43D;              /* DEWB 브랜드 골드 */
+    --lip:#C0344B;               /* 립스틱 레드 — 포인트 최소 사용 */
+    --sub:#8B8892; --line:rgba(217,188,140,.22); --hair:rgba(245,242,236,.1);
+    --good:#57C99B;
+    --serif:"Didot","Bodoni MT","Playfair Display","Noto Serif KR",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{font-family:var(--sans);background:var(--bg);color:var(--paper);display:flex;justify-content:center;}
+  /* 파파라치 플래시 */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(65% 34% at 50% -6%,rgba(245,242,236,.13),transparent 62%);}
+  /* 필름 그레인 */
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");}
+  #app{width:100%;max-width:560px;min-height:100vh;position:relative;z-index:1;padding-bottom:env(safe-area-inset-bottom);}
+
+  /* ---------- SPOTTED ticker ---------- */
+  .ticker{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);overflow:hidden;white-space:nowrap;
+    font-size:10px;letter-spacing:2.5px;color:var(--champ);padding:7px 0;text-transform:uppercase;}
+  .ticker span{display:inline-block;padding-left:100%;animation:tick 22s linear infinite;}
+  @keyframes tick{to{transform:translateX(-100%);}}
+
+  /* ---------- header (hero) ---------- */
+  header{padding:26px 22px 0;text-align:center;position:relative;overflow:hidden;}
+  header.hashero{padding-top:120px;}
+  .hero{position:absolute;inset:0;z-index:-1;display:none;}
+  header.hashero .hero{display:block;}
+  .hero img{width:100%;height:100%;object-fit:cover;object-position:center 22%;
+    filter:grayscale(1) contrast(1.12) brightness(.9);}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(7,7,9,.25) 0%,rgba(7,7,9,.45) 45%,rgba(7,7,9,.92) 82%,var(--bg) 100%);}
+  header.hashero .brand{text-shadow:0 1px 8px rgba(0,0,0,.8);}
+  header.hashero h1.logo{text-shadow:0 2px 18px rgba(0,0,0,.85),0 0 44px rgba(245,242,236,.14);}
+  .brand{font-size:10px;letter-spacing:4px;color:var(--gold);font-weight:800;}
+  h1.logo{font-family:var(--serif);font-weight:400;font-style:italic;font-size:46px;letter-spacing:0;line-height:1.02;
+    margin:12px 0 0;color:var(--paper);text-shadow:0 0 44px rgba(245,242,236,.14);}
+  h1.logo .amp{color:var(--champ);}
+  .tagline{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--champ);margin:10px 0 20px;letter-spacing:.4px;}
+
+  /* ---------- home : category & posts ---------- */
+  .cats{display:flex;gap:0;overflow-x:auto;padding:0 22px;scrollbar-width:none;border-bottom:1px solid var(--hair);}
+  .cats::-webkit-scrollbar{display:none;}
+  .cat{flex-shrink:0;padding:12px 13px 10px;background:none;border:none;border-bottom:2px solid transparent;
+    color:var(--sub);font-size:12px;font-weight:800;letter-spacing:.5px;cursor:pointer;}
+  .cat.on{color:var(--paper);border-bottom-color:var(--lip);}
+  .list{padding:18px 22px 30px;display:flex;flex-direction:column;gap:0;}
+  .post{padding:20px 2px 22px;border-bottom:1px solid var(--hair);cursor:pointer;transition:.12s;}
+  .post:active{opacity:.7;}
+  .phead{display:flex;justify-content:space-between;align-items:baseline;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;}
+  .phead .sp{color:var(--lip);font-weight:800;}
+  .phead .ep{color:var(--sub);}
+  .post h3{font-family:var(--serif);font-weight:400;font-style:italic;font-size:26px;line-height:1.2;margin:10px 0 8px;color:var(--paper);}
+  .post .mng{font-size:13px;color:var(--champ);margin:-2px 0 10px;letter-spacing:.2px;}
+  .post .meta{font-size:11.5px;color:var(--sub);display:flex;gap:14px;align-items:center;letter-spacing:.4px;}
+  .post .meta .done{color:var(--good);font-weight:800;}
+  .post .meta .kiss{margin-left:auto;color:var(--champ);font-family:var(--serif);font-style:italic;font-size:12.5px;}
+  .empty{padding:70px 30px;text-align:center;color:var(--sub);font-size:13.5px;line-height:1.9;}
+  .empty b{color:var(--paper);font-family:var(--serif);font-style:italic;font-weight:400;font-size:19px;}
+
+  /* ---------- scene view ---------- */
+  .topbar{display:flex;align-items:center;gap:14px;padding:16px 18px 12px;}
+  .back{background:none;border:1px solid var(--line);color:var(--champ);width:38px;height:38px;font-size:17px;cursor:pointer;flex-shrink:0;}
+  .topbar .t{min-width:0;}
+  .topbar .t .s{font-size:9.5px;color:var(--lip);letter-spacing:2.5px;text-transform:uppercase;font-weight:800;}
+  .topbar .t h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px;}
+  .videowrap{margin:6px 18px;border:1px solid var(--hair);overflow:hidden;background:#000;}
+  video{width:100%;display:block;aspect-ratio:16/9;background:#000;}
+  .novid{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:13px;
+    font-family:var(--serif);font-style:italic;letter-spacing:.5px;}
+  .lyr{display:flex;margin:16px 18px 4px;border-bottom:1px solid var(--hair);}
+  .lyr button{flex:1;padding:11px;background:none;border:none;border-bottom:2px solid transparent;color:var(--sub);
+    font-size:11.5px;font-weight:800;letter-spacing:2px;cursor:pointer;text-transform:uppercase;}
+  .lyr button.on{color:var(--paper);border-bottom-color:var(--lip);}
+
+  /* Layer 1 — script style */
+  .sents{padding:10px 18px 50px;}
+  .sent{padding:15px 4px 16px;border-bottom:1px solid var(--hair);cursor:pointer;transition:.12s;position:relative;}
+  .sent:active{opacity:.7;}
+  .sent .who{font-size:9.5px;font-weight:800;letter-spacing:2.5px;color:var(--champ);text-transform:uppercase;
+    display:flex;justify-content:space-between;margin-bottom:6px;}
+  .sent .who .num{color:var(--sub);letter-spacing:1px;}
+  .sent .en{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.45;}
+  .sent .ko{font-size:12.5px;color:var(--sub);margin-top:6px;line-height:1.55;}
+  .sent.playing .en{color:var(--champ);}
+  .sent.playing::before{content:"";position:absolute;left:-18px;top:14px;bottom:14px;width:2px;background:var(--lip);}
+  .sent .pr{font-size:9px;color:var(--good);font-weight:800;letter-spacing:2px;margin-top:7px;display:none;}
+  .sent.prd .pr{display:block;}
+
+  /* Layer 2 — pull-quote focus */
+  .focus{padding:8px 18px 46px;}
+  .fnav{display:flex;justify-content:space-between;align-items:center;margin:6px 0 14px;}
+  .fnav button{background:none;border:1px solid var(--line);color:var(--champ);padding:9px 18px;font-size:12px;
+    font-weight:800;letter-spacing:1px;cursor:pointer;text-transform:uppercase;}
+  .fnav button[disabled]{opacity:.25;pointer-events:none;}
+  .fnav .pos{font-size:11px;color:var(--sub);letter-spacing:3px;}
+  .fcardX{padding:34px 22px 26px;text-align:center;position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .fcardX .qm{font-family:var(--serif);font-size:64px;line-height:0;color:var(--lip);display:block;height:26px;}
+  .fcardX .who{font-size:10px;font-weight:800;letter-spacing:3px;color:var(--champ);text-transform:uppercase;margin:14px 0 12px;}
+  .fcardX .en{font-family:var(--serif);font-style:italic;font-size:25px;line-height:1.45;transition:filter .2s;}
+  .fcardX .en.blur{filter:blur(10px);}
+  .fcardX .ko{font-size:14px;color:var(--sub);margin-top:14px;line-height:1.65;}
+  .eyeBtn{position:absolute;top:12px;right:2px;background:none;border:1px solid var(--line);color:var(--sub);
+    width:36px;height:36px;cursor:pointer;font-size:14px;}
+  .ctl{margin-top:16px;}
+  .ctl .row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px;}
+  .pill{padding:12px 17px;border:1px solid var(--line);background:transparent;color:var(--paper);
+    font-size:12.5px;font-weight:800;cursor:pointer;letter-spacing:1px;text-transform:uppercase;}
+  .pill:active{transform:scale(.96);}
+  .pill.on{background:var(--paper);color:#141116;border-color:var(--paper);}
+  .pill.play{min-width:132px;}
+  .pill.recbtn{border-color:rgba(192,52,75,.55);color:var(--lip);}
+  .pill.recbtn.recording{background:var(--lip);color:#fff;animation:blink 1s infinite;}
+  @keyframes blink{50%{opacity:.55;}}
+  .pill[disabled]{opacity:.3;pointer-events:none;}
+  .speedlbl{font-size:9.5px;color:var(--sub);letter-spacing:3px;text-align:center;margin-top:16px;text-transform:uppercase;}
+  .savednote{text-align:center;font-size:11px;color:var(--good);font-weight:700;margin-top:12px;min-height:14px;letter-spacing:.5px;}
+  .gsent{font-size:11.5px;color:var(--sub);text-align:center;margin-top:18px;line-height:1.8;}
+  .foot{padding:30px 22px 44px;text-align:center;border-top:1px solid var(--hair);margin-top:10px;}
+  .foot .xo{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--paper);letter-spacing:.5px;}
+  .foot .xo b{color:var(--lip);font-weight:400;}
+  .foot .sig{font-size:9.5px;letter-spacing:4px;color:var(--gold);margin-top:8px;font-weight:800;}
+  .hidden{display:none!important;}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ HOME ============ -->
+  <div id="home">
+    <div class="ticker"><span>★ spotted — a new scene just dropped &nbsp;·&nbsp; listen, shadow, repeat &nbsp;·&nbsp; your accent called: it wants an upgrade &nbsp;·&nbsp; ★ spotted — a new scene just dropped &nbsp;·&nbsp; listen, shadow, repeat</span></div>
+    <header id="hdr">
+      <div class="hero" id="hero"><img id="heroImg" alt=""></div>
+      <div class="brand">DO ENGLISH WITH BRIAN</div>
+      <h1 class="logo">listen <span class="amp">&amp;</span> shadow</h1>
+      <div class="tagline">— your daily dose of lines worth stealing —</div>
+    </header>
+    <div class="cats" id="cats"></div>
+    <div class="list" id="list"></div>
+    <div class="foot"><div class="xo">and who am I? that's a secret I'll never tell. <b>xoxo</b></div><div class="sig">DO ENGLISH WITH BRIAN</div></div>
+  </div>
+
+  <!-- ============ SCENE ============ -->
+  <div id="scene" class="hidden">
+    <div class="topbar">
+      <button class="back" onclick="goHome()">‹</button>
+      <div class="t"><div class="s" id="scSub"></div><h2 id="scTitle"></h2></div>
+    </div>
+    <div class="videowrap" id="vidwrap"></div>
+    <div class="lyr">
+      <button id="lyr1" class="on" onclick="showLayer(1)">Ⅰ · The Scene</button>
+      <button id="lyr2" onclick="showLayer(2)">Ⅱ · Line by Line</button>
+    </div>
+    <div class="sents" id="sents"></div>
+    <div class="focus hidden" id="focus"></div>
+  </div>
+</div>
+
+<script>
+/* =====================================================
+   Listen & Shadow — app shell v2 (GG blog art direction)
+   콘텐츠: ./content/index.json → ./content/<id>/scene.json
+   ===================================================== */
+const CONTENT_BASE='./content/';
+const CATS=["전체","일상대화","감정·리액션","연애·관계","유머·티키타카","회의·업무","전화·컨콜","면접·격식"];
+
+const DEMO_INDEX={scenes:[{id:"demo",title:"The Photo Shoot",sub:"DEMO · SAMPLE SCENE",category:"감정·리액션",tags:["DEMO"],count:6}]};
+const DEMO_SCENE={id:"demo",title:"The Photo Shoot",sub:"DEMO · SAMPLE SCENE",category:"감정·리액션",tags:["DEMO"],video:null,
+ sentences:[
+  {start:0,end:0,who:"A",en:"You knew how much this meant to me.",ko:"이게 나한테 얼마나 중요한지 알았잖아."},
+  {start:0,end:0,who:"B",en:"I never asked for any of this.",ko:"내가 원해서 된 게 아니야."},
+  {start:0,end:0,who:"A",en:"That's what makes it worse.",ko:"그래서 더 화가 나는 거야."},
+  {start:0,end:0,who:"B",en:"I can't help how they see me.",ko:"사람들이 날 어떻게 보는지는 나도 어쩔 수 없어."},
+  {start:0,end:0,who:"A",en:"For once, this was supposed to be mine.",ko:"이번 한 번만은 내 것이어야 했어."},
+  {start:0,end:0,who:"B",en:"Then take it. I'll walk away.",ko:"그럼 가져. 내가 빠질게."},
+ ]};
+
+let INDEX=null, SCENE=null, layer=1, fi=0, cat="전체";
+let looping=false, speed=1, segTimer=null;
+const $=id=>document.getElementById(id);
+
+/* ---- IndexedDB ---- */
+const DBN='dewb_shadow_app', ST='kv';
+function idb(){return new Promise((res,rej)=>{const r=indexedDB.open(DBN,1);
+ r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(ST))r.result.createObjectStore(ST);};
+ r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function kvSet(k,v){try{const d=await idb();return await new Promise(r=>{const t=d.transaction(ST,'readwrite');t.objectStore(ST).put(v,k);t.oncomplete=()=>r(1);t.onerror=()=>r(0);});}catch(e){return 0;}}
+async function kvGet(k){try{const d=await idb();return await new Promise(r=>{const q=d.transaction(ST,'readonly').objectStore(ST).get(k);q.onsuccess=()=>r(q.result||null);q.onerror=()=>r(null);});}catch(e){return null;}}
+
+/* ---- boot ---- */
+window.addEventListener('load',async()=>{
+  try{
+    const r=await fetch(CONTENT_BASE+'index.json',{cache:'no-store'});
+    if(!r.ok)throw 0;
+    INDEX=await r.json();
+    if(!INDEX.scenes||!INDEX.scenes.length)throw 0;
+  }catch(e){ INDEX=DEMO_INDEX; }
+  setHero();
+  renderCats(); renderList();
+});
+/* 히어로 이미지: index.json의 "hero" 필드 (예: "hero.jpg") 또는 기본 content/hero.jpg — 없으면 기존 플래시 배경 유지 */
+function setHero(){
+  const src=CONTENT_BASE+((INDEX&&INDEX.hero)||'hero.jpg');
+  const img=$("heroImg");
+  img.onload=()=>$("hdr").classList.add('hashero');
+  img.onerror=()=>$("hdr").classList.remove('hashero');
+  img.src=src;
+}
+function renderCats(){
+  $("cats").innerHTML=CATS.map(c=>`<button class="cat ${c===cat?'on':''}" onclick="setCat('${c}')">${c}</button>`).join('');
+}
+function setCat(c){cat=c;renderCats();renderList();}
+async function renderList(){
+  const items=INDEX.scenes.filter(s=>cat==="전체"||s.category===cat);
+  if(!items.length){ $("list").innerHTML=`<div class="empty"><b>Nothing to see here… yet.</b><br>이 카테고리의 장면은 준비 중이에요.<br><span style="font-family:var(--serif);font-style:italic;color:var(--champ)">xoxo</span></div>`; return; }
+  let h='';
+  for(const s of items){
+    const done=await kvGet(`prog|${s.id}`);
+    const dn=done?Object.values(done).filter(Boolean).length:0;
+    h+=`<div class="post" onclick="openScene('${s.id}')">
+      <div class="phead"><span class="sp">● Spotted</span><span class="ep">${s.sub||s.category||''}</span></div>
+      <h3>&ldquo;${s.title}&rdquo;</h3>
+      ${s.meaning?`<div class="mng">${s.meaning}</div>`:''}
+      <div class="meta"><span>${s.count?s.count+' lines':'coming soon'}</span>${dn?`<span class="done">✓ ${dn} practiced</span>`:''}<span class="kiss">read &amp; repeat →</span></div>
+    </div>`;
+  }
+  $("list").innerHTML=h;
+}
+
+/* ---- scene ---- */
+let PROG={},MYREC={};
+async function openScene(id){
+  let sc=null;
+  if(id==='demo'){ sc=DEMO_SCENE; }
+  else{
+    try{ const r=await fetch(`${CONTENT_BASE}${id}/scene.json`,{cache:'no-store'}); if(!r.ok)throw 0; sc=await r.json(); }
+    catch(e){ alert('장면을 불러오지 못했어요. 네트워크를 확인해주세요.'); return; }
+  }
+  SCENE=sc; fi=0; layer=1; looping=false; speed=1;
+  PROG=(await kvGet(`prog|${sc.id}`))||{};
+  MYREC={};
+  $("home").classList.add("hidden"); $("scene").classList.remove("hidden");
+  $("scTitle").textContent='“'+sc.title+'”';
+  $("scSub").textContent=sc.sub||sc.category||'';
+  $("vidwrap").innerHTML = sc.video
+    ? `<video id="vid" src="${CONTENT_BASE}${sc.id}/${sc.video}" controls playsinline preload="metadata"></video>`
+    : `<div class="novid">— clip coming soon · line practice below —</div>`;
+  showLayer(1);
+  window.scrollTo(0,0);
+}
+function goHome(){ stopSeg(); $("scene").classList.add("hidden"); $("home").classList.remove("hidden"); renderList(); }
+function vid(){ return $("vid"); }
+
+function showLayer(n){
+  layer=n; stopSeg();
+  $("lyr1").classList.toggle("on",n===1); $("lyr2").classList.toggle("on",n===2);
+  $("sents").classList.toggle("hidden",n!==1); $("focus").classList.toggle("hidden",n!==2);
+  if(n===1) renderSents(); else renderFocus();
+}
+
+/* ---- Layer 1 ---- */
+function renderSents(){
+  $("sents").innerHTML=SCENE.sentences.map((s,i)=>`
+    <div class="sent ${PROG[i]?'prd':''}" id="sent-${i}" onclick="tapSent(${i})">
+      <div class="who"><span>${s.who||''}</span><span class="num">${String(i+1).padStart(2,'0')}</span></div>
+      <div class="en">${s.en}</div>
+      <div class="ko">${s.ko||''}</div>
+      <div class="pr">✓ PRACTICED</div>
+    </div>`).join('');
+}
+function tapSent(i){
+  const s=SCENE.sentences[i];
+  if(vid() && s.end>s.start){ playSegment(s.start,s.end,1,false); markPlaying(i); }
+  else { fi=i; showLayer(2); }
+}
+function markPlaying(i){
+  document.querySelectorAll('.sent').forEach(el=>el.classList.remove('playing'));
+  const el=$("sent-"+i); if(el)el.classList.add('playing');
+}
+
+/* ---- 구간 재생 ---- */
+function playSegment(a,b,rate,loop){
+  const v=vid(); if(!v)return;
+  stopSeg();
+  v.currentTime=a; v.playbackRate=rate||1;
+  v.play().catch(()=>{});
+  segTimer=setInterval(()=>{
+    if(v.currentTime>=b-0.03){
+      if(loop && looping){ v.currentTime=a; }
+      else { v.pause(); stopSeg(); syncPlayBtn(false); }
+    }
+  },50);
+}
+function stopSeg(){ clearInterval(segTimer); segTimer=null; const v=vid(); if(v)v.pause(); }
+
+/* ---- Layer 2 ---- */
+let blurred=false;
+function renderFocus(){
+  const s=SCENE.sentences[fi], n=SCENE.sentences.length;
+  const hasSeg=!!(vid() && s.end>s.start);
+  $("focus").innerHTML=`
+    <div class="fnav">
+      <button ${fi===0?'disabled':''} onclick="nav(-1)">‹ Prev</button>
+      <span class="pos">${String(fi+1).padStart(2,'0')} / ${String(n).padStart(2,'0')}</span>
+      <button ${fi===n-1?'disabled':''} onclick="nav(1)">Next ›</button>
+    </div>
+    <div class="fcardX">
+      <button class="eyeBtn" onclick="toggleBlur()" id="eye">${blurred?'🙈':'👁'}</button>
+      <span class="qm">&ldquo;</span>
+      <div class="who">${s.who||'&nbsp;'}</div>
+      <div class="en ${blurred?'blur':''}" id="fen">${s.en}</div>
+      <div class="ko">${s.ko||''}</div>
+    </div>
+    <div class="ctl">
+      <div class="row">
+        <button class="pill play" id="segPlay" ${hasSeg?'':'disabled'} onclick="togglePlay()">▶︎ Play line</button>
+        <button class="pill" id="loopBtn" ${hasSeg?'':'disabled'} onclick="toggleLoop()">∞ Loop</button>
+      </div>
+      <div class="speedlbl">Speed</div>
+      <div class="row" id="spRow">
+        ${[0.5,0.75,1,1.25].map(r=>`<button class="pill sp ${r===speed?'on':''}" onclick="setSpeed(${r})">${r}×</button>`).join('')}
+      </div>
+      <div class="speedlbl">Shadow</div>
+      <div class="row">
+        <button class="pill recbtn" id="recBtn" onclick="toggleRec()">● Record</button>
+        <button class="pill" id="myPlay" disabled onclick="playMine()">▶︎ My voice</button>
+        <button class="pill" onclick="markDone()">✓ Done</button>
+      </div>
+      <div class="savednote" id="note"></div>
+      <div class="gsent">듣고 → 따라 말하고 → 내 목소리와 비교 — 대사가 내 것이 될 때까지.<br>${hasSeg?'':'(클립 업로드 전에는 문장 읽기·녹음 연습으로 이용하세요)'}</div>
+    </div>`;
+  loadMyRec();
+}
+function nav(d){ stopSeg(); looping=false; fi=Math.max(0,Math.min(SCENE.sentences.length-1,fi+d)); renderFocus(); }
+function toggleBlur(){ blurred=!blurred; $("fen").classList.toggle('blur',blurred); $("eye").textContent=blurred?'🙈':'👁'; }
+function setSpeed(r){ speed=r; document.querySelectorAll('.sp').forEach(b=>b.classList.toggle('on',parseFloat(b.textContent)===r));
+  const v=vid(); if(v)v.playbackRate=r; }
+function syncPlayBtn(playing){ const b=$("segPlay"); if(b)b.innerHTML=playing?'❚❚ Stop':'▶︎ Play line'; }
+function togglePlay(){
+  const s=SCENE.sentences[fi];
+  if(segTimer){ stopSeg(); syncPlayBtn(false); return; }
+  playSegment(s.start,s.end,speed,looping); syncPlayBtn(true);
+}
+function toggleLoop(){ looping=!looping; $("loopBtn").classList.toggle('on',looping);
+  if(segTimer){ const s=SCENE.sentences[fi]; playSegment(s.start,s.end,speed,looping); syncPlayBtn(true);} }
+
+/* ---- 내 녹음 (blob URL 재생 — iOS 안정) ---- */
+let sharedMic=null,recorder=null,recording=false;
+function micAlive(m){try{return !!m&&m.getAudioTracks().some(t=>t.readyState==='live');}catch(e){return false;}}
+async function getMic(){ if(micAlive(sharedMic))return sharedMic;
+  try{ sharedMic=await navigator.mediaDevices.getUserMedia({audio:true}); return sharedMic; }
+  catch(e){ alert("마이크 권한을 허용해주세요."); return null; } }
+function pickMime(){ const c=['audio/mp4','audio/mp4;codecs=mp4a.40.2','audio/aac','audio/webm;codecs=opus','audio/webm'];
+  if(window.MediaRecorder&&MediaRecorder.isTypeSupported){for(const t of c){if(MediaRecorder.isTypeSupported(t))return t;}} return ''; }
+function recKey(){ return `rec|${SCENE.id}|${fi}`; }
+async function toggleRec(){
+  const btn=$("recBtn");
+  if(recording){ if(recorder&&recorder.state==='recording')recorder.stop(); return; }
+  const mic=await getMic(); if(!mic)return;
+  stopSeg(); syncPlayBtn(false);
+  let chunks=[]; const mt=pickMime();
+  recorder=mt?new MediaRecorder(mic,{mimeType:mt}):new MediaRecorder(mic);
+  recording=true;
+  const keyAt=recKey();
+  recorder.ondataavailable=e=>{if(e.data&&e.data.size>0)chunks.push(e.data);};
+  recorder.onstop=()=>{
+    recording=false;
+    const blob=new Blob(chunks,{type:recorder.mimeType||mt||'audio/mp4'});
+    MYREC[keyAt]={blob,url:URL.createObjectURL(blob)};
+    const fr=new FileReader();
+    fr.onload=()=>kvSet(keyAt,fr.result);
+    fr.readAsDataURL(blob);
+    if(keyAt===recKey()){
+      btn.classList.remove('recording'); btn.innerHTML='● Re-record';
+      const mp=$("myPlay"); mp.disabled=false;
+      $("note").textContent='✓ Saved — 이 기기에서 언제든 다시 들을 수 있어요';
+    }
+  };
+  recorder.start();
+  btn.classList.add('recording'); btn.innerHTML='■ Stop';
+}
+async function loadMyRec(){
+  const k=recKey();
+  if(!MYREC[k]){
+    const dataUrl=await kvGet(k);
+    if(dataUrl){ try{ const blob=await (await fetch(dataUrl)).blob(); MYREC[k]={blob,url:URL.createObjectURL(blob)}; }catch(e){} }
+  }
+  if(MYREC[k]){ const mp=$("myPlay"); if(mp)mp.disabled=false;
+    const rb=$("recBtn"); if(rb)rb.innerHTML='● Re-record'; }
+}
+let myAudio=null;
+function playMine(){
+  const k=recKey(); if(!MYREC[k])return;
+  stopSeg(); syncPlayBtn(false);
+  if(myAudio){ myAudio.pause(); myAudio=null; }
+  myAudio=new Audio(MYREC[k].url);
+  myAudio.play().catch(()=>{ $("note").textContent='재생 실패 — 한 번 더 눌러보세요'; });
+}
+async function markDone(){
+  PROG[fi]=true; await kvSet(`prog|${SCENE.id}`,PROG);
+  $("note").textContent=`✓ Line ${fi+1} — practiced`;
+}
+</script>
+</body>
+</html>

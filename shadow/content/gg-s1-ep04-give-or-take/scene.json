@@ -1,0 +1,38 @@
+{
+  "_readme": "video: 이 폴더에 올린 클립 파일명 (예: clip.mp4). 아직 없으면 null. sentences의 start/end는 클립 기준 초 단위 (예: 12.5). end가 start보다 크면 구간 재생·반복이 활성화됩니다. who는 화자 표시용. ★표현이 핵심 표현이니 그 문장은 꼭 넣고, 앞뒤 대사를 클립 보면서 채우세요.",
+  "id": "gg-s1-ep04-give-or-take",
+  "title": "EP.04 — give or take",
+  "sub": "GOSSIP GIRL · S1E · Dan & Serena",
+  "category": "유머·티키타카",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP04"
+  ],
+  "expression": "give or take",
+  "meaning": "~쯤·대략",
+  "scene_note": "댄이 세레나 동네에 우연히 왔다는 장면 (70블록 개그)",
+  "video": null,
+  "sentences": [
+    {
+      "start": 0,
+      "end": 0,
+      "who": "",
+      "en": "(앞 대사 — 클립 보며 채우기)",
+      "ko": "(뜻)"
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "",
+      "en": "★ I was in the neighborhood — give or take seventy blocks.",
+      "ko": "★ 근처 온 김에 — 뭐 70블록쯤 차이지만."
+    },
+    {
+      "start": 0,
+      "end": 0,
+      "who": "",
+      "en": "(뒤 대사 — 클립 보며 채우기)",
+      "ko": "(뜻)"
+    }
+  ]
+}
