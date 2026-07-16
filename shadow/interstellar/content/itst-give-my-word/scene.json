@@ -1,0 +1,50 @@
+{
+  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "id": "itst-give-my-word",
+  "title": "I give you my word",
+  "sub": "INTERSTELLAR · 2014",
+  "category": "회의·업무",
+  "tags": [
+    "INTERSTELLAR"
+  ],
+  "expression": "I give you my word",
+  "meaning": "내 약속하지·장담하지",
+  "video": "i_give_you_my_word.mp4",
+  "sentences": [
+    {
+      "start": 0.45,
+      "end": 2.03,
+      "who": "COOPER",
+      "en": "How far have you got?",
+      "ko": "어디까지 왔는데요?"
+    },
+    {
+      "start": 2.17,
+      "end": 3.43,
+      "who": "PROF. BRAND",
+      "en": "Almost there.",
+      "ko": "거의 다 왔네."
+    },
+    {
+      "start": 3.61,
+      "end": 8.17,
+      "who": "COOPER",
+      "en": "★ You're asking me to hang everything on an almost.",
+      "ko": "★ '거의'라는 말에 모든 걸 걸라는 거군요."
+    },
+    {
+      "start": 8.79,
+      "end": 21.57,
+      "who": "PROF. BRAND",
+      "en": "I'm asking you to trust me. Find us a new home. And by the time you return, I will have solved the problem of gravity.",
+      "ko": "날 믿어달라는 걸세. 새 보금자리를 찾아주게. 자네가 돌아올 때쯤엔 내가 중력 문제를 풀어놓겠네."
+    },
+    {
+      "start": 23.17,
+      "end": 24.41,
+      "who": "PROF. BRAND",
+      "en": "★ I give you my word.",
+      "ko": "★ 내 약속하지."
+    }
+  ]
+}

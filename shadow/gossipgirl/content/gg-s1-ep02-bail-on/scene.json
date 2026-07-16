@@ -1,0 +1,52 @@
+{
+  "_readme": "video: 이 폴더에 올린 클립 파일명 (예: clip.mp4). 아직 없으면 null. sentences의 start/end는 클립 기준 초 단위 (예: 12.5). end가 start보다 크면 구간 재생·반복이 활성화됩니다. who는 화자 표시용. ★표현이 핵심 표현이니 그 문장은 꼭 넣고, 앞뒤 대사를 클립 보면서 채우세요.",
+  "id": "gg-s1-ep02-bail-on",
+  "title": "EP.02 — bail on",
+  "sub": "GOSSIP GIRL · S1E1 · Pilot",
+  "category": "연애·관계",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP02"
+  ],
+  "expression": "bail on",
+  "meaning": "약속을 펑크내다·저버리다",
+  "scene_note": "블레어의 파티 다음, 세레나가 90초 만에 자리를 뜬 것에 대한 대화 + 내레이션",
+  "video": "bail_on.mp4",
+  "sentences": [
+    {
+      "start": 0.0,
+      "end": 1.47,
+      "who": "KATI",
+      "en": "Didn't you know she was coming?",
+      "ko": "세레나 오는 거 몰랐어?"
+    },
+    {
+      "start": 2.23,
+      "end": 3.4,
+      "who": "BLAIR",
+      "en": "Of course I did.",
+      "ko": "당연히 알았지."
+    },
+    {
+      "start": 4.03,
+      "end": 6.27,
+      "who": "BLAIR",
+      "en": "I just wanted it to be a surprise.",
+      "ko": "그냥 깜짝 등장이었으면 했던 거야."
+    },
+    {
+      "start": 6.43,
+      "end": 10.4,
+      "who": "KRISTEN (V.O.)",
+      "en": "★ Word is that S bailed on B's party in under 90 seconds",
+      "ko": "★ 소문에 의하면 S가 90초도 안 돼서 B의 파티를 째고 나갔대"
+    },
+    {
+      "start": 10.4,
+      "end": 12.53,
+      "who": "KRISTEN (V.O.)",
+      "en": "and didn't even have one limoncello.",
+      "ko": "리몬첼로 한 잔도 안 마시고."
+    }
+  ]
+}

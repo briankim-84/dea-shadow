@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 수동 확정 (겹침·소음 라인 실측)",
+  "id": "nb-figure-it-out",
+  "title": "figure something out",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "연애·관계",
+  "difficulty": 2,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "figure something out",
+  "meaning": "방법을 찾아내다",
+  "video": "figure_something_out.mp4",
+  "sentences": [
+    {
+      "start": 1.83,
+      "end": 3.81,
+      "who": "NOAH",
+      "en": "★ Well, what can I do to change your mind?",
+      "ko": "★ 그럼 어떻게 하면 마음을 돌릴 수 있죠?"
+    },
+    {
+      "start": 3.96,
+      "end": 5.79,
+      "who": "ALLIE",
+      "en": "★ Guess you'll figure something out.",
+      "ko": "★ 글쎄요, 알아서 방법을 찾아보시죠."
+    },
+    {
+      "start": 7.06,
+      "end": 8.83,
+      "who": "FIN",
+      "en": "You sure she's coming?",
+      "ko": "걔 진짜 온대?"
+    },
+    {
+      "start": 8.85,
+      "end": 10.85,
+      "who": "NOAH",
+      "en": "★ Relax, pal, it's all set up. We're meeting her for the late show.",
+      "ko": "★ 진정해, 친구. 다 세팅해놨다니까. 심야 상영에서 만나기로 했어."
+    },
+    {
+      "start": 10.87,
+      "end": 13.0,
+      "who": "NOAH",
+      "en": "Look... what did I tell you? Come on.",
+      "ko": "봐... 내가 뭐랬어? 가자."
+    }
+  ]
+}

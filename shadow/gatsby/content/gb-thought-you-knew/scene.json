@@ -1,0 +1,58 @@
+{
+  "_readme": "v7 + 겹침 대사 수동 재구성 (실측 발화 순서)",
+  "id": "gb-thought-you-knew",
+  "title": "I thought you knew",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "I thought you knew",
+  "meaning": "아는 줄 알았어",
+  "video": "thought_you_knew.mp4",
+  "sentences": [
+    {
+      "start": 1.85,
+      "end": 3.65,
+      "who": "GATSBY",
+      "en": "★ Sorry, old sport. I thought you knew.",
+      "ko": "★ 미안하네, 친구. 아는 줄 알았지."
+    },
+    {
+      "start": 4.0,
+      "end": 7.6,
+      "who": "NICK",
+      "en": "Please just... I don't know what to say. Please forgive me.",
+      "ko": "그게... 뭐라 해야 할지 모르겠네요. 용서하세요."
+    },
+    {
+      "start": 7.83,
+      "end": 8.85,
+      "who": "GATSBY",
+      "en": "It's quite all right.",
+      "ko": "괜찮네, 정말."
+    },
+    {
+      "start": 8.87,
+      "end": 10.1,
+      "who": "NICK",
+      "en": "I've had so much to drink.",
+      "ko": "술을 너무 많이 마셔서요."
+    },
+    {
+      "start": 10.75,
+      "end": 12.55,
+      "who": "HERZOG",
+      "en": "Mr. Gatsby, sir. Chicago on the wire.",
+      "ko": "개츠비 씨, 시카고에서 전화입니다."
+    },
+    {
+      "start": 13.3,
+      "end": 15.05,
+      "who": "GATSBY",
+      "en": "★ I'll be in in just a minute.",
+      "ko": "★ 금방 들어가지."
+    }
+  ]
+}

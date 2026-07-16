@@ -1,0 +1,96 @@
+{
+  "_readme": "인터스텔라 에디션 인덱스 — content/<id>/ 에 scene.json과 클립",
+  "scenes": [
+    {
+      "id": "itst-long-shot",
+      "title": "a long shot",
+      "sub": "INTERSTELLAR · 2014",
+      "category": "회의·업무",
+      "tags": [
+        "INTERSTELLAR"
+      ],
+      "expression": "a long shot",
+      "meaning": "가망 낮은 시도·희박한 확률",
+      "count": 4,
+      "difficulty": 2
+    },
+    {
+      "id": "itst-give-my-word",
+      "title": "I give you my word",
+      "sub": "INTERSTELLAR · 2014",
+      "category": "회의·업무",
+      "tags": [
+        "INTERSTELLAR"
+      ],
+      "expression": "I give you my word",
+      "meaning": "내 약속하지·장담하지",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "itst-look-after",
+      "title": "look after ~ for me",
+      "sub": "INTERSTELLAR · 2014",
+      "category": "일상대화",
+      "tags": [
+        "INTERSTELLAR"
+      ],
+      "expression": "look after ~ for me",
+      "meaning": "~ 좀 잘 부탁해·맡아줘",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "itst-bring-it-down",
+      "title": "bring it (on) down to ~",
+      "sub": "INTERSTELLAR · 2014",
+      "category": "유머·티키타카",
+      "tags": [
+        "INTERSTELLAR"
+      ],
+      "expression": "bring it (on) down to ~",
+      "meaning": "~(수준)으로 낮추다",
+      "count": 4,
+      "difficulty": 2
+    },
+    {
+      "id": "itst-when-not-to",
+      "title": "learn to talk — and when not to",
+      "sub": "INTERSTELLAR · 2014",
+      "category": "유머·티키타카",
+      "tags": [
+        "INTERSTELLAR"
+      ],
+      "expression": "learn to talk — and when not to",
+      "meaning": "대화하는 법 — 언제 말을 아낄지",
+      "count": 5,
+      "difficulty": 3
+    },
+    {
+      "id": "itst-my-regards",
+      "title": "Give my regards to ~",
+      "sub": "INTERSTELLAR · 2014",
+      "category": "일상대화",
+      "tags": [
+        "INTERSTELLAR"
+      ],
+      "expression": "Give my regards to ~",
+      "meaning": "~에게 안부 전해 줘",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "itst-wasting-breath",
+      "title": "waste your breath",
+      "sub": "INTERSTELLAR · 2014",
+      "category": "일상대화",
+      "tags": [
+        "INTERSTELLAR"
+      ],
+      "expression": "waste your breath",
+      "meaning": "말해봐야 입만 아프다·헛수고다",
+      "count": 3,
+      "difficulty": 2
+    }
+  ]
+}

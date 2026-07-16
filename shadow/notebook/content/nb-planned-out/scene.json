@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nb-planned-out",
+  "title": "My days are all planned out",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "My days are all planned out",
+  "meaning": "하루가 전부 짜여 있다",
+  "video": "planned_out.mp4",
+  "sentences": [
+    {
+      "start": 1.47,
+      "end": 3.1,
+      "who": "NOAH",
+      "en": "You're busy?",
+      "ko": "바빠요?"
+    },
+    {
+      "start": 3.72,
+      "end": 8.58,
+      "who": "ALLIE",
+      "en": "★ I have a very strict schedule. My days are all planned out.",
+      "ko": "★ 스케줄이 아주 빡빡해요. 하루가 전부 짜여 있죠."
+    },
+    {
+      "start": 8.6,
+      "end": 20.99,
+      "who": "ALLIE",
+      "en": "I get up in the morning... breakfast, math tutor, Latin tutor, lunch, tennis lessons, dance lessons... sometimes both... French tutor, piano lesson, then I eat dinner. And after dinner I spend time with my family. And then I... I catch up on some reading.",
+      "ko": "아침에 일어나면 아침 식사, 수학 과외, 라틴어 과외, 점심, 테니스 레슨, 댄스 레슨 — 어떨 땐 둘 다 — 프랑스어 과외, 피아노 레슨, 그리고 저녁 식사. 저녁 후엔 가족과 시간을 보내고, 그다음엔... 밀린 독서를 하죠."
+    },
+    {
+      "start": 28.46,
+      "end": 32.83,
+      "who": "NOAH",
+      "en": "Sounds like the road to success.",
+      "ko": "성공가도네요."
+    },
+    {
+      "start": 33.04,
+      "end": 34.05,
+      "who": "ALLIE",
+      "en": "★ Oh, you bet.",
+      "ko": "★ 그럼요, 당연하죠."
+    }
+  ]
+}

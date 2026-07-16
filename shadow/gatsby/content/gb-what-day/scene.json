@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-what-day",
+  "title": "What day would suit you?",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "What day would suit you?",
+  "meaning": "무슨 요일이 좋으세요?",
+  "video": "what_day_would_suit_you.mp4",
+  "sentences": [
+    {
+      "start": 2.13,
+      "end": 6.9,
+      "who": "NICK",
+      "en": "Happy to do it. I'm going to call Daisy and invite her to tea.",
+      "ko": "기꺼이 할게요. 데이지한테 전화해서 티타임에 초대할게요."
+    },
+    {
+      "start": 8.0,
+      "end": 10.39,
+      "who": "GATSBY",
+      "en": "★ What day would suit you?",
+      "ko": "★ 무슨 요일이 좋겠나?"
+    },
+    {
+      "start": 10.41,
+      "end": 12.89,
+      "who": "NICK",
+      "en": "What day would suit you?",
+      "ko": "당신은 무슨 요일이 좋은데요?"
+    },
+    {
+      "start": 12.91,
+      "end": 15.39,
+      "who": "GATSBY",
+      "en": "★ I don't want to put you to any trouble.",
+      "ko": "★ 자네한테 폐를 끼치고 싶진 않아서."
+    },
+    {
+      "start": 15.41,
+      "end": 17.51,
+      "who": "NICK",
+      "en": "Day after tomorrow all right?",
+      "ko": "모레 괜찮아요?"
+    }
+  ]
+}

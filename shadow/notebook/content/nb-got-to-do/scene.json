@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 수동 확정 (겹침·소음 라인 실측)",
+  "id": "nb-got-to-do",
+  "title": "What's that got to do with it?",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "유머·티키타카",
+  "difficulty": 2,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "What's that got to do with it?",
+  "meaning": "그게 무슨 상관이야?",
+  "video": "got_to_do_with_it.mp4",
+  "sentences": [
+    {
+      "start": 1.4,
+      "end": 3.9,
+      "who": "FRANK",
+      "en": "Say, how would you like some breakfast? Would you like some breakfast?",
+      "ko": "저기, 아침 좀 먹을 텐가? 아침 어때?"
+    },
+    {
+      "start": 4.0,
+      "end": 5.4,
+      "who": "ALLIE",
+      "en": "Breakfast?",
+      "ko": "아침이요?"
+    },
+    {
+      "start": 5.5,
+      "end": 7.25,
+      "who": "NOAH",
+      "en": "Dad, it's 10:00.",
+      "ko": "아버지, 지금 밤 10시예요."
+    },
+    {
+      "start": 7.3,
+      "end": 8.4,
+      "who": "FRANK",
+      "en": "★ What's that got to do with it?",
+      "ko": "★ 그게 무슨 상관이냐?"
+    },
+    {
+      "start": 8.45,
+      "end": 10.3,
+      "who": "FRANK",
+      "en": "You can have pancakes any damn time of night you want.",
+      "ko": "팬케이크야 밤 아무 때고 먹고 싶을 때 먹는 거지."
+    }
+  ]
+}

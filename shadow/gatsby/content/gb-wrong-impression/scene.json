@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-wrong-impression",
+  "title": "get the wrong impression",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "get the wrong impression",
+  "meaning": "오해하다·잘못된 인상을 받다",
+  "video": "wrong_impression.mp4",
+  "sentences": [
+    {
+      "start": 0,
+      "end": 4.53,
+      "who": "GATSBY",
+      "en": "Look here, old sport. What is your opinion of me, anyhow?",
+      "ko": "이보게, 친구. 도대체 나에 대해 어떻게 생각하나?"
+    },
+    {
+      "start": 4.55,
+      "end": 5.79,
+      "who": "NICK",
+      "en": "My opinion?",
+      "ko": "제 생각이요?"
+    },
+    {
+      "start": 5.81,
+      "end": 6.94,
+      "who": "GATSBY",
+      "en": "Yes, your opinion.",
+      "ko": "그래, 자네 생각."
+    },
+    {
+      "start": 6.96,
+      "end": 13.56,
+      "who": "GATSBY",
+      "en": "★ I don't want you to get the wrong impression from all these bizarre accusations you must be hearing.",
+      "ko": "★ 자네가 듣고 있을 그 괴상한 소문들 때문에 오해하진 않았으면 해서 말이야."
+    },
+    {
+      "start": 13.58,
+      "end": 18.99,
+      "who": "GATSBY",
+      "en": "A pack of lies, I guarantee. You've heard the stories? I will tell you God's truth.",
+      "ko": "전부 새빨간 거짓말이야, 장담하네. 소문 들었지? 내가 진실을 말해주겠네."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "id": "itst-my-regards",
+  "title": "Give my regards to ~",
+  "sub": "INTERSTELLAR · 2014",
+  "category": "일상대화",
+  "tags": [
+    "INTERSTELLAR"
+  ],
+  "expression": "Give my regards to ~",
+  "meaning": "~에게 안부 전해 줘",
+  "video": "give_my_regards.mp4",
+  "sentences": [
+    {
+      "start": 1.39,
+      "end": 3.13,
+      "who": "PROF. BRAND",
+      "en": "Amelia, be safe.",
+      "ko": "아멜리아, 몸조심하렴."
+    },
+    {
+      "start": 3.93,
+      "end": 5.77,
+      "who": "PROF. BRAND",
+      "en": "★ Give my regards to Dr. Mann.",
+      "ko": "★ 만 박사에게 안부 전해 주고."
+    },
+    {
+      "start": 6.35,
+      "end": 7.6,
+      "who": "BRAND",
+      "en": "I will, Dad.",
+      "ko": "그럴게요, 아빠."
+    },
+    {
+      "start": 7.52,
+      "end": 12.53,
+      "who": "PROF. BRAND",
+      "en": "It looks good for your trajectory. We've calculated two years to Saturn.",
+      "ko": "궤도는 좋아 보이네. 토성까지 2년으로 계산했어."
+    },
+    {
+      "start": 13.29,
+      "end": 14.75,
+      "who": "COOPER",
+      "en": "That's a lot of Dramamine.",
+      "ko": "멀미약 꽤나 들겠는데요."
+    }
+  ]
+}

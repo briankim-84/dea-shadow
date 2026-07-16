@@ -1,0 +1,146 @@
+{
+  "_readme": "장면을 추가하려면 scenes 배열에 항목을 넣고, content/<id>/ 폴더에 scene.json과 클립 파일을 올리세요. hero 필드에 이미지 파일명을 넣으면 히어로 배경이 됩니다 (예: hero.jpg).",
+  "hero": "hero.jpg",
+  "scenes": [
+    {
+      "id": "gg-s1-ep01-as-promised",
+      "title": "EP.01 — as promised",
+      "sub": "GOSSIP GIRL · S1E1 · Pilot",
+      "category": "일상대화",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP01"
+      ],
+      "expression": "as promised",
+      "meaning": "약속한 대로·말한 대로",
+      "count": 4,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep02-bail-on",
+      "title": "EP.02 — bail on",
+      "sub": "GOSSIP GIRL · S1E1 · Pilot",
+      "category": "연애·관계",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP02"
+      ],
+      "expression": "bail on",
+      "meaning": "약속을 펑크내다·저버리다",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep03-shot-in-the-dark",
+      "title": "EP.03 — a shot in the dark",
+      "sub": "GOSSIP GIRL · S1E2 · The Wild Brunch",
+      "category": "일상대화",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP03"
+      ],
+      "expression": "a shot in the dark",
+      "meaning": "어림짐작·되는대로 찍기",
+      "count": 4,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep04-dishing",
+      "title": "EP.04 — dishing",
+      "sub": "GOSSIP GIRL · S1E2 · The Wild Brunch",
+      "category": "유머·티키타카",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP04"
+      ],
+      "expression": "dishing",
+      "meaning": "① 음식을 담아 내다  ② 가십을 늘어놓다 (말장난)",
+      "count": 3,
+      "difficulty": 3
+    },
+    {
+      "id": "gg-s1-ep05-for-the-best",
+      "title": "EP.05 — for the best",
+      "sub": "GOSSIP GIRL · S1E1 · Pilot",
+      "category": "감정·리액션",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP05"
+      ],
+      "expression": "for the best",
+      "meaning": "차라리 그게 낫다",
+      "count": 6,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep06-make-the-most-of",
+      "title": "EP.06 — make the most of",
+      "sub": "GOSSIP GIRL · S1E1 · Pilot",
+      "category": "일상대화",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP06"
+      ],
+      "expression": "make the most of",
+      "meaning": "최대한 누리다·활용하다",
+      "count": 3,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep07-no-hard-feelings",
+      "title": "EP.07 — no hard feelings",
+      "sub": "GOSSIP GIRL · S1E3 · Poison Ivy",
+      "category": "유머·티키타카",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP07"
+      ],
+      "expression": "no hard feelings",
+      "meaning": "감정 상한 거 없기예요·서운해 말기",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep08-it-comes-down-to",
+      "title": "EP.08 — it comes down to ~",
+      "sub": "GOSSIP GIRL · S1E3 · Poison Ivy",
+      "category": "회의·업무",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP08"
+      ],
+      "expression": "it comes down to ~",
+      "meaning": "결국 ~로 귀결된다·핵심은 ~다",
+      "count": 4,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep09-when-it-comes-to",
+      "title": "EP.09 — when it comes to ~",
+      "sub": "GOSSIP GIRL · S1E3 · Poison Ivy",
+      "category": "일상대화",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP09"
+      ],
+      "expression": "when it comes to ~",
+      "meaning": "~에 관해서라면·~ 얘기가 나오면",
+      "count": 3,
+      "difficulty": 2
+    },
+    {
+      "id": "gg-s1-ep10-keep-you-posted",
+      "title": "EP.10 — keep you posted",
+      "sub": "GOSSIP GIRL · S1E3 · Poison Ivy",
+      "category": "회의·업무",
+      "tags": [
+        "GOSSIP GIRL",
+        "EP10"
+      ],
+      "expression": "keep you posted",
+      "meaning": "계속 알려줄게·진행 상황 전할게",
+      "count": 4,
+      "difficulty": 2
+    }
+  ]
+}

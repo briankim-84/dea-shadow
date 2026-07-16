@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nb-in-ages",
+  "title": "I haven't ~ in ages",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "I haven't ~ in ages",
+  "meaning": "~한 지 정말 오래됐다",
+  "video": "in_ages.mp4",
+  "sentences": [
+    {
+      "start": 1.77,
+      "end": 3.31,
+      "who": "ALLIE",
+      "en": "That was fun.",
+      "ko": "재밌었어요."
+    },
+    {
+      "start": 5.16,
+      "end": 7.61,
+      "who": "ALLIE",
+      "en": "★ I haven't seen a movie in ages.",
+      "ko": "★ 영화 본 지 정말 오래됐거든요."
+    },
+    {
+      "start": 7.63,
+      "end": 8.87,
+      "who": "NOAH",
+      "en": "Really?",
+      "ko": "정말요?"
+    },
+    {
+      "start": 9.64,
+      "end": 11.45,
+      "who": "ALLIE",
+      "en": "Not since I was a little kid.",
+      "ko": "어렸을 때 이후로 처음이에요."
+    }
+  ]
+}

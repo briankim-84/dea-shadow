@@ -1,0 +1,50 @@
+{
+  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "id": "itst-look-after",
+  "title": "look after ~ for me",
+  "sub": "INTERSTELLAR · 2014",
+  "category": "일상대화",
+  "tags": [
+    "INTERSTELLAR"
+  ],
+  "expression": "look after ~ for me",
+  "meaning": "~ 좀 잘 부탁해·맡아줘",
+  "video": "look_after_our_place.mp4",
+  "sentences": [
+    {
+      "start": 1.09,
+      "end": 2.03,
+      "who": "COOPER",
+      "en": "I love you, Tom.",
+      "ko": "사랑한다, 톰."
+    },
+    {
+      "start": 2.65,
+      "end": 3.39,
+      "who": "TOM",
+      "en": "Travel safe, huh?",
+      "ko": "조심히 다녀와요, 네?"
+    },
+    {
+      "start": 4.27,
+      "end": 6.23,
+      "who": "COOPER",
+      "en": "★ You look after our place for me, all right?",
+      "ko": "★ 우리 집 잘 부탁한다, 알았지?"
+    },
+    {
+      "start": 13.25,
+      "end": 15.01,
+      "who": "TOM",
+      "en": "Hey, can I use your truck while you're gone?",
+      "ko": "저기, 아빠 없는 동안 트럭 좀 써도 돼요?"
+    },
+    {
+      "start": 14.99,
+      "end": 19.47,
+      "who": "COOPER",
+      "en": "You mean your truck? I'll make sure they bring it back.",
+      "ko": "네 트럭 말이냐? 꼭 돌려보내라고 해두마."
+    }
+  ]
+}

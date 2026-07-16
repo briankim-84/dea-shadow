@@ -1,0 +1,36 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-my-nerves",
+  "title": "get on my nerves",
+  "sub": "TOY STORY · 1995",
+  "category": "감정·리액션",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "get on my nerves",
+  "meaning": "신경을 거스르다·거슬리다",
+  "video": "getting_on_my_nerves.mp4",
+  "sentences": [
+    {
+      "start": 1.51,
+      "end": 9.21,
+      "who": "WOODY",
+      "en": "Listen, Light Snack, you stay away from Andy. He's mine, and no one is taking him away from me.",
+      "ko": "잘 들어, 우주간식 씨. 앤디한테서 떨어져. 앤디는 내 거고, 아무도 못 뺏어 가."
+    },
+    {
+      "start": 9.11,
+      "end": 12.57,
+      "who": "BUZZ",
+      "en": "What are you talking about? Where's that bonding strip?",
+      "ko": "무슨 소리를 하는 거야? 그 접착 스트립은 어디 갔지?"
+    },
+    {
+      "start": 14.41,
+      "end": 20.51,
+      "who": "WOODY",
+      "en": "★ And another thing, stop with this spaceman thing! It's getting on my nerves!",
+      "ko": "★ 그리고 하나 더, 그 우주인 행세 좀 그만해! 신경에 거슬려 죽겠으니까!"
+    }
+  ]
+}

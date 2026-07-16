@@ -1,0 +1,50 @@
+{
+  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "id": "itst-when-not-to",
+  "title": "learn to talk — and when not to",
+  "sub": "INTERSTELLAR · 2014",
+  "category": "유머·티키타카",
+  "tags": [
+    "INTERSTELLAR"
+  ],
+  "expression": "learn to talk — and when not to",
+  "meaning": "대화하는 법 — 언제 말을 아낄지",
+  "video": "learn_to_talk.mp4",
+  "sentences": [
+    {
+      "start": 0.51,
+      "end": 2.93,
+      "who": "BRAND",
+      "en": "We're going to be spending a lot of time together.",
+      "ko": "우린 아주 오랜 시간을 같이 보내게 될 거예요."
+    },
+    {
+      "start": 3.03,
+      "end": 4.63,
+      "who": "BRAND",
+      "en": "★ We should learn to talk.",
+      "ko": "★ 서로 대화하는 법을 배워둬야죠."
+    },
+    {
+      "start": 5.13,
+      "end": 6.35,
+      "who": "COOPER",
+      "en": "★ And when not to.",
+      "ko": "★ 언제 말을 말아야 하는지도요."
+    },
+    {
+      "start": 8.07,
+      "end": 9.59,
+      "who": "BRAND",
+      "en": "Just being honest.",
+      "ko": "그냥 솔직하게 말한 것뿐이에요."
+    },
+    {
+      "start": 10.11,
+      "end": 12.03,
+      "who": "COOPER",
+      "en": "I don't think you need to be that honest.",
+      "ko": "그렇게까지 솔직할 필요는 없을 것 같은데요."
+    }
+  ]
+}

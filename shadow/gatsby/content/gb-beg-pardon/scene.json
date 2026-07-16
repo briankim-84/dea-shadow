@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-beg-pardon",
+  "title": "I beg your pardon",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "면접·격식",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "I beg your pardon",
+  "meaning": "실례합니다 (격식)",
+  "video": "i_beg_your_pardon.mp4",
+  "sentences": [
+    {
+      "start": 0.89,
+      "end": 6.07,
+      "who": "JORDAN",
+      "en": "He told me once he was an Oxford man. However, I don't believe it.",
+      "ko": "옥스퍼드 출신이라고 한 적이 있어요. 근데 난 안 믿어요."
+    },
+    {
+      "start": 6.12,
+      "end": 7.18,
+      "who": "NICK",
+      "en": "Why not?",
+      "ko": "왜요?"
+    },
+    {
+      "start": 7.2,
+      "end": 10.17,
+      "who": "JORDAN",
+      "en": "I don't know. I just don't believe he went there.",
+      "ko": "글쎄요. 그냥 거길 다녔을 것 같지가 않아요."
+    },
+    {
+      "start": 10.54,
+      "end": 11.95,
+      "who": "HERZOG",
+      "en": "★ I beg your pardon.",
+      "ko": "★ 실례하겠습니다."
+    },
+    {
+      "start": 12.38,
+      "end": 15.84,
+      "who": "HERZOG",
+      "en": "Miss Baker, Mr. Gatsby would like to speak to you. Alone.",
+      "ko": "베이커 양, 개츠비 씨께서 얘기를 나누고 싶어 하십니다. 단둘이서요."
+    }
+  ]
+}

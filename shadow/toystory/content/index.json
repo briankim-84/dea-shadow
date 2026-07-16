@@ -1,0 +1,135 @@
+{
+  "_readme": "토이스토리 에디션 인덱스",
+  "scenes": [
+    {
+      "id": "ts1-bad-news",
+      "title": "I got some bad news",
+      "sub": "TOY STORY · 1995",
+      "category": "일상대화",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "I got some bad news",
+      "meaning": "안 좋은 소식이 있어",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-hear-me",
+      "title": "Everybody hear me?",
+      "sub": "TOY STORY · 1995",
+      "category": "회의·업무",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "Everybody hear me?",
+      "meaning": "다들 들려요? (회의 시작 멘트)",
+      "count": 4,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-marbles",
+      "title": "losing her marbles",
+      "sub": "TOY STORY · 1995",
+      "category": "유머·티키타카",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "losing her marbles",
+      "meaning": "정신이 나가다·제정신이 아니다",
+      "count": 3,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-good-enough",
+      "title": "good enough for me",
+      "sub": "TOY STORY · 1995",
+      "category": "일상대화",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "good enough for me",
+      "meaning": "난 그걸로 충분해·그럼 됐어",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-old-noodle",
+      "title": "use the old noodle",
+      "sub": "TOY STORY · 1995",
+      "category": "유머·티키타카",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "use the old noodle",
+      "meaning": "머리를 쓰다",
+      "count": 4,
+      "difficulty": 3
+    },
+    {
+      "id": "ts1-on-the-job",
+      "title": "lie down on the job",
+      "sub": "TOY STORY · 1995",
+      "category": "회의·업무",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "lie down on the job",
+      "meaning": "일을 대충 하다·농땡이 부리다",
+      "count": 3,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-never-doubted",
+      "title": "Never doubted ya for a second",
+      "sub": "TOY STORY · 1995",
+      "category": "일상대화",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "Never doubted ya for a second",
+      "meaning": "한순간도 의심 안 했어",
+      "count": 3,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-mix-up",
+      "title": "a bit of a mix-up",
+      "sub": "TOY STORY · 1995",
+      "category": "일상대화",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "a bit of a mix-up",
+      "meaning": "약간의 착오·혼선",
+      "count": 5,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-get-to-you",
+      "title": "Don't let it get to you",
+      "sub": "TOY STORY · 1995",
+      "category": "감정·리액션",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "Don't let it get to you",
+      "meaning": "너무 담아두지 마·신경 쓰지 마",
+      "count": 4,
+      "difficulty": 2
+    },
+    {
+      "id": "ts1-my-nerves",
+      "title": "get on my nerves",
+      "sub": "TOY STORY · 1995",
+      "category": "감정·리액션",
+      "tags": [
+        "TOY STORY"
+      ],
+      "expression": "get on my nerves",
+      "meaning": "신경을 거스르다·거슬리다",
+      "count": 3,
+      "difficulty": 2
+    }
+  ]
+}

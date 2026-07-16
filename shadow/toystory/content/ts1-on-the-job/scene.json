@@ -1,0 +1,36 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-on-the-job",
+  "title": "lie down on the job",
+  "sub": "TOY STORY · 1995",
+  "category": "회의·업무",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "lie down on the job",
+  "meaning": "일을 대충 하다·농땡이 부리다",
+  "video": "lying_down_on_the_job.mp4",
+  "sentences": [
+    {
+      "start": 1.6,
+      "end": 3.83,
+      "who": "REX",
+      "en": "★ Shouldn't they be there by now? What's taking them so long?",
+      "ko": "★ 지금쯤 도착했어야 하는 거 아냐? 왜 이렇게 오래 걸려?"
+    },
+    {
+      "start": 3.85,
+      "end": 7.09,
+      "who": "WOODY",
+      "en": "Hey, these guys are professionals. They're the best.",
+      "ko": "야, 이 친구들 프로야. 최고라고."
+    },
+    {
+      "start": 7.53,
+      "end": 10.13,
+      "who": "WOODY",
+      "en": "★ Come on! They're not lying down on the job.",
+      "ko": "★ 에이, 설마 일하다 드러누워 농땡이 부리겠어."
+    }
+  ]
+}

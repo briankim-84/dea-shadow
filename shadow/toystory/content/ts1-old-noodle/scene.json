@@ -1,0 +1,43 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-old-noodle",
+  "title": "use the old noodle",
+  "sub": "TOY STORY · 1995",
+  "category": "유머·티키타카",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "use the old noodle",
+  "meaning": "머리를 쓰다",
+  "video": "using_the_old_noodle.mp4",
+  "sentences": [
+    {
+      "start": 1.15,
+      "end": 7.19,
+      "who": "WOODY",
+      "en": "All right! All right! If I send out the troops, will you all calm down?",
+      "ko": "알았어, 알았어! 부대를 내보내면 다들 진정할 거야?"
+    },
+    {
+      "start": 7.09,
+      "end": 8.61,
+      "who": "TOYS",
+      "en": "Yes! Yes! We promise!",
+      "ko": "네! 네! 약속해요!"
+    },
+    {
+      "start": 8.75,
+      "end": 10.71,
+      "who": "WOODY",
+      "en": "Okay! Save your batteries.",
+      "ko": "좋아! 배터리 아껴 둬."
+    },
+    {
+      "start": 11.17,
+      "end": 13.59,
+      "who": "HAMM",
+      "en": "★ Very good, Woody. That's using the old noodle.",
+      "ko": "★ 잘했어, 우디. 그거 머리 좀 쓸 줄 아는데."
+    }
+  ]
+}

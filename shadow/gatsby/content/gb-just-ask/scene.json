@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-just-ask",
+  "title": "just ask for it",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "just ask for it",
+  "meaning": "말만 하게 (뭐든 해줄 테니)",
+  "video": "just_ask_for_it.mp4",
+  "sentences": [
+    {
+      "start": 1.83,
+      "end": 3.84,
+      "who": "GATSBY",
+      "en": "Lovely to see you again, miss Baker.",
+      "ko": "다시 만나 반갑소, 베이커 양."
+    },
+    {
+      "start": 6.08,
+      "end": 10.33,
+      "who": "GATSBY",
+      "en": "★ If there's anything that you want, just ask for it, old sport.",
+      "ko": "★ 원하는 게 있으면 뭐든 말만 하게, 친구."
+    },
+    {
+      "start": 13.78,
+      "end": 17.51,
+      "who": "GATSBY",
+      "en": "Excuse me. I will rejoin you later.",
+      "ko": "실례하지. 이따 다시 합류하겠네."
+    }
+  ]
+}

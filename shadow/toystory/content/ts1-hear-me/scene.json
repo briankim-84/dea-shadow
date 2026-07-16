@@ -1,0 +1,43 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-hear-me",
+  "title": "Everybody hear me?",
+  "sub": "TOY STORY · 1995",
+  "category": "회의·업무",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "Everybody hear me?",
+  "meaning": "다들 들려요? (회의 시작 멘트)",
+  "video": "everybody_hear_me.mp4",
+  "sentences": [
+    {
+      "start": 1.07,
+      "end": 3.61,
+      "who": "WOODY",
+      "en": "Hello? Check. That better? Great.",
+      "ko": "들리나? 체크. 이제 낫죠? 좋아요."
+    },
+    {
+      "start": 4.13,
+      "end": 6.83,
+      "who": "WOODY",
+      "en": "★ Everybody hear me? Up on the shelf, can you hear me? Great.",
+      "ko": "★ 다들 들려요? 선반 위에도 들려요? 좋아요."
+    },
+    {
+      "start": 6.99,
+      "end": 13.91,
+      "who": "WOODY",
+      "en": "★ Okay. First item today... Oh, yeah. Has everyone picked a moving buddy?",
+      "ko": "★ 자, 오늘 첫 안건은... 아 맞다. 다들 이사 짝꿍 정했어요?"
+    },
+    {
+      "start": 14.47,
+      "end": 16.45,
+      "who": "HAMM",
+      "en": "Moving buddy? You can't be serious.",
+      "ko": "이사 짝꿍? 장난하는 거지."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-never-doubted",
+  "title": "Never doubted ya for a second",
+  "sub": "TOY STORY · 1995",
+  "category": "일상대화",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "Never doubted ya for a second",
+  "meaning": "한순간도 의심 안 했어",
+  "video": "never_doubted_ya.mp4",
+  "sentences": [
+    {
+      "start": 2.69,
+      "end": 4.87,
+      "who": "SARGE",
+      "en": "★ Mission accomplished. Well done, men. Pack it up. We're goin' home.",
+      "ko": "★ 임무 완수. 수고했다, 제군들. 짐 챙겨. 복귀한다."
+    },
+    {
+      "start": 5.17,
+      "end": 7.96,
+      "who": "WOODY",
+      "en": "So did I tell ya? Nothin' to worry about.",
+      "ko": "거봐, 내가 뭐랬어? 걱정할 거 하나 없다니까."
+    },
+    {
+      "start": 7.86,
+      "end": 11.45,
+      "who": "SLINKY",
+      "en": "★ I knew you were right all along, Woody. Never doubted ya for a second.",
+      "ko": "★ 네 말이 맞을 줄 알았다니까, 우디. 한순간도 의심 안 했어."
+    }
+  ]
+}

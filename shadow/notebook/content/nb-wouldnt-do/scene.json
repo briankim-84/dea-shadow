@@ -1,0 +1,37 @@
+{
+  "_readme": "v7 + QA 수동 확정 (겹침·소음 라인 실측)",
+  "id": "nb-wouldnt-do",
+  "title": "Don't do anything I wouldn't do",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "유머·티키타카",
+  "difficulty": 3,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "Don't do anything I wouldn't do",
+  "meaning": "적당히들 놀아 (선 넘지 말고)",
+  "video": "anything_i_wouldnt_do.mp4",
+  "sentences": [
+    {
+      "start": 2.27,
+      "end": 5.7,
+      "who": "FIN",
+      "en": "Huh? Oh, I get it. You guys do love each other.",
+      "ko": "아~ 알겠다. 너네 둘이 진짜 좋아하는 거구나."
+    },
+    {
+      "start": 5.85,
+      "end": 7.15,
+      "who": "NOAH",
+      "en": "★ Don't do anything I wouldn't do.",
+      "ko": "★ 적당히들 놀아. (나라면 안 할 짓은 하지 마)"
+    },
+    {
+      "start": 7.17,
+      "end": 8.95,
+      "who": "FIN",
+      "en": "Okay, good bye. All right, all right.",
+      "ko": "알았어, 잘 가. 그래그래."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-mix-up",
+  "title": "a bit of a mix-up",
+  "sub": "TOY STORY · 1995",
+  "category": "일상대화",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "a bit of a mix-up",
+  "meaning": "약간의 착오·혼선",
+  "video": "a_bit_of_a_mix_up.mp4",
+  "sentences": [
+    {
+      "start": 1.67,
+      "end": 4.79,
+      "who": "WOODY",
+      "en": "Whoa! Hey! Did I frighten you? Didn't mean to. Sorry.",
+      "ko": "워! 이봐! 놀랐어? 그럴 뜻은 아니었어. 미안."
+    },
+    {
+      "start": 4.69,
+      "end": 10.41,
+      "who": "WOODY",
+      "en": "Howdy. My name is Woody. And this is Andy's room. That's all I wanted to say.",
+      "ko": "안녕. 난 우디야. 그리고 여긴 앤디의 방이고. 그 말이 하고 싶었을 뿐이야."
+    },
+    {
+      "start": 10.67,
+      "end": 16.17,
+      "who": "WOODY",
+      "en": "★ And also, there has been a bit of a mix-up. This is my spot, see, the bed here.",
+      "ko": "★ 아 그리고, 뭔가 착오가 좀 있었어. 여기 침대는 내 자리거든."
+    },
+    {
+      "start": 16.13,
+      "end": 18.35,
+      "who": "BUZZ",
+      "en": "★ Local law enforcement. It's about time you got here.",
+      "ko": "★ 지역 경찰이군. 이제야 도착했네."
+    },
+    {
+      "start": 18.25,
+      "end": 23.31,
+      "who": "BUZZ",
+      "en": "I'm Buzz Lightyear, Space Ranger, Universe Protection Unit. My ship has crash-landed here by mistake.",
+      "ko": "난 버즈 라이트이어, 우주 특공대 소속 스페이스 레인저다. 내 함선이 실수로 여기 불시착했지."
+    }
+  ]
+}

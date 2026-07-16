@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-suits-you",
+  "title": "The time that suits you",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "The time that suits you",
+  "meaning": "당신 편한 시간에",
+  "video": "time_that_suits_you.mp4",
+  "sentences": [
+    {
+      "start": 1.89,
+      "end": 6.25,
+      "who": "GATSBY",
+      "en": "I'm taking my new hydroplane out in the morning. Would you like to go with me?",
+      "ko": "아침에 새 수상비행기를 몰고 나갈 건데, 같이 가겠나?"
+    },
+    {
+      "start": 7.22,
+      "end": 8.61,
+      "who": "NICK",
+      "en": "What time?",
+      "ko": "몇 시에요?"
+    },
+    {
+      "start": 8.63,
+      "end": 10.42,
+      "who": "GATSBY",
+      "en": "★ The time that suits you.",
+      "ko": "★ 자네 편한 시간에."
+    },
+    {
+      "start": 10.44,
+      "end": 12.11,
+      "who": "NICK",
+      "en": "★ Well, that's very kind of you.",
+      "ko": "★ 이거 정말 친절하시네요."
+    }
+  ]
+}

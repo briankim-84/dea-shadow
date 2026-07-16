@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-where-to-start",
+  "title": "I don't quite know where to start",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "I don't quite know where to start",
+  "meaning": "어디서부터 말해야 할지",
+  "video": "where_to_start.mp4",
+  "sentences": [
+    {
+      "start": 1.59,
+      "end": 2.83,
+      "who": "NICK",
+      "en": "Daisy?",
+      "ko": "데이지를요?"
+    },
+    {
+      "start": 4.68,
+      "end": 6.49,
+      "who": "JORDAN",
+      "en": "And Gatsby.",
+      "ko": "개츠비랑 같이요."
+    },
+    {
+      "start": 7.08,
+      "end": 8.4,
+      "who": "NICK",
+      "en": "Why?",
+      "ko": "왜요?"
+    },
+    {
+      "start": 8.52,
+      "end": 11.08,
+      "who": "JORDAN",
+      "en": "★ I don't quite know where to start.",
+      "ko": "★ 어디서부터 얘기해야 할지 모르겠네요."
+    },
+    {
+      "start": 11.32,
+      "end": 19.77,
+      "who": "JORDAN",
+      "en": "You see, I didn't realize until the other night that I'd met Gatsby. Five years ago. In Louisville.",
+      "ko": "실은 며칠 전 밤에야 알았어요 — 내가 개츠비를 만난 적이 있다는 걸. 5년 전, 루이빌에서요."
+    }
+  ]
+}

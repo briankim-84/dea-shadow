@@ -1,0 +1,58 @@
+{
+  "_readme": "video: 클립 파일명. start/end는 클립 기준 초. ★가 핵심 표현.",
+  "id": "gg-s1-ep05-for-the-best",
+  "title": "EP.05 — for the best",
+  "sub": "GOSSIP GIRL · S1E1 · Pilot",
+  "category": "감정·리액션",
+  "tags": [
+    "GOSSIP GIRL",
+    "EP05"
+  ],
+  "expression": "for the best",
+  "meaning": "차라리 그게 낫다",
+  "video": "for_the_best.mp4",
+  "sentences": [
+    {
+      "start": 0.0,
+      "end": 3.27,
+      "who": "HOWIE",
+      "en": "You seem upbeat this morning. Did you have fun with Blair last night?",
+      "ko": "오늘 아침 기분 좋아 보이네. 어젯밤 블레어랑 즐거웠어?"
+    },
+    {
+      "start": 3.97,
+      "end": 5.97,
+      "who": "NATE",
+      "en": "Actually, we got into a pretty big fight.",
+      "ko": "사실, 꽤 크게 싸웠어요."
+    },
+    {
+      "start": 6.0,
+      "end": 8.43,
+      "who": "HOWIE",
+      "en": "You want my advice? Apologize, even if it was her fault.",
+      "ko": "내 조언 듣고 싶어? 사과해, 그게 그녀 잘못이었더라도."
+    },
+    {
+      "start": 8.43,
+      "end": 10.33,
+      "who": "HOWIE",
+      "en": "Flowers, maybe some jewelry if she's really upset.",
+      "ko": "꽃, 정말 화났으면 보석도 좀."
+    },
+    {
+      "start": 10.37,
+      "end": 11.43,
+      "who": "HOWIE",
+      "en": "Always works for your mom.",
+      "ko": "네 엄마한텐 늘 통하거든."
+    },
+    {
+      "start": 11.43,
+      "end": 13.23,
+      "who": "NATE",
+      "en": "★ I don't know. I think it might be for the best.",
+      "ko": "★ 모르겠어요. 차라리 이게 나을지도 몰라요."
+    }
+  ]
+}

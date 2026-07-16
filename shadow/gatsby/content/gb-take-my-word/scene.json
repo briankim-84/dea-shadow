@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-take-my-word",
+  "title": "take my word for it",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "take my word for it",
+  "meaning": "내 말을 그대로 믿다",
+  "video": "take_my_word.mp4",
+  "sentences": [
+    {
+      "start": 2.15,
+      "end": 4.48,
+      "who": "GATSBY",
+      "en": "★ Of course, you don't need to take my word for it, old sport.",
+      "ko": "★ 물론 내 말만 믿을 필요는 없네, 친구."
+    },
+    {
+      "start": 4.76,
+      "end": 11.92,
+      "who": "GATSBY",
+      "en": "At lunch, I'm going to introduce you to one of New York's most distinguished businessmen — a Mr. Meyer Wolfshiem, my good friend.",
+      "ko": "점심에서 뉴욕 최고의 사업가 한 분을 소개해주지 — 내 좋은 친구, 마이어 울프심 씨야."
+    },
+    {
+      "start": 11.98,
+      "end": 14.85,
+      "who": "GATSBY",
+      "en": "He will confirm all I have told you and vouch for my good character.",
+      "ko": "내가 한 말을 전부 확인해주고 내 인품도 보증해줄 걸세."
+    },
+    {
+      "start": 15.24,
+      "end": 16.57,
+      "who": "NICK",
+      "en": "That's not necessary.",
+      "ko": "그럴 필요까진 없어요."
+    },
+    {
+      "start": 16.59,
+      "end": 17.91,
+      "who": "GATSBY",
+      "en": "Oh, but it is, though.",
+      "ko": "아니, 필요하네."
+    }
+  ]
+}

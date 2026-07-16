@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nb-mind-my-asking",
+  "title": "If you don't mind my asking",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "면접·격식",
+  "difficulty": 2,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "If you don't mind my asking",
+  "meaning": "실례가 안 된다면 여쭤보는데",
+  "video": "mind_my_asking.mp4",
+  "sentences": [
+    {
+      "start": 2.01,
+      "end": 3.63,
+      "who": "ANNE",
+      "en": "Oh, that's lovely, dear.",
+      "ko": "어머, 근사하네요."
+    },
+    {
+      "start": 3.76,
+      "end": 4.59,
+      "who": "NOAH",
+      "en": "Thank you.",
+      "ko": "감사합니다."
+    },
+    {
+      "start": 4.61,
+      "end": 7.77,
+      "who": "ANNE",
+      "en": "★ If you don't mind my asking, uh, how much do you make at your job?",
+      "ko": "★ 실례가 안 된다면, 그 일로 얼마나 버나요?"
+    },
+    {
+      "start": 7.79,
+      "end": 13.0,
+      "who": "NOAH",
+      "en": "Uh, how much money do I make? About 40 cents an hour.",
+      "ko": "제가 얼마 버냐고요? 시간당 40센트 정도요."
+    }
+  ]
+}

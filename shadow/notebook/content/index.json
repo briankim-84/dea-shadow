@@ -1,0 +1,148 @@
+{
+  "_readme": "노트북 에디션 인덱스 (difficulty 포함)",
+  "scenes": [
+    {
+      "id": "nb-clear-that-up",
+      "title": "clear that up",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "clear that up",
+      "meaning": "오해를 풀다·확실히 해두다",
+      "count": 5
+    },
+    {
+      "id": "nb-getting-me-wrong",
+      "title": "You're getting me wrong",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "연애·관계",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "You're getting me wrong",
+      "meaning": "날 오해하고 있어",
+      "count": 5
+    },
+    {
+      "id": "nb-figure-it-out",
+      "title": "figure something out",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "연애·관계",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "figure something out",
+      "meaning": "방법을 찾아내다",
+      "count": 5
+    },
+    {
+      "id": "nb-after-you",
+      "title": "After you",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "After you",
+      "meaning": "먼저 가시죠 (양보)",
+      "count": 4
+    },
+    {
+      "id": "nb-wouldnt-do",
+      "title": "Don't do anything I wouldn't do",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "유머·티키타카",
+      "difficulty": 3,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "Don't do anything I wouldn't do",
+      "meaning": "적당히들 놀아 (선 넘지 말고)",
+      "count": 3
+    },
+    {
+      "id": "nb-in-ages",
+      "title": "I haven't ~ in ages",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "I haven't ~ in ages",
+      "meaning": "~한 지 정말 오래됐다",
+      "count": 4
+    },
+    {
+      "id": "nb-planned-out",
+      "title": "My days are all planned out",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "My days are all planned out",
+      "meaning": "하루가 전부 짜여 있다",
+      "count": 5
+    },
+    {
+      "id": "nb-for-fun",
+      "title": "what you do for fun",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "what you do for fun",
+      "meaning": "넌 뭘 하고 노는지",
+      "count": 4
+    },
+    {
+      "id": "nb-let-on",
+      "title": "~ than you let on",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "유머·티키타카",
+      "difficulty": 3,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "~ than you let on",
+      "meaning": "내색한 것보다 ~하다 (let on: 내색하다)",
+      "count": 5
+    },
+    {
+      "id": "nb-got-to-do",
+      "title": "What's that got to do with it?",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "유머·티키타카",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "What's that got to do with it?",
+      "meaning": "그게 무슨 상관이야?",
+      "count": 5
+    },
+    {
+      "id": "nb-mind-my-asking",
+      "title": "If you don't mind my asking",
+      "sub": "THE NOTEBOOK · 2004",
+      "category": "면접·격식",
+      "difficulty": 2,
+      "tags": [
+        "NOTEBOOK"
+      ],
+      "expression": "If you don't mind my asking",
+      "meaning": "실례가 안 된다면 여쭤보는데",
+      "count": 4
+    }
+  ]
+}

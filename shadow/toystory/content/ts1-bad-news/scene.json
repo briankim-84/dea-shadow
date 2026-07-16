@@ -1,0 +1,50 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-bad-news",
+  "title": "I got some bad news",
+  "sub": "TOY STORY · 1995",
+  "category": "일상대화",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "I got some bad news",
+  "meaning": "안 좋은 소식이 있어",
+  "video": "bad_news.mp4",
+  "sentences": [
+    {
+      "start": 1.31,
+      "end": 3.5,
+      "who": "WOODY",
+      "en": "★ Not now, Slink. I got some bad news.",
+      "ko": "★ 지금 말고, 슬링키. 안 좋은 소식이 있어."
+    },
+    {
+      "start": 3.52,
+      "end": 4.37,
+      "who": "SLINKY",
+      "en": "Bad news?",
+      "ko": "안 좋은 소식이요?"
+    },
+    {
+      "start": 6.97,
+      "end": 9.09,
+      "who": "WOODY",
+      "en": "★ Just gather everyone up for a staff meeting, and be happy.",
+      "ko": "★ 일단 다들 모아서 회의 소집해. 그리고 태연한 표정으로."
+    },
+    {
+      "start": 9.11,
+      "end": 9.72,
+      "who": "SLINKY",
+      "en": "Got it.",
+      "ko": "알겠어요."
+    },
+    {
+      "start": 9.74,
+      "end": 10.53,
+      "who": "SLINKY",
+      "en": "Be happy!",
+      "ko": "(짐짓 활짝) 태연하게!"
+    }
+  ]
+}

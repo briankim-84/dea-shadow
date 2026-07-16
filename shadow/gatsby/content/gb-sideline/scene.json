@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-sideline",
+  "title": "a (business on the) side / sideline",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "회의·업무",
+  "difficulty": 3,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "a (business on the) side / sideline",
+  "meaning": "부업·사이드잡",
+  "video": "a_sideline.mp4",
+  "sentences": [
+    {
+      "start": 1.65,
+      "end": 5.07,
+      "who": "GATSBY",
+      "en": "Well, look here, old sport. You don't make much money, do you?",
+      "ko": "저기 말이야, 친구. 자네 돈을 많이 벌진 못하지?"
+    },
+    {
+      "start": 5.36,
+      "end": 6.81,
+      "who": "NICK",
+      "en": "Not really.",
+      "ko": "별로요."
+    },
+    {
+      "start": 6.83,
+      "end": 13.43,
+      "who": "GATSBY",
+      "en": "★ If you'll forgive me... You see, I happen to run a little business on the side. A sort of sideline.",
+      "ko": "★ 이해해 주게... 실은 내가 부업으로 작은 사업을 하나 하고 있거든. 일종의 사이드잡이지."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nb-clear-that-up",
+  "title": "clear that up",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "clear that up",
+  "meaning": "오해를 풀다·확실히 해두다",
+  "video": "clear_that_up.mp4",
+  "sentences": [
+    {
+      "start": 1.29,
+      "end": 2.82,
+      "who": "NOAH",
+      "en": "Do you remember me?",
+      "ko": "나 기억해요?"
+    },
+    {
+      "start": 3.52,
+      "end": 6.82,
+      "who": "ALLIE",
+      "en": "Yeah, sure, Mr. Underwear, was it?",
+      "ko": "그럼요. '팬티 씨'였던가요?"
+    },
+    {
+      "start": 7.2,
+      "end": 8.17,
+      "who": "ALLIE",
+      "en": "How could I forget.",
+      "ko": "어떻게 잊겠어요."
+    },
+    {
+      "start": 8.19,
+      "end": 10.93,
+      "who": "NOAH",
+      "en": "★ Yeah, I wanted to clear that up with you, because I'm really sorry about that.",
+      "ko": "★ 네, 그 오해를 좀 풀고 싶었어요. 정말 미안해서요."
+    },
+    {
+      "start": 10.95,
+      "end": 14.13,
+      "who": "NOAH",
+      "en": "It was a really stupid thing to do... crawl up a Ferris wheel to talk to somebody.",
+      "ko": "말 걸겠다고 관람차에 기어올라간 건 진짜 멍청한 짓이었죠."
+    }
+  ]
+}

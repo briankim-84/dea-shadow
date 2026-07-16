@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-hands-full",
+  "title": "I have my hands full",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "I have my hands full",
+  "meaning": "지금도 벅차요·여력이 없어요",
+  "video": "hands_full.mp4",
+  "sentences": [
+    {
+      "start": 2.11,
+      "end": 5.87,
+      "who": "GATSBY",
+      "en": "You understand what I'm saying, right? You do sell bonds, don't you, old sport?",
+      "ko": "무슨 말인지 알겠지? 자네 채권 파는 일 하잖나, 친구?"
+    },
+    {
+      "start": 5.89,
+      "end": 6.87,
+      "who": "NICK",
+      "en": "I'm trying to.",
+      "ko": "팔아보려고는 하고 있죠."
+    },
+    {
+      "start": 6.89,
+      "end": 12.61,
+      "who": "GATSBY",
+      "en": "Right. Well, happens to be a rather confidential sort of thing, but you might make a nice bit of money.",
+      "ko": "그래. 좀 기밀에 속하는 일이긴 한데, 꽤 짭짤하게 벌 수 있을 거야."
+    },
+    {
+      "start": 12.63,
+      "end": 13.95,
+      "who": "NICK",
+      "en": "★ No, thank you. I have my hands full.",
+      "ko": "★ 고맙지만 사양할게요. 지금도 벅차서요."
+    },
+    {
+      "start": 13.97,
+      "end": 16.92,
+      "who": "GATSBY",
+      "en": "You wouldn't have to do any business with Wolfshiem, I assure you.",
+      "ko": "울프심과 엮일 일은 없을 거야, 장담하네."
+    }
+  ]
+}

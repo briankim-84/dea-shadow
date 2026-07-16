@@ -1,0 +1,43 @@
+{
+  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "id": "itst-bring-it-down",
+  "title": "bring it (on) down to ~",
+  "sub": "INTERSTELLAR · 2014",
+  "category": "유머·티키타카",
+  "tags": [
+    "INTERSTELLAR"
+  ],
+  "expression": "bring it (on) down to ~",
+  "meaning": "~(수준)으로 낮추다",
+  "video": "bring_it_on_down.mp4",
+  "sentences": [
+    {
+      "start": 0.35,
+      "end": 3.93,
+      "who": "TARS",
+      "en": "You can use it to find your way back to the ship after I blow you out the airlock.",
+      "ko": "제가 당신을 에어록 밖으로 날려버린 뒤에, 그 불빛 보고 배 찾아오시면 되겠네요."
+    },
+    {
+      "start": 5.55,
+      "end": 7.39,
+      "who": "COOPER",
+      "en": "What's your humor setting, TARS?",
+      "ko": "TARS, 네 유머 설정 몇이야?"
+    },
+    {
+      "start": 7.29,
+      "end": 8.25,
+      "who": "TARS",
+      "en": "That's 100 percent.",
+      "ko": "100퍼센트입니다."
+    },
+    {
+      "start": 8.57,
+      "end": 10.69,
+      "who": "COOPER",
+      "en": "★ Let's bring it on down to 75, please.",
+      "ko": "★ 75로 낮추자, 부탁할게."
+    }
+  ]
+}

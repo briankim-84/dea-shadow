@@ -1,0 +1,50 @@
+{
+  "_readme": "타임스탬프 whisper 단어 실측 (파이프라인 v6 기본)",
+  "id": "ts1-good-enough",
+  "title": "good enough for me",
+  "sub": "TOY STORY · 1995",
+  "category": "일상대화",
+  "tags": [
+    "TOY STORY"
+  ],
+  "expression": "good enough for me",
+  "meaning": "난 그걸로 충분해·그럼 됐어",
+  "video": "good_enough_for_me.mp4",
+  "sentences": [
+    {
+      "start": 1.45,
+      "end": 3.33,
+      "who": "WOODY",
+      "en": "I'm not worried. You shouldn't be worried.",
+      "ko": "난 걱정 안 해. 너희도 걱정할 거 없어."
+    },
+    {
+      "start": 3.23,
+      "end": 6.59,
+      "who": "MR. POTATO HEAD",
+      "en": "Of course Woody ain't worried. He's been Andy's favourite since kindergarten.",
+      "ko": "당연히 우디야 걱정 없지. 유치원 때부터 앤디 최애였는데."
+    },
+    {
+      "start": 6.99,
+      "end": 9.19,
+      "who": "SLINKY",
+      "en": "Hey, hey. Come on, Potato Head.",
+      "ko": "어허, 왜 그래, 포테이토 헤드."
+    },
+    {
+      "start": 9.37,
+      "end": 12.89,
+      "who": "SLINKY",
+      "en": "★ If Woody says it's all right, then, well, darn it, it's good enough for me.",
+      "ko": "★ 우디가 괜찮다고 하면, 뭐, 젠장, 난 그걸로 충분해."
+    },
+    {
+      "start": 13.03,
+      "end": 15.19,
+      "who": "REX",
+      "en": "★ Woody has never steered us wrong before.",
+      "ko": "★ 우디가 우릴 잘못 이끈 적은 한 번도 없었지."
+    }
+  ]
+}

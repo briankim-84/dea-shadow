@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-make-that-call",
+  "title": "If you'll excuse me, I have to make that call",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "전화·컨콜",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "If you'll excuse me, I have to make that call",
+  "meaning": "실례지만 전화 좀 해야겠어요",
+  "video": "make_that_call.mp4",
+  "sentences": [
+    {
+      "start": 0,
+      "end": 2.87,
+      "who": "WOLFSHIEM",
+      "en": "I understand you're looking for a business connection.",
+      "ko": "사업 커넥션을 찾고 계시다고 들었소."
+    },
+    {
+      "start": 4.04,
+      "end": 9.48,
+      "who": "GATSBY",
+      "en": "No, no, no. This isn't the man, Meyer. This is the friend that I told you about.",
+      "ko": "아니, 아니에요. 이 사람이 아니에요, 마이어. 내가 말했던 그 친구예요."
+    },
+    {
+      "start": 9.5,
+      "end": 12.69,
+      "who": "WOLFSHIEM",
+      "en": "Oh, I beg your pardon. I had a wrong man.",
+      "ko": "오, 이거 실례했소. 사람을 잘못 봤군."
+    },
+    {
+      "start": 15.08,
+      "end": 18.36,
+      "who": "GATSBY",
+      "en": "★ If you'll excuse me, I have to make that call.",
+      "ko": "★ 실례 좀 하겠네. 그 전화를 해야 해서."
+    }
+  ]
+}

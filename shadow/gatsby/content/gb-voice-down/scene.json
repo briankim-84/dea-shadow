@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-voice-down",
+  "title": "Keep your voice down",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "Keep your voice down",
+  "meaning": "목소리 낮춰",
+  "video": "keep_your_voice_down.mp4",
+  "sentences": [
+    {
+      "start": 2.05,
+      "end": 4.16,
+      "who": "NICK",
+      "en": "What game are you and Gatsby playing at?",
+      "ko": "당신이랑 개츠비, 대체 무슨 수작이에요?"
+    },
+    {
+      "start": 6.0,
+      "end": 10.44,
+      "who": "NICK",
+      "en": "It's all rather strange. He picks me up in his fancy car, going on about his life.",
+      "ko": "다 좀 이상해요. 고급 차로 날 데리러 오질 않나, 자기 인생 얘길 늘어놓질 않나."
+    },
+    {
+      "start": 10.92,
+      "end": 11.88,
+      "who": "JORDAN",
+      "en": "★ Keep your voice down. People can hear you.",
+      "ko": "★ 목소리 낮춰요. 사람들 다 들어요."
+    },
+    {
+      "start": 11.9,
+      "end": 13.41,
+      "who": "NICK",
+      "en": "What is this enormous request?",
+      "ko": "그 엄청난 부탁이란 게 뭐예요?"
+    },
+    {
+      "start": 13.43,
+      "end": 16.05,
+      "who": "JORDAN",
+      "en": "He wants you to invite Daisy to tea.",
+      "ko": "당신이 데이지를 티타임에 초대해줬으면 한대요."
+    }
+  ]
+}

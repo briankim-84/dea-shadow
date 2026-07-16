@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nb-let-on",
+  "title": "~ than you let on",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "유머·티키타카",
+  "difficulty": 3,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "~ than you let on",
+  "meaning": "내색한 것보다 ~하다 (let on: 내색하다)",
+  "video": "than_you_let_on.mp4",
+  "sentences": [
+    {
+      "start": 1.73,
+      "end": 4.51,
+      "who": "FRANK",
+      "en": "You can call me Frank. Here, come in and have a seat.",
+      "ko": "프랭크라고 부르렴. 자, 들어와서 앉아요."
+    },
+    {
+      "start": 7.36,
+      "end": 9.36,
+      "who": "FRANK",
+      "en": "So, Allie. Well, yeah, she is pretty, son.",
+      "ko": "그래, 앨리라... 야, 정말 예쁘구나, 아들."
+    },
+    {
+      "start": 9.56,
+      "end": 11.75,
+      "who": "FRANK",
+      "en": "★ She's a lot prettier than you let on.",
+      "ko": "★ 네가 내색한 것보다 훨씬 예쁜데."
+    },
+    {
+      "start": 11.77,
+      "end": 13.54,
+      "who": "ALLIE",
+      "en": "Oh, is that right?",
+      "ko": "어머, 그래요?"
+    },
+    {
+      "start": 13.56,
+      "end": 15.37,
+      "who": "NOAH",
+      "en": "No, it's not right. Don't believe what he says.",
+      "ko": "아니에요. 아버지 말은 믿지 마요."
+    }
+  ]
+}

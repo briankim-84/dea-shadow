@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "gb-makes-sense",
+  "title": "It all makes sense",
+  "sub": "THE GREAT GATSBY · 2013",
+  "category": "감정·리액션",
+  "difficulty": 2,
+  "tags": [
+    "GATSBY"
+  ],
+  "expression": "It all makes sense",
+  "meaning": "이제 전부 이해가 돼",
+  "video": "it_all_makes_sense.mp4",
+  "sentences": [
+    {
+      "start": 0,
+      "end": 4.5,
+      "who": "JORDAN",
+      "en": "Nick! I've just heard the most shocking thing.",
+      "ko": "닉! 방금 진짜 충격적인 얘길 들었어요."
+    },
+    {
+      "start": 4.52,
+      "end": 6.81,
+      "who": "NICK",
+      "en": "Where have you been? The car's waiting.",
+      "ko": "어디 있었어요? 차가 기다려요."
+    },
+    {
+      "start": 7.46,
+      "end": 12.19,
+      "who": "JORDAN",
+      "en": "★ Simply amazing. It all makes sense. It all makes sense.",
+      "ko": "★ 정말 놀라워요. 이제 전부 이해가 돼요. 전부요."
+    },
+    {
+      "start": 13.88,
+      "end": 15.62,
+      "who": "NICK",
+      "en": "What makes sense?",
+      "ko": "뭐가 이해가 된다는 거예요?"
+    },
+    {
+      "start": 15.64,
+      "end": 16.51,
+      "who": "JORDAN",
+      "en": "Everything!",
+      "ko": "전부 다요!"
+    }
+  ]
+}

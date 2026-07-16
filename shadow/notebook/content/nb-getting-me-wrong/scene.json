@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 수동 확정 (겹침·소음 라인 실측)",
+  "id": "nb-getting-me-wrong",
+  "title": "You're getting me wrong",
+  "sub": "THE NOTEBOOK · 2004",
+  "category": "연애·관계",
+  "difficulty": 2,
+  "tags": [
+    "NOTEBOOK"
+  ],
+  "expression": "You're getting me wrong",
+  "meaning": "날 오해하고 있어",
+  "video": "getting_me_wrong.mp4",
+  "sentences": [
+    {
+      "start": 1.41,
+      "end": 3.77,
+      "who": "ALLIE",
+      "en": "Oh, you're good.",
+      "ko": "오, 선수네요."
+    },
+    {
+      "start": 5.08,
+      "end": 7.45,
+      "who": "NOAH",
+      "en": "★ No. No, you're getting me wrong.",
+      "ko": "★ 아니, 아니에요. 오해하시는 거예요."
+    },
+    {
+      "start": 7.47,
+      "end": 10.6,
+      "who": "ALLIE",
+      "en": "You're good. You are. You're fantastic. I'm impressed.",
+      "ko": "선수 맞다니까요. 정말이에요. 대단해요. 감탄했어요."
+    },
+    {
+      "start": 10.88,
+      "end": 12.39,
+      "who": "NOAH",
+      "en": "★ I'm not usually like this, I'm sorry.",
+      "ko": "★ 저 원래 이런 사람 아니에요, 미안해요."
+    },
+    {
+      "start": 12.41,
+      "end": 13.53,
+      "who": "ALLIE",
+      "en": "Oh, yes, you are.",
+      "ko": "아뇨, 딱 이런 사람인데요."
+    }
+  ]
+}

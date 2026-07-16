@@ -1,0 +1,187 @@
+{
+  "_readme": "갯츠비 에디션 인덱스 (difficulty 포함)",
+  "scenes": [
+    {
+      "id": "gb-good-host",
+      "title": "I'm afraid I haven't been ~",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "면접·격식",
+      "difficulty": 3,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "I'm afraid I haven't been ~",
+      "meaning": "유감이지만 ~하지 못했네요 (완곡)",
+      "count": 3
+    },
+    {
+      "id": "gb-thought-you-knew",
+      "title": "I thought you knew",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "I thought you knew",
+      "meaning": "아는 줄 알았어",
+      "count": 6
+    },
+    {
+      "id": "gb-suits-you",
+      "title": "The time that suits you",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "The time that suits you",
+      "meaning": "당신 편한 시간에",
+      "count": 4
+    },
+    {
+      "id": "gb-just-ask",
+      "title": "just ask for it",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "just ask for it",
+      "meaning": "말만 하게 (뭐든 해줄 테니)",
+      "count": 3
+    },
+    {
+      "id": "gb-beg-pardon",
+      "title": "I beg your pardon",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "면접·격식",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "I beg your pardon",
+      "meaning": "실례합니다 (격식)",
+      "count": 5
+    },
+    {
+      "id": "gb-makes-sense",
+      "title": "It all makes sense",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "감정·리액션",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "It all makes sense",
+      "meaning": "이제 전부 이해가 돼",
+      "count": 5
+    },
+    {
+      "id": "gb-wrong-impression",
+      "title": "get the wrong impression",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "get the wrong impression",
+      "meaning": "오해하다·잘못된 인상을 받다",
+      "count": 5
+    },
+    {
+      "id": "gb-take-my-word",
+      "title": "take my word for it",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "take my word for it",
+      "meaning": "내 말을 그대로 믿다",
+      "count": 5
+    },
+    {
+      "id": "gb-make-that-call",
+      "title": "If you'll excuse me, I have to make that call",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "전화·컨콜",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "If you'll excuse me, I have to make that call",
+      "meaning": "실례지만 전화 좀 해야겠어요",
+      "count": 4
+    },
+    {
+      "id": "gb-voice-down",
+      "title": "Keep your voice down",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "Keep your voice down",
+      "meaning": "목소리 낮춰",
+      "count": 5
+    },
+    {
+      "id": "gb-where-to-start",
+      "title": "I don't quite know where to start",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "I don't quite know where to start",
+      "meaning": "어디서부터 말해야 할지",
+      "count": 5
+    },
+    {
+      "id": "gb-what-day",
+      "title": "What day would suit you?",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "What day would suit you?",
+      "meaning": "무슨 요일이 좋으세요?",
+      "count": 5
+    },
+    {
+      "id": "gb-sideline",
+      "title": "a (business on the) side / sideline",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "회의·업무",
+      "difficulty": 3,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "a (business on the) side / sideline",
+      "meaning": "부업·사이드잡",
+      "count": 3
+    },
+    {
+      "id": "gb-hands-full",
+      "title": "I have my hands full",
+      "sub": "THE GREAT GATSBY · 2013",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "GATSBY"
+      ],
+      "expression": "I have my hands full",
+      "meaning": "지금도 벅차요·여력이 없어요",
+      "count": 5
+    }
+  ]
+}
