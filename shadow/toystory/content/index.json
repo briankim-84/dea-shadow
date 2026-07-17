@@ -12,7 +12,7 @@
       "expression": "I got some bad news",
       "meaning": "안 좋은 소식이 있어",
       "count": 5,
-      "difficulty": 2
+      "difficulty": 1
     },
     {
       "id": "ts1-hear-me",
@@ -25,7 +25,7 @@
       "expression": "Everybody hear me?",
       "meaning": "다들 들려요? (회의 시작 멘트)",
       "count": 4,
-      "difficulty": 2
+      "difficulty": 1
     },
     {
       "id": "ts1-marbles",
@@ -38,7 +38,7 @@
       "expression": "losing her marbles",
       "meaning": "정신이 나가다·제정신이 아니다",
       "count": 3,
-      "difficulty": 2
+      "difficulty": 3
     },
     {
       "id": "ts1-good-enough",

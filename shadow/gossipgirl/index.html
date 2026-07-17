@@ -532,9 +532,12 @@ function toggleLoop(){ looping=!looping; $("loopBtn").classList.toggle('on',loop
 /* ---- 내 녹음 (blob URL 재생 — iOS 안정) ---- */
 let sharedMic=null,recorder=null,recording=false;
 function micAlive(m){try{return !!m&&m.getAudioTracks().some(t=>t.readyState==='live');}catch(e){return false;}}
-async function getMic(){ if(micAlive(sharedMic))return sharedMic;
+async function getMic(){
+  /* iOS: 캐시된 스트림은 영상 재생 후 무음으로 죽음 → 매번 새로 획득 */
+  releaseMic();
   try{ sharedMic=await navigator.mediaDevices.getUserMedia({audio:true}); return sharedMic; }
   catch(e){ alert("마이크 권한을 허용해주세요."); return null; } }
+function releaseMic(){ try{ if(sharedMic){ sharedMic.getTracks().forEach(t=>t.stop()); sharedMic=null; } }catch(e){} }
 function pickMime(){ const c=['audio/mp4','audio/mp4;codecs=mp4a.40.2','audio/aac','audio/webm;codecs=opus','audio/webm'];
   if(window.MediaRecorder&&MediaRecorder.isTypeSupported){for(const t of c){if(MediaRecorder.isTypeSupported(t))return t;}} return ''; }
 function recKey(){ return `rec|${SCENE.id}|${fi}`; }
@@ -552,9 +555,9 @@ async function toggleRec(){
   recording=true;
   const keyAt=recKey();
   recorder.ondataavailable=e=>{if(e.data&&e.data.size>0)chunks.push(e.data);};
-  recorder.onerror=()=>{ recording=false; btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음 오류 — 다시 시도해 주세요'; };
+  recorder.onerror=()=>{ recording=false; releaseMic(); btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음 오류 — 다시 시도해 주세요'; };
   recorder.onstop=()=>{
-    recording=false;
+    recording=false; releaseMic();
     const blob=new Blob(chunks,{type:(recorder&&recorder.mimeType)||mt||'audio/mp4'});
     /* iOS에서 간혹 빈 blob → 안내 후 중단 */
     if(!blob||blob.size<200){ btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음이 너무 짧아요 — 다시 눌러 말해보세요'; return; }
