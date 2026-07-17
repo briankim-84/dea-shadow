@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>June's Studio — Pilates in English</title>
+<style>
+  :root{
+    --navy:#0E2A2C; --navy2:#0A1828; --card:#173834; --gold:#43C9B0; --gold2:#2A9D88;
+    --ink:#F4F7FC; --sub:#9DB0CC; --good:#3FD08A; --bad:#FF6B6B; --line:rgba(67,201,176,.25);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    background:#08201E; color:var(--ink); display:flex; justify-content:center; overscroll-behavior:none;
+  }
+  #app{width:100%;max-width:440px;min-height:100vh;background:
+    radial-gradient(120% 60% at 50% 0%, #13443E 0%, #0C2A27 45%, #08201E 100%);
+    display:flex;flex-direction:column;position:relative;overflow:hidden;}
+
+  /* HUD */
+  .hud{padding:14px 16px 10px;}
+  .hudtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+  .brand{font-size:12px;letter-spacing:2px;color:var(--gold);font-weight:800;}
+  .brand small{display:block;font-size:9px;letter-spacing:1px;color:var(--sub);font-weight:600;margin-top:2px;}
+  .scores{display:flex;gap:14px;align-items:center;}
+  .score{text-align:right;}
+  .score .n{font-size:22px;font-weight:900;color:var(--ink);line-height:1;}
+  .score .l{font-size:9px;letter-spacing:1px;color:var(--sub);}
+  .combo{min-width:54px;text-align:center;padding:5px 8px;border-radius:10px;
+    background:rgba(67,201,176,.10);border:1px solid var(--line);transition:.15s;}
+  .combo .n{font-size:18px;font-weight:900;color:var(--gold);line-height:1;}
+  .combo .l{font-size:8px;letter-spacing:1px;color:var(--sub);}
+  .combo.pulse{transform:scale(1.18);background:rgba(67,201,176,.28);box-shadow:0 0 18px rgba(67,201,176,.5);}
+
+  .stagebar{margin-top:4px;}
+  .stagebar .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+  .stagebar .name{font-size:13px;font-weight:800;}
+  .stagebar .name b{color:var(--gold);}
+  .stagebar .pct{font-size:11px;color:var(--sub);}
+  .gauge{height:11px;border-radius:8px;background:rgba(255,255,255,.07);overflow:hidden;border:1px solid rgba(255,255,255,.06);}
+  .gfill{height:100%;width:0%;border-radius:8px;background:linear-gradient(90deg,var(--gold2),var(--gold));
+    box-shadow:0 0 12px rgba(67,201,176,.6);transition:width .5s cubic-bezier(.2,.8,.2,1);}
+  .dots{display:flex;gap:5px;margin-top:8px;justify-content:center;}
+  .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.16);}
+  .dot.done{background:var(--gold);box-shadow:0 0 8px var(--gold);}
+  .dot.s1.done{background:#FF8A5B;box-shadow:0 0 8px #FF8A5B;}
+  .dot.s2.done{background:#7CC6FF;box-shadow:0 0 8px #7CC6FF;}
+  .dot.s3.done{background:#9BF0B0;box-shadow:0 0 8px #9BF0B0;}
+
+  /* SCENE */
+  .scene{flex:1;padding:8px 16px 0;display:flex;flex-direction:column;overflow-y:auto;}
+  .situ{font-size:11px;letter-spacing:1px;color:var(--gold);font-weight:700;text-transform:uppercase;margin:6px 2px 10px;}
+  .bubble{max-width:88%;padding:13px 15px;border-radius:16px;font-size:15px;line-height:1.5;margin-bottom:12px;animation:pop .25s ease;}
+  .npc{align-self:flex-start;background:#1B4540;border:1px solid rgba(255,255,255,.08);border-bottom-left-radius:5px;}
+  .npc .who{font-size:11px;color:#7CC6FF;font-weight:800;margin-bottom:3px;letter-spacing:.5px;}
+  .frank{align-self:flex-end;background:linear-gradient(135deg,#2a9d88,#43c9b0);color:#1a1206;border-bottom-right-radius:5px;font-weight:600;}
+  .frank .who{font-size:11px;color:#5a4410;font-weight:800;margin-bottom:3px;}
+  @keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98);}to{opacity:1;transform:none;}}
+
+  .ko{align-self:flex-start;font-size:12px;color:var(--sub);margin:-6px 4px 12px;}
+
+  /* CHOICES */
+  .ask{font-size:13px;color:var(--sub);margin:2px 2px 9px;}
+  .choices{display:flex;flex-direction:column;gap:9px;padding-bottom:16px;}
+  .choice{display:flex;align-items:center;gap:10px;padding:14px 15px;border-radius:13px;
+    background:#133431;border:1px solid rgba(255,255,255,.09);color:var(--ink);
+    font-size:15px;font-weight:600;text-align:left;cursor:pointer;transition:.12s;}
+  .choice:active{transform:scale(.98);}
+  .choice .en{font-weight:800;}
+  .choice.correct{background:rgba(63,208,138,.16);border-color:var(--good);box-shadow:0 0 14px rgba(63,208,138,.3);}
+  .choice.wrong{background:rgba(255,107,107,.14);border-color:var(--bad);animation:shake .35s;}
+  .choice.dim{opacity:.4;}
+  @keyframes shake{0%,100%{transform:translateX(0);}20%{transform:translateX(-7px);}40%{transform:translateX(7px);}60%{transform:translateX(-5px);}80%{transform:translateX(5px);}}
+
+  .note{font-size:13px;line-height:1.5;padding:11px 14px;border-radius:12px;margin:2px 0 14px;animation:pop .25s;}
+  .note.ok{background:rgba(63,208,138,.12);border:1px solid rgba(63,208,138,.4);color:#cdebda;}
+  .note.no{background:rgba(255,107,107,.10);border:1px solid rgba(255,107,107,.35);color:#f2cccc;}
+  .note b{color:var(--gold);}
+
+  .next{margin:0 16px 18px;padding:15px;border-radius:13px;border:none;cursor:pointer;
+    background:linear-gradient(135deg,#2a9d88,#43c9b0);color:#1a1206;font-size:16px;font-weight:900;letter-spacing:.5px;}
+  .next:active{transform:scale(.98);}
+
+  /* FLOAT score */
+  .float{position:absolute;font-size:22px;font-weight:900;color:var(--gold);pointer-events:none;
+    animation:rise 1s ease forwards;text-shadow:0 0 10px rgba(67,201,176,.7);}
+  @keyframes rise{0%{opacity:0;transform:translateY(6px) scale(.8);}25%{opacity:1;}100%{opacity:0;transform:translateY(-40px) scale(1.1);}}
+
+  /* INTERSTITIAL / SCREENS */
+  .screen{position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 30%,#154A43,#0A2421 70%,#08201E);
+    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:26px;z-index:5;animation:fade .35s;overflow-y:auto;}
+  @keyframes fade{from{opacity:0;}to{opacity:1;}}
+  .screen .kick{font-size:13px;letter-spacing:3px;color:var(--gold);font-weight:800;margin-bottom:8px;}
+  .screen h1{font-size:34px;font-weight:900;margin-bottom:14px;line-height:1.1;}
+  .screen p{font-size:15px;color:var(--sub);line-height:1.6;max-width:320px;margin-bottom:10px;}
+  .screen .emoji{font-size:60px;margin-bottom:14px;}
+  .screen .btn{margin-top:22px;padding:15px 40px;border-radius:14px;border:none;cursor:pointer;
+    background:linear-gradient(135deg,#2a9d88,#43c9b0);color:#1a1206;font-size:17px;font-weight:900;letter-spacing:.5px;}
+  .screen .btn:active{transform:scale(.97);}
+  .screen .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--gold);margin-top:12px;font-weight:700;}
+  .statgrid{display:flex;gap:22px;margin:14px 0 4px;}
+  .stat .v{font-size:30px;font-weight:900;color:var(--gold);}
+  .stat .k{font-size:11px;letter-spacing:1px;color:var(--sub);}
+  .rank{font-size:46px;font-weight:900;background:linear-gradient(135deg,#43c9b0,#fff2c8,#2a9d88);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin:6px 0 4px;}
+  .hidden{display:none !important;}
+  .exprtag{display:inline-block;font-size:11px;padding:3px 9px;border-radius:20px;background:rgba(67,201,176,.14);
+    border:1px solid var(--line);color:var(--gold);margin:3px;font-weight:700;}
+
+  /* ===== CHARACTER ===== */
+  #dock{height:118px;display:flex;align-items:flex-end;justify-content:center;flex:0 0 auto;
+    pointer-events:none;border-top:1px solid rgba(255,255,255,.05);
+    background:linear-gradient(180deg,transparent,rgba(67,201,176,.05));}
+  .hero-wrap{display:block;}
+  #dock .hero-wrap{width:116px;height:134px;}
+  .screen .hero-wrap{width:150px;height:172px;margin-bottom:6px;}
+  .heroSvg{width:100%;height:100%;display:block;overflow:visible;}
+  .heroSvg .legL{transform-origin:100px 168px;} .heroSvg .legR{transform-origin:116px 168px;}
+  .heroSvg .armB{transform-origin:80px 112px;transform:rotate(10deg);}
+  .heroSvg .armF{transform-origin:140px 112px;transform:rotate(-10deg);}
+  .heroSvg .head{transform-origin:110px 64px;} .heroSvg .charBody{transform-origin:110px 205px;}
+  .heroSvg .ponytail{transform-origin:138px 40px;}
+  .heroSvg .confetti{display:none;}
+  .heroSvg .fUp,.heroSvg .fTalk,.heroSvg .fBig{display:none;} .heroSvg .fSmile{display:block;}
+
+  .ph-idle .charBody{animation:hbob 2.8s ease-in-out infinite;}
+  .ph-idle .ponytail{animation:hpony 2.8s ease-in-out infinite;}
+  @keyframes hbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  @keyframes hpony{0%,100%{transform:rotate(0)}50%{transform:rotate(5deg)}}
+
+  /* WELCOME (S1) */
+  .ph-welcome .fSmile{display:none;} .ph-welcome .fUp{display:block;}
+  .ph-welcome .armB{transform:rotate(-36deg);} .ph-welcome .armF{transform:rotate(36deg);}
+  .ph-welcome .ponytail{transform:rotate(-6deg);}
+  .ph-welcome .charBody{animation:hbob 2.8s ease-in-out infinite;}
+
+  /* DEMO (S2) reach/stretch */
+  .ph-demo .fSmile{display:none;} .ph-demo .fUp{display:block;}
+  .ph-demo .armF{transform:rotate(-150deg);} .ph-demo .armB{transform:rotate(18deg);}
+  .ph-demo .charBody{animation:hstretch 2.4s ease-in-out infinite;}
+  @keyframes hstretch{0%,100%{transform:rotate(-7deg) translateY(0)}50%{transform:rotate(-7deg) translateY(-5px)}}
+  .ph-demo .ponytail{animation:hpony 2.4s ease-in-out infinite;}
+
+  /* COACH (S3) guiding */
+  .ph-coach .fSmile{display:none;} .ph-coach .fTalk{display:block;}
+  .ph-coach .armF{transform:rotate(-80deg);animation:hpoint 1.8s ease-in-out infinite;}
+  @keyframes hpoint{0%,100%{transform:rotate(-80deg)}50%{transform:rotate(-70deg)}}
+  .ph-coach .armB{transform:rotate(44deg);}
+  .ph-coach .charBody{animation:hbob 2.8s ease-in-out infinite;}
+
+  /* CHEER */
+  .ph-cheer .fSmile{display:none;} .ph-cheer .fBig{display:block;}
+  .ph-cheer .armB{transform:rotate(150deg);} .ph-cheer .armF{transform:rotate(-150deg);}
+  .ph-cheer .ponytail{animation:hpony2 .5s ease-in-out infinite;}
+  @keyframes hpony2{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(10deg)}}
+  .ph-cheer .charBody{animation:hjump .6s ease-in-out infinite;}
+  @keyframes hjump{0%,100%{transform:translateY(0)}30%{transform:translateY(-14px)}60%{transform:translateY(0)}}
+  .ph-cheer .confetti{display:block;}
+  .ph-cheer .cfp{animation:hfall 1.4s linear infinite;}
+  @keyframes hfall{0%{transform:translateY(-16px);opacity:0}10%{opacity:1}100%{transform:translateY(220px) rotate(300deg);opacity:0}}
+</style>
+</head>
+<body>
+<div id="app">
+  <svg width="0" height="0" style="position:absolute"><defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%"><stop offset="0%" stop-color="#FFE0BE"/><stop offset="70%" stop-color="#F8CDA0"/><stop offset="100%" stop-color="#EAB984"/></radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5A4636"/><stop offset="45%" stop-color="#3E2F24"/><stop offset="100%" stop-color="#2C2018"/></linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#43C9B0"/><stop offset="100%" stop-color="#2A9D88"/></linearGradient>
+    <linearGradient id="legs" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#37424F"/><stop offset="100%" stop-color="#262E39"/></linearGradient>
+    <linearGradient id="tie" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5FD8C0"/><stop offset="100%" stop-color="#2A9D88"/></linearGradient>
+    <radialGradient id="iris" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#6E4A33"/><stop offset="100%" stop-color="#2A1A12"/></radialGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#DDE5F0"/></linearGradient>
+    <radialGradient id="blush" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F39A8E" stop-opacity=".75"/><stop offset="100%" stop-color="#F39A8E" stop-opacity="0"/></radialGradient>
+    <linearGradient id="skinArm" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F8CDA0"/><stop offset="100%" stop-color="#E7B585"/></linearGradient>
+  </defs></svg>
+  <!-- START SCREEN -->
+  <div id="start" class="screen">
+    <div class="emoji">🧘</div>
+    <div class="kick">PILATES STUDIO · IN ENGLISH</div>
+    <h1>June's First Class</h1>
+    <p>You're <b style="color:#43c9b0">June</b>, a Pilates instructor teaching your first session <b style="color:#43c9b0">fully in English</b> to a foreign beginner, Emma.</p>
+    <p>Three phases — welcome &amp; setup, movement, and cooldown. Pick the right cue at each moment to keep Emma calm, safe, and flowing. Keep your combo alive!</p>
+    <div style="margin:14px 0;">
+      <span class="exprtag">Welcome &amp; Setup</span>
+      <span class="exprtag">Movement</span>
+      <span class="exprtag">Care &amp; Cooldown</span>
+    </div>
+    <button class="btn" onclick="startGame()">▶  START SESSION</button>
+  </div>
+
+  <!-- STAGE INTRO / CLEAR -->
+  <div id="inter" class="screen hidden">
+    <div id="iHero"></div>
+    <div class="kick" id="iKick">STAGE 1</div>
+    <h1 id="iTitle">Damage Control</h1>
+    <p id="iDesc"></p>
+    <div id="iExpr" style="margin:8px 0;"></div>
+    <button class="btn" id="iBtn" onclick="interNext()">▶  GO</button>
+  </div>
+
+  <!-- END SCREEN -->
+  <div id="end" class="screen hidden">
+    <div id="eHero"></div>
+    <div class="kick">MISSION COMPLETE</div>
+    <div class="rank" id="eRank">CLOSER</div>
+    <p id="eMsg"></p>
+    <div class="statgrid">
+      <div class="stat"><div class="v" id="eScore">0</div><div class="k">SCORE</div></div>
+      <div class="stat"><div class="v" id="eCombo">0</div><div class="k">BEST COMBO</div></div>
+      <div class="stat"><div class="v" id="eAcc">0%</div><div class="k">ACCURACY</div></div>
+    </div>
+    <p style="font-size:13px;margin-top:6px;">오늘 필라테스 큐잉 표현을 실제 세션에서 모두 써봤어요.</p>
+    <button class="btn" onclick="resetGame()">↻  PLAY AGAIN</button>
+    <button class="btn ghost" onclick="showExpr()">큐잉 표현 다시 보기</button>
+    <div id="exprList" class="hidden" style="margin-top:14px;"></div>
+  </div>
+
+  <!-- GAME HUD -->
+  <div id="game" class="hidden">
+    <div class="hud">
+      <div class="hudtop">
+        <div class="brand">JUNE'S STUDIO<small>PILATES · IN ENGLISH</small></div>
+        <div class="scores">
+          <button id="muteBtn" onclick="toggleMute()" style="background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--gold);width:34px;height:34px;border-radius:9px;font-size:15px;cursor:pointer;">🔊</button>
+          <div class="combo" id="comboBox"><div class="n" id="comboN">×1</div><div class="l">COMBO</div></div>
+          <div class="score"><div class="n" id="scoreN">0</div><div class="l">SCORE</div></div>
+        </div>
+      </div>
+      <div class="stagebar">
+        <div class="row"><div class="name" id="stName">STAGE 1 · <b>신뢰 회복</b></div><div class="pct" id="stPct">0%</div></div>
+        <div class="gauge"><div class="gfill" id="gFill"></div></div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+    <div class="scene" id="scene"></div>
+    <div id="dock"></div>
+    <button class="next hidden" id="nextBtn" onclick="advance()">CONTINUE  ▶</button>
+  </div>
+</div>
+
+<script>
+const STAGES = [
+ {
+   key:"s1", emoji:"🧘", kick:"STAGE 1", title:"Welcome & Setup",
+   gaugeName:"몸풀기 세팅", color:"#43C9B0",
+   desc:"Emma is a foreign beginner trying Pilates for the first time. Welcome her and set up her body on the mat — posture, core, and breathing.",
+   exprs:["lie flat on your back","engage your core","keep your spine neutral","breathe into your ribcage","keep your shoulders relaxed"],
+   intro:{who:"Emma · first-timer", text:"Hi! This is my very first Pilates class — I'm a little nervous!"},
+   beats:[
+     { situ:"Setup · 매트에 눕히기",
+       prompt:"Let's get her started on the mat. What do you cue?",
+       options:[{en:"Lie flat on your back",ko:"등을 대고 누우세요"},{en:"Stand tall",ko:"똑바로 서세요"},{en:"Take a moment to rest",ko:"잠깐 쉬어가요"}],
+       answer:0,
+       frank:"No worries, Emma — let's start easy. Lie flat on your back for me.",
+       ok:"Perfect start. <b>lie flat on your back</b> (등을 대고 누우세요) gets her into the base position calmly.",
+       no:"She needs to get onto the mat first: <b>lie flat on your back</b> (등을 대고 누우세요)." },
+     { situ:"Setup · 코어 활성화",
+       prompt:"Before any movement, cue her center.",
+       options:[{en:"Engage your core",ko:"코어에 힘을 주세요"},{en:"Roll your shoulders back",ko:"어깨를 뒤로 돌려주세요"},{en:"Well done today",ko:"오늘 수고했어요"}],
+       answer:0,
+       frank:"Good. Now gently engage your core — draw everything in.",
+       ok:"Yes. <b>engage your core</b> (코어에 힘을 주세요) is the foundation of every Pilates move.",
+       no:"You want her center switched on: <b>engage your core</b> (코어에 힘을 주세요)." },
+     { situ:"Setup · 척추 정렬",
+       prompt:"Her lower back is arching off the mat.",
+       npc:{who:"Emma · first-timer", text:"Is my back supposed to touch the floor?"},
+       options:[{en:"Reach through your fingertips",ko:"손끝까지 뻗어주세요"},{en:"Keep your spine neutral",ko:"척추를 중립으로 유지하세요"},{en:"Take a deep breath in",ko:"깊게 숨을 들이쉬세요"}],
+       answer:1,
+       frank:"Not too flat, not too arched — keep your spine neutral.",
+       ok:"Nice. <b>keep your spine neutral</b> (척추를 중립으로 유지하세요) protects her lower back.",
+       no:"You're correcting her spine alignment: <b>keep your spine neutral</b> (척추를 중립으로 유지하세요)." },
+     { situ:"Setup · 호흡 셋업",
+       prompt:"Set up her breathing pattern.",
+       options:[{en:"Don't push through pain",ko:"아프면 무리하지 마세요"},{en:"Feet hip-width apart",ko:"발을 골반 너비로"},{en:"Breathe into your ribcage",ko:"갈비뼈로 숨을 들이쉬세요"}],
+       answer:2,
+       frank:"Let's breathe — breathe into your ribcage, feel it expand sideways.",
+       ok:"Great cue. <b>breathe into your ribcage</b> (갈비뼈로 숨을 들이쉬세요) is the Pilates breath.",
+       no:"You're teaching lateral breathing: <b>breathe into your ribcage</b> (갈비뼈로 숨을 들이쉬세요)." },
+     { situ:"Setup · 긴장 풀기",
+       prompt:"She's holding tension up top.",
+       npc:{who:"Emma · first-timer", text:"I feel a bit of tension in my shoulders..."},
+       options:[{en:"Keep your shoulders relaxed",ko:"어깨에 힘을 빼세요"},{en:"Soften your knees",ko:"무릎을 살짝 구부려주세요"},{en:"Hold that position",ko:"그 자세를 유지해주세요"}],
+       answer:0,
+       frank:"Let those go — keep your shoulders relaxed, away from your ears.",
+       ok:"Caring cue. <b>keep your shoulders relaxed</b> (어깨에 힘을 빼세요) eases her tension.",
+       no:"She mentioned shoulder tension: <b>keep your shoulders relaxed</b> (어깨에 힘을 빼세요)." },
+   ]
+ },
+ {
+   key:"s2", emoji:"💪", kick:"STAGE 2", title:"Movement & Cueing",
+   gaugeName:"동작 흐름", color:"#5FD8C0",
+   desc:"Emma is warmed up. Bring her to standing and guide her through the flow with clear movement and breathing cues.",
+   exprs:["stand tall","feet hip-width apart","bend your knees slightly","take a deep breath in","hold that position"],
+   intro:{who:"You", text:"Time to move to standing work. Guide her up and into the flow."},
+   beats:[
+     { situ:"Flow · 일어서기",
+       prompt:"Bring her up to standing posture.",
+       options:[{en:"Stand tall",ko:"똑바로 서세요"},{en:"Lie flat on your back",ko:"등을 대고 누우세요"},{en:"Release and relax",ko:"힘을 풀고 릴렉스하세요"}],
+       answer:0,
+       frank:"Let's come up — stand tall, lengthen through the crown of your head.",
+       ok:"Yes. <b>stand tall</b> (똑바로 서세요) sets a strong standing posture.",
+       no:"You're cueing standing posture: <b>stand tall</b> (똑바로 서세요)." },
+     { situ:"Flow · 발 위치",
+       prompt:"Set her stance.",
+       options:[{en:"Tuck your chin in",ko:"턱을 살짝 당겨주세요"},{en:"Feet hip-width apart",ko:"발을 골반 너비로 벌려주세요"},{en:"Hold this stretch for a few breaths",ko:"몇 번 호흡하면서 유지"}],
+       answer:1,
+       frank:"Set your base — feet hip-width apart, weight even.",
+       ok:"Good. <b>feet hip-width apart</b> (발을 골반 너비로 벌려주세요) gives her a stable base.",
+       no:"You're setting her stance: <b>feet hip-width apart</b> (발을 골반 너비로 벌려주세요)." },
+     { situ:"Flow · 무릎 준비",
+       prompt:"Soften her knees before the movement.",
+       options:[{en:"Bend your knees slightly",ko:"무릎을 살짝 구부려주세요"},{en:"Reach through your fingertips",ko:"손끝까지 뻗어주세요"},{en:"Breathe into your ribcage",ko:"갈비뼈로 숨을 들이쉬세요"}],
+       answer:0,
+       frank:"Soft knees — bend your knees slightly, don't lock them.",
+       ok:"Nice. <b>bend your knees slightly</b> (무릎을 살짝 구부려주세요) keeps joints safe.",
+       no:"You're softening her knees: <b>bend your knees slightly</b> (무릎을 살짝 구부려주세요)." },
+     { situ:"Flow · 호흡 타이밍",
+       prompt:"Cue the inhale as she prepares.",
+       options:[{en:"Take a deep breath in",ko:"깊게 숨을 들이쉬세요"},{en:"Roll down one vertebra at a time",ko:"척추뼈 하나씩 내려오세요"},{en:"Engage your core",ko:"코어에 힘을 주세요"}],
+       answer:0,
+       frank:"And take a deep breath in... prepare the movement.",
+       ok:"Good timing. <b>take a deep breath in</b> (깊게 숨을 들이쉬세요) preps the move.",
+       no:"You're cueing the inhale: <b>take a deep breath in</b> (깊게 숨을 들이쉬세요)." },
+     { situ:"Flow · 자세 유지",
+       prompt:"She reaches the position — get her to hold.",
+       npc:{who:"Emma · first-timer", text:"Like this? How long do I stay here?"},
+       options:[{en:"Hold that position",ko:"그 자세를 유지해주세요"},{en:"Feet hip-width apart",ko:"발을 골반 너비로"},{en:"Well done today",ko:"오늘 수고했어요"}],
+       answer:0,
+       frank:"Perfect — hold that position, breathe, and stay strong.",
+       ok:"Yes. <b>hold that position</b> (그 자세를 유지해주세요) builds her control.",
+       no:"You want her to stay put: <b>hold that position</b> (그 자세를 유지해주세요)." },
+   ]
+ },
+ {
+   key:"s3", emoji:"🌿", kick:"STAGE 3", title:"Care & Cooldown",
+   gaugeName:"만족도", color:"#9BF0B0",
+   desc:"Emma is working hard. Keep her safe and encouraged, correct gently, and bring the session to a calm close.",
+   exprs:["nice and easy","you're doing great","don't push through pain","let's move on to the next one","well done today"],
+   intro:{who:"You", text:"She's giving it her all — now guide, reassure, and wind down."},
+   beats:[
+     { situ:"Care · 속도 늦추기",
+       prompt:"She's rushing and tensing up.",
+       npc:{who:"Emma · first-timer", text:"Am I going too fast? I want to get it right!"},
+       options:[{en:"Nice and easy",ko:"부드럽게 천천히"},{en:"Stand tall",ko:"똑바로 서세요"},{en:"Take a deep breath in",ko:"깊게 숨을 들이쉬세요"}],
+       answer:0,
+       frank:"No rush at all — nice and easy, let it flow.",
+       ok:"Calming. <b>nice and easy</b> (부드럽게 천천히) slows her down without pressure.",
+       no:"You're easing her pace: <b>nice and easy</b> (부드럽게 천천히)." },
+     { situ:"Care · 격려",
+       prompt:"She's doing well — encourage her.",
+       options:[{en:"You're doing great",ko:"잘 하고 계세요"},{en:"Tuck your chin in",ko:"턱을 살짝 당겨주세요"},{en:"Feet hip-width apart",ko:"발을 골반 너비로"}],
+       answer:0,
+       frank:"That's it — you're doing great, really nice control!",
+       ok:"Lovely. <b>you're doing great</b> (잘 하고 계세요) keeps her motivated.",
+       no:"You're encouraging her: <b>you're doing great</b> (잘 하고 계세요)." },
+     { situ:"Care · 안전 (통증)",
+       prompt:"She winces — sharp sensation in the knee.",
+       npc:{who:"Emma · first-timer", text:"Ow — my knee feels a bit sharp here."},
+       options:[{en:"Hold that position",ko:"그 자세를 유지해주세요"},{en:"Don't push through pain",ko:"아프면 무리하지 마세요"},{en:"Reach through your fingertips",ko:"손끝까지 뻗어주세요"}],
+       answer:1,
+       frank:"Okay, ease off — don't push through pain. Let's back off a little.",
+       ok:"Exactly right. <b>don't push through pain</b> (아프면 무리하지 마세요) keeps her safe — the most important cue.",
+       no:"Safety first when she feels pain: <b>don't push through pain</b> (아프면 무리하지 마세요)." },
+     { situ:"Care · 다음 동작",
+       prompt:"That movement's done — transition on.",
+       options:[{en:"Let's move on to the next one",ko:"다음으로 넘어갈게요"},{en:"Lie flat on your back",ko:"등을 대고 누우세요"},{en:"Engage your core",ko:"코어에 힘을 주세요"}],
+       answer:0,
+       frank:"Great work — let's move on to the next one.",
+       ok:"Smooth. <b>let's move on to the next one</b> (다음으로 넘어갈게요) keeps the session flowing.",
+       no:"You're transitioning to the next move: <b>let's move on to the next one</b> (다음으로 넘어갈게요)." },
+     { situ:"Cooldown · 마무리",
+       prompt:"The session's complete. Close it warmly.",
+       npc:{who:"Emma · first-timer", text:"That was amazing — I actually feel great!"},
+       options:[{en:"Well done today",ko:"오늘 수고했어요"},{en:"Stand tall",ko:"똑바로 서세요"},{en:"Keep your spine neutral",ko:"척추를 중립으로"}],
+       answer:0,
+       frank:"You did so well — well done today, Emma. See you next time!",
+       ok:"Perfect close. <b>well done today</b> (오늘 수고했어요) ends on a warm, encouraging note.",
+       no:"You're closing the session warmly: <b>well done today</b> (오늘 수고했어요)." },
+   ]
+ }
+];
+
+// ----- audio -----
+let actx=null, muted=false;
+function initAudio(){
+  if(!actx){ try{ actx=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ actx=null; } }
+  if(actx && actx.state==='suspended') actx.resume();
+}
+function tone(freq,dur,type,when,vol){
+  if(!actx||muted) return;
+  const t=actx.currentTime+(when||0);
+  const o=actx.createOscillator(), g=actx.createGain();
+  o.type=type||'sine'; o.frequency.setValueAtTime(freq,t);
+  g.gain.setValueAtTime(0.0001,t);
+  g.gain.exponentialRampToValueAtTime(vol||0.18,t+0.012);
+  g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  o.connect(g).connect(actx.destination); o.start(t); o.stop(t+dur+0.03);
+}
+function sCorrect(){ tone(660,0.13,'triangle',0,.22); tone(990,0.17,'triangle',0.085,.20); }
+function sCombo(n){ const b=560+Math.min(n,5)*90; tone(b,0.09,'square',0,.14); tone(b*1.5,0.12,'square',0.05,.11); }
+function sWrong(){ tone(190,0.20,'sawtooth',0,.14); tone(140,0.24,'sawtooth',0.09,.12); }
+function sStage(){ [523,659,784,1047].forEach((f,i)=>tone(f,0.20,'triangle',i*0.1,.18)); }
+function sDeal(){ [523,659,784,1047,1319].forEach((f,i)=>tone(f,0.26,'triangle',i*0.1,.20)); tone(1047,0.6,'sine',0.62,.16); }
+function sClick(){ tone(420,0.05,'sine',0,.08); }
+function toggleMute(){ muted=!muted; document.getElementById("muteBtn").textContent=muted?"🔇":"🔊"; if(!muted){ initAudio(); } }
+
+// ----- character -----
+const O="#2A2630", LW="3";
+function eyesOpen(){return `<ellipse cx="94" cy="68" rx="7" ry="9.5" fill="#fff" stroke="${O}" stroke-width="2.4"/><ellipse cx="126" cy="68" rx="7" ry="9.5" fill="#fff" stroke="${O}" stroke-width="2.4"/><circle cx="95" cy="69" r="5" fill="url(#iris)"/><circle cx="127" cy="69" r="5" fill="url(#iris)"/><circle cx="93.4" cy="66.4" r="2" fill="#fff"/><circle cx="125.4" cy="66.4" r="2" fill="#fff"/><path d="M85 62 l-4 -3" stroke="${O}" stroke-width="2.2" stroke-linecap="round"/><path d="M135 62 l4 -3" stroke="${O}" stroke-width="2.2" stroke-linecap="round"/>`;}
+function eyesHappy(){return `<path d="M88 67 q6 -8 13 0" stroke="${O}" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M119 67 q6 -8 13 0" stroke="${O}" stroke-width="3" fill="none" stroke-linecap="round"/>`;}
+const BROW={normal:`<path d="M85 55 q9 -4 16 -1" stroke="#36271F" stroke-width="2.8" fill="none" stroke-linecap="round"/><path d="M119 54 q9 -3 16 1" stroke="#36271F" stroke-width="2.8" fill="none" stroke-linecap="round"/>`,
+ up:`<path d="M85 51 q9 -3 16 -1" stroke="#36271F" stroke-width="2.8" fill="none" stroke-linecap="round"/><path d="M119 50 q9 -3 16 1" stroke="#36271F" stroke-width="2.8" fill="none" stroke-linecap="round"/>`};
+const MOUTH={smile:`<path d="M100 87 q10 8 20 0" stroke="${O}" stroke-width="2.8" fill="none" stroke-linecap="round"/>`,
+ talk:`<ellipse cx="110" cy="88" rx="6" ry="7" fill="#9A4A4A" stroke="${O}" stroke-width="2"/>`,
+ big:`<path d="M98 84 q12 14 24 0 z" fill="#9A4A4A"/><path d="M98 84 q12 14 24 0" stroke="${O}" stroke-width="2.5" fill="none"/>`};
+function fvar(cls,brow,eyes,mouth){return `<g class="${cls}">${BROW[brow]}${eyes}${mouth}</g>`;}
+function buildHero(){
+  let conf=""; const cols=["#43C9B0","#F0A089","#FFD479","#7CC6FF","#C7A6F0"];
+  for(let i=0;i<15;i++){const x=18+Math.round(Math.random()*184),c=cols[i%5],d=(Math.random()*1.2).toFixed(2),r=Math.round(Math.random()*60-30);
+    conf+=`<rect class="cfp" x="${x}" y="0" width="8" height="11" rx="2" fill="${c}" style="animation-delay:${d}s" transform="rotate(${r} ${x} 0)"/>`;}
+  const head=`<g class="head">
+     <circle cx="68" cy="68" r="7" fill="url(#face)" stroke="${O}" stroke-width="${LW}"/><circle cx="152" cy="68" r="7" fill="url(#face)" stroke="${O}" stroke-width="${LW}"/>
+     <path d="M71 62 q0 -45 39 -45 q39 0 39 45 q0 31 -16 46 q-10 9 -23 9 q-13 0 -23 -9 q-16 -15 -16 -46 z" fill="url(#face)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/>
+     <path d="M67 64 q-3 -52 43 -52 q46 0 43 52 q-4 -14 -13 -19 q2 8 -1 14 q-10 -14 -29 -14 q-9 8 -22 6 q4 6 1 14 q-9 -4 -14 -16 q-2 7 -2 15 z" fill="url(#hair)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/>
+     <path d="M104 17 q-16 6 -22 24" stroke="#5A4234" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".7"/>
+     <path d="M109 73 q-2 6 1 9 q2 1 4 -1" stroke="#D89A66" stroke-width="2" fill="none" stroke-linecap="round"/>
+     <ellipse cx="83" cy="82" rx="8.5" ry="5.5" fill="url(#blush)"/><ellipse cx="137" cy="82" rx="8.5" ry="5.5" fill="url(#blush)"/>
+     <path d="M148 62 q1 32 -16 46 q-7 6 -14 8 q13 -16 16 -41 q1 -7 -2 -16 z" fill="#E0A875" opacity=".28"/>
+     ${fvar("face fSmile","normal",eyesOpen(),MOUTH.smile)}
+     ${fvar("face fUp","up",eyesOpen(),MOUTH.smile)}
+     ${fvar("face fTalk","up",eyesOpen(),MOUTH.talk)}
+     ${fvar("face fBig","up",eyesHappy(),MOUTH.big)}
+   </g>`;
+  const ponytail=`<g class="ponytail"><path d="M138 34 q34 6 36 44 q2 26 -12 44 q-3 4 -8 2 q10 -22 6 -44 q-4 -30 -28 -36 z" fill="url(#hair)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/><path d="M150 50 q14 14 12 40" stroke="#4A352A" stroke-width="2.4" fill="none" opacity=".6"/></g>`;
+  const body=`<g class="body">
+     <path d="M88 104 q22 -8 44 0 q2 12 2 20 q-24 8 -48 0 q0 -8 2 -20 z" fill="url(#face)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/>
+     <path d="M82 116 q28 -8 56 0 q4 28 7 52 q-35 12 -70 0 q4 -24 7 -52 z" fill="url(#top)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/>
+     <path d="M95 106 q3 8 4 14" stroke="${O}" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M95 106 q3 8 4 14" stroke="#43C9B0" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+     <path d="M125 106 q-3 8 -4 14" stroke="${O}" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M125 106 q-3 8 -4 14" stroke="#43C9B0" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+     <path d="M99 118 q11 9 22 0" stroke="#2A9D88" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>`;
+  const aB=`<g class="armB"><path d="M76 112 q-12 6 -14 30 q-1 8 7 10 q8 1 10 -6 q2 -19 5 -28 z" fill="url(#skinArm)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/><circle cx="71" cy="150" r="8.5" fill="url(#skinArm)" stroke="${O}" stroke-width="${LW}"/></g>`;
+  const aF=`<g class="armF"><path d="M144 112 q12 6 14 30 q1 8 -7 10 q-8 1 -10 -6 q-2 -19 -5 -28 z" fill="url(#skinArm)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/><circle cx="149" cy="150" r="8.5" fill="url(#skinArm)" stroke="${O}" stroke-width="${LW}"/></g>`;
+  const lL=`<g class="legL"><path d="M95 168 q-5 26 -3 42 q1 6 8 6 q7 0 8 -6 l1 -42 z" fill="url(#legs)" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/><path d="M87 210 q-3 9 4 12 q8 3 15 -1 q4 -2 2 -7 l-2 -6 z" fill="#F4F7FC" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/></g>`;
+  const lR=`<g class="legR"><path d="M115 168 q5 26 3 42 q-1 6 -8 6 q-7 0 -8 -6 l-1 -42 z" fill="#2C3540" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/><path d="M133 210 q3 9 -4 12 q-8 3 -15 -1 q-4 -2 -2 -7 l2 -6 z" fill="#E7ECF3" stroke="${O}" stroke-width="${LW}" stroke-linejoin="round"/></g>`;
+  return `<svg class="heroSvg" viewBox="0 0 220 254" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="110" cy="240" rx="44" ry="8.5" fill="#000" opacity=".18"/>
+    ${ponytail}
+    <g class="charBody">${lL}${lR}${aB}${body}${head}${aF}</g>
+    <g class="confetti">${conf}</g>
+  </svg>`;
+}
+
+function injectHero(id){ document.getElementById(id).innerHTML='<div class="hero-wrap ph-idle">'+buildHero()+'</div>'; }
+function setHero(id,pose){ const w=document.querySelector('#'+id+' .hero-wrap'); if(w) w.className='hero-wrap '+pose; }
+function stagePose(){ return ['ph-welcome','ph-demo','ph-coach'][st]||'ph-idle'; }
+
+// ----- BGM -----
+let bgmTimer=null, bgmStep=0, bgmStageIdx=0, bgmGain=null;
+const BGM_PAT=[
+  {root:[131,196],arp:[523,659,587,494],dur:760,type:'sine'},     // S1 calm welcome
+  {root:[147,220],arp:[587,659,784,659],dur:680,type:'sine'},     // S2 gentle flow
+  {root:[165,247],arp:[659,784,880,784],dur:720,type:'sine'},     // S3 soothing close
+];
+function bgmInit(){ if(actx&&!bgmGain){ bgmGain=actx.createGain(); bgmGain.gain.value=0.07; bgmGain.connect(actx.destination);} }
+function bgmNote(f,d,type){ if(!actx||muted||!bgmGain)return; const t=actx.currentTime; const o=actx.createOscillator(),g=actx.createGain();
+  o.type=type; o.frequency.setValueAtTime(f,t); g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.5,t+0.03); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+  o.connect(g).connect(bgmGain); o.start(t); o.stop(t+d+0.03); }
+function bgmTick(){
+  const P=BGM_PAT[bgmStageIdx]; if(!P)return;
+  bgmNote(P.root[bgmStep%2], P.dur/1000*0.9, 'sine');
+  for(let i=0;i<P.arp.length;i++){ setTimeout(()=>bgmNote(P.arp[(bgmStep+i)%P.arp.length], 0.16, P.type), i*(P.dur/4)); }
+  bgmStep++;
+}
+function bgmStart(idx){ bgmInit(); bgmStageIdx=idx; if(bgmTimer)clearInterval(bgmTimer); bgmTick(); bgmTimer=setInterval(bgmTick, BGM_PAT[idx].dur); }
+function bgmStop(){ if(bgmTimer){clearInterval(bgmTimer);bgmTimer=null;} }
+
+// ----- state -----
+let st, beatIdx, score, combo, bestCombo, totalBeats, firstTryHits, answered;
+const $=id=>document.getElementById(id);
+
+function startGame(){ initAudio(); bgmInit(); sClick(); $("start").classList.add("hidden"); injectHero("dock"); resetState(); showInter(); }
+function resetState(){ st=0; beatIdx=0; score=0; combo=0; bestCombo=0;
+  totalBeats=STAGES.reduce((a,s)=>a+s.beats.length,0); firstTryHits=0; }
+
+function showInter(){
+  const s=STAGES[st];
+  $("game").classList.add("hidden"); $("end").classList.add("hidden");
+  const iv=$("inter"); iv.classList.remove("hidden");
+  injectHero("iHero"); setHero("iHero", stagePose());
+  bgmStart(st);
+  $("iKick").textContent=s.kick;
+  $("iTitle").textContent=s.title; $("iDesc").textContent=s.desc;
+  $("iExpr").innerHTML=s.exprs.map(e=>`<span class="exprtag">${e}</span>`).join("");
+  $("iBtn").textContent = st===0 ? "▶  GO" : "▶  CONTINUE";
+}
+function interNext(){ $("inter").classList.add("hidden"); $("game").classList.remove("hidden");
+  setHero("dock", stagePose());
+  beatIdx=0; renderStageHUD(); renderBeat(); }
+
+function renderStageHUD(){
+  const s=STAGES[st];
+  $("stName").innerHTML=`${s.kick} · <b>${s.gaugeName}</b>`;
+  document.documentElement.style.setProperty("--gold",getComputedStyle(document.documentElement).getPropertyValue("--gold"));
+  $("gFill").style.background=`linear-gradient(90deg, ${s.color}aa, ${s.color})`;
+  $("gFill").style.boxShadow=`0 0 12px ${s.color}99`;
+  setGauge(); buildDots();
+  $("scoreN").textContent=score; updateCombo();
+}
+function buildDots(){
+  const s=STAGES[st]; let h="";
+  for(let i=0;i<s.beats.length;i++){ h+=`<div class="dot ${s.key} ${i<beatIdx?'done':''}" id="dot${i}"></div>`; }
+  $("dots").innerHTML=h;
+}
+function setGauge(){
+  const s=STAGES[st]; const pct=Math.round(beatIdx/s.beats.length*100);
+  $("gFill").style.width=pct+"%"; $("stPct").textContent=pct+"%";
+}
+
+function renderBeat(){
+  answered=false;
+  const s=STAGES[st], b=s.beats[beatIdx];
+  const sc=$("scene"); sc.innerHTML="";
+  $("nextBtn").classList.add("hidden");
+  // situation tag
+  const tag=document.createElement("div"); tag.className="situ"; tag.textContent=b.situ; sc.appendChild(tag);
+  // intro bubble at first beat
+  if(beatIdx===0 && s.intro){ sc.appendChild(npcBubble(s.intro.who, s.intro.text)); }
+  // beat-specific npc line
+  if(b.npc){ sc.appendChild(npcBubble(b.npc.who, b.npc.text)); }
+  // ask
+  const ask=document.createElement("div"); ask.className="ask"; ask.textContent=b.prompt; sc.appendChild(ask);
+  // choices
+  const wrap=document.createElement("div"); wrap.className="choices";
+  b.options.forEach((o,i)=>{
+    const btn=document.createElement("button"); btn.className="choice"; btn.id="ch"+i;
+    btn.innerHTML=`<span class="en">${o.en}</span><span style="color:var(--sub);font-weight:500;font-size:13px;">${o.ko}</span>`;
+    btn.onclick=()=>pick(i); wrap.appendChild(btn);
+  });
+  sc.appendChild(wrap);
+  sc.scrollTop=0;
+}
+function npcBubble(who,text){
+  const d=document.createElement("div"); d.className="bubble npc";
+  d.innerHTML=`<div class="who">${who}</div>${text}`; return d;
+}
+
+let wrongThisBeat=false;
+function pick(i){
+  if(answered) return;
+  const s=STAGES[st], b=s.beats[beatIdx];
+  const btn=$("ch"+i);
+  if(i===b.answer){
+    answered=true;
+    btn.classList.add("correct");
+    // disable others
+    b.options.forEach((o,k)=>{ if(k!==i) $("ch"+k).classList.add("dim"); $("ch"+k).onclick=null; });
+    // scoring
+    let pts;
+    if(!wrongThisBeat){ combo++; bestCombo=Math.max(bestCombo,combo); firstTryHits++;
+      const mult=Math.min(combo,5); pts=100*mult; }
+    else { combo=0; pts=40; }
+    score+=pts; floatPts("+"+pts);
+    animateScore(); updateCombo();
+    if(!wrongThisBeat && combo>1){ sCorrect(); sCombo(combo); } else { sCorrect(); }
+    setHero("dock","ph-demo"); setTimeout(()=>setHero("dock",stagePose()),850);
+    // June reply + note
+    const sc=$("scene");
+    sc.appendChild(frankBubble(b.frank));
+    const note=document.createElement("div"); note.className="note ok"; note.innerHTML=b.ok; sc.appendChild(note);
+    // gauge advance
+    beatIdx++; setGauge(); markDot();
+    $("nextBtn").classList.remove("hidden");
+    $("nextBtn").textContent = (beatIdx>=s.beats.length) ? "STAGE CLEAR  ▶" : "CONTINUE  ▶";
+    sc.scrollTop=sc.scrollHeight;
+    setTimeout(()=>{ $("nextBtn").scrollIntoView({behavior:"smooth",block:"nearest"}); },120);
+  } else {
+    wrongThisBeat=true; combo=0; updateCombo(); sWrong();
+    btn.classList.add("wrong");
+    const sc=$("scene");
+    // remove any prior correction note
+    const old=sc.querySelector(".note.no"); if(old) old.remove();
+    const note=document.createElement("div"); note.className="note no"; note.innerHTML="✗ "+b.no+"  다시 골라보세요."; sc.appendChild(note);
+    setTimeout(()=>btn.classList.remove("wrong"),400);
+    btn.classList.add("dim"); btn.onclick=null;
+    sc.scrollTop=sc.scrollHeight;
+  }
+}
+function frankBubble(text){
+  const d=document.createElement("div"); d.className="bubble frank";
+  d.innerHTML=`<div class="who">JUNE</div>${text}`; return d;
+}
+function markDot(){ const d=$("dot"+(beatIdx-1)); if(d) d.classList.add("done"); }
+
+function advance(){
+  wrongThisBeat=false;
+  const s=STAGES[st];
+  if(beatIdx>=s.beats.length){
+    // stage clear
+    if(st < STAGES.length-1){ st++; sStage(); showStageClear(); }
+    else { sDeal(); showEnd(); }
+  } else { sClick(); renderBeat(); }
+}
+function showStageClear(){
+  const prev=STAGES[st-1];
+  const iv=$("inter"); $("game").classList.add("hidden"); iv.classList.remove("hidden");
+  injectHero("iHero"); setHero("iHero","ph-cheer");
+  bgmStart(st);
+  $("iKick").textContent=prev.kick+" CLEAR";
+  $("iTitle").textContent=prev.gaugeName+" 완료!";
+  $("iDesc").innerHTML=`Next up — <b style="color:#43c9b0">${STAGES[st].title}</b>.<br>${STAGES[st].desc}`;
+  $("iExpr").innerHTML=STAGES[st].exprs.map(e=>`<span class="exprtag">${e}</span>`).join("");
+  $("iBtn").textContent="▶  NEXT STAGE";
+}
+
+function showEnd(){
+  $("game").classList.add("hidden");
+  const e=$("end"); e.classList.remove("hidden");
+  injectHero("eHero"); setHero("eHero","ph-cheer"); bgmStop();
+  const acc=Math.round(firstTryHits/totalBeats*100);
+  let rank,msg;
+  if(acc>=90){ rank="MASTER TRAINER"; msg="완벽에 가까운 큐잉! 영어로 세션을 완전히 리드할 수 있어요."; }
+  else if(acc>=60){ rank="CERTIFIED INSTRUCTOR"; msg="안정적인 영어 큐잉! 한 번 더 도전해 MASTER TRAINER에 올라보세요."; }
+  else { rank="ROOKIE COACH"; msg="좋은 출발! 큐잉 표현을 한 번 더 익히고 다시 플레이하면 랭크가 쑥 오릅니다."; }
+  $("eRank").textContent=rank; $("eMsg").textContent=msg;
+  animateTo($("eScore"),score); $("eCombo").textContent="×"+bestCombo; $("eAcc").textContent=acc+"%";
+  // build expr list
+  const all=STAGES.flatMap(s=>s.beats.map(b=>({en:b.options[b.answer].en, ko:b.options[b.answer].ko})));
+  $("exprList").innerHTML=all.map(x=>`<div style="text-align:left;padding:7px 12px;margin:5px 0;background:rgba(255,255,255,.04);border-radius:9px;border:1px solid rgba(255,255,255,.06);"><b style="color:#43c9b0">${x.en}</b> <span style="color:var(--sub);font-size:13px;">— ${x.ko}</span></div>`).join("");
+  $("exprList").classList.add("hidden");
+}
+function showExpr(){ $("exprList").classList.toggle("hidden"); }
+function resetGame(){ $("end").classList.add("hidden"); $("exprList").classList.add("hidden"); resetState(); showInter(); }
+
+// ----- fx -----
+function updateCombo(){
+  const mult=Math.max(1,Math.min(combo,5));
+  $("comboN").textContent="×"+mult;
+  const box=$("comboBox");
+  box.classList.remove("pulse"); void box.offsetWidth; if(combo>1) box.classList.add("pulse");
+}
+function animateScore(){ animateTo($("scoreN"),score); }
+function animateTo(el,target){
+  let cur=parseInt(el.textContent.replace(/\D/g,''))||0; const step=Math.max(1,Math.round((target-cur)/14));
+  const t=setInterval(()=>{ cur+=step; if(cur>=target){cur=target;clearInterval(t);} el.textContent=cur; },22);
+}
+function floatPts(txt){
+  const f=document.createElement("div"); f.className="float"; f.textContent=txt;
+  f.style.right="24px"; f.style.top="58px"; $("app").appendChild(f);
+  setTimeout(()=>f.remove(),1000);
+}
+</script>
+</body>
+</html>
