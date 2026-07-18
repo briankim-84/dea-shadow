@@ -1,0 +1,44 @@
+{
+  "_readme": "v7 + QA 수동 확정",
+  "id": "nh-put-you-through",
+  "title": "I'll put you right through",
+  "sub": "NOTTING HILL · 1999",
+  "category": "전화·컨콜",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "I'll put you right through",
+  "meaning": "바로 연결해 드리겠습니다",
+  "video": "put_you_right_through.mp4",
+  "sentences": [
+    {
+      "start": 1.57,
+      "end": 3.86,
+      "who": "WILLIAM",
+      "en": "I think she said her name was Flintstone.",
+      "ko": "이름이 플린트스톤이라고 했던 것 같은데요."
+    },
+    {
+      "start": 8.05,
+      "end": 11.42,
+      "who": "WILLIAM",
+      "en": "★ I don't-- I don't suppose, um, Flintstone rings any bells, does it?",
+      "ko": "★ 혹시... 플린트스톤이라고 하면 뭐 떠오르는 거 없으실까요?"
+    },
+    {
+      "start": 11.46,
+      "end": 13.3,
+      "who": "RECEPTIONIST",
+      "en": "★ Oh, I'll put you right through, sir.",
+      "ko": "★ 아, 바로 연결해 드리겠습니다, 손님."
+    },
+    {
+      "start": 13.3,
+      "end": 14.76,
+      "who": "WILLIAM",
+      "en": "Oh, my God.",
+      "ko": "맙소사."
+    }
+  ]
+}

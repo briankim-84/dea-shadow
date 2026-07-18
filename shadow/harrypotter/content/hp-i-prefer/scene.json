@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "hp-i-prefer",
+  "title": "I prefer ~, if you don't mind",
+  "sub": "HARRY POTTER · 2001",
+  "category": "면접·격식",
+  "difficulty": 2,
+  "tags": [
+    "HARRYPOTTER"
+  ],
+  "expression": "I prefer ~, if you don't mind",
+  "meaning": "괜찮으시면 ~라고 불러주시죠",
+  "video": "i_prefer_if_you_dont_mind.mp4",
+  "sentences": [
+    {
+      "start": 1.53,
+      "end": 5.11,
+      "who": "RON",
+      "en": "I know you. You're Nearly Headless Nick.",
+      "ko": "당신 알아요. 목이 달랑달랑한 닉이죠."
+    },
+    {
+      "start": 5.13,
+      "end": 7.85,
+      "who": "NICK",
+      "en": "★ I prefer Sir Nicholas, if you don't mind.",
+      "ko": "★ 괜찮다면 '니콜라스 경'으로 불러주면 좋겠네만."
+    },
+    {
+      "start": 8.3,
+      "end": 11.68,
+      "who": "HERMIONE",
+      "en": "\"Nearly\" headless? How can you be nearly headless?",
+      "ko": "'달랑달랑'이라니요? 어떻게 목이 '거의' 잘릴 수가 있죠?"
+    },
+    {
+      "start": 11.88,
+      "end": 12.93,
+      "who": "NICK",
+      "en": "Like this.",
+      "ko": "이렇게."
+    }
+  ]
+}

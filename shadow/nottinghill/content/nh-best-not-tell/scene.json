@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nh-best-not-tell",
+  "title": "best not to tell anyone",
+  "sub": "NOTTING HILL · 1999",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "best not to tell anyone",
+  "meaning": "아무에게도 말 안 하는 게 좋겠어요",
+  "video": "best_not_to_tell.mp4",
+  "sentences": [
+    {
+      "start": 1.39,
+      "end": 4.62,
+      "who": "ANNA",
+      "en": "★ Probably best not to tell anyone about this.",
+      "ko": "★ 이 일은 아무한테도 말 안 하는 게 좋겠죠."
+    },
+    {
+      "start": 4.94,
+      "end": 8.05,
+      "who": "WILLIAM",
+      "en": "Right. Right. No one.",
+      "ko": "네. 네. 아무한테도요."
+    },
+    {
+      "start": 8.2,
+      "end": 12.35,
+      "who": "WILLIAM",
+      "en": "I mean, I'll tell myself sometimes. But don't worry. I won't believe it.",
+      "ko": "뭐, 가끔 저 자신한테는 말하겠지만요. 걱정 마요, 저도 안 믿을 테니까."
+    }
+  ]
+}

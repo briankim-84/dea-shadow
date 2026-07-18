@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nh-help-me-with",
+  "title": "You couldn't help me with ~, could you?",
+  "sub": "NOTTING HILL · 1999",
+  "category": "일상대화",
+  "difficulty": 3,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "You couldn't help me with ~, could you?",
+  "meaning": "~ 좀 도와줄 수 없을까? (영국식 완곡)",
+  "video": "couldnt_help_me.mp4",
+  "sentences": [
+    {
+      "start": 3.37,
+      "end": 5.5,
+      "who": "SPIKE",
+      "en": "★ You couldn't help me with an incredibly important decision, could you?",
+      "ko": "★ 엄청나게 중요한 결정 하나 도와줄 수 없을까?"
+    },
+    {
+      "start": 5.98,
+      "end": 9.88,
+      "who": "WILLIAM",
+      "en": "Is this important in comparison to, let's say, whether they should cancel Third World debt?",
+      "ko": "그게 이를테면 제3세계 부채 탕감 같은 문제에 비할 만큼 중요한 거야?"
+    },
+    {
+      "start": 9.9,
+      "end": 15.45,
+      "who": "SPIKE",
+      "en": "That's right. I am at last going out on a date with the great Janine, and I just wanna be sure I've picked the right T-shirt.",
+      "ko": "맞아. 드디어 그 위대한 재닌이랑 데이트하거든. 티셔츠를 제대로 골랐는지 확실히 해두고 싶어서."
+    },
+    {
+      "start": 15.47,
+      "end": 16.42,
+      "who": "WILLIAM",
+      "en": "What are the choices?",
+      "ko": "선택지가 뭔데?"
+    },
+    {
+      "start": 16.44,
+      "end": 17.64,
+      "who": "SPIKE",
+      "en": "★ Well, wait for it.",
+      "ko": "★ 자, 기대하시라."
+    }
+  ]
+}

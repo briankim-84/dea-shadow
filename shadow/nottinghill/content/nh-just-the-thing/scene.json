@@ -1,0 +1,44 @@
+{
+  "_readme": "v7 + QA 수동 확정",
+  "id": "nh-just-the-thing",
+  "title": "I have just the thing",
+  "sub": "NOTTING HILL · 1999",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "I have just the thing",
+  "meaning": "딱 맞는 게 있지",
+  "video": "just_the_thing.mp4",
+  "sentences": [
+    {
+      "start": 0.9,
+      "end": 3.8,
+      "who": "SPIKE",
+      "en": "First there's this one. Cool, huh?",
+      "ko": "먼저 이거. 멋지지?"
+    },
+    {
+      "start": 4.72,
+      "end": 9.29,
+      "who": "WILLIAM",
+      "en": "Yeah, it might make it hard to strike a really romantic note.",
+      "ko": "어, 그걸 입고 로맨틱한 분위기를 내긴 좀 어렵겠는데."
+    },
+    {
+      "start": 9.25,
+      "end": 11.05,
+      "who": "SPIKE",
+      "en": "★ Point taken. Don't despair.",
+      "ko": "★ 인정. 하지만 절망은 일러."
+    },
+    {
+      "start": 11.2,
+      "end": 14.65,
+      "who": "SPIKE",
+      "en": "★ If it's romance we're looking for, I believe I have just the thing.",
+      "ko": "★ 로맨스가 목표라면, 딱 맞는 게 있지."
+    }
+  ]
+}

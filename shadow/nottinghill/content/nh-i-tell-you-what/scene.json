@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nh-i-tell-you-what",
+  "title": "I tell you what",
+  "sub": "NOTTING HILL · 1999",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "I tell you what",
+  "meaning": "이렇게 하죠 (제안 시작)",
+  "video": "i_tell_you_what.mp4",
+  "sentences": [
+    {
+      "start": 1.49,
+      "end": 9.63,
+      "who": "WILLIAM",
+      "en": "★ I tell you what. Um, I'll call the police, and, um, if I'm wrong about the whole \"book down the trousers\" scenario, I really apologize.",
+      "ko": "★ 이렇게 하죠. 경찰을 부를게요. 그리고 '바지 속 책' 시나리오가 제 오해라면, 정말 사과드리죠."
+    },
+    {
+      "start": 10.6,
+      "end": 14.39,
+      "who": "THIEF",
+      "en": "Okay. What if... I did have a book down my trousers?",
+      "ko": "좋아요. 만약... 진짜 바지 속에 책이 있다면요?"
+    },
+    {
+      "start": 14.41,
+      "end": 19.58,
+      "who": "WILLIAM",
+      "en": "Well, ideally, when I went back to the desk, you'd remove the Cadogan guide to Bali from your trousers.",
+      "ko": "음, 이상적으로는, 제가 카운터로 돌아가면 바지에서 발리 가이드북을 꺼내놓으시는 거죠."
+    }
+  ]
+}

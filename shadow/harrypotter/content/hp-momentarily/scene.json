@@ -1,0 +1,30 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "hp-momentarily",
+  "title": "~ will begin momentarily",
+  "sub": "HARRY POTTER · 2001",
+  "category": "면접·격식",
+  "difficulty": 3,
+  "tags": [
+    "HARRYPOTTER"
+  ],
+  "expression": "~ will begin momentarily",
+  "meaning": "곧 시작하겠습니다 (격식)",
+  "video": "begin_momentarily.mp4",
+  "sentences": [
+    {
+      "start": 1.57,
+      "end": 5.0,
+      "who": "MCGONAGALL",
+      "en": "★ The Sorting Ceremony will begin momentarily.",
+      "ko": "★ 기숙사 배정식이 곧 시작됩니다."
+    },
+    {
+      "start": 6.96,
+      "end": 13.62,
+      "who": "DRACO",
+      "en": "It's true then, what they're saying on the train. Harry Potter has come to Hogwarts.",
+      "ko": "그럼 기차에서 떠들던 게 사실이구나. 해리 포터가 호그와트에 왔다는 거."
+    }
+  ]
+}

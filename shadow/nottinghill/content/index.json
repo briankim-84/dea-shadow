@@ -1,0 +1,148 @@
+{
+  "_readme": "노팅힐 에디션 인덱스",
+  "scenes": [
+    {
+      "id": "nh-help-me-with",
+      "title": "You couldn't help me with ~, could you?",
+      "sub": "NOTTING HILL · 1999",
+      "category": "일상대화",
+      "difficulty": 3,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "You couldn't help me with ~, could you?",
+      "meaning": "~ 좀 도와줄 수 없을까? (영국식 완곡)",
+      "count": 5
+    },
+    {
+      "id": "nh-just-the-thing",
+      "title": "I have just the thing",
+      "sub": "NOTTING HILL · 1999",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "I have just the thing",
+      "meaning": "딱 맞는 게 있지",
+      "count": 4
+    },
+    {
+      "id": "nh-to-be-frank",
+      "title": "to be frank with you",
+      "sub": "NOTTING HILL · 1999",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "to be frank with you",
+      "meaning": "솔직히 말하면",
+      "count": 4
+    },
+    {
+      "id": "nh-look-around",
+      "title": "I'll just look around",
+      "sub": "NOTTING HILL · 1999",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "I'll just look around",
+      "meaning": "그냥 둘러볼게요",
+      "count": 5
+    },
+    {
+      "id": "nh-give-me-a-second",
+      "title": "Can you just give me a second?",
+      "sub": "NOTTING HILL · 1999",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "Can you just give me a second?",
+      "meaning": "잠깐만 실례해도 될까요?",
+      "count": 3
+    },
+    {
+      "id": "nh-i-tell-you-what",
+      "title": "I tell you what",
+      "sub": "NOTTING HILL · 1999",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "I tell you what",
+      "meaning": "이렇게 하죠 (제안 시작)",
+      "count": 3
+    },
+    {
+      "id": "nh-tempting",
+      "title": "Tempting. But no, thank you",
+      "sub": "NOTTING HILL · 1999",
+      "category": "감정·리액션",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "Tempting. But no, thank you",
+      "meaning": "솔깃하지만, 사양할게요",
+      "count": 3
+    },
+    {
+      "id": "nh-on-second-thoughts",
+      "title": "on second thoughts",
+      "sub": "NOTTING HILL · 1999",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "on second thoughts",
+      "meaning": "다시 생각해 보니",
+      "count": 5
+    },
+    {
+      "id": "nh-better-be-going",
+      "title": "I'd better be going",
+      "sub": "NOTTING HILL · 1999",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "I'd better be going",
+      "meaning": "이만 가봐야겠어요",
+      "count": 4
+    },
+    {
+      "id": "nh-best-not-tell",
+      "title": "best not to tell anyone",
+      "sub": "NOTTING HILL · 1999",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "best not to tell anyone",
+      "meaning": "아무에게도 말 안 하는 게 좋겠어요",
+      "count": 3
+    },
+    {
+      "id": "nh-put-you-through",
+      "title": "I'll put you right through",
+      "sub": "NOTTING HILL · 1999",
+      "category": "전화·컨콜",
+      "difficulty": 2,
+      "tags": [
+        "NOTTINGHILL"
+      ],
+      "expression": "I'll put you right through",
+      "meaning": "바로 연결해 드리겠습니다",
+      "count": 4
+    }
+  ]
+}

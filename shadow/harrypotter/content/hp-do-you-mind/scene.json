@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "hp-do-you-mind",
+  "title": "Do you mind? / Not at all",
+  "sub": "HARRY POTTER · 2001",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "HARRYPOTTER"
+  ],
+  "expression": "Do you mind? / Not at all",
+  "meaning": "실례해도 될까? / 그럼요 (양해 세트)",
+  "video": "do_you_mind.mp4",
+  "sentences": [
+    {
+      "start": 1.93,
+      "end": 6.48,
+      "who": "RON",
+      "en": "★ Excuse me. Do you mind? Everywhere else is full.",
+      "ko": "★ 저기, 실례해도 될까? 다른 덴 다 찼어서."
+    },
+    {
+      "start": 6.5,
+      "end": 7.71,
+      "who": "HARRY",
+      "en": "★ Not at all.",
+      "ko": "★ 그럼, 앉아."
+    },
+    {
+      "start": 11.5,
+      "end": 13.29,
+      "who": "RON",
+      "en": "★ I'm Ron, by the way. Ron Weasley.",
+      "ko": "★ 아 참, 난 론이야. 론 위즐리."
+    },
+    {
+      "start": 14.42,
+      "end": 15.94,
+      "who": "HARRY",
+      "en": "I'm Harry. Harry Potter.",
+      "ko": "난 해리. 해리 포터야."
+    }
+  ]
+}

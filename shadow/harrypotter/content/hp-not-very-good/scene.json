@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "hp-not-very-good",
+  "title": "It's not very good, is it?",
+  "sub": "HARRY POTTER · 2001",
+  "category": "유머·티키타카",
+  "difficulty": 2,
+  "tags": [
+    "HARRYPOTTER"
+  ],
+  "expression": "It's not very good, is it?",
+  "meaning": "별로 안 좋은데, 그렇지? (부가의문)",
+  "video": "not_very_good.mp4",
+  "sentences": [
+    {
+      "start": 2.89,
+      "end": 9.02,
+      "who": "RON",
+      "en": "Sunshine, daisies, butter mellow. Turn this stupid, fat rat yellow.",
+      "ko": "햇살, 데이지, 버터처럼 노랗게. 이 멍청하고 뚱뚱한 쥐를 노랗게 바꿔라!"
+    },
+    {
+      "start": 11.92,
+      "end": 17.67,
+      "who": "HERMIONE",
+      "en": "★ Are you sure that's a real spell? Well, it's not very good, is it?",
+      "ko": "★ 그거 진짜 주문 맞아? 뭐, 별로 좋진 않네, 그렇지?"
+    },
+    {
+      "start": 18.84,
+      "end": 23.14,
+      "who": "HERMIONE",
+      "en": "I've only tried a few simple ones myself, but they've all worked for me.",
+      "ko": "나도 간단한 것 몇 개만 해봤는데, 전부 성공했거든."
+    }
+  ]
+}

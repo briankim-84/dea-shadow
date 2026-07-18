@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nh-give-me-a-second",
+  "title": "Can you just give me a second?",
+  "sub": "NOTTING HILL · 1999",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "Can you just give me a second?",
+  "meaning": "잠깐만 실례해도 될까요?",
+  "video": "give_me_a_second.mp4",
+  "sentences": [
+    {
+      "start": 1.39,
+      "end": 3.09,
+      "who": "ANNA",
+      "en": "Thanks. I'll think about it.",
+      "ko": "고마워요. 생각해 볼게요."
+    },
+    {
+      "start": 3.14,
+      "end": 6.07,
+      "who": "WILLIAM",
+      "en": "Or, in the bigger hardback variety, there's--",
+      "ko": "아니면 더 큰 양장본 쪽엔--"
+    },
+    {
+      "start": 6.78,
+      "end": 9.99,
+      "who": "WILLIAM",
+      "en": "★ I'm sorry. Can you just give me a second?",
+      "ko": "★ 죄송한데, 잠깐만 실례해도 될까요?"
+    }
+  ]
+}

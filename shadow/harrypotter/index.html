@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0C1424">
+<title>Listen & Shadow — HARRY POTTER · Do English with Brian</title>
+<style>
+  :root{
+    --bg:#0C1424; --panel:#131E36; --panel2:#182544;
+    --paper:#EDDFC0;             /* 아이스 화이트 */
+    --champ:#E3A43C;             /* 가르강튀아 광환 앰버 (포인트) */
+    --gold:#E7B43D;              /* DEWB 브랜드 골드 */
+    --lip:#CF5A50;               /* 콘솔 경고등 레드 — REC/재생 마커 등 기능색 */
+    --sub:#95A0B5; --line:rgba(227,164,60,.28); --hair:rgba(237,223,192,.16);
+    --good:#5FC9A5; --halo:rgba(227,164,60,.35);
+    --disp:"Archivo","Inter","Segoe UI",-apple-system,sans-serif;
+    --serif:"Playfair Display","Noto Serif KR",Georgia,serif;
+    --sans:"Pretendard",-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{font-family:var(--sans);background:radial-gradient(120% 90% at 50% -10%, #1B2C4E 0%, #101B33 45%, #0C1424 75%, #080D18 100%) fixed;color:var(--paper);display:flex;justify-content:center;}
+  /* 별 필드 */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+    background-image:radial-gradient(1px 1px at 12% 22%,rgba(236,241,248,.7),transparent),
+    radial-gradient(1px 1px at 78% 12%,rgba(236,241,248,.55),transparent),
+    radial-gradient(1.5px 1.5px at 62% 44%,rgba(236,241,248,.4),transparent),
+    radial-gradient(1px 1px at 32% 68%,rgba(236,241,248,.5),transparent),
+    radial-gradient(1px 1px at 88% 76%,rgba(236,241,248,.45),transparent),
+    radial-gradient(1.2px 1.2px at 48% 88%,rgba(236,241,248,.35),transparent);}
+  #app{width:100%;max-width:560px;min-height:100vh;position:relative;z-index:1;padding-bottom:env(safe-area-inset-bottom);}
+
+  /* ---------- 미션 로그 라인 ---------- */
+  .ticker{border-bottom:1px solid var(--hair);padding:8px 14px;display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--disp);font-size:10px;letter-spacing:3px;color:var(--sub);text-transform:uppercase;}
+  .ticker b{color:var(--champ);font-weight:600;}
+  .ticker a{color:var(--sub);text-decoration:none;letter-spacing:1px;}
+
+  /* ---------- header ---------- */
+  header{position:relative;z-index:2;padding:30px 22px 4px;text-align:center;position:relative;overflow:hidden;}
+  header.hashero{padding-top:120px;}
+  .hero{position:absolute;inset:0;z-index:-1;display:none;}
+  header.hashero .hero{display:block;}
+  .hero img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:contrast(1.08) brightness(.85);}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,14,26,.25) 0%,rgba(10,14,26,.5) 45%,rgba(10,14,26,.93) 82%,var(--bg) 100%);}
+  .fan{width:200px;height:100px;margin:0 auto 4px;position:relative;overflow:hidden;}
+  .fan::before{content:"";position:absolute;left:50%;bottom:-100px;width:200px;height:200px;transform:translateX(-50%);border-radius:50%;
+    background:repeating-conic-gradient(from -90deg at 50% 50%, var(--champ) 0deg 3deg, transparent 3deg 14deg);
+    -webkit-mask:radial-gradient(circle at 50% 50%, transparent 34%, #000 35%, #000 70%, transparent 71%);
+            mask:radial-gradient(circle at 50% 50%, transparent 34%, #000 35%, #000 70%, transparent 71%);opacity:.8;}
+  .fan::after{content:"";position:absolute;left:50%;bottom:-8px;width:56px;height:56px;transform:translateX(-50%);
+    border-radius:50%;border:2px solid var(--champ);box-shadow:0 0 18px var(--halo), inset 0 0 10px rgba(212,175,55,.3);}
+  .brand{font-family:var(--disp);font-size:10px;letter-spacing:4px;color:var(--sub);text-transform:uppercase;margin-bottom:10px;}
+  h1.logo{font-family:var(--serif);font-weight:500;font-size:30px;letter-spacing:.14em;text-indent:.14em;
+    color:var(--paper);text-transform:uppercase;text-shadow:0 0 24px rgba(236,241,248,.18);}
+  .tagline{margin-top:11px;font-size:13px;color:var(--sub);line-height:1.65;}
+  .tagline em{font-family:var(--serif);font-style:italic;color:var(--champ);}
+
+  /* ---------- home : category & cards ---------- */
+  .cats{display:flex;gap:0;overflow-x:auto;padding:8px 22px 0;scrollbar-width:none;border-bottom:1px solid var(--hair);}
+  .cats::-webkit-scrollbar{display:none;}
+  .cat{flex-shrink:0;padding:12px 13px 10px;background:none;border:none;border-bottom:2px solid transparent;
+    color:var(--sub);font-size:12px;font-weight:800;letter-spacing:.5px;cursor:pointer;}
+  .cat.on{color:var(--paper);border-bottom-color:var(--champ);}
+  .list{padding:16px 18px 30px;display:flex;flex-direction:column;gap:14px;}
+  .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--hair);
+    border-radius:16px;padding:18px 18px 16px;position:relative;overflow:hidden;cursor:pointer;transition:.12s;}
+  .card:active{transform:scale(.99);}
+  .card::before{content:"";position:absolute;top:0;left:18px;right:18px;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(227,164,60,.5),transparent);}
+  .chead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+  .mlog{font-family:var(--disp);font-size:9.5px;letter-spacing:2.5px;color:var(--champ);text-transform:uppercase;}
+  .cmeta{font-size:11px;color:var(--sub);letter-spacing:.5px;}
+  .expr{font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.3;color:var(--paper);}
+  .mean{margin-top:7px;font-size:14px;color:var(--sub);}
+  .cfoot{display:flex;justify-content:space-between;align-items:center;margin-top:15px;gap:10px;}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;}
+  .bdg{font-size:10.5px;padding:4px 9px;border-radius:6px;border:1px solid var(--hair);color:var(--sub);}
+  .bdg.catb{color:var(--champ);border-color:rgba(227,164,60,.45);}
+  .bdg.doneb{color:var(--good);border-color:rgba(95,201,165,.4);font-weight:700;}
+  .cta{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13.5px;flex-shrink:0;
+    color:#0C1424;background:var(--champ);border:none;border-radius:11px;padding:10px 15px;cursor:pointer;
+    box-shadow:0 4px 0 rgba(140,95,20,.9),0 8px 18px rgba(227,164,60,.22);transition:.1s;}
+  .card:active .cta{transform:translateY(3px);box-shadow:0 1px 0 rgba(140,95,20,.9),0 3px 8px rgba(227,164,60,.18);}
+  .cta .tri{width:0;height:0;border-left:9px solid #0C1424;border-top:6px solid transparent;border-bottom:6px solid transparent;}
+  .empty{padding:70px 30px;text-align:center;color:var(--sub);font-size:13.5px;line-height:1.9;}
+  .empty b{color:var(--paper);font-family:var(--serif);font-style:italic;font-weight:400;font-size:19px;}
+
+  /* ---------- scene view ---------- */
+  .topbar{display:flex;align-items:center;gap:14px;padding:16px 18px 12px;}
+  .back{background:none;border:1px solid var(--line);color:var(--champ);width:38px;height:38px;font-size:17px;cursor:pointer;flex-shrink:0;border-radius:10px;}
+  .topbar .t{min-width:0;}
+  .topbar .t .s{font-size:9.5px;color:var(--champ);letter-spacing:2.5px;text-transform:uppercase;font-weight:800;font-family:var(--disp);}
+  .topbar .t h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:3px;}
+  .videowrap{margin:6px 10px;border:1px solid var(--hair);border-radius:10px;overflow:hidden;background:#000;position:relative;}
+  .videowrap.sticky{position:sticky;top:0;z-index:20;margin:0;border-left:none;border-right:none;border-radius:0;}
+  video{width:100%;display:block;aspect-ratio:4/3;background:#000;}
+  .capbox{position:absolute;left:0;right:0;bottom:0;padding:0 14px 16px;pointer-events:none;text-align:center;z-index:3;}
+  .capbox .cap{display:inline-block;max-width:94%;padding:7px 14px;border-radius:6px;
+    background:rgba(0,0,0,.62);backdrop-filter:blur(3px);line-height:1.4;transition:opacity .15s;}
+  .capbox .cap.en{font-family:var(--serif);font-style:italic;font-size:19px;color:#fff;}
+  .capbox .cap.ko{font-size:15px;color:#EAF0F7;letter-spacing:.2px;}
+  .capbox.empty{opacity:0;}
+  .captoggle{display:flex;justify-content:center;gap:0;margin:8px 10px 2px;}
+  .captoggle button{background:none;border:1px solid var(--hair);color:var(--sub);
+    font-size:11.5px;font-weight:700;letter-spacing:.8px;padding:7px 16px;cursor:pointer;transition:.15s;text-transform:uppercase;}
+  .captoggle button:first-child{border-radius:20px 0 0 20px;}
+  .captoggle button:last-child{border-radius:0 20px 20px 0;border-left:none;}
+  .captoggle button.on{background:var(--champ);color:#0C1424;border-color:var(--champ);}
+  .novid{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:13px;
+    font-family:var(--serif);font-style:italic;letter-spacing:.5px;}
+  .lyr{display:flex;margin:16px 18px 4px;border-bottom:1px solid var(--hair);}
+  .lyr button{flex:1;padding:11px;background:none;border:none;border-bottom:2px solid transparent;color:var(--sub);
+    font-size:11.5px;font-weight:800;letter-spacing:2px;cursor:pointer;text-transform:uppercase;}
+  .lyr button.on{color:var(--paper);border-bottom-color:var(--champ);}
+
+  .sents{padding:10px 18px 50px;}
+  .scenehint{padding:22px 8px 40px;text-align:center;color:var(--sub);font-size:14px;line-height:1.7;}
+  .scenehint b{color:var(--paper);font-weight:700;}
+  .scenehint .xo{font-family:var(--disp);font-size:10px;letter-spacing:3px;color:var(--champ);text-transform:uppercase;}
+  .sent{padding:15px 4px 16px;border-bottom:1px solid var(--hair);cursor:pointer;transition:.12s;position:relative;}
+  .sent:active{opacity:.7;}
+  .sent .who{font-size:9.5px;font-weight:800;letter-spacing:2.5px;color:var(--champ);text-transform:uppercase;
+    display:flex;justify-content:space-between;margin-bottom:6px;font-family:var(--disp);}
+  .sent .who .num{color:var(--sub);letter-spacing:1px;}
+  .sent .en{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.45;}
+  .sent .ko{font-size:12.5px;color:var(--sub);margin-top:6px;line-height:1.55;}
+  .sent.playing .en{color:var(--champ);}
+  .sent.playing::before{content:"";position:absolute;left:-18px;top:14px;bottom:14px;width:2px;background:var(--lip);}
+  .sent .pr{font-size:9px;color:var(--good);font-weight:800;letter-spacing:2px;margin-top:7px;display:none;}
+  .sent.prd .pr{display:block;}
+
+  .focus{padding:8px 18px 46px;}
+  .fnav{display:flex;justify-content:space-between;align-items:center;margin:6px 0 14px;}
+  .fnav button{background:none;border:1px solid var(--line);color:var(--champ);padding:9px 18px;font-size:12px;
+    font-weight:800;letter-spacing:1px;cursor:pointer;text-transform:uppercase;border-radius:10px;}
+  .fnav button[disabled]{opacity:.25;pointer-events:none;}
+  .fnav .pos{font-family:var(--disp);font-size:11px;color:var(--sub);letter-spacing:3px;}
+  .fcardX{padding:34px 22px 26px;text-align:center;position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(26,36,64,.5),transparent);}
+  .fcardX .qm{font-family:var(--serif);font-size:64px;line-height:0;color:var(--champ);display:block;height:26px;}
+  .fcardX .who{font-family:var(--disp);font-size:10px;font-weight:800;letter-spacing:3px;color:var(--champ);text-transform:uppercase;margin:14px 0 12px;}
+  .fcardX .en{font-family:var(--serif);font-style:italic;font-size:25px;line-height:1.45;transition:filter .2s;}
+  .fcardX .en.blur{filter:blur(10px);}
+  .fcardX .ko{font-size:14px;color:var(--sub);margin-top:14px;line-height:1.65;}
+  .eyeBtn{position:absolute;top:12px;right:2px;background:none;border:1px solid var(--line);color:var(--sub);
+    width:36px;height:36px;cursor:pointer;font-size:14px;border-radius:10px;}
+  .ctl{margin-top:16px;}
+  .ctl .row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px;}
+  .pill{padding:12px 17px;border:1px solid var(--line);background:transparent;color:var(--paper);
+    font-size:12.5px;font-weight:800;cursor:pointer;letter-spacing:1px;text-transform:uppercase;border-radius:11px;
+    box-shadow:0 3px 0 rgba(0,0,0,.35);transition:.1s;}
+  .pill:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.35);}
+  .pill.on{background:var(--paper);color:#0C1424;border-color:var(--paper);}
+  .pill.play{min-width:132px;}
+  .pill.recbtn{border-color:rgba(207,90,80,.6);color:var(--lip);}
+  .pill.recbtn.recording{background:var(--lip);color:#fff;animation:blink 1s infinite;}
+  @keyframes blink{50%{opacity:.55;}}
+  .pill[disabled]{opacity:.3;pointer-events:none;box-shadow:none;}
+  .speedlbl{font-family:var(--disp);font-size:9.5px;color:var(--sub);letter-spacing:3px;text-align:center;margin-top:16px;text-transform:uppercase;}
+  .savednote{text-align:center;font-size:11px;color:var(--good);font-weight:700;margin-top:12px;min-height:14px;letter-spacing:.5px;}
+  .gsent{font-size:11.5px;color:var(--sub);text-align:center;margin-top:18px;line-height:1.8;}
+  .foot{padding:30px 22px 44px;text-align:center;border-top:1px solid var(--hair);margin-top:10px;}
+  .foot .xo{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--paper);letter-spacing:.5px;}
+  .foot .xo b{color:var(--champ);font-weight:400;}
+  .foot .sig{font-family:var(--disp);font-size:9.5px;letter-spacing:4px;color:var(--gold);margin-top:8px;font-weight:800;}
+
+  /* ---------- 허브 복귀 바 (작품 공통 포맷) ---------- */
+  .hubbar{display:flex;align-items:center;gap:12px;padding:10px 14px;border-bottom:1px solid var(--hair);}
+  .hubback{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;letter-spacing:.5px;
+    text-decoration:none;border-radius:10px;padding:9px 14px;transition:.1s;}
+  .hubback:active{transform:translateY(2px);}
+  .hublabel{margin-left:auto;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;}
+  .hubback{color:#0C1424;background:var(--champ);box-shadow:0 3px 0 rgba(140,95,20,.9);}
+  .hubback:active{box-shadow:0 1px 0 rgba(140,95,20,.9);}
+  .hublabel{font-family:var(--disp);color:var(--sub);}
+  .hublabel b{color:var(--champ);font-weight:600;}
+
+  /* ---------- 공통 기능: 난이도·진행률·힌트·루틴 ---------- */
+  .diffrow{display:flex;gap:8px;padding:12px 22px 2px;align-items:center;}
+  .difflbl{font-family:var(--disp,var(--sans));font-size:9.5px;letter-spacing:2px;color:var(--sub);text-transform:uppercase;}
+  .diff{font-size:12px;font-weight:800;padding:7px 13px;border-radius:999px;border:1px solid var(--hair);color:var(--sub);background:transparent;cursor:pointer;transition:.15s;}
+  .diff.on{color:var(--diffink,#0C1424);background:var(--champ);border-color:var(--champ);}
+  .bdg.dl{font-weight:800;color:var(--champ);border-color:var(--champ);}
+  .prog{margin-top:12px;display:flex;align-items:center;gap:10px;}
+  .prog .bar{flex:1;height:3px;border-radius:2px;background:var(--hair);overflow:hidden;}
+  .prog .bar i{display:block;height:100%;background:var(--champ);}
+  .prog .pct{font-family:var(--disp,var(--sans));font-size:10px;letter-spacing:1.5px;color:var(--sub);}
+  .toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);max-width:86%;z-index:99;
+    background:var(--paper);color:var(--bg);font-size:13px;font-weight:600;line-height:1.55;
+    padding:12px 16px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.35);opacity:0;transition:.25s;pointer-events:none;}
+  .toast.show{opacity:1;}
+  .helpbtn{position:fixed;right:16px;bottom:20px;width:44px;height:44px;border-radius:50%;z-index:60;
+    border:none;background:var(--champ);color:var(--diffink,#0C1424);font-size:19px;font-weight:800;cursor:pointer;
+    box-shadow:0 4px 0 rgba(0,0,0,.3),0 8px 18px rgba(0,0,0,.3);}
+  .helpbtn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.3);}
+  .sheetwrap{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:98;display:none;align-items:flex-end;justify-content:center;}
+  .sheetwrap.open{display:flex;}
+  .sheet{width:100%;max-width:560px;background:var(--panel,var(--bg));color:var(--paper);border-radius:20px 20px 0 0;
+    padding:22px 22px calc(26px + env(safe-area-inset-bottom));max-height:78vh;overflow-y:auto;border-top:1px solid var(--hair);}
+  .sheet h3{font-family:var(--disp,var(--sans));font-size:12px;letter-spacing:3px;color:var(--champ);text-transform:uppercase;margin-bottom:14px;}
+  .sheet .step{display:flex;gap:12px;padding:9px 0;font-size:13.5px;line-height:1.6;color:var(--paper);}
+  .sheet .step b{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--champ);color:var(--diffink,#0C1424);
+    display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;}
+  .sheet .sec{font-size:10px;letter-spacing:2.5px;color:var(--sub);text-transform:uppercase;margin:14px 0 4px;font-weight:800;}
+  .sheet .close{margin-top:18px;width:100%;padding:13px;border:none;border-radius:12px;background:var(--champ);
+    color:var(--diffink,#0C1424);font-weight:800;font-size:14px;cursor:pointer;}
+  .card{border-radius:4px;background:linear-gradient(165deg,#F4EAD2,#EDDFC0 70%,#E2D0A8);box-shadow:0 8px 20px rgba(0,0,0,.45), inset 0 0 28px rgba(59,46,30,.12);border:none;}
+  .card::before{content:"";position:absolute;right:-4px;top:-4px;width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 70% 30%, rgba(12,20,36,.5), rgba(12,20,36,.16) 55%, transparent 70%);pointer-events:none;left:auto;border:none;}
+  .card::after{content:none;}
+  .card .expr{color:#3B2E1E;font-style:normal;}
+  .card .mean{color:#6B5B41;}
+  .card .cmeta{color:#8A7657;}
+  .card .mlog{color:#8E2B21;font-family:var(--serif);font-size:13px;letter-spacing:1px;text-transform:none;font-weight:400;}
+  .card .bdg{color:#6B5B41;border-color:rgba(59,46,30,.25);}
+  .card .bdg.catb{color:#3E6B4F;border-color:rgba(62,107,79,.5);}
+  .card .bdg.dl{color:#F4EAD2;background:#8E2B21;border-color:#8E2B21;}
+  .card .prog .pct{color:#8A7657;}
+  .card .prog .bar{background:rgba(59,46,30,.18);}
+  .card .prog .bar i{background:#8E2B21;}
+  .hidden{display:none!important;}
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ HOME ============ -->
+  <div id="home">
+    <div class="hubbar"><a class="hubback" href="../">&lsaquo; 작품 선택</a><span class="hublabel">HOGWARTS BY NIGHT — <b>FIRST YEAR</b></span></div>
+    <header id="hdr">
+      <div class="hero" id="hero"><img id="heroImg" alt=""></div>
+      <div class="sky"></div><div class="mist"></div>
+      <div class="castle"><svg viewBox="0 0 560 92" preserveAspectRatio="none">
+      <path fill="#070C16" d="M0,92 L0,68 L28,68 L28,50 L36,50 L36,40 L40,28 L44,40 L44,60 L70,60 L70,42 L78,42 L78,28 L83,15 L88,28 L88,42 L96,42 L96,56 L130,56 L130,38 L138,38 L138,25 L144,8 L150,25 L150,38 L158,38 L158,58 L200,58 L200,46 L214,46 L214,32 L220,19 L226,32 L226,46 L240,46 L240,62 L300,62 L300,48 L312,48 L312,34 L318,21 L324,34 L324,48 L336,48 L336,64 L392,64 L392,44 L400,44 L400,30 L406,13 L412,30 L412,44 L420,44 L420,60 L470,60 L470,50 L480,50 L480,38 L486,26 L492,38 L492,50 L502,50 L502,70 L560,70 L560,92 Z"/>
+      <g fill="#F2C14E" opacity=".8"><rect x="82" y="32" width="2.5" height="3.5"/><rect x="142" y="28" width="2.5" height="3.5"/><rect x="218" y="36" width="2.5" height="3.5"/><rect x="316" y="38" width="2.5" height="3.5"/><rect x="404" y="34" width="2.5" height="3.5"/><rect x="484" y="42" width="2.5" height="3.5"/></g></svg></div>
+      <span class="candle" style="left:9%;top:88px"></span><span class="candle" style="left:15%;top:60px"></span>
+      <span class="candle" style="left:30%;top:66px;height:8px"></span><span class="candle" style="left:46%;top:96px;height:11px"></span>
+      <span class="candle" style="left:70%;top:58px;height:9px"></span><span class="candle" style="left:88%;top:100px;height:8px"></span>
+      <div class="letterwrap">
+        <div class="owl"><span class="tuft l"></span><span class="tuft r"></span><div class="body"></div><div class="belly"></div><div class="wing l"></div><div class="wing r"></div><div class="eye l"></div><div class="eye r"></div><div class="beak"></div><div class="feet"></div></div>
+        <div class="addr">Mr. B. Kim &amp; Students,<br>The Cupboard under the Stairs, Listen &amp; Shadow</div>
+      <div class="brand">LISTEN &amp; SHADOW · DO ENGLISH WITH BRIAN</div>
+      <h1 class="logo" style="color:#3B2E1E;text-shadow:0 0 14px rgba(227,164,60,.3)">harry <b style='color:#8E2B21;font-weight:500'>potter</b></h1>
+      <div class="tagline">마법학교 첫 해에 배우는 예의 바른 첫 만남의 영어.<br><em style="color:#3E6B4F">&ldquo;Do you mind? &mdash; Not at all.&rdquo;</em></div>
+    </header>
+    <div class="cats" id="cats"></div>
+    <div class="diffrow" id="diffrow"></div>
+    <div class="list" id="list"></div>
+    <div class="foot"><div class="xo">drawn from the restricted section. <b>— FIRST YEAR EDITION</b></div><div class="sig">DO ENGLISH WITH BRIAN · HARRY POTTER EDITION</div></div>
+  </div>
+
+  <!-- ============ SCENE ============ -->
+  <div id="scene" class="hidden">
+    <div class="topbar">
+      <button class="back" onclick="goHome()">‹</button>
+      <div class="t"><div class="s" id="scSub"></div><h2 id="scTitle"></h2></div>
+    </div>
+    <div class="videowrap" id="vidwrap"></div>
+    <div class="lyr">
+      <button id="lyr1" class="on" onclick="showLayer(1)">Ⅰ · The Scene</button>
+      <button id="lyr2" onclick="showLayer(2)">Ⅱ · Line by Line</button>
+    </div>
+    <div class="captoggle" id="captoggle"></div>
+    <div class="sents" id="sents"></div>
+    <div class="focus hidden" id="focus"></div>
+  </div>
+</div>
+
+
+  <div class="toast" id="toast"></div>
+  <button class="helpbtn" id="helpbtn" title="연습 방법">?</button>
+  <div class="sheetwrap" id="sheetwrap"><div class="sheet">
+    <h3>추천 연습 루틴</h3>
+    <div class="sec">The Scene</div>
+    <div class="step"><b>1</b><span>한글 자막으로 상황과 내용 이해하기</span></div>
+    <div class="step"><b>2</b><span>영어 자막으로 실제 대사 눈으로 확인하기</span></div>
+    <div class="step"><b>3</b><span>자막 없이 보며 들리는지 리스닝 도전</span></div>
+    <div class="sec">Line by Line</div>
+    <div class="step"><b>4</b><span>쉬운 문장은 1배속으로 바로 확인 — 👁 버튼으로 대사를 가리고 다시 들어보기</span></div>
+    <div class="step"><b>5</b><span>어려운 문장은 속도를 늦춰 최대한 귀로 잡아내기</span></div>
+    <div class="step"><b>6</b><span>써먹고 싶은 문장은 REC으로 녹음해서 원어민과 비교하기</span></div>
+    <div class="sec">마무리</div>
+    <div class="step"><b>✓</b><span>충분히 됐다 싶으면 DONE 체크 — 홈 카드의 진행률에 쌓여요</span></div>
+    <button class="close" onclick="document.getElementById('sheetwrap').classList.remove('open')">닫기</button>
+  </div></div>
+<script>
+/* =====================================================
+   Listen & Shadow — app shell v2 (GG blog art direction)
+   콘텐츠: ./content/index.json → ./content/<id>/scene.json
+   ===================================================== */
+const CONTENT_BASE='./content/';
+const CATS=["전체","일상대화","감정·리액션","연애·관계","유머·티키타카","회의·업무","전화·컨콜","면접·격식"];
+
+const DEMO_INDEX={scenes:[{id:"demo",title:"The Photo Shoot",sub:"DEMO · SAMPLE SCENE",category:"감정·리액션",tags:["DEMO"],count:6}]};
+const DEMO_SCENE={id:"demo",title:"The Photo Shoot",sub:"DEMO · SAMPLE SCENE",category:"감정·리액션",tags:["DEMO"],video:null,
+ sentences:[
+  {start:0,end:0,who:"A",en:"You knew how much this meant to me.",ko:"이게 나한테 얼마나 중요한지 알았잖아."},
+  {start:0,end:0,who:"B",en:"I never asked for any of this.",ko:"내가 원해서 된 게 아니야."},
+  {start:0,end:0,who:"A",en:"That's what makes it worse.",ko:"그래서 더 화가 나는 거야."},
+  {start:0,end:0,who:"B",en:"I can't help how they see me.",ko:"사람들이 날 어떻게 보는지는 나도 어쩔 수 없어."},
+  {start:0,end:0,who:"A",en:"For once, this was supposed to be mine.",ko:"이번 한 번만은 내 것이어야 했어."},
+  {start:0,end:0,who:"B",en:"Then take it. I'll walk away.",ko:"그럼 가져. 내가 빠질게."},
+ ]};
+
+let INDEX=null, SCENE=null, layer=1, fi=0, cat="전체";
+let capMode="ko"; /* 자막 모드: ko(한글) → en(영어) → off(없음) */
+const CAP_ORDER=["ko","en","off"];
+const CAP_LABEL={ko:"한글",en:"ENG",off:"없음"};
+let looping=false, speed=1, segTimer=null;
+const $=id=>document.getElementById(id);
+
+/* ---- IndexedDB ---- */
+const DBN='dewb_shadow_app', ST='kv';
+function idb(){return new Promise((res,rej)=>{const r=indexedDB.open(DBN,1);
+ r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(ST))r.result.createObjectStore(ST);};
+ r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function kvSet(k,v){try{const d=await idb();return await new Promise(r=>{const t=d.transaction(ST,'readwrite');t.objectStore(ST).put(v,k);t.oncomplete=()=>r(1);t.onerror=()=>r(0);});}catch(e){return 0;}}
+async function kvGet(k){try{const d=await idb();return await new Promise(r=>{const q=d.transaction(ST,'readonly').objectStore(ST).get(k);q.onsuccess=()=>r(q.result||null);q.onerror=()=>r(null);});}catch(e){return null;}}
+
+/* ---- boot ---- */
+window.addEventListener('load',async()=>{
+  try{
+    const r=await fetch(CONTENT_BASE+'index.json',{cache:'no-store'});
+    if(!r.ok)throw 0;
+    INDEX=await r.json();
+    if(!INDEX.scenes||!INDEX.scenes.length)throw 0;
+  }catch(e){ INDEX=DEMO_INDEX; }
+  setHero();
+  renderCats(); renderDiffRow(); renderList();
+  // 딥링크: ?scene=<id> → 바로 해당 장면
+  try{
+    const q=new URLSearchParams(location.search).get('scene');
+    if(q && INDEX.scenes.some(x=>x.id===q)) openScene(q);
+  }catch(e){}
+});
+/* 히어로 이미지: index.json의 "hero" 필드 (예: "hero.jpg") 또는 기본 content/hero.jpg — 없으면 기존 플래시 배경 유지 */
+function setHero(){
+  const src=CONTENT_BASE+((INDEX&&INDEX.hero)||'hero.jpg');
+  const img=$("heroImg");
+  img.onload=()=>$("hdr").classList.add('hashero');
+  img.onerror=()=>$("hdr").classList.remove('hashero');
+  img.src=src;
+}
+function renderCats(){
+  $("cats").innerHTML=CATS.map(c=>`<button class="cat ${c===cat?'on':''}" onclick="setCat('${c}')">${c}</button>`).join('');
+}
+function setCat(c){cat=c;renderCats();renderList();}
+
+
+/* ---- scene ---- */
+let PROG={},MYREC={};
+async function openScene(id){
+  try{
+    const _m=(INDEX&&INDEX.scenes||[]).find(x=>x.id===id);
+    localStorage.setItem('ls_last',JSON.stringify({t:'harrypotter',label:'HARRY POTTER',id:id,expr:_m?_m.title:''}));
+  }catch(e){}
+  let sc=null;
+  if(id==='demo'){ sc=DEMO_SCENE; }
+  else{
+    try{ const r=await fetch(`${CONTENT_BASE}${id}/scene.json`,{cache:'no-store'}); if(!r.ok)throw 0; sc=await r.json(); }
+    catch(e){ alert('장면을 불러오지 못했어요. 네트워크를 확인해주세요.'); return; }
+  }
+  SCENE=sc; fi=0; layer=1; looping=false; speed=1;
+  PROG=(await kvGet(`prog|${sc.id}`))||{};
+  MYREC={};
+  $("home").classList.add("hidden"); $("scene").classList.remove("hidden");
+  $("scTitle").textContent='“'+sc.title+'”';
+  $("scSub").textContent=sc.sub||sc.category||'';
+  $("vidwrap").innerHTML = sc.video
+    ? `<video id="vid" src="${CONTENT_BASE}${sc.id}/${sc.video}" controls playsinline preload="metadata"></video><div class="capbox empty" id="capbox"></div>`
+    : `<div class="novid">— clip coming soon · line practice below —</div>`;
+  if(sc.video){
+    const v=vid();
+    v.addEventListener('timeupdate',updateCap);
+    v.addEventListener('seeked',updateCap);
+    v.addEventListener('pause',updateCap);
+    /* LINE BY LINE(layer 2): 영상 자체 재생 버튼을 눌러도 현재 라인 구간만 */
+    v.addEventListener('play',()=>{
+      if(layer===2 && !segTimer){
+        const s=SCENE.sentences[fi];
+        if(s && s.end>s.start){
+          if(v.currentTime < s.start-0.05 || v.currentTime >= s.end-0.05){ v.currentTime=s.start; }
+          armLineStop(s.end);
+        }
+      }
+    });
+  }
+  showLayer(1);
+  window.scrollTo(0,0);
+}
+function goHome(){ stopSeg(); $("scene").classList.add("hidden"); $("home").classList.remove("hidden"); renderList(); }
+function vid(){ return $("vid"); }
+
+/* ---- 영상 위 자막 오버레이 ---- */
+function curSentIdx(){
+  const v=vid(); if(!v||!SCENE)return -1;
+  const t=v.currentTime;
+  for(let i=0;i<SCENE.sentences.length;i++){
+    const s=SCENE.sentences[i];
+    if(s.end>s.start && t>=s.start && t<s.end) return i;
+  }
+  return -1;
+}
+function updateCap(){
+  const box=$("capbox"); if(!box)return;
+  /* LINE BY LINE(layer 2)에선 오버레이 자막 항상 끔 */
+  if(capMode==="off" || layer!==1){ box.className="capbox empty"; box.innerHTML=""; return; }
+  const i=curSentIdx();
+  if(i<0){ box.className="capbox empty"; box.innerHTML=""; return; }
+  const s=SCENE.sentences[i];
+  const txt = capMode==="ko" ? (s.ko||"") : (s.en||"");
+  if(!txt){ box.className="capbox empty"; box.innerHTML=""; return; }
+  box.className="capbox";
+  box.innerHTML=`<span class="cap ${capMode}">${txt}</span>`;
+}
+function cycleCap(){
+  const idx=CAP_ORDER.indexOf(capMode);
+  capMode=CAP_ORDER[(idx+1)%CAP_ORDER.length];
+  renderCapToggle();
+  updateCap();
+}
+function renderCapToggle(){
+  const el=$("captoggle"); if(!el)return;
+  el.innerHTML=CAP_ORDER.map(m=>`<button class="${m===capMode?'on':''}" onclick="setCap2('${m}')">${CAP_LABEL[m]}</button>`).join('');
+}
+function setCap2(m){ capMode=m; renderCapToggle(); updateCap(); }
+
+function showLayer(n){
+  layer=n; stopSeg();
+  if(typeof lineStopTimer!=='undefined') clearInterval(lineStopTimer);
+  $("lyr1").classList.toggle("on",n===1); $("lyr2").classList.toggle("on",n===2);
+  $("sents").classList.toggle("hidden",n!==1); $("focus").classList.toggle("hidden",n!==2);
+  /* LINE BY LINE에선 영상 상단 고정(sticky) */
+  const vw=$("vidwrap");
+  if(vw){ vw.classList.toggle("sticky",n===2); }
+  /* 자막 토글은 THE SCENE(1)에서만, 클립 있을 때만 */
+  const ct=$("captoggle");
+  if(ct){ ct.style.display=(n===1 && SCENE && SCENE.video)?'flex':'none'; }
+  if(n===1){ renderCapToggle(); renderSents(); updateCap(); }
+  else { renderFocus(); updateCap(); }
+}
+
+/* ---- Layer 1 (THE SCENE) — 영상+오버레이 자막 몰입, 문장 리스트 없음 ---- */
+function renderSents(){
+  if(!SCENE.video){
+    $("sents").innerHTML=`<div class="scenehint">클립이 준비되면 여기서 장면을 감상할 수 있어요.<br><span class="xo">— MISSION LOG</span></div>`;
+    return;
+  }
+  $("sents").innerHTML=`<div class="scenehint">
+    ▶︎ 영상을 재생하고, 위 버튼으로 자막을 바꿔보세요 — <b>한글</b>로 뜻 잡고 → <b>영어</b>로 따라 하고 → <b>없음</b>으로 소리만 듣기.<br><br>
+    문장 하나하나 훈련은 <b onclick="showLayer(2)" style="color:var(--champ);cursor:pointer;text-decoration:underline;">Ⅱ · Line by Line</b> 탭에서.<br>
+    <span class="xo">— MISSION LOG</span>
+  </div>`;
+}
+function tapSent(i){
+  const s=SCENE.sentences[i];
+  if(vid() && s.end>s.start){ playSegment(s.start,s.end,1,false); markPlaying(i); }
+  else { fi=i; showLayer(2); }
+}
+function markPlaying(i){
+  document.querySelectorAll('.sent').forEach(el=>el.classList.remove('playing'));
+  const el=$("sent-"+i); if(el)el.classList.add('playing');
+}
+
+/* ---- 구간 재생 ---- */
+function playSegment(a,b,rate,loop){
+  const v=vid(); if(!v)return;
+  stopSeg();
+  v.currentTime=a; v.playbackRate=rate||1;
+  v.play().catch(()=>{});
+  segTimer=setInterval(()=>{
+    if(v.currentTime>=b-0.03){
+      if(loop && looping){ v.currentTime=a; }
+      else { v.pause(); stopSeg(); syncPlayBtn(false); }
+    }
+  },50);
+}
+function stopSeg(){ clearInterval(segTimer); segTimer=null; const v=vid(); if(v)v.pause(); }
+
+/* LINE BY LINE에서 영상 기본 컨트롤로 재생 시, 현재 라인 끝에서 자동 정지 */
+let lineStopTimer=null;
+function armLineStop(end){
+  clearInterval(lineStopTimer);
+  const v=vid(); if(!v)return;
+  lineStopTimer=setInterval(()=>{
+    if(layer!==2){ clearInterval(lineStopTimer); return; }
+    if(v.currentTime>=end-0.03){ v.pause(); clearInterval(lineStopTimer); }
+  },40);
+}
+
+/* ---- Layer 2 ---- */
+let blurred=false;
+function renderFocus(){
+  const s=SCENE.sentences[fi], n=SCENE.sentences.length;
+  const hasSeg=!!(vid() && s.end>s.start);
+  $("focus").innerHTML=`
+    <div class="fnav">
+      <button ${fi===0?'disabled':''} onclick="nav(-1)">‹ Prev</button>
+      <span class="pos">${String(fi+1).padStart(2,'0')} / ${String(n).padStart(2,'0')}</span>
+      <button ${fi===n-1?'disabled':''} onclick="nav(1)">Next ›</button>
+    </div>
+    <div class="fcardX">
+      <button class="eyeBtn" onclick="toggleBlur()" id="eye">${blurred?'🙈':'👁'}</button>
+      <span class="qm">&ldquo;</span>
+      <div class="who">${s.who||'&nbsp;'}</div>
+      <div class="en ${blurred?'blur':''}" id="fen">${s.en}</div>
+      <div class="ko">${s.ko||''}</div>
+    </div>
+    <div class="ctl">
+      <div class="row">
+        <button class="pill play" id="segPlay" ${hasSeg?'':'disabled'} onclick="togglePlay()">▶︎ Play line</button>
+        <button class="pill" id="loopBtn" ${hasSeg?'':'disabled'} onclick="toggleLoop()">∞ Loop</button>
+      </div>
+      <div class="speedlbl">Speed</div>
+      <div class="row" id="spRow">
+        ${[0.5,0.75,1,1.25].map(r=>`<button class="pill sp ${r===speed?'on':''}" onclick="setSpeed(${r})">${r}×</button>`).join('')}
+      </div>
+      <div class="speedlbl">Shadow</div>
+      <div class="row">
+        <button class="pill recbtn" id="recBtn" onclick="toggleRec()">● Record</button>
+        <button class="pill" id="myPlay" disabled onclick="playMine()">▶︎ My voice</button>
+        <button class="pill" onclick="markDone()">✓ Done</button>
+      </div>
+      <div class="savednote" id="note"></div>
+      <div class="gsent">듣고 → 따라 말하고 → 내 목소리와 비교 — 대사가 내 것이 될 때까지.<br>${hasSeg?'':'(클립 업로드 전에는 문장 읽기·녹음 연습으로 이용하세요)'}</div>
+    </div>`;
+  loadMyRec();
+}
+function nav(d){ stopSeg(); looping=false; fi=Math.max(0,Math.min(SCENE.sentences.length-1,fi+d)); renderFocus(); }
+function toggleBlur(){ blurred=!blurred; $("fen").classList.toggle('blur',blurred); $("eye").textContent=blurred?'🙈':'👁'; }
+function setSpeed(r){ speed=r; document.querySelectorAll('.sp').forEach(b=>b.classList.toggle('on',parseFloat(b.textContent)===r));
+  const v=vid(); if(v)v.playbackRate=r; }
+function syncPlayBtn(playing){ const b=$("segPlay"); if(b)b.innerHTML=playing?'❚❚ Stop':'▶︎ Play line'; }
+function togglePlay(){
+  const s=SCENE.sentences[fi];
+  if(segTimer){ stopSeg(); syncPlayBtn(false); return; }
+  playSegment(s.start,s.end,speed,looping); syncPlayBtn(true);
+}
+function toggleLoop(){ looping=!looping; $("loopBtn").classList.toggle('on',looping);
+  if(segTimer){ const s=SCENE.sentences[fi]; playSegment(s.start,s.end,speed,looping); syncPlayBtn(true);} }
+
+/* ---- 내 녹음 (blob URL 재생 — iOS 안정) ---- */
+let sharedMic=null,recorder=null,recording=false;
+function micAlive(m){try{return !!m&&m.getAudioTracks().some(t=>t.readyState==='live');}catch(e){return false;}}
+async function getMic(){
+  /* iOS: 캐시된 스트림은 영상 재생 후 무음으로 죽음 → 매번 새로 획득 */
+  releaseMic();
+  try{ sharedMic=await navigator.mediaDevices.getUserMedia({audio:true}); return sharedMic; }
+  catch(e){ alert("마이크 권한을 허용해주세요."); return null; } }
+function releaseMic(){ try{ if(sharedMic){ sharedMic.getTracks().forEach(t=>t.stop()); sharedMic=null; } }catch(e){} }
+function pickMime(){ const c=['audio/mp4','audio/mp4;codecs=mp4a.40.2','audio/aac','audio/webm;codecs=opus','audio/webm'];
+  if(window.MediaRecorder&&MediaRecorder.isTypeSupported){for(const t of c){if(MediaRecorder.isTypeSupported(t))return t;}} return ''; }
+function recKey(){ return `rec|${SCENE.id}|${fi}`; }
+async function toggleRec(){
+  const btn=$("recBtn");
+  if(recording){ if(recorder&&recorder.state==='recording'){try{recorder.requestData&&recorder.requestData();}catch(e){} recorder.stop();} return; }
+  const mic=await getMic(); if(!mic)return;
+  /* iOS: 영상·기존 재생이 오디오 세션을 잡고 있으면 녹음이 실패/무음 → 모두 정지 */
+  stopSeg(); syncPlayBtn(false);
+  const v=vid(); if(v){ try{ v.pause(); }catch(e){} }
+  if(myAudio){ try{ myAudio.pause(); }catch(e){} }
+  let chunks=[]; const mt=pickMime();
+  try{ recorder=mt?new MediaRecorder(mic,{mimeType:mt}):new MediaRecorder(mic); }
+  catch(e){ try{ recorder=new MediaRecorder(mic); }catch(e2){ $("note").textContent='이 기기에서는 녹음이 지원되지 않아요'; return; } }
+  recording=true;
+  const keyAt=recKey();
+  recorder.ondataavailable=e=>{if(e.data&&e.data.size>0)chunks.push(e.data);};
+  recorder.onerror=()=>{ recording=false; releaseMic(); btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음 오류 — 다시 시도해 주세요'; };
+  recorder.onstop=()=>{
+    recording=false; releaseMic();
+    const blob=new Blob(chunks,{type:(recorder&&recorder.mimeType)||mt||'audio/mp4'});
+    /* iOS에서 간혹 빈 blob → 안내 후 중단 */
+    if(!blob||blob.size<200){ btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음이 너무 짧아요 — 다시 눌러 말해보세요'; return; }
+    if(MYREC[keyAt]&&MYREC[keyAt].url){ try{URL.revokeObjectURL(MYREC[keyAt].url);}catch(e){} }
+    MYREC[keyAt]={blob,url:URL.createObjectURL(blob)};
+    const fr=new FileReader();
+    fr.onload=()=>kvSet(keyAt,fr.result);
+    fr.readAsDataURL(blob);
+    if(keyAt===recKey()){
+      btn.classList.remove('recording'); btn.innerHTML='● Re-record';
+      const mp=$("myPlay"); if(mp)mp.disabled=false;
+      $("note").textContent='✓ Saved — My voice로 들어보세요';
+    }
+  };
+  /* timeslice(100ms) 지정: iOS에서 stop 시 데이터 누락 방지 */
+  try{ recorder.start(100); }catch(e){ try{recorder.start();}catch(e2){} }
+  btn.classList.add('recording'); btn.innerHTML='■ Stop';
+}
+async function loadMyRec(){
+  const k=recKey();
+  if(!MYREC[k]){
+    const dataUrl=await kvGet(k);
+    if(dataUrl){ try{
+      let blob=await (await fetch(dataUrl)).blob();
+      /* iOS: type 비어있으면 재생 실패 → dataURL의 mime로 보정 */
+      if(!blob.type){ const m=/^data:([^;]+);/.exec(dataUrl); if(m){ blob=blob.slice(0,blob.size,m[1]); } }
+      MYREC[k]={blob,url:URL.createObjectURL(blob)};
+    }catch(e){} }
+  }
+  if(MYREC[k]){ const mp=$("myPlay"); if(mp)mp.disabled=false;
+    const rb=$("recBtn"); if(rb)rb.innerHTML='● Re-record'; }
+}
+let myAudio=null;
+function playMine(){
+  const k=recKey(); const rec=MYREC[k]; if(!rec)return;
+  const note=$("note");
+  /* iOS: 영상이 오디오 세션을 물고 있으면 녹음이 무음으로 재생됨 → 영상 확실히 정지 */
+  stopSeg(); syncPlayBtn(false);
+  const v=vid(); if(v){ try{ v.pause(); }catch(e){} }
+  if(typeof lineStopTimer!=='undefined') clearInterval(lineStopTimer);
+  /* 이전 재생 정리 */
+  if(myAudio){ try{ myAudio.pause(); myAudio.src=''; }catch(e){} myAudio=null; }
+  /* iOS 사파리: blob URL이 만료/미준비일 수 있어 blob에서 매번 새 URL 생성 (사용자 제스처 안에서 즉시) */
+  let url=rec.url;
+  try{ if(rec.blob){ if(rec.url) URL.revokeObjectURL(rec.url); url=URL.createObjectURL(rec.blob); rec.url=url; } }catch(e){}
+  const a=new Audio();
+  a.preload='auto';
+  a.setAttribute('playsinline','');
+  myAudio=a;
+  let tried=false;
+  const attempt=()=>{
+    const p=a.play();
+    if(p&&p.catch){ p.then(()=>{ if(note)note.textContent='▶︎ 내 목소리 재생 중'; })
+      .catch(()=>{
+        if(!tried){ tried=true; try{a.load();}catch(e){} setTimeout(attempt,120); }
+        else if(note){ note.textContent='재생하려면 한 번 더 눌러주세요 (무음 스위치 해제 확인)'; }
+      });
+    }
+  };
+  a.onended=()=>{ if(note)note.textContent='✓ 다시 들으려면 My voice를 누르세요'; };
+  a.onerror=()=>{ if(note)note.textContent='재생 오류 — 다시 녹음해 주세요'; };
+  a.src=url;
+  if(a.readyState>=2){ attempt(); }
+  else { a.oncanplay=()=>{ a.oncanplay=null; attempt(); }; try{a.load();}catch(e){} setTimeout(()=>{ if(myAudio===a&&a.paused&&!tried) attempt(); },300); }
+}
+async function markDone(){
+  PROG[fi]=true; await kvSet(`prog|${SCENE.id}`,PROG);
+  $("note").textContent=`✓ Line ${fi+1} — practiced`;
+}
+
+const ROMAN=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
+const LABEL=mi=>`Chapter ${ROMAN[mi-1]||mi}.`;
+const EXTRA_CARD='';
+const EMPTY_TITLE="This page of the spellbook is blank&hellip;";
+
+/* ---------- 공통 기능 JS ---------- */
+let diff=0;
+function renderDiffRow(){
+  const lv=[...new Set((INDEX.scenes||[]).map(s=>s.difficulty).filter(Boolean))].sort();
+  const row=document.getElementById('diffrow');
+  if(!row) return;
+  if(lv.length<1){ row.style.display='none'; return; }
+  const nm={1:'① 기초',2:'② 중급',3:'③ 고급'};
+  row.innerHTML='<span class="difflbl">난이도</span>'+
+    `<button class="diff ${diff===0?'on':''}" onclick="setDiff(0)">전체</button>`+
+    lv.map(d=>`<button class="diff ${diff===d?'on':''}" onclick="setDiff(${d})">${nm[d]}</button>`).join('');
+}
+function setDiff(d){ diff=d; renderDiffRow(); renderList(); }
+async function renderList(){
+  const items=INDEX.scenes.filter(s=>(cat==="전체"||s.category===cat)&&(!diff||s.difficulty===diff));
+  if(!items.length){ $("list").innerHTML=`<div class="empty"><b>${EMPTY_TITLE}</b><br>이 조합의 장면은 준비 중이에요.</div>`; return; }
+  let h='';
+  const nm={1:'① 기초',2:'② 중급',3:'③ 고급'};
+  for(const s of items){
+    const mi=INDEX.scenes.indexOf(s)+1;
+    const done=await kvGet(`prog|${s.id}`);
+    const dn=done?Object.values(done).filter(Boolean).length:0;
+    const pct=s.count?Math.min(100,Math.round(dn/s.count*100)):0;
+    h+=`<div class="card" onclick="openScene('${s.id}')">${EXTRA_CARD}
+      <div class="chead"><span class="mlog">${LABEL(mi)}</span><span class="cmeta">${s.sub||''}</span></div>
+      <div class="expr">&ldquo;${s.title}&rdquo;</div>
+      ${s.meaning?`<div class="mean">${s.meaning}</div>`:''}
+      <div class="cfoot">
+        <div class="badges">${s.difficulty?`<span class="bdg dl">${nm[s.difficulty]}</span>`:''}<span class="bdg catb">${s.category||''}</span><span class="bdg">${s.count?s.count+' LINES':'SOON'}</span></div>
+        <button class="cta"><span class="tri"></span>연습하기 &rarr;</button>
+      </div>
+      <div class="prog"><div class="bar"><i style="width:${pct}%"></i></div><span class="pct">${dn}/${s.count||0} DONE</span></div>
+    </div>`;
+  }
+  $("list").innerHTML=h;
+}
+/* 힌트 (1회성) */
+function hint(k,msg){
+  try{ if(localStorage.getItem('h_'+k)) return; localStorage.setItem('h_'+k,'1'); }catch(e){}
+  const t=document.getElementById('toast'); if(!t) return;
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),5200);
+}
+document.addEventListener('click',e=>{
+  if(e.target.closest('#lyr2')) hint('lbl','쉬운 문장은 바로, 어려운 문장은 느리게 — 👁로 대사를 가리고 들어보세요');
+  if(e.target.closest('.recbtn')) hint('rec','써먹고 싶은 문장은 녹음해서 원어민과 비교해보세요. 됐다 싶으면 DONE 체크!');
+});
+document.getElementById('helpbtn').onclick=()=>document.getElementById('sheetwrap').classList.add('open');
+document.getElementById('sheetwrap').onclick=e=>{ if(e.target.id==='sheetwrap') e.target.classList.remove('open'); };
+const _openScene=openScene;
+openScene=async function(id){
+  await _openScene(id);
+  hint('scene','자막 버튼으로 한글 → 영어 → 자막 없이, 3단계로 들어보세요');
+  setTimeout(renderDiffRow,0);
+};
+
+</script>
+</body>
+</html>

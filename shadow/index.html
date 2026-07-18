@@ -132,6 +132,30 @@ h1 .thin{color:var(--stamp)}
 .nb .cta{color:#FBF6EA;background:#C4593C}
 .nb .tri{border-left:9px solid #FBF6EA}
 
+.nh{background:#F5F0E4;color:#33291F}
+.nh::before{content:"";position:absolute;left:20px;top:24px;width:34px;height:52px;pointer-events:none;
+  background:linear-gradient(175deg,#4A7BB0,#3E6FA3 55%,#2E5580);border-radius:17px 17px 2px 2px;border:2px solid #2A4A6E;opacity:.9}
+.nh .eyebrow{color:#8C7F6C;padding-left:46px}.nh .eyebrow .sp{color:#B8412F;font-weight:800}
+.nh h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:28px;padding-left:46px}
+.nh h2 b{color:#3E6FA3;font-weight:500}
+.nh .xo{font-family:var(--serif);font-style:italic;font-size:13px;color:#8C7F6C;margin-top:6px;padding-left:46px}
+.nh .tdesc{color:#8C7F6C}
+.nh .cta{color:#F5F0E4;background:#3E6FA3}
+.nh .tri{border-left:9px solid #F5F0E4}
+.hp{background:radial-gradient(120% 120% at 50% -20%, #1B2C4E 0%, #101B33 55%, #0C1424 100%);color:#EDDFC0}
+.hp::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(30px 30px at 86% 26px, rgba(214,230,255,.4), transparent 70%),
+   radial-gradient(1px 1px at 14% 24%,rgba(220,232,255,.8),transparent),radial-gradient(1.2px 1.2px at 34% 56%,rgba(220,232,255,.6),transparent),
+   radial-gradient(1px 1px at 55% 18%,rgba(220,232,255,.7),transparent),
+   radial-gradient(3px 12px at 22% 34%,rgba(246,217,160,.9),transparent 60%),
+   radial-gradient(3px 10px at 44% 52%,rgba(246,217,160,.7),transparent 60%)}
+.hp .eyebrow{color:#5d6a88}.hp .eyebrow .sp{color:#E3A43C;font-weight:700}
+.hp h2{font-family:var(--serif);font-weight:500;font-size:27px}
+.hp h2 b{color:#E3A43C;font-weight:500}
+.hp .xo{font-family:var(--serif);font-style:italic;font-size:13px;color:#7C88A3;margin-top:6px}
+.hp .tdesc{color:#7C88A3}
+.hp .cta{color:#0C1424;background:#E3A43C}
+.hp .tri{border-left:9px solid #0C1424}
 .soon{border:1.5px dashed var(--hair);padding:15px;text-align:center;font-size:11.5px;color:var(--sub);
   font-family:var(--disp);letter-spacing:1.5px;text-transform:uppercase}
 
@@ -251,7 +275,33 @@ footer{margin:40px 22px 0 46px;padding-top:14px;border-top:1.5px solid var(--ink
       <div class="sprocket"></div></div>
     </div>
 
-    <div class="soon">NEXT REELS — NOTTING HILL · HARRY POTTER · THE OFFICE</div>
+    <div class="reel">
+      <div class="reelno"><span class="rn">REEL 06</span><span class="rl"></span><span class="rc">11 SCENES · <b>NEW</b></span></div>
+      <div class="frame"><div class="sprocket"></div>
+        <a class="tcard nh" href="./nottinghill/" onclick="mark('nottinghill')">
+          <span class="still"><img src="./posters/nottinghill.jpg" alt="" loading="lazy"></span>
+          <div class="eyebrow"><span class="sp">&#9632; PORTOBELLO RD</span></div>
+          <h2>notting <b>hill</b></h2>
+          <div class="xo">whoops-a-daisies</div>
+          <div class="tfoot"><div class="tdesc">파란 대문의 서점 — 영국식 일상·완곡 화법</div><span class="cta"><span class="tri"></span>입장 &rarr;</span></div>
+        </a>
+      <div class="sprocket"></div></div>
+    </div>
+
+    <div class="reel">
+      <div class="reelno"><span class="rn">REEL 07</span><span class="rl"></span><span class="rc">8 SCENES · <b>NEW</b></span></div>
+      <div class="frame"><div class="sprocket"></div>
+        <a class="tcard hp" href="./harrypotter/" onclick="mark('harrypotter')">
+          <span class="still"><img src="./posters/harrypotter.jpg" alt="" loading="lazy"></span>
+          <div class="eyebrow"><span class="sp">&#10022; HOGWARTS BY NIGHT</span></div>
+          <h2>harry <b>potter</b></h2>
+          <div class="xo">drawn from the restricted section</div>
+          <div class="tfoot"><div class="tdesc">마법학교 첫 해 — 예의 바른 첫 만남의 영어</div><span class="cta"><span class="tri"></span>입장 &rarr;</span></div>
+        </a>
+      <div class="sprocket"></div></div>
+    </div>
+
+    <div class="soon">NEXT REELS — THE INTERN · THE OFFICE · DEVIL WEARS PRADA</div>
   </div>
 
   <div id="lib" class="hidden">
@@ -270,6 +320,8 @@ const TITLES={
  toystory:{name:"TOY STORY",color:"#D19A1F"},
  gatsby:{name:"GATSBY",color:"#B8962E"},
  notebook:{name:"NOTEBOOK",color:"#C4593C"},
+ nottinghill:{name:"NOTTING HILL",color:"#3E6FA3"},
+ harrypotter:{name:"HARRY POTTER",color:"#E3A43C"},
 };
 const CATS=["전체","일상대화","감정·리액션","연애·관계","유머·티키타카","회의·업무","전화·컨콜","면접·격식"];
 function mark(t){ try{localStorage.setItem('ls_last',JSON.stringify({t,label:TITLES[t].name,id:'',expr:''}));}catch(e){} }

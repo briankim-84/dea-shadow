@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nh-tempting",
+  "title": "Tempting. But no, thank you",
+  "sub": "NOTTING HILL · 1999",
+  "category": "감정·리액션",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "Tempting. But no, thank you",
+  "meaning": "솔깃하지만, 사양할게요",
+  "video": "tempting_but_no.mp4",
+  "sentences": [
+    {
+      "start": 1.43,
+      "end": 2.81,
+      "who": "THIEF",
+      "en": "Good one.",
+      "ko": "한 방 먹었네요."
+    },
+    {
+      "start": 4.88,
+      "end": 6.16,
+      "who": "THIEF",
+      "en": "Do you want my phone number?",
+      "ko": "제 전화번호 드릴까요?"
+    },
+    {
+      "start": 7.26,
+      "end": 12.2,
+      "who": "ANNA",
+      "en": "★ Tempting. But... no. Thank you.",
+      "ko": "★ 솔깃하네요. 하지만... 사양할게요."
+    }
+  ]
+}

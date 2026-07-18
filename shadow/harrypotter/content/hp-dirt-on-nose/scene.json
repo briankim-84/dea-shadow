@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 수동 확정 (실발화 순서 반영)",
+  "id": "hp-dirt-on-nose",
+  "title": "You've got dirt on your nose",
+  "sub": "HARRY POTTER · 2001",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "HARRYPOTTER"
+  ],
+  "expression": "You've got dirt on your nose",
+  "meaning": "코에 뭐 묻었어",
+  "video": "dirt_on_your_nose.mp4",
+  "sentences": [
+    {
+      "start": 0.05,
+      "end": 1.45,
+      "who": "HERMIONE",
+      "en": "And you are?",
+      "ko": "그리고 넌 누구니?"
+    },
+    {
+      "start": 1.55,
+      "end": 3.4,
+      "who": "RON",
+      "en": "Um... Ron Weasley.",
+      "ko": "어... 론 위즐리."
+    },
+    {
+      "start": 3.76,
+      "end": 4.89,
+      "who": "HERMIONE",
+      "en": "Pleasure.",
+      "ko": "반가워."
+    },
+    {
+      "start": 5.78,
+      "end": 9.3,
+      "who": "HERMIONE",
+      "en": "You two better change into robes. I expect we'll be arriving soon.",
+      "ko": "너희 둘 로브로 갈아입는 게 좋을 거야. 곧 도착할 테니까."
+    },
+    {
+      "start": 14.56,
+      "end": 18.93,
+      "who": "HERMIONE",
+      "en": "★ You've got dirt on your nose. Did you know? Just there.",
+      "ko": "★ 너 코에 뭐 묻었어. 알고 있었어? 바로 거기."
+    }
+  ]
+}

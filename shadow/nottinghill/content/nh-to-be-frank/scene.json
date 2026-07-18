@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nh-to-be-frank",
+  "title": "to be frank with you",
+  "sub": "NOTTING HILL · 1999",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "to be frank with you",
+  "meaning": "솔직히 말하면",
+  "video": "to_be_frank.mp4",
+  "sentences": [
+    {
+      "start": 1.35,
+      "end": 4.48,
+      "who": "WILLIAM",
+      "en": "This is work, by the way, my little travel bookshop,",
+      "ko": "그리고 여긴 내 일터 — 작은 여행 서점이야."
+    },
+    {
+      "start": 5.74,
+      "end": 7.03,
+      "who": "WILLIAM",
+      "en": "Morning, Martin.",
+      "ko": "좋은 아침, 마틴."
+    },
+    {
+      "start": 7.05,
+      "end": 8.56,
+      "who": "MARTIN",
+      "en": "Morning, Monsignor.",
+      "ko": "좋은 아침입니다, 몬시뇰."
+    },
+    {
+      "start": 8.72,
+      "end": 15.27,
+      "who": "WILLIAM",
+      "en": "★ which, um, well, sells travel books, and to be frank with you, doesn't always sell many of those.",
+      "ko": "★ 여행 책을 파는 곳인데, 솔직히 말하면, 늘 많이 팔리진 않아."
+    }
+  ]
+}

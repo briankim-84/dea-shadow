@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "hp-all-set",
+  "title": "I'm all set",
+  "sub": "HARRY POTTER · 2001",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "HARRYPOTTER"
+  ],
+  "expression": "I'm all set",
+  "meaning": "저는 됐어요·충분해요",
+  "video": "im_all_set.mp4",
+  "sentences": [
+    {
+      "start": 1.73,
+      "end": 3.5,
+      "who": "TROLLEY",
+      "en": "Anything off the trolley, dears?",
+      "ko": "카트에서 뭐 좀 사겠니, 얘들아?"
+    },
+    {
+      "start": 3.52,
+      "end": 6.2,
+      "who": "RON",
+      "en": "★ No, thanks. I'm all set.",
+      "ko": "★ 아뇨, 괜찮아요. 저는 됐어요."
+    },
+    {
+      "start": 10.72,
+      "end": 12.4,
+      "who": "HARRY",
+      "en": "We'll take the lot!",
+      "ko": "전부 다 주세요!"
+    }
+  ]
+}

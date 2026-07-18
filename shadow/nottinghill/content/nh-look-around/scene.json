@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "nh-look-around",
+  "title": "I'll just look around",
+  "sub": "NOTTING HILL · 1999",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "NOTTINGHILL"
+  ],
+  "expression": "I'll just look around",
+  "meaning": "그냥 둘러볼게요",
+  "video": "just_look_around.mp4",
+  "sentences": [
+    {
+      "start": 2.13,
+      "end": 4.46,
+      "who": "WILLIAM",
+      "en": "★ Um, can I help you at all?",
+      "ko": "★ 저, 뭐 도와드릴까요?"
+    },
+    {
+      "start": 4.76,
+      "end": 7.12,
+      "who": "ANNA",
+      "en": "★ No, thanks. I'll just... look around.",
+      "ko": "★ 아뇨, 괜찮아요. 그냥... 둘러볼게요."
+    },
+    {
+      "start": 9.48,
+      "end": 11.11,
+      "who": "WILLIAM",
+      "en": "Fine.",
+      "ko": "네."
+    },
+    {
+      "start": 18.34,
+      "end": 25.37,
+      "who": "WILLIAM",
+      "en": "Uh, that book's really not great. Just in case, you know, browsing turned to buying. You'd be wasting your money.",
+      "ko": "저, 그 책은 별로예요. 혹시 구경이 구매로 이어질까 봐요. 돈 낭비하시는 거예요."
+    },
+    {
+      "start": 25.92,
+      "end": 30.88,
+      "who": "WILLIAM",
+      "en": "★ But if it's Turkey you're interested in, um, this one, on the other hand, is very good.",
+      "ko": "★ 그런데 튀르키예에 관심 있으신 거면, 반면에 이 책은 아주 좋아요."
+    }
+  ]
+}

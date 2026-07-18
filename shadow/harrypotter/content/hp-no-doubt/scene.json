@@ -1,0 +1,44 @@
+{
+  "_readme": "v7 + QA 수동 확정",
+  "id": "hp-no-doubt",
+  "title": "no doubt about that",
+  "sub": "HARRY POTTER · 2001",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "HARRYPOTTER"
+  ],
+  "expression": "no doubt about that",
+  "meaning": "그건 의심의 여지가 없지",
+  "video": "no_doubt_about_that.mp4",
+  "sentences": [
+    {
+      "start": 1.35,
+      "end": 6.97,
+      "who": "HAT",
+      "en": "You could be great, you know. It's all here, in your head.",
+      "ko": "넌 위대해질 수 있어. 전부 여기, 네 머릿속에 있거든."
+    },
+    {
+      "start": 7.12,
+      "end": 11.83,
+      "who": "HAT",
+      "en": "★ And Slytherin will help you on the way to greatness, no doubt about that.",
+      "ko": "★ 슬리데린이 그 위대함의 길을 도와줄 거다. 그건 의심의 여지가 없지."
+    },
+    {
+      "start": 11.85,
+      "end": 12.62,
+      "who": "HARRY",
+      "en": "Please, no.",
+      "ko": "제발, 안 돼요."
+    },
+    {
+      "start": 12.64,
+      "end": 16.0,
+      "who": "HAT",
+      "en": "No? Well, if you're sure.",
+      "ko": "싫다고? 뭐, 정 그렇다면."
+    }
+  ]
+}

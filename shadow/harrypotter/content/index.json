@@ -1,0 +1,109 @@
+{
+  "_readme": "해리포터 에디션 인덱스",
+  "scenes": [
+    {
+      "id": "hp-do-you-mind",
+      "title": "Do you mind? / Not at all",
+      "sub": "HARRY POTTER · 2001",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "Do you mind? / Not at all",
+      "meaning": "실례해도 될까? / 그럼요 (양해 세트)",
+      "count": 4
+    },
+    {
+      "id": "hp-all-set",
+      "title": "I'm all set",
+      "sub": "HARRY POTTER · 2001",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "I'm all set",
+      "meaning": "저는 됐어요·충분해요",
+      "count": 3
+    },
+    {
+      "id": "hp-not-very-good",
+      "title": "It's not very good, is it?",
+      "sub": "HARRY POTTER · 2001",
+      "category": "유머·티키타카",
+      "difficulty": 2,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "It's not very good, is it?",
+      "meaning": "별로 안 좋은데, 그렇지? (부가의문)",
+      "count": 3
+    },
+    {
+      "id": "hp-dirt-on-nose",
+      "title": "You've got dirt on your nose",
+      "sub": "HARRY POTTER · 2001",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "You've got dirt on your nose",
+      "meaning": "코에 뭐 묻었어",
+      "count": 5
+    },
+    {
+      "id": "hp-momentarily",
+      "title": "~ will begin momentarily",
+      "sub": "HARRY POTTER · 2001",
+      "category": "면접·격식",
+      "difficulty": 3,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "~ will begin momentarily",
+      "meaning": "곧 시작하겠습니다 (격식)",
+      "count": 2
+    },
+    {
+      "id": "hp-few-words",
+      "title": "say a few words",
+      "sub": "HARRY POTTER · 2001",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "say a few words",
+      "meaning": "몇 말씀 하시다",
+      "count": 5
+    },
+    {
+      "id": "hp-no-doubt",
+      "title": "no doubt about that",
+      "sub": "HARRY POTTER · 2001",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "no doubt about that",
+      "meaning": "그건 의심의 여지가 없지",
+      "count": 4
+    },
+    {
+      "id": "hp-i-prefer",
+      "title": "I prefer ~, if you don't mind",
+      "sub": "HARRY POTTER · 2001",
+      "category": "면접·격식",
+      "difficulty": 2,
+      "tags": [
+        "HARRYPOTTER"
+      ],
+      "expression": "I prefer ~, if you don't mind",
+      "meaning": "괜찮으시면 ~라고 불러주시죠",
+      "count": 4
+    }
+  ]
+}
