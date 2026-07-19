@@ -156,6 +156,18 @@ h1 .thin{color:var(--stamp)}
 .hp .tdesc{color:#7C88A3}
 .hp .cta{color:#0C1424;background:#E3A43C}
 .hp .tri{border-left:9px solid #0C1424}
+.it2{background:#F6F1E6;color:#2E2620;background-image:repeating-linear-gradient(180deg,transparent 0 26px,rgba(36,48,63,.09) 26px 27px)}
+.it2::before{content:"";position:absolute;left:20px;top:30px;width:46px;height:34px;pointer-events:none;border-radius:3px 3px 4px 4px;
+  background:linear-gradient(170deg,#8E5C36,#7A4E2D 45%,#6A4327);border:1.5px solid #5C3820;
+  box-shadow:0 4px 8px rgba(92,56,32,.3)}
+.it2::after{content:"";position:absolute;left:34px;top:22px;width:18px;height:9px;border:2.5px solid #5C3820;border-bottom:none;border-radius:6px 6px 0 0;pointer-events:none}
+.it2 .eyebrow{color:#87796A;padding-left:60px}.it2 .eyebrow .sp{color:#B8912F;font-weight:800}
+.it2 h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:28px;padding-left:60px}
+.it2 h2 b{color:#7A4E2D;font-weight:500}
+.it2 .xo{font-family:var(--serif);font-style:italic;font-size:13px;color:#87796A;margin-top:6px;padding-left:60px}
+.it2 .tdesc{color:#87796A}
+.it2 .cta{color:#FCF9F1;background:#7A4E2D}
+.it2 .tri{border-left:9px solid #FCF9F1}
 .soon{border:1.5px dashed var(--hair);padding:15px;text-align:center;font-size:11.5px;color:var(--sub);
   font-family:var(--disp);letter-spacing:1.5px;text-transform:uppercase}
 
@@ -301,7 +313,20 @@ footer{margin:40px 22px 0 46px;padding-top:14px;border-top:1.5px solid var(--ink
       <div class="sprocket"></div></div>
     </div>
 
-    <div class="soon">NEXT REELS — THE INTERN · THE OFFICE · DEVIL WEARS PRADA</div>
+    <div class="reel">
+      <div class="reelno"><span class="rn">REEL 08</span><span class="rl"></span><span class="rc">22 SCENES · <b>NEW</b></span></div>
+      <div class="frame"><div class="sprocket"></div>
+        <a class="tcard it2" href="./intern/" onclick="mark('intern')">
+          <span class="still"><img src="./posters/intern.jpg" alt="" loading="lazy"></span>
+          <div class="eyebrow"><span class="sp">&#9632; ABOUT THE FIT</span></div>
+          <h2>the <b>intern</b></h2>
+          <div class="xo">experience never gets old</div>
+          <div class="tfoot"><div class="tdesc">70세 인턴의 서류가방 — 회의·면접·전화 실무 영어</div><span class="cta"><span class="tri"></span>입장 &rarr;</span></div>
+        </a>
+      <div class="sprocket"></div></div>
+    </div>
+
+    <div class="soon">NEXT REELS — THE OFFICE · DEVIL WEARS PRADA · YOUNG SHELDON</div>
   </div>
 
   <div id="lib" class="hidden">
@@ -322,6 +347,7 @@ const TITLES={
  notebook:{name:"NOTEBOOK",color:"#C4593C"},
  nottinghill:{name:"NOTTING HILL",color:"#3E6FA3"},
  harrypotter:{name:"HARRY POTTER",color:"#E3A43C"},
+ intern:{name:"THE INTERN",color:"#7A4E2D"},
 };
 const CATS=["전체","일상대화","감정·리액션","연애·관계","유머·티키타카","회의·업무","전화·컨콜","면접·격식"];
 function mark(t){ try{localStorage.setItem('ls_last',JSON.stringify({t,label:TITLES[t].name,id:'',expr:''}));}catch(e){} }

@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-take-a-seat",
+  "title": "Take a seat, someone will come get you",
+  "sub": "THE INTERN · 2015",
+  "category": "면접·격식",
+  "difficulty": 1,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "Take a seat, someone will come get you",
+  "meaning": "앉아 계시면 모시러 올 거예요",
+  "video": "take_a_seat.mp4",
+  "sentences": [
+    {
+      "start": 1.41,
+      "end": 2.75,
+      "who": "STAFF",
+      "en": "Hey, Ben. How's it going?",
+      "ko": "안녕하세요, 벤. 잘 지내시죠?"
+    },
+    {
+      "start": 2.77,
+      "end": 4.26,
+      "who": "BEN",
+      "en": "It's going good, real good. Thank you.",
+      "ko": "좋습니다, 아주 좋아요. 감사합니다."
+    },
+    {
+      "start": 4.28,
+      "end": 6.07,
+      "who": "STAFF",
+      "en": "★ Excellent. Take a seat around the corner,",
+      "ko": "★ 좋아요. 저 모퉁이 쪽에 앉아 계시면,"
+    },
+    {
+      "start": 6.09,
+      "end": 8.01,
+      "who": "STAFF",
+      "en": "★ and someone from talent acquisition will come get you.",
+      "ko": "★ 인재 채용팀에서 모시러 올 거예요."
+    },
+    {
+      "start": 8.94,
+      "end": 10.08,
+      "who": "BEN",
+      "en": "Thank you.",
+      "ko": "감사합니다."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-set-in-motion",
+  "title": "I set it in motion",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 3,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "I set it in motion",
+  "meaning": "이미 착수시켰어",
+  "video": "set_it_in_motion.mp4",
+  "sentences": [
+    {
+      "start": 1.58,
+      "end": 3.35,
+      "who": "CAMERON",
+      "en": "★ ...so I set it in motion. It's gonna be great.",
+      "ko": "★ ...그래서 이미 착수시켰어. 아주 잘될 거야."
+    },
+    {
+      "start": 3.38,
+      "end": 4.46,
+      "who": "JULES",
+      "en": "Hold, please.",
+      "ko": "잠깐만요."
+    },
+    {
+      "start": 4.48,
+      "end": 6.71,
+      "who": "JULES",
+      "en": "You're hiring senior citizen interns?",
+      "ko": "시니어 인턴을 뽑는다고?"
+    },
+    {
+      "start": 6.82,
+      "end": 8.44,
+      "who": "CAMERON",
+      "en": "There's been a ton of research on this,",
+      "ko": "이거 관련 연구가 엄청 많아."
+    },
+    {
+      "start": 8.48,
+      "end": 12.05,
+      "who": "CAMERON",
+      "en": "and the results are actually incredible.",
+      "ko": "결과가 정말 놀라워."
+    }
+  ]
+}

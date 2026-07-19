@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-wait-to-hear",
+  "title": "I'll wait to hear from you",
+  "sub": "THE INTERN · 2015",
+  "category": "면접·격식",
+  "difficulty": 1,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "I'll wait to hear from you",
+  "meaning": "연락 기다리겠습니다",
+  "video": "wait_to_hear_from_you.mp4",
+  "sentences": [
+    {
+      "start": 1.17,
+      "end": 4.37,
+      "who": "JULES",
+      "en": "Well, I think we did it in less than two minutes.",
+      "ko": "2분도 안 걸린 것 같네요."
+    },
+    {
+      "start": 4.92,
+      "end": 6.35,
+      "who": "BEN",
+      "en": "★ I'll wait to hear from you.",
+      "ko": "★ 연락 기다리겠습니다."
+    },
+    {
+      "start": 6.78,
+      "end": 7.76,
+      "who": "JULES",
+      "en": "Okay.",
+      "ko": "네."
+    },
+    {
+      "start": 9.86,
+      "end": 12.47,
+      "who": "BEN",
+      "en": "Want the door open or closed?",
+      "ko": "문은 열어둘까요, 닫을까요?"
+    },
+    {
+      "start": 12.66,
+      "end": 13.74,
+      "who": "JULES",
+      "en": "Doesn't matter.",
+      "ko": "아무래도 상관없어요."
+    }
+  ]
+}

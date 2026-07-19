@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nh-on-second-thoughts",
   "title": "on second thoughts",
   "sub": "NOTTING HILL · 1999",
@@ -20,7 +20,7 @@
       "ko": "이걸로 살게요."
     },
     {
-      "start": 4.3,
+      "start": 4.08,
       "end": 10.48,
       "who": "WILLIAM",
       "en": "★ Oh, right, right. So, uh-- Well, on second thoughts, um, maybe it's not that bad after all.",
@@ -35,13 +35,13 @@
     },
     {
       "start": 17.66,
-      "end": 21.42,
+      "end": 21.46,
       "who": "WILLIAM",
       "en": "★ And, um, I tell you what. I'll throw in one of those for free.",
       "ko": "★ 그리고, 이렇게 하죠. 저건 덤으로 드릴게요."
     },
     {
-      "start": 21.9,
+      "start": 21.5,
       "end": 25.96,
       "who": "WILLIAM",
       "en": "Useful for, uh, lighting fires, wrapping fish, that sort of thing.",

@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-check-off-list",
+  "title": "check this one off your list",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "check this one off your list",
+  "meaning": "이건 처리된 걸로 지우세요",
+  "video": "check_off_your_list.mp4",
+  "sentences": [
+    {
+      "start": 1.55,
+      "end": 4.21,
+      "who": "JULES",
+      "en": "And I am gonna refund you back all your money.",
+      "ko": "그리고 대금은 전액 환불해 드리겠습니다."
+    },
+    {
+      "start": 5.8,
+      "end": 10.87,
+      "who": "JULES",
+      "en": "★ Okay, hey, you check this one off your list, okay?",
+      "ko": "★ 자, 이건 목록에서 지우셔도 돼요."
+    },
+    {
+      "start": 10.89,
+      "end": 11.79,
+      "who": "JULES",
+      "en": "This is done.",
+      "ko": "이건 끝났습니다."
+    },
+    {
+      "start": 11.84,
+      "end": 14.42,
+      "who": "JULES",
+      "en": "And, Rachel, have a great wedding.",
+      "ko": "그리고 레이첼, 결혼식 잘 치르세요."
+    }
+  ]
+}

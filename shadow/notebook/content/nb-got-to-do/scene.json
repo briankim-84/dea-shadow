@@ -1,5 +1,5 @@
 {
-  "_readme": "v7 + QA 수동 확정 (겹침·소음 라인 실측)",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nb-got-to-do",
   "title": "What's that got to do with it?",
   "sub": "THE NOTEBOOK · 2004",
@@ -13,7 +13,7 @@
   "video": "got_to_do_with_it.mp4",
   "sentences": [
     {
-      "start": 1.4,
+      "start": 1.22,
       "end": 3.9,
       "who": "FRANK",
       "en": "Say, how would you like some breakfast? Would you like some breakfast?",

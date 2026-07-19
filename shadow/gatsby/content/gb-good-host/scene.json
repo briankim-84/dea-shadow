@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "gb-good-host",
   "title": "I'm afraid I haven't been ~",
   "sub": "THE GREAT GATSBY · 2013",
@@ -27,7 +27,7 @@
       "ko": "실은... 내가 개츠비요."
     },
     {
-      "start": 10.58,
+      "start": 10.85,
       "end": 12.47,
       "who": "NICK",
       "en": "You're...",

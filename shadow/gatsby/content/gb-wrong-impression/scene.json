@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "gb-wrong-impression",
   "title": "get the wrong impression",
   "sub": "THE GREAT GATSBY · 2013",
@@ -14,13 +14,13 @@
   "sentences": [
     {
       "start": 0,
-      "end": 4.53,
+      "end": 4.4,
       "who": "GATSBY",
       "en": "Look here, old sport. What is your opinion of me, anyhow?",
       "ko": "이보게, 친구. 도대체 나에 대해 어떻게 생각하나?"
     },
     {
-      "start": 4.55,
+      "start": 4.44,
       "end": 5.79,
       "who": "NICK",
       "en": "My opinion?",
@@ -42,7 +42,7 @@
     },
     {
       "start": 13.58,
-      "end": 18.99,
+      "end": 19.4,
       "who": "GATSBY",
       "en": "A pack of lies, I guarantee. You've heard the stories? I will tell you God's truth.",
       "ko": "전부 새빨간 거짓말이야, 장담하네. 소문 들었지? 내가 진실을 말해주겠네."

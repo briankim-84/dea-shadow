@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 수동 확정",
+  "id": "it-your-call",
+  "title": "It's your call",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "It's your call",
+  "meaning": "네가 결정해",
+  "video": "its_your_call.mp4",
+  "sentences": [
+    {
+      "start": 1.25,
+      "end": 3.51,
+      "who": "JUSTIN",
+      "en": "Wait. Did not realize you were 70.",
+      "ko": "잠깐, 일흔이신 줄 몰랐어요."
+    },
+    {
+      "start": 3.53,
+      "end": 6.05,
+      "who": "JUSTIN",
+      "en": "That's, uh... that question just doesn't work for you, does it?",
+      "ko": "그, 어... 그 질문은 지원자님께 안 맞네요, 그렇죠?"
+    },
+    {
+      "start": 6.07,
+      "end": 7.91,
+      "who": "JUSTIN",
+      "en": "Should we just scratch that one and just move on?",
+      "ko": "그건 빼고 넘어갈까요?"
+    },
+    {
+      "start": 7.95,
+      "end": 8.95,
+      "who": "BEN",
+      "en": "★ It's your call, Justin.",
+      "ko": "★ 저스틴 씨가 결정하세요."
+    },
+    {
+      "start": 8.98,
+      "end": 10.05,
+      "who": "JUSTIN",
+      "en": "Okay, that one's gone.",
+      "ko": "좋아요, 그 질문은 없던 걸로."
+    }
+  ]
+}

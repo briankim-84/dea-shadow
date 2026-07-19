@@ -1,5 +1,5 @@
 {
-  "_readme": "v7 + QA 수동 확정 (실발화 순서 반영)",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "hp-dirt-on-nose",
   "title": "You've got dirt on your nose",
   "sub": "HARRY POTTER · 2001",
@@ -34,7 +34,7 @@
       "ko": "반가워."
     },
     {
-      "start": 5.78,
+      "start": 5.36,
       "end": 9.3,
       "who": "HERMIONE",
       "en": "You two better change into robes. I expect we'll be arriving soon.",

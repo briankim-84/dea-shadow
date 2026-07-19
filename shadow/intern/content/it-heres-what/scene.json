@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-heres-what",
+  "title": "Here's what we're gonna do",
+  "sub": "THE INTERN · 2015",
+  "category": "전화·컨콜",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "Here's what we're gonna do",
+  "meaning": "이렇게 처리하겠습니다",
+  "video": "heres_what_were_gonna_do.mp4",
+  "sentences": [
+    {
+      "start": 0.89,
+      "end": 3.93,
+      "who": "JULES",
+      "en": "Which we don't even sell, so that is a bit of a mystery.",
+      "ko": "저희가 팔지도 않는 색이라, 좀 미스터리네요."
+    },
+    {
+      "start": 4.9,
+      "end": 6.87,
+      "who": "JULES",
+      "en": "★ Okay, here's what we're gonna do about this.",
+      "ko": "★ 자, 이렇게 처리하겠습니다."
+    },
+    {
+      "start": 7.38,
+      "end": 9.33,
+      "who": "JULES",
+      "en": "I am gonna call the vendor and have this fixed today.",
+      "ko": "제가 업체에 전화해서 오늘 안에 해결하겠습니다."
+    },
+    {
+      "start": 9.35,
+      "end": 11.86,
+      "who": "JULES",
+      "en": "I will personally see the dresses before they are Fedexed.",
+      "ko": "발송 전에 제가 직접 드레스를 확인하겠습니다."
+    },
+    {
+      "start": 11.88,
+      "end": 15.97,
+      "who": "JULES",
+      "en": "And I promise you they will be at your front door by 9:00 A.M. Friday, okay?",
+      "ko": "금요일 아침 9시까지 댁 앞에 도착하도록 약속드릴게요."
+    }
+  ]
+}

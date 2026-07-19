@@ -1,5 +1,5 @@
 {
-  "_readme": "v7 + QA 수동 확정 (겹침·소음 라인 실측)",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nb-wouldnt-do",
   "title": "Don't do anything I wouldn't do",
   "sub": "THE NOTEBOOK · 2004",
@@ -21,13 +21,13 @@
     },
     {
       "start": 5.85,
-      "end": 7.15,
+      "end": 6.88,
       "who": "NOAH",
       "en": "★ Don't do anything I wouldn't do.",
       "ko": "★ 적당히들 놀아. (나라면 안 할 짓은 하지 마)"
     },
     {
-      "start": 7.17,
+      "start": 6.92,
       "end": 8.95,
       "who": "FIN",
       "en": "Okay, good bye. All right, all right.",

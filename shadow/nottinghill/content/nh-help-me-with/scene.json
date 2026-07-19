@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nh-help-me-with",
   "title": "You couldn't help me with ~, could you?",
   "sub": "NOTTING HILL · 1999",
@@ -14,13 +14,13 @@
   "sentences": [
     {
       "start": 3.37,
-      "end": 5.5,
+      "end": 5.68,
       "who": "SPIKE",
       "en": "★ You couldn't help me with an incredibly important decision, could you?",
       "ko": "★ 엄청나게 중요한 결정 하나 도와줄 수 없을까?"
     },
     {
-      "start": 5.98,
+      "start": 5.72,
       "end": 9.88,
       "who": "WILLIAM",
       "en": "Is this important in comparison to, let's say, whether they should cancel Third World debt?",

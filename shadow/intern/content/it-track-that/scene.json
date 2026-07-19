@@ -1,0 +1,44 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-track-that",
+  "title": "Let me track that for you",
+  "sub": "THE INTERN · 2015",
+  "category": "전화·컨콜",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "Let me track that for you",
+  "meaning": "제가 조회해 드릴게요",
+  "video": "let_me_track_that.mp4",
+  "sentences": [
+    {
+      "start": 1.35,
+      "end": 4.4,
+      "who": "JULES",
+      "en": "No, you are right. That package should have arrived by now.",
+      "ko": "맞습니다, 고객님. 그 소포는 지금쯤 도착했어야 해요."
+    },
+    {
+      "start": 4.42,
+      "end": 5.85,
+      "who": "JULES",
+      "en": "★ Let me track that for you.",
+      "ko": "★ 제가 조회해 드릴게요."
+    },
+    {
+      "start": 6.0,
+      "end": 7.92,
+      "who": "JULES",
+      "en": "Yep, these pants are awesome if you have hips.",
+      "ko": "네, 이 바지는 골반이 있으면 정말 예뻐요."
+    },
+    {
+      "start": 7.94,
+      "end": 8.95,
+      "who": "JULES",
+      "en": "Super slimming.",
+      "ko": "엄청 날씬해 보이죠."
+    }
+  ]
+}

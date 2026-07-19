@@ -1,0 +1,291 @@
+{
+  "_readme": "인턴 에디션 인덱스",
+  "scenes": [
+    {
+      "id": "it-rain-check",
+      "title": "take a rain check",
+      "sub": "THE INTERN · 2015",
+      "category": "일상대화",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "take a rain check",
+      "meaning": "다음 기회로 미루다",
+      "count": 5
+    },
+    {
+      "id": "it-good-in-a-crisis",
+      "title": "I'm good in a crisis",
+      "sub": "THE INTERN · 2015",
+      "category": "면접·격식",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "I'm good in a crisis",
+      "meaning": "위기에 강합니다 (자기PR)",
+      "count": 5
+    },
+    {
+      "id": "it-track-that",
+      "title": "Let me track that for you",
+      "sub": "THE INTERN · 2015",
+      "category": "전화·컨콜",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "Let me track that for you",
+      "meaning": "제가 조회해 드릴게요",
+      "count": 4
+    },
+    {
+      "id": "it-heres-what",
+      "title": "Here's what we're gonna do",
+      "sub": "THE INTERN · 2015",
+      "category": "전화·컨콜",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "Here's what we're gonna do",
+      "meaning": "이렇게 처리하겠습니다",
+      "count": 5
+    },
+    {
+      "id": "it-check-off-list",
+      "title": "check this one off your list",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "check this one off your list",
+      "meaning": "이건 처리된 걸로 지우세요",
+      "count": 4
+    },
+    {
+      "id": "it-sign-off-on",
+      "title": "sign off on ~",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "sign off on ~",
+      "meaning": "~를 결재·승인하다",
+      "count": 5
+    },
+    {
+      "id": "it-take-a-seat",
+      "title": "Take a seat, someone will come get you",
+      "sub": "THE INTERN · 2015",
+      "category": "면접·격식",
+      "difficulty": 1,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "Take a seat, someone will come get you",
+      "meaning": "앉아 계시면 모시러 올 거예요",
+      "count": 5
+    },
+    {
+      "id": "it-in-a-glance",
+      "title": "read in a glance",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 3,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "read in a glance",
+      "meaning": "한눈에 읽히다",
+      "count": 3
+    },
+    {
+      "id": "it-fire-away",
+      "title": "Fire away",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "Fire away",
+      "meaning": "(질문) 시작하세요",
+      "count": 4
+    },
+    {
+      "id": "it-see-yourself",
+      "title": "Where do you see yourself in 10 years?",
+      "sub": "THE INTERN · 2015",
+      "category": "면접·격식",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "Where do you see yourself in 10 years?",
+      "meaning": "10년 후 본인의 모습은? (면접 단골)",
+      "count": 5
+    },
+    {
+      "id": "it-your-call",
+      "title": "It's your call",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "It's your call",
+      "meaning": "네가 결정해",
+      "count": 5
+    },
+    {
+      "id": "it-overqualified",
+      "title": "way overqualified / You nailed it",
+      "sub": "THE INTERN · 2015",
+      "category": "면접·격식",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "way overqualified / You nailed it",
+      "meaning": "스펙이 차고 넘치는 / 완벽했어요",
+      "count": 5
+    },
+    {
+      "id": "it-set-in-motion",
+      "title": "I set it in motion",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 3,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "I set it in motion",
+      "meaning": "이미 착수시켰어",
+      "count": 5
+    },
+    {
+      "id": "it-set-the-tone",
+      "title": "You have to set the tone",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 3,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "You have to set the tone",
+      "meaning": "네가 본을 보여야지",
+      "count": 3
+    },
+    {
+      "id": "it-hang-in-there",
+      "title": "Hang in there",
+      "sub": "THE INTERN · 2015",
+      "category": "감정·리액션",
+      "difficulty": 1,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "Hang in there",
+      "meaning": "버텨봐요·힘내요",
+      "count": 4
+    },
+    {
+      "id": "it-gave-me-the-drill",
+      "title": "gave me the drill",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 3,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "gave me the drill",
+      "meaning": "대충 상황을 알려줬다",
+      "count": 5
+    },
+    {
+      "id": "it-stuck-with-me",
+      "title": "you're stuck with me",
+      "sub": "THE INTERN · 2015",
+      "category": "유머·티키타카",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "you're stuck with me",
+      "meaning": "나랑 엮이게 됐네요",
+      "count": 4
+    },
+    {
+      "id": "it-wait-to-hear",
+      "title": "I'll wait to hear from you",
+      "sub": "THE INTERN · 2015",
+      "category": "면접·격식",
+      "difficulty": 1,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "I'll wait to hear from you",
+      "meaning": "연락 기다리겠습니다",
+      "count": 5
+    },
+    {
+      "id": "it-get-used-to-me",
+      "title": "You'll get used to me",
+      "sub": "THE INTERN · 2015",
+      "category": "유머·티키타카",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "You'll get used to me",
+      "meaning": "적응하게 될 거예요",
+      "count": 3
+    },
+    {
+      "id": "it-see-that-coming",
+      "title": "I did not see that coming",
+      "sub": "THE INTERN · 2015",
+      "category": "감정·리액션",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "I did not see that coming",
+      "meaning": "그건 예상 못 했네",
+      "count": 5
+    },
+    {
+      "id": "it-off-your-plate",
+      "title": "take things off your plate",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "take things off your plate",
+      "meaning": "부담을 덜어주다",
+      "count": 4
+    },
+    {
+      "id": "it-run-by",
+      "title": "run every idea by this person",
+      "sub": "THE INTERN · 2015",
+      "category": "회의·업무",
+      "difficulty": 2,
+      "tags": [
+        "INTERN"
+      ],
+      "expression": "run every idea by this person",
+      "meaning": "모든 아이디어를 이 사람에게 컨펌받다",
+      "count": 5
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-sign-off-on",
+  "title": "sign off on ~",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "sign off on ~",
+  "meaning": "~를 결재·승인하다",
+  "video": "sign_off_on.mp4",
+  "sentences": [
+    {
+      "start": 1.13,
+      "end": 3.09,
+      "who": "BECKY",
+      "en": "Okay, Cameron was waiting for you but had another meeting.",
+      "ko": "캐머런이 기다리다가 다른 회의 들어갔어요."
+    },
+    {
+      "start": 3.12,
+      "end": 4.55,
+      "who": "BECKY",
+      "en": "He said he'll be back at 2:00.",
+      "ko": "2시에 돌아온대요."
+    },
+    {
+      "start": 5.06,
+      "end": 7.0,
+      "who": "BECKY",
+      "en": "★ Everyone needs you to sign off on tomorrow's homepage.",
+      "ko": "★ 다들 내일 홈페이지 결재를 기다리고 있어요."
+    },
+    {
+      "start": 7.02,
+      "end": 7.74,
+      "who": "JULES",
+      "en": "Right.",
+      "ko": "알겠어."
+    },
+    {
+      "start": 7.76,
+      "end": 9.93,
+      "who": "BECKY",
+      "en": "And your 11:00 is in the big conference room.",
+      "ko": "11시 미팅은 대회의실이에요."
+    }
+  ]
+}

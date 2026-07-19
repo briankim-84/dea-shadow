@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nh-i-tell-you-what",
   "title": "I tell you what",
   "sub": "NOTTING HILL · 1999",
@@ -14,13 +14,13 @@
   "sentences": [
     {
       "start": 1.49,
-      "end": 9.63,
+      "end": 9.48,
       "who": "WILLIAM",
       "en": "★ I tell you what. Um, I'll call the police, and, um, if I'm wrong about the whole \"book down the trousers\" scenario, I really apologize.",
       "ko": "★ 이렇게 하죠. 경찰을 부를게요. 그리고 '바지 속 책' 시나리오가 제 오해라면, 정말 사과드리죠."
     },
     {
-      "start": 10.6,
+      "start": 9.52,
       "end": 14.39,
       "who": "THIEF",
       "en": "Okay. What if... I did have a book down my trousers?",

@@ -1,0 +1,37 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-set-the-tone",
+  "title": "You have to set the tone",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 3,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "You have to set the tone",
+  "meaning": "네가 본을 보여야지",
+  "video": "set_the_tone.mp4",
+  "sentences": [
+    {
+      "start": 0.95,
+      "end": 2.74,
+      "who": "JULES",
+      "en": "Why do I have to have one?",
+      "ko": "왜 내가 꼭 한 명 둬야 해?"
+    },
+    {
+      "start": 2.76,
+      "end": 4.27,
+      "who": "CAMERON",
+      "en": "★ Because you have to set the tone.",
+      "ko": "★ 네가 본을 보여야 하니까."
+    },
+    {
+      "start": 4.64,
+      "end": 7.72,
+      "who": "CAMERON",
+      "en": "Now, would you prefer a man or a woman?",
+      "ko": "자, 남성이 좋아, 여성이 좋아?"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "gb-voice-down",
   "title": "Keep your voice down",
   "sub": "THE GREAT GATSBY · 2013",
@@ -13,8 +13,8 @@
   "video": "keep_your_voice_down.mp4",
   "sentences": [
     {
-      "start": 2.05,
-      "end": 4.16,
+      "start": 1.82,
+      "end": 3.7,
       "who": "NICK",
       "en": "What game are you and Gatsby playing at?",
       "ko": "당신이랑 개츠비, 대체 무슨 수작이에요?"
@@ -27,7 +27,7 @@
       "ko": "다 좀 이상해요. 고급 차로 날 데리러 오질 않나, 자기 인생 얘길 늘어놓질 않나."
     },
     {
-      "start": 10.92,
+      "start": 10.7,
       "end": 11.88,
       "who": "JORDAN",
       "en": "★ Keep your voice down. People can hear you.",

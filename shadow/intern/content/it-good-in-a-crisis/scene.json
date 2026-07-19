@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-good-in-a-crisis",
+  "title": "I'm good in a crisis",
+  "sub": "THE INTERN · 2015",
+  "category": "면접·격식",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "I'm good in a crisis",
+  "meaning": "위기에 강합니다 (자기PR)",
+  "video": "good_in_a_crisis.mp4",
+  "sentences": [
+    {
+      "start": 1.47,
+      "end": 4.75,
+      "who": "BEN",
+      "en": "Also, I want you to know I've been a company man all my life.",
+      "ko": "그리고 저는 평생 회사에 헌신한 사람이라는 걸 알아주셨으면 합니다."
+    },
+    {
+      "start": 4.77,
+      "end": 7.77,
+      "who": "BEN",
+      "en": "★ I'm loyal, I'm trustworthy, and I'm good in a crisis.",
+      "ko": "★ 저는 성실하고, 믿을 수 있고, 위기에 강합니다."
+    },
+    {
+      "start": 15.56,
+      "end": 18.02,
+      "who": "BEN",
+      "en": "I read once, musicians don't retire.",
+      "ko": "언젠가 읽었는데, 음악가는 은퇴하지 않는답니다."
+    },
+    {
+      "start": 18.1,
+      "end": 20.33,
+      "who": "BEN",
+      "en": "They stop when there's no more music in them.",
+      "ko": "안에 더 이상 음악이 없을 때 멈추는 거죠."
+    },
+    {
+      "start": 20.35,
+      "end": 24.21,
+      "who": "BEN",
+      "en": "★ Well, I still have music in me, absolutely positive about that.",
+      "ko": "★ 저는 아직 제 안에 음악이 있습니다. 그건 확신합니다."
+    }
+  ]
+}

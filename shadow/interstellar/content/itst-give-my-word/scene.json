@@ -1,5 +1,5 @@
 {
-  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "itst-give-my-word",
   "title": "I give you my word",
   "sub": "INTERSTELLAR · 2014",
@@ -12,7 +12,7 @@
   "video": "i_give_you_my_word.mp4",
   "sentences": [
     {
-      "start": 0.45,
+      "start": 0.0,
       "end": 2.03,
       "who": "COOPER",
       "en": "How far have you got?",

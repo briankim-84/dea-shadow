@@ -1,0 +1,37 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-get-used-to-me",
+  "title": "You'll get used to me",
+  "sub": "THE INTERN · 2015",
+  "category": "유머·티키타카",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "You'll get used to me",
+  "meaning": "적응하게 될 거예요",
+  "video": "get_used_to_me.mp4",
+  "sentences": [
+    {
+      "start": 1.23,
+      "end": 2.93,
+      "who": "JULES",
+      "en": "Open, actually.",
+      "ko": "아니, 열어두세요."
+    },
+    {
+      "start": 6.48,
+      "end": 7.33,
+      "who": "BEN",
+      "en": "★ You'll get used to me.",
+      "ko": "★ 적응하게 되실 거예요."
+    },
+    {
+      "start": 7.76,
+      "end": 9.13,
+      "who": "JULES",
+      "en": "★ Look forward to it.",
+      "ko": "★ 기대할게요."
+    }
+  ]
+}

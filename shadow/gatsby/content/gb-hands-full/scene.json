@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "gb-hands-full",
   "title": "I have my hands full",
   "sub": "THE GREAT GATSBY · 2013",
@@ -28,13 +28,13 @@
     },
     {
       "start": 6.89,
-      "end": 12.61,
+      "end": 12.72,
       "who": "GATSBY",
       "en": "Right. Well, happens to be a rather confidential sort of thing, but you might make a nice bit of money.",
       "ko": "그래. 좀 기밀에 속하는 일이긴 한데, 꽤 짭짤하게 벌 수 있을 거야."
     },
     {
-      "start": 12.63,
+      "start": 12.76,
       "end": 13.95,
       "who": "NICK",
       "en": "★ No, thank you. I have my hands full.",
@@ -42,7 +42,7 @@
     },
     {
       "start": 13.97,
-      "end": 16.92,
+      "end": 17.12,
       "who": "GATSBY",
       "en": "You wouldn't have to do any business with Wolfshiem, I assure you.",
       "ko": "울프심과 엮일 일은 없을 거야, 장담하네."

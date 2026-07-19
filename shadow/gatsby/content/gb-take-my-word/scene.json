@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "gb-take-my-word",
   "title": "take my word for it",
   "sub": "THE GREAT GATSBY · 2013",
@@ -13,7 +13,7 @@
   "video": "take_my_word.mp4",
   "sentences": [
     {
-      "start": 2.15,
+      "start": 1.98,
       "end": 4.48,
       "who": "GATSBY",
       "en": "★ Of course, you don't need to take my word for it, old sport.",

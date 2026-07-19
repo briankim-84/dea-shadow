@@ -1,0 +1,44 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-fire-away",
+  "title": "Fire away",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "Fire away",
+  "meaning": "(질문) 시작하세요",
+  "video": "fire_away.mp4",
+  "sentences": [
+    {
+      "start": 0.4,
+      "end": 2.82,
+      "who": "JUSTIN",
+      "en": "...some of our intern questions may not exactly fit your profile,",
+      "ko": "저희 인턴 질문들이 지원자님께 딱 맞지 않을 수도 있는데,"
+    },
+    {
+      "start": 2.85,
+      "end": 5.09,
+      "who": "JUSTIN",
+      "en": "but we're gonna go for it anyway, okay?",
+      "ko": "그래도 그냥 진행할게요, 괜찮죠?"
+    },
+    {
+      "start": 5.11,
+      "end": 5.89,
+      "who": "BEN",
+      "en": "★ Fire away.",
+      "ko": "★ 시작하세요."
+    },
+    {
+      "start": 5.91,
+      "end": 8.52,
+      "who": "JUSTIN",
+      "en": "Okay, good. Where'd you go to school?",
+      "ko": "좋습니다. 어느 학교 나오셨죠?"
+    }
+  ]
+}

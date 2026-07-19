@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-overqualified",
+  "title": "way overqualified / You nailed it",
+  "sub": "THE INTERN · 2015",
+  "category": "면접·격식",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "way overqualified / You nailed it",
+  "meaning": "스펙이 차고 넘치는 / 완벽했어요",
+  "video": "overqualified_nailed_it.mp4",
+  "sentences": [
+    {
+      "start": 1.31,
+      "end": 3.53,
+      "who": "JUSTIN",
+      "en": "And you're clearly more than qualified for this job.",
+      "ko": "이 자리엔 자격이 차고도 넘치시죠."
+    },
+    {
+      "start": 3.55,
+      "end": 5.9,
+      "who": "JUSTIN",
+      "en": "★ You're actually, like, way overqualified, and we were so impressed.",
+      "ko": "★ 사실 스펙이 과할 정도예요. 저희 정말 감명받았어요."
+    },
+    {
+      "start": 5.92,
+      "end": 8.12,
+      "who": "JUSTIN",
+      "en": "You had great interviews, great video.",
+      "ko": "면접도 훌륭했고, 영상도 훌륭했어요."
+    },
+    {
+      "start": 8.28,
+      "end": 9.6,
+      "who": "JUSTIN",
+      "en": "★ You nailed it, Ben. Congrats.",
+      "ko": "★ 완벽했어요, 벤. 축하합니다."
+    },
+    {
+      "start": 9.64,
+      "end": 10.97,
+      "who": "JUSTIN",
+      "en": "You're an intern.",
+      "ko": "인턴이 되셨습니다."
+    }
+  ]
+}

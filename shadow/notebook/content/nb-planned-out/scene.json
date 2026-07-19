@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nb-planned-out",
   "title": "My days are all planned out",
   "sub": "THE NOTEBOOK · 2004",
@@ -34,7 +34,7 @@
       "ko": "아침에 일어나면 아침 식사, 수학 과외, 라틴어 과외, 점심, 테니스 레슨, 댄스 레슨 — 어떨 땐 둘 다 — 프랑스어 과외, 피아노 레슨, 그리고 저녁 식사. 저녁 후엔 가족과 시간을 보내고, 그다음엔... 밀린 독서를 하죠."
     },
     {
-      "start": 28.46,
+      "start": 28.12,
       "end": 32.83,
       "who": "NOAH",
       "en": "Sounds like the road to success.",

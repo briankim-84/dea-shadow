@@ -1,5 +1,5 @@
 {
-  "_readme": "v7 + QA 수동 확정 (겹침·소음 라인 실측)",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nb-figure-it-out",
   "title": "figure something out",
   "sub": "THE NOTEBOOK · 2004",
@@ -42,7 +42,7 @@
     },
     {
       "start": 10.87,
-      "end": 13.0,
+      "end": 14.25,
       "who": "NOAH",
       "en": "Look... what did I tell you? Come on.",
       "ko": "봐... 내가 뭐랬어? 가자."

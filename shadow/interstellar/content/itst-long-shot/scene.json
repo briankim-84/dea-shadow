@@ -1,5 +1,5 @@
 {
-  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "itst-long-shot",
   "title": "a long shot",
   "sub": "INTERSTELLAR · 2014",
@@ -12,7 +12,7 @@
   "video": "a_long_shot.mp4",
   "sentences": [
     {
-      "start": 0.7,
+      "start": 0.0,
       "end": 2.55,
       "who": "BRAND",
       "en": "And one system shows promise.",

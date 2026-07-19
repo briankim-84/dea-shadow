@@ -1,0 +1,51 @@
+{
+  "_readme": "v7 + QA 수동 확정",
+  "id": "it-see-that-coming",
+  "title": "I did not see that coming",
+  "sub": "THE INTERN · 2015",
+  "category": "감정·리액션",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "I did not see that coming",
+  "meaning": "그건 예상 못 했네",
+  "video": "did_not_see_that_coming.mp4",
+  "sentences": [
+    {
+      "start": 0.73,
+      "end": 2.19,
+      "who": "JULES",
+      "en": "Wow.",
+      "ko": "와."
+    },
+    {
+      "start": 3.02,
+      "end": 6.58,
+      "who": "JULES",
+      "en": "★ I did not see that coming.",
+      "ko": "★ 그건 예상 못 했네."
+    },
+    {
+      "start": 7.1,
+      "end": 8.55,
+      "who": "JULES",
+      "en": "W-why? Uh...",
+      "ko": "왜... 어..."
+    },
+    {
+      "start": 9.65,
+      "end": 11.75,
+      "who": "JULES",
+      "en": "Am I too inexperienced at running a business?",
+      "ko": "내가 사업 운영에 너무 미숙해서?"
+    },
+    {
+      "start": 12.3,
+      "end": 13.6,
+      "who": "JULES",
+      "en": "I-I didn't go to Harvard?",
+      "ko": "하버드를 안 나와서?"
+    }
+  ]
+}

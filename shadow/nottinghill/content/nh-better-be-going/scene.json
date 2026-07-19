@@ -1,5 +1,5 @@
 {
-  "_readme": "v7 + QA 수동 확정",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nh-better-be-going",
   "title": "I'd better be going",
   "sub": "NOTTING HILL · 1999",
@@ -13,29 +13,29 @@
   "video": "better_be_going.mp4",
   "sentences": [
     {
-      "start": 1.67,
+      "start": 0.92,
       "end": 3.75,
       "who": "ANNA",
       "en": "Do you always say \"no\" to everything?",
       "ko": "항상 모든 것에 '아니요'라고 해요?"
     },
     {
-      "start": 3.77,
-      "end": 6.48,
+      "start": 6.02,
+      "end": 6.98,
       "who": "WILLIAM",
       "en": "No.",
       "ko": "아니요."
     },
     {
       "start": 9.6,
-      "end": 13.5,
+      "end": 14.72,
       "who": "ANNA",
       "en": "★ I'd better be going. Thanks for your, uh, help.",
       "ko": "★ 이만 가봐야겠어요. 도와줘서, 음, 고마워요."
     },
     {
       "start": 15.6,
-      "end": 16.85,
+      "end": 16.6,
       "who": "WILLIAM",
       "en": "You're welcome.",
       "ko": "천만에요."

@@ -1,0 +1,37 @@
+{
+  "_readme": "v7 + QA 수동 확정 (무음 라인 제거)",
+  "id": "it-in-a-glance",
+  "title": "read in a glance",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 3,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "read in a glance",
+  "meaning": "한눈에 읽히다",
+  "video": "read_in_a_glance.mp4",
+  "sentences": [
+    {
+      "start": 1.49,
+      "end": 2.65,
+      "who": "JULES",
+      "en": "Okay, you guys have to remember,",
+      "ko": "자, 여러분 이건 기억해야 해요."
+    },
+    {
+      "start": 2.68,
+      "end": 4.2,
+      "who": "JULES",
+      "en": "★ the homepage has to read in a glance.",
+      "ko": "★ 홈페이지는 한눈에 읽혀야 해요."
+    },
+    {
+      "start": 4.45,
+      "end": 7.85,
+      "who": "JULES",
+      "en": "Also, you have to get back like this if you want to see what it looks like if you're, like, over 35.",
+      "ko": "그리고 35세 이상이 보면 어떻게 보이는지 알고 싶으면 이렇게 물러나서 봐야 해요."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nh-tempting",
   "title": "Tempting. But no, thank you",
   "sub": "NOTTING HILL · 1999",
@@ -20,7 +20,7 @@
       "ko": "한 방 먹었네요."
     },
     {
-      "start": 4.88,
+      "start": 4.42,
       "end": 6.16,
       "who": "THIEF",
       "en": "Do you want my phone number?",

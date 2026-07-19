@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-rain-check",
+  "title": "take a rain check",
+  "sub": "THE INTERN · 2015",
+  "category": "일상대화",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "take a rain check",
+  "meaning": "다음 기회로 미루다",
+  "video": "take_a_rain_check.mp4",
+  "sentences": [
+    {
+      "start": 1.59,
+      "end": 3.61,
+      "who": "FRIEND",
+      "en": "You know that was over five months ago?",
+      "ko": "그게 벌써 다섯 달도 더 전인 거 알아?"
+    },
+    {
+      "start": 3.63,
+      "end": 7.77,
+      "who": "BEN",
+      "en": "★ Oh, yeah. No, no, we got to do that again, for sure, but okay if we take a rain check?",
+      "ko": "★ 아 그렇지. 아니야, 또 하자, 꼭. 근데 다음 기회로 미뤄도 될까?"
+    },
+    {
+      "start": 7.9,
+      "end": 9.74,
+      "who": "FRIEND",
+      "en": "You're awful cute, you know that?",
+      "ko": "당신 참 귀엽네, 알아요?"
+    },
+    {
+      "start": 9.76,
+      "end": 10.76,
+      "who": "BEN",
+      "en": "No, I didn't.",
+      "ko": "몰랐는데요."
+    },
+    {
+      "start": 10.78,
+      "end": 19.77,
+      "who": "FRIEND",
+      "en": "★ Well, it's true, you are. So I'll see you. Don't take too long, doll. You're not getting any younger.",
+      "ko": "★ 사실이에요. 그럼 또 봐요. 너무 오래 끌지 말고요. 당신도 더 젊어지진 않으니까."
+    }
+  ]
+}

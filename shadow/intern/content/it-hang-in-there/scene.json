@@ -1,0 +1,44 @@
+{
+  "_readme": "v7 + QA 수동 확정",
+  "id": "it-hang-in-there",
+  "title": "Hang in there",
+  "sub": "THE INTERN · 2015",
+  "category": "감정·리액션",
+  "difficulty": 1,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "Hang in there",
+  "meaning": "버텨봐요·힘내요",
+  "video": "hang_in_there.mp4",
+  "sentences": [
+    {
+      "start": 2.15,
+      "end": 3.3,
+      "who": "COWORKER",
+      "en": "Unfortunate.",
+      "ko": "안됐네요."
+    },
+    {
+      "start": 4.4,
+      "end": 5.7,
+      "who": "COWORKER",
+      "en": "★ Hang in there.",
+      "ko": "★ 힘내요."
+    },
+    {
+      "start": 10.12,
+      "end": 15.24,
+      "who": "BEN",
+      "en": "\"Hi Ben, I have secured an appointment for you to meet with Jules Ostin today at 3:55 P.M.\"",
+      "ko": "\"안녕하세요 벤, 오늘 오후 3시 55분에 줄스 오스틴과의 면담을 잡아두었습니다.\""
+    },
+    {
+      "start": 15.26,
+      "end": 17.97,
+      "who": "BEN",
+      "en": "\"Please be prompt as Jules has another meeting at 4:00 P.M.\"",
+      "ko": "\"줄스가 4시에 다른 회의가 있으니 시간을 꼭 지켜주세요.\""
+    }
+  ]
+}

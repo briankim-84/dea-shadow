@@ -1,5 +1,5 @@
 {
-  "_readme": "v7 + QA 수동 확정",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "nh-just-the-thing",
   "title": "I have just the thing",
   "sub": "NOTTING HILL · 1999",
@@ -14,7 +14,7 @@
   "sentences": [
     {
       "start": 0.9,
-      "end": 3.8,
+      "end": 4.12,
       "who": "SPIKE",
       "en": "First there's this one. Cool, huh?",
       "ko": "먼저 이거. 멋지지?"

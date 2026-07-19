@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-run-by",
+  "title": "run every idea by this person",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "run every idea by this person",
+  "meaning": "모든 아이디어를 이 사람에게 컨펌받다",
+  "video": "run_every_idea_by.mp4",
+  "sentences": [
+    {
+      "start": 1.47,
+      "end": 3.06,
+      "who": "JULES",
+      "en": "But, Cameron, this new person,",
+      "ko": "근데 캐머런, 그 새로운 사람은,"
+    },
+    {
+      "start": 3.08,
+      "end": 5.08,
+      "who": "JULES",
+      "en": "they are going to want to do things their way.",
+      "ko": "자기 방식대로 하려고 할 거야."
+    },
+    {
+      "start": 5.1,
+      "end": 6.5,
+      "who": "JULES",
+      "en": "Technically be my boss.",
+      "ko": "엄밀히 말하면 내 상사가 되는 거고."
+    },
+    {
+      "start": 6.68,
+      "end": 13.28,
+      "who": "JULES",
+      "en": "★ I mean, how can I do what I do if I have to report to someone else, run every idea I have by this person?",
+      "ko": "★ 다른 사람한테 보고하고, 아이디어마다 그 사람 컨펌을 받아야 하는데 내가 어떻게 일을 해?"
+    },
+    {
+      "start": 13.3,
+      "end": 14.48,
+      "who": "JULES",
+      "en": "Can you see that working?",
+      "ko": "그게 될 것 같아?"
+    }
+  ]
+}

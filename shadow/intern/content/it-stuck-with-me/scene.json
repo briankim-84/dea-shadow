@@ -1,0 +1,44 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-stuck-with-me",
+  "title": "you're stuck with me",
+  "sub": "THE INTERN · 2015",
+  "category": "유머·티키타카",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "you're stuck with me",
+  "meaning": "나랑 엮이게 됐네요",
+  "video": "stuck_with_me.mp4",
+  "sentences": [
+    {
+      "start": 1.11,
+      "end": 2.21,
+      "who": "JULES",
+      "en": "Excuse me. Okay.",
+      "ko": "실례할게요. 됐어요."
+    },
+    {
+      "start": 4.06,
+      "end": 5.83,
+      "who": "BEN",
+      "en": "★ Well, then, looks like you're stuck with me.",
+      "ko": "★ 그럼, 저랑 엮이게 되셨네요."
+    },
+    {
+      "start": 5.85,
+      "end": 7.5,
+      "who": "JULES",
+      "en": "Great, I'm excited.",
+      "ko": "좋아요, 기대되네요."
+    },
+    {
+      "start": 8.02,
+      "end": 11.57,
+      "who": "JULES",
+      "en": "I will e-mail you when I have something for you to do.",
+      "ko": "일이 생기면 이메일 드릴게요."
+    }
+  ]
+}

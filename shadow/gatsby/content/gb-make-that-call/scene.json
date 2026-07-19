@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "gb-make-that-call",
   "title": "If you'll excuse me, I have to make that call",
   "sub": "THE GREAT GATSBY · 2013",
@@ -34,7 +34,7 @@
       "ko": "오, 이거 실례했소. 사람을 잘못 봤군."
     },
     {
-      "start": 15.08,
+      "start": 15.26,
       "end": 18.36,
       "who": "GATSBY",
       "en": "★ If you'll excuse me, I have to make that call.",

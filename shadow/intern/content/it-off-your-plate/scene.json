@@ -1,0 +1,44 @@
+{
+  "_readme": "v7 + QA 전수 타이밍 검증 확정",
+  "id": "it-off-your-plate",
+  "title": "take things off your plate",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "take things off your plate",
+  "meaning": "부담을 덜어주다",
+  "video": "off_your_plate.mp4",
+  "sentences": [
+    {
+      "start": 1.47,
+      "end": 4.7,
+      "who": "CAMERON",
+      "en": "That it's all going too fast, and it could get away from us.",
+      "ko": "너무 빠르게 커져서 통제를 벗어날 수 있다는 거지."
+    },
+    {
+      "start": 4.72,
+      "end": 7.48,
+      "who": "CAMERON",
+      "en": "Our investors just think that a seasoned CEO",
+      "ko": "투자자들은 노련한 CEO라면"
+    },
+    {
+      "start": 7.5,
+      "end": 10.62,
+      "who": "CAMERON",
+      "en": "★ could take some things off your plate.",
+      "ko": "★ 네 부담을 좀 덜어줄 수 있다고 보는 거야."
+    },
+    {
+      "start": 10.64,
+      "end": 13.0,
+      "who": "CAMERON",
+      "en": "That's all. Just free you up to do what you do great.",
+      "ko": "그게 다야. 네가 제일 잘하는 일에 집중하게 해주는 거지."
+    }
+  ]
+}

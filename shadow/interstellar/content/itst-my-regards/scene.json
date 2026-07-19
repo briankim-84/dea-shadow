@@ -1,5 +1,5 @@
 {
-  "_readme": "타임스탬프 v6 — whisper 단어 단위 실측 (base.en, word_timestamps)",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "itst-my-regards",
   "title": "Give my regards to ~",
   "sub": "INTERSTELLAR · 2014",
@@ -26,14 +26,14 @@
       "ko": "★ 만 박사에게 안부 전해 주고."
     },
     {
-      "start": 6.35,
-      "end": 7.6,
+      "start": 6.6,
+      "end": 7.05,
       "who": "BRAND",
       "en": "I will, Dad.",
       "ko": "그럴게요, 아빠."
     },
     {
-      "start": 7.52,
+      "start": 7.55,
       "end": 12.53,
       "who": "PROF. BRAND",
       "en": "It looks good for your trajectory. We've calculated two years to Saturn.",

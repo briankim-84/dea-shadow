@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-gave-me-the-drill",
+  "title": "gave me the drill",
+  "sub": "THE INTERN · 2015",
+  "category": "회의·업무",
+  "difficulty": 3,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "gave me the drill",
+  "meaning": "대충 상황을 알려줬다",
+  "video": "gave_me_the_drill.mp4",
+  "sentences": [
+    {
+      "start": 1.55,
+      "end": 3.45,
+      "who": "JULES",
+      "en": "★ But Cameron gave me the drill,",
+      "ko": "★ 캐머런한테 대충 얘기는 들었어요."
+    },
+    {
+      "start": 3.47,
+      "end": 4.69,
+      "who": "JULES",
+      "en": "so can I just be honest with you?",
+      "ko": "그래서 솔직하게 말해도 될까요?"
+    },
+    {
+      "start": 4.71,
+      "end": 5.62,
+      "who": "BEN",
+      "en": "Please.",
+      "ko": "그럼요."
+    },
+    {
+      "start": 5.64,
+      "end": 7.74,
+      "who": "JULES",
+      "en": "I'm not gonna have a lot for you to do.",
+      "ko": "드릴 일이 많지 않을 거예요."
+    },
+    {
+      "start": 7.76,
+      "end": 8.89,
+      "who": "JULES",
+      "en": "That's the truth.",
+      "ko": "그게 사실이에요."
+    }
+  ]
+}

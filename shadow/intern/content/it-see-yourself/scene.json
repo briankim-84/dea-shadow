@@ -1,0 +1,51 @@
+{
+  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "id": "it-see-yourself",
+  "title": "Where do you see yourself in 10 years?",
+  "sub": "THE INTERN · 2015",
+  "category": "면접·격식",
+  "difficulty": 2,
+  "tags": [
+    "INTERN"
+  ],
+  "expression": "Where do you see yourself in 10 years?",
+  "meaning": "10년 후 본인의 모습은? (면접 단골)",
+  "video": "where_do_you_see_yourself.mp4",
+  "sentences": [
+    {
+      "start": 1.05,
+      "end": 2.97,
+      "who": "JUSTIN",
+      "en": "And... and take your time.",
+      "ko": "그리고... 천천히 생각하세요."
+    },
+    {
+      "start": 3.18,
+      "end": 4.97,
+      "who": "JUSTIN",
+      "en": "★ Where do you see yourself in 10 years?",
+      "ko": "★ 10년 후 본인의 모습은 어떨 것 같습니까?"
+    },
+    {
+      "start": 6.38,
+      "end": 7.82,
+      "who": "BEN",
+      "en": "When I'm 80?",
+      "ko": "제가 여든일 때요?"
+    },
+    {
+      "start": 8.54,
+      "end": 10.01,
+      "who": "JUSTIN",
+      "en": "Yeah, sure.",
+      "ko": "네, 그럼요."
+    },
+    {
+      "start": 10.03,
+      "end": 11.23,
+      "who": "BEN",
+      "en": "Yeah, whatever.",
+      "ko": "뭐, 아무거나요."
+    }
+  ]
+}

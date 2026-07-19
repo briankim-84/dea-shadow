@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "gb-what-day",
   "title": "What day would suit you?",
   "sub": "THE GREAT GATSBY · 2013",
@@ -13,7 +13,7 @@
   "video": "what_day_would_suit_you.mp4",
   "sentences": [
     {
-      "start": 2.13,
+      "start": 1.78,
       "end": 6.9,
       "who": "NICK",
       "en": "Happy to do it. I'm going to call Daisy and invite her to tea.",
@@ -28,13 +28,13 @@
     },
     {
       "start": 10.41,
-      "end": 12.89,
+      "end": 12.72,
       "who": "NICK",
       "en": "What day would suit you?",
       "ko": "당신은 무슨 요일이 좋은데요?"
     },
     {
-      "start": 12.91,
+      "start": 12.74,
       "end": 15.39,
       "who": "GATSBY",
       "en": "★ I don't want to put you to any trouble.",

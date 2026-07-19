@@ -1,5 +1,5 @@
 {
-  "_readme": "pipeline v7 — whisper 실측+간격배분+감쇠보정, QA 통과분",
+  "_readme": "v7 + 소급 타이밍 전수 검증 확정",
   "id": "hp-few-words",
   "title": "say a few words",
   "sub": "HARRY POTTER · 2001",
@@ -42,7 +42,7 @@
     },
     {
       "start": 26.4,
-      "end": 39.78,
+      "end": 40.6,
       "who": "DUMBLEDORE",
       "en": "Also, our caretaker, Mr. Filch, has asked me to remind you that the third-floor corridor is out of bounds to everyone who does not wish to die a most painful death.",
       "ko": "또한 관리인 필치 씨의 당부로 알려드립니다 — 3층 복도는 몹시 고통스러운 죽음을 원치 않는 모든 이에게 출입 금지 구역입니다."
