@@ -527,7 +527,8 @@ function toggleLoop(){ looping=!looping; $("loopBtn").classList.toggle('on',loop
 let sharedMic=null,recorder=null,recording=false;
 function micAlive(m){try{return !!m&&m.getAudioTracks().some(t=>t.readyState==='live');}catch(e){return false;}}
 async function getMic(){
-  /* iOS: 캐시된 스트림은 영상 재생 후 무음으로 죽음 → 매번 새로 획득 */
+  /* iOS: 살아있는 마이크는 재사용(재획득 직후 빈 녹음 방지). 죽었을 때만 새로 획득 */
+  if(micAlive(sharedMic)) return sharedMic;
   releaseMic();
   try{ sharedMic=await navigator.mediaDevices.getUserMedia({audio:true}); return sharedMic; }
   catch(e){ alert("마이크 권한을 허용해주세요."); return null; } }
@@ -549,9 +550,9 @@ async function toggleRec(){
   recording=true;
   const keyAt=recKey();
   recorder.ondataavailable=e=>{if(e.data&&e.data.size>0)chunks.push(e.data);};
-  recorder.onerror=()=>{ recording=false; releaseMic(); btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음 오류 — 다시 시도해 주세요'; };
+  recorder.onerror=()=>{ recording=false; btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음 오류 — 다시 시도해 주세요'; };
   recorder.onstop=()=>{
-    recording=false; releaseMic();
+    recording=false;
     const blob=new Blob(chunks,{type:(recorder&&recorder.mimeType)||mt||'audio/mp4'});
     /* iOS에서 간혹 빈 blob → 안내 후 중단 */
     if(!blob||blob.size<200){ btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음이 너무 짧아요 — 다시 눌러 말해보세요'; return; }
