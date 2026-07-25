@@ -202,6 +202,81 @@ h1 .thin{color:var(--stamp)}
 footer{margin:40px 22px 0 46px;padding-top:14px;border-top:1.5px solid var(--ink);display:flex;justify-content:space-between;
   font-family:var(--disp);font-size:9px;letter-spacing:3px;color:var(--sub);font-weight:900;text-transform:uppercase}
 .hidden{display:none!important}
+
+/* ── 내 진도 (MY PROGRESS) ── */
+:root{--d1:#24303F;--d2:#7A4E2D;--d3:#B8412F;--card:#FBF8F0}
+#prog{padding:20px 22px 0 46px;display:flex;flex-direction:column;gap:18px}
+.ticket{position:relative;background:var(--card);border:1.5px solid var(--ink);border-radius:8px;
+  padding:16px 18px;display:flex;align-items:center;gap:16px;box-shadow:4px 5px 0 rgba(38,34,27,.9)}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:16px;height:16px;border:1.5px solid var(--ink);
+  border-radius:50%;background:var(--ivory);transform:translateY(-50%)}
+.ticket::before{left:-9px;border-left-color:var(--ivory)}.ticket::after{right:-9px;border-right-color:var(--ivory)}
+.ring{position:relative;width:86px;height:86px;flex-shrink:0}
+.ring svg{transform:rotate(-90deg)}
+.ring .bgc{fill:none;stroke:var(--hair);stroke-width:8}
+.ring .fgc{fill:none;stroke:var(--stamp);stroke-width:8;stroke-linecap:round;stroke-dasharray:239.4;transition:stroke-dashoffset .6s ease}
+.ring .pct{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .pct b{font-family:var(--disp);font-size:19px;letter-spacing:-.5px}
+.ring .pct span{font-size:9px;letter-spacing:2px;color:var(--sub);font-weight:800}
+.tinfo{flex:1;min-width:0}
+.tcode{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);font-size:11px;letter-spacing:1.5px;font-weight:900;
+  background:var(--ink);color:var(--ivory);border-radius:5px;padding:5px 10px;border:none;cursor:pointer}
+.tcode i{width:6px;height:6px;border-radius:50%;background:#7BB544;font-style:normal}
+.tcode.off i{background:#C9C0AC}
+.tstats{margin-top:9px;font-size:13px;color:var(--ink2);line-height:1.75}
+.tstats b{font-family:var(--disp);font-size:14px;letter-spacing:-.3px;color:var(--ink)}
+.tsub{margin-top:2px;font-size:11px;color:var(--sub)}
+.tsub u{cursor:pointer;color:var(--stamp)}
+.psec{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:16px 18px}
+.sechead{display:flex;align-items:baseline;gap:10px;margin-bottom:13px}
+.sechead .no{font-family:var(--disp);font-size:9px;letter-spacing:2.5px;color:var(--stamp);font-weight:900}
+.sechead h2{font-family:var(--disp);font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+.sechead .r{margin-left:auto;font-size:10.5px;color:var(--sub)}
+.reelrow{display:flex;align-items:center;gap:10px;padding:7.5px 0;border-bottom:1px dashed var(--hair)}
+.reelrow:last-child{border-bottom:none}
+.reelrow .prn{font-family:var(--disp);font-size:8px;letter-spacing:1.5px;color:var(--sub);font-weight:900;width:44px;flex-shrink:0}
+.reelrow .nm{font-family:var(--serif);font-style:italic;font-size:13.5px;width:104px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reelrow .bar{flex:1;height:8px;border:1px solid var(--hair);border-radius:4px;background:var(--ivory);overflow:hidden}
+.reelrow .bar i{display:block;height:100%;background:var(--c,var(--stamp))}
+.reelrow .v{font-family:var(--disp);font-size:9px;letter-spacing:.5px;color:var(--ink2);font-weight:900;width:48px;text-align:right;flex-shrink:0}
+.reelrow.rdone .nm::after{content:" ✓";color:var(--stamp)}
+.diffgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.dcell{border:1px solid var(--hair);border-radius:7px;padding:11px 10px;text-align:center;background:var(--ivory)}
+.dcell .lb{font-size:11px;font-weight:800;color:#fff;display:inline-block;border-radius:4px;padding:3px 9px}
+.dcell .num{margin-top:8px;font-family:var(--disp);font-size:17px;letter-spacing:-.5px}
+.dcell .den{font-size:10px;color:var(--sub)}
+.dcell .mini{margin-top:7px;height:4px;border-radius:2px;background:var(--hair);overflow:hidden}
+.dcell .mini i{display:block;height:100%}
+.keepfilter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.kchip{font-size:10.5px;font-weight:800;padding:5px 11px;border-radius:999px;border:1px solid var(--hair);color:var(--sub);background:transparent;cursor:pointer}
+.kchip.on{color:var(--ivory);background:var(--ink);border-color:var(--ink)}
+.keeprow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed var(--hair)}
+.keeprow:last-child{border-bottom:none}
+.keeprow .kmark{flex-shrink:0;width:26px;height:26px;border:1.5px solid var(--stamp);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--stamp);font-size:12px;
+  background:none;cursor:pointer;transition:transform .12s,opacity .12s;padding:0}
+.keeprow .kmark:active{transform:scale(.86);opacity:.6}
+.keeprow .kt{flex:1;min-width:0}
+.keeprow .ktag{font-family:var(--disp);font-size:7.5px;letter-spacing:1.2px;color:var(--stamp);font-weight:900;margin-bottom:3px}
+.keeprow .ken{font-family:var(--serif);font-style:italic;font-size:14.5px;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.keeprow .kko{font-size:11px;color:var(--sub);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.keeprow .go{flex-shrink:0;display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:11.5px;
+  color:var(--ink);background:var(--ivory);border:1.5px solid var(--ink);border-radius:8px;padding:8px 11px;cursor:pointer;
+  box-shadow:0 3px 0 rgba(38,34,27,.85);text-decoration:none}
+.keeprow .go .tri{width:0;height:0;border-left:7px solid var(--ink);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.krecent{display:flex;align-items:center;gap:14px}
+.krecent .st{flex:1;font-size:12.5px;color:var(--ink2);line-height:1.8}
+.krecent .st b{color:var(--ink)}
+.presume{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;flex-shrink:0;
+  color:var(--ivory);background:var(--stamp);border:none;border-radius:9px;padding:11px 15px;cursor:pointer;
+  box-shadow:0 4px 0 #7E2A1D;text-decoration:none}
+.presume .tri{width:0;height:0;border-left:8px solid var(--ivory);border-top:5.5px solid transparent;border-bottom:5.5px solid transparent}
+.weekband{margin-top:12px;display:flex;gap:4px;padding-bottom:14px}
+.weekband .d{flex:1;height:22px;border:1px solid var(--hair);border-radius:4px;background:var(--ivory);position:relative}
+.weekband .d.on{background:var(--stamp);border-color:var(--stamp)}
+.weekband .d span{position:absolute;top:100%;left:50%;transform:translateX(-50%);font-size:8px;color:var(--sub);margin-top:3px}
+.pnote{padding:2px 4px;font-size:10.5px;color:var(--sub);line-height:1.7}
+.pempty{padding:26px 8px;text-align:center;font-size:12.5px;color:var(--sub);line-height:1.9}
 </style>
 </head>
 <body>
@@ -219,6 +294,7 @@ footer{margin:40px 22px 0 46px;padding-top:14px;border-top:1.5px solid var(--ink
   <div class="tabs">
     <button class="tab on" id="tabT">작품별</button>
     <button class="tab" id="tabL">전체 탐색<span class="dot" id="libdot"></span></button>
+    <button class="tab" id="tabP">내 진도</button>
   </div>
 
   <div class="shelf" id="shelf">
@@ -336,6 +412,8 @@ footer{margin:40px 22px 0 46px;padding-top:14px;border-top:1.5px solid var(--ink
     <div class="list" id="list"></div>
   </div>
 
+  <div id="prog" class="hidden"></div>
+
   <footer><span>DO ENGLISH WITH BRIAN</span><span>LISTEN &amp; SHADOW</span></footer>
 </div>
 <script>
@@ -365,13 +443,18 @@ function mark(t){ try{localStorage.setItem('ls_last',JSON.stringify({t,label:TIT
 })();
 
 /* 탭 */
-const shelf=document.getElementById('shelf'),lib=document.getElementById('lib');
-const tabT=document.getElementById('tabT'),tabL=document.getElementById('tabL');
+const shelf=document.getElementById('shelf'),lib=document.getElementById('lib'),prog=document.getElementById('prog');
+const tabT=document.getElementById('tabT'),tabL=document.getElementById('tabL'),tabP=document.getElementById('tabP');
 try{ if(localStorage.getItem('lib_seen')) document.getElementById('libdot').style.display='none'; }catch(e){}
-tabT.onclick=()=>{tabT.classList.add('on');tabL.classList.remove('on');shelf.classList.remove('hidden');lib.classList.add('hidden');};
-tabL.onclick=()=>{tabL.classList.add('on');tabT.classList.remove('on');lib.classList.remove('hidden');shelf.classList.add('hidden');
+function swTab(n){
+  tabT.classList.toggle('on',n===0);tabL.classList.toggle('on',n===1);tabP.classList.toggle('on',n===2);
+  shelf.classList.toggle('hidden',n!==0);lib.classList.toggle('hidden',n!==1);prog.classList.toggle('hidden',n!==2);
+}
+tabT.onclick=()=>swTab(0);
+tabL.onclick=()=>{swTab(1);
   try{localStorage.setItem('lib_seen','1');document.getElementById('libdot').style.display='none';}catch(e){}
   if(!ALL.length) loadAll();};
+tabP.onclick=async()=>{swTab(2); if(!ALL.length) await loadAll(); renderProgress();};
 
 /* 라이브러리 */
 let ALL=[],fc="전체",fd=0;
@@ -398,15 +481,22 @@ function renderChips(){
 }
 function setC(c){fc=c;renderChips();render();}
 function setD(d){fd=d;renderChips();render();}
-function kvGet(k){ try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;} }
-function render(){
+/* 앱 진도는 IndexedDB(dewb_shadow_app)에 저장됨 — localStorage가 아니라 IDB에서 읽는다 */
+const _DBN='dewb_shadow_app',_ST='kv';
+function _idb(){return new Promise((res,rej)=>{const r=indexedDB.open(_DBN,1);
+ r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(_ST))r.result.createObjectStore(_ST);};
+ r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function kvGet(k){try{const d=await _idb();return await new Promise(r=>{const q=d.transaction(_ST,'readonly').objectStore(_ST).get(k);q.onsuccess=()=>r(q.result||null);q.onerror=()=>r(null);});}catch(e){return null;}}
+async function kvKeys(){try{const d=await _idb();return await new Promise(r=>{const q=d.transaction(_ST,'readonly').objectStore(_ST).getAllKeys();q.onsuccess=()=>r(q.result||[]);q.onerror=()=>r([]);});}catch(e){return [];}}
+async function kvSet(k,v){try{const d=await _idb();return await new Promise(r=>{const t=d.transaction(_ST,'readwrite');t.objectStore(_ST).put(v,k);t.oncomplete=()=>r(1);t.onerror=()=>r(0);});}catch(e){return 0;}}
+async function render(){
   const nm={1:'① 기초',2:'② 중급',3:'③ 고급'};
   const out=ALL.filter(s=>(fc==="전체"||s.category===fc)&&(!fd||s.difficulty===fd));
   document.getElementById('cnt').textContent=`${out.length} / ${ALL.length} SCENES · ${Object.keys(TITLES).length} TITLES`;
   if(!out.length){ document.getElementById('list').innerHTML=`<div class="empty">이 조합의 장면은 아직 없어요.<br>다음 릴에서 채워질 예정.</div>`; return; }
   let h='';
   for(const s of out){
-    const done=kvGet(`prog|${s.id}`);
+    const done=await kvGet(`prog|${s.id}`);
     const dn=done?Object.values(done).filter(Boolean).length:0;
     const pct=s.count?Math.min(100,Math.round(dn/s.count*100)):0;
     h+=`<div class="scard" onclick="location.href='./${s._t}/?scene=${encodeURIComponent(s.id)}'">
@@ -419,6 +509,147 @@ function render(){
   }
   document.getElementById('list').innerHTML=h;
 }
+
+/* ── [내 진도] 탭 ── */
+async function scanIDB(prefix){
+  const keys=await kvKeys(), out={};
+  for(const k of keys){ const s=String(k);
+    if(s.startsWith(prefix)) out[s.slice(prefix.length)]=await kvGet(s); }
+  return out;
+}
+function dstr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+let KFILT='전체';
+function setKF(f){KFILT=f;renderProgress();}
+async function unkeep(sid,li){
+  const key=`keep|${sid}`;
+  const m=(await kvGet(key))||{};
+  m[String(li)]={del:1,t:Date.now()};   /* 삭제 표식 — 다른 기기로도 전파 */
+  await kvSet(key,m);
+  renderProgress();
+}
+window.unkeep=unkeep;
+async function renderProgress(){
+  const el=document.getElementById('prog');
+  const nm={1:'① 기초',2:'② 중급',3:'③ 고급'},dc={1:'var(--d1)',2:'var(--d2)',3:'var(--d3)'};
+  const progAll=await scanIDB('prog|'), keepAll=await scanIDB('keep|');
+  const days=progAll['_days']||{}; delete progAll['_days'];
+  const meta={}; for(const s of ALL) meta[s.id]=s;
+
+  /* 관람권 */
+  let doneLines=0,totLines=0,doneScenes=0;
+  const perTitle={},perDiff={1:[0,0],2:[0,0],3:[0,0]};
+  for(const t of Object.keys(TITLES)) perTitle[t]=[0,0];
+  for(const s of ALL){
+    const c=s.count||0; totLines+=c;
+    const p=progAll[s.id]||{}; let dn=0; for(const i in p) if(p[i]) dn++;
+    dn=Math.min(dn,c);
+    doneLines+=dn; if(c&&dn>=c) doneScenes++;
+    perTitle[s._t][0]+=dn; perTitle[s._t][1]+=c;
+    if(perDiff[s.difficulty]){perDiff[s.difficulty][0]+=dn; perDiff[s.difficulty][1]+=c;}
+  }
+  const pct=totLines?Math.round(doneLines/totLines*100):0;
+  const st=(window.DEWBSync&&DEWBSync.student&&DEWBSync.student())||null;
+  const codeHtml=st
+    ?`<span class="tcode"><i></i>${st.code.toUpperCase()}</span>`
+    :`<button class="tcode off" onclick="window.DEWBSync&&DEWBSync.link()"><i></i>코드 연결</button>`;
+  const syncTxt=st
+    ?'모든 기기에서 동기화됨'
+    :'이 기기에만 저장 중 — <u onclick="window.DEWBSync&&DEWBSync.link()">학생 코드를 연결</u>하면 폰·PC 진도가 합쳐져요';
+
+  /* 작품별 */
+  let reels='';
+  Object.keys(TITLES).forEach((t,i)=>{
+    const [dn,c]=perTitle[t]; const w=c?Math.round(dn/c*100):0;
+    reels+=`<div class="reelrow ${c&&dn>=c?'rdone':''}"><span class="prn">REEL ${String(i+1).padStart(2,'0')}</span>`+
+      `<span class="nm">${TITLES[t].name.toLowerCase()}</span>`+
+      `<div class="bar"><i style="width:${w}%;--c:${TITLES[t].color}"></i></div><span class="v">${dn}/${c}</span></div>`;
+  });
+
+  /* 난이도 */
+  let diffs='';
+  for(const d of [1,2,3]){
+    const [dn,c]=perDiff[d]; const w=c?Math.round(dn/c*100):0;
+    diffs+=`<div class="dcell"><span class="lb" style="background:${dc[d]}">${nm[d]}</span>`+
+      `<div class="num">${w}%</div><div class="den">${dn} / ${c} 라인</div>`+
+      `<div class="mini"><i style="width:${w}%;background:${dc[d]}"></i></div></div>`;
+  }
+
+  /* KEEP */
+  const krows=[];
+  for(const sid in keepAll){
+    const m=keepAll[sid]||{}, sc=meta[sid]; if(!sc) continue;
+    for(const li in m){ const e=m[li];
+      if(e&&!e.del) krows.push({t:sc._t,sid,li:+li,en:e.en||'',ko:e.ko||'',ts:e.t||0,sc}); }
+  }
+  krows.sort((a,b)=>b.ts-a.ts);
+  const kByT={}; for(const k of krows) kByT[k.t]=(kByT[k.t]||0)+1;
+  let kchips=`<button class="kchip ${KFILT==='전체'?'on':''}" onclick="setKF('전체')">전체 ${krows.length}</button>`;
+  for(const t in kByT) kchips+=`<button class="kchip ${KFILT===t?'on':''}" onclick="setKF('${t}')">${TITLES[t].name} ${kByT[t]}</button>`;
+  const kshow=krows.filter(k=>KFILT==='전체'||k.t===KFILT);
+  let keeps=kshow.length?'':`<div class="pempty">아직 보관한 라인이 없어요.<br>연습 중 마음에 드는 라인에서 <b>⚑</b> 를 눌러보세요.</div>`;
+  for(const k of kshow){
+    keeps+=`<div class="keeprow"><button class="kmark" onclick="unkeep('${k.sid}',${k.li})" title="보관 해제">&#9873;</button>`+
+      `<div class="kt"><div class="ktag">${TITLES[k.t].name} · ${(k.sc.title||'').toUpperCase()}</div>`+
+      `<div class="ken">&ldquo;${k.en}&rdquo;</div>${k.ko?`<div class="kko">${k.ko}</div>`:''}</div>`+
+      `<a class="go" href="./${k.t}/?scene=${encodeURIComponent(k.sid)}&line=${k.li}"><span class="tri"></span>연습</a></div>`;
+  }
+
+  /* 최근 + 주간밴드 (월~일) */
+  let last=null; try{last=JSON.parse(localStorage.getItem('ls_last')||'null');}catch(e){}
+  const dayKeys=Object.keys(days).sort();
+  const lastDay=dayKeys.length?dayKeys[dayKeys.length-1]:null;
+  const today=dstr(new Date());
+  const lastTxt=lastDay?(lastDay===today?'오늘':lastDay.slice(5).replace('-','/')):'—';
+  const now=new Date(), dow=(now.getDay()+6)%7; /* 월=0 */
+  const wk=['월','화','수','목','금','토','일'];
+  let band='',wkCnt=0;
+  for(let i=0;i<7;i++){
+    const d=new Date(now); d.setDate(now.getDate()-dow+i);
+    const on=!!days[dstr(d)]; if(on)wkCnt++;
+    band+=`<div class="d ${on?'on':''}"><span>${wk[i]}</span></div>`;
+  }
+  const resumeHref=(last&&last.t&&TITLES[last.t])?(last.id?`./${last.t}/?scene=${encodeURIComponent(last.id)}`:`./${last.t}/`):null;
+  const lastLabel=(last&&last.t&&TITLES[last.t])?`${TITLES[last.t].name}${last.expr?' — <b>&ldquo;'+last.expr+'&rdquo;</b>':''}`:'—';
+
+  el.innerHTML=`
+    <div class="ticket">
+      <div class="ring">
+        <svg width="86" height="86"><circle class="bgc" cx="43" cy="43" r="38.1"/><circle class="fgc" cx="43" cy="43" r="38.1" style="stroke-dashoffset:${(239.4*(1-pct/100)).toFixed(1)}"/></svg>
+        <div class="pct"><b>${pct}%</b><span>DONE</span></div>
+      </div>
+      <div class="tinfo">
+        ${codeHtml}
+        <div class="tstats">완료 라인 <b>${doneLines}</b> / ${totLines} &nbsp;·&nbsp; 완료 씬 <b>${doneScenes}</b> / ${ALL.length}</div>
+        <div class="tsub">${syncTxt}</div>
+      </div>
+    </div>
+    <div class="psec">
+      <div class="sechead"><span class="no">SEC 01</span><h2>Reel Progress</h2><span class="r">${Object.keys(TITLES).length} TITLES</span></div>
+      ${reels}
+    </div>
+    <div class="psec">
+      <div class="sechead"><span class="no">SEC 02</span><h2>By Difficulty</h2><span class="r">수준 진단</span></div>
+      <div class="diffgrid">${diffs}</div>
+    </div>
+    <div class="psec">
+      <div class="sechead"><span class="no">SEC 03</span><h2>My Keeps</h2><span class="r">${krows.length} LINES</span></div>
+      ${krows.length?`<div class="keepfilter">${kchips}</div>`:''}
+      ${keeps}
+    </div>
+    <div class="psec">
+      <div class="sechead"><span class="no">SEC 04</span><h2>Recent</h2><span class="r">이번 주</span></div>
+      <div class="krecent">
+        <div class="st">마지막 학습 <b>${lastTxt}</b> · ${lastLabel}<br>이번 주 학습일 <b>${wkCnt}일</b></div>
+        ${resumeHref?`<a class="presume" href="${resumeHref}"><span class="tri"></span>이어서 하기</a>`:''}
+      </div>
+      <div class="weekband">${band}</div>
+      <div class="pnote" style="margin-top:16px">주간 밴드는 그날 ✓ Done 라인이 1개 이상이면 채워져요.</div>
+    </div>`;
+}
+window.renderProgress=renderProgress;
+window.addEventListener('dewb:sync',()=>{ if(!prog.classList.contains('hidden')) renderProgress(); });
+window.addEventListener('dewb:ready',()=>{ if(!prog.classList.contains('hidden')) renderProgress(); });
 </script>
+<script src="sync.js"></script>
 </body>
 </html>

@@ -212,6 +212,16 @@
   .sheet .close{margin-top:18px;width:100%;padding:13px;border:none;border-radius:12px;background:var(--champ);
     color:var(--diffink,#0A0E1A);font-weight:800;font-size:14px;cursor:pointer;}
   .hidden{display:none!important;}
+
+  /* ---- KEEP ⚑ (eyeBtn 규칙 상속, 위치만 좌측으로) ---- */
+  .keepBtn{position:absolute;top:12px;right:46px;background:none;border:1px solid var(--line);color:var(--sub);
+    width:36px;height:36px;cursor:pointer;font-size:14px;border-radius:10px;}
+  .keepBtn{font-size:15px;line-height:1;transition:transform .16s ease,color .16s,border-color .16s;}
+  .keepBtn.on{color:var(--gold);border-color:var(--gold);
+    background:color-mix(in srgb,var(--gold) 12%,transparent);}
+  .keepBtn.pop{transform:scale(1.22);}
+  .fcardX.keephl{animation:keephl 1.8s ease;}
+  @keyframes keephl{0%,55%{box-shadow:inset 0 0 0 2px var(--gold);}100%{box-shadow:inset 0 0 0 0 transparent;}}
 </style>
 </head>
 <body>
@@ -313,7 +323,10 @@ window.addEventListener('load',async()=>{
   renderCats(); renderDiffRow(); renderList();
   // 딥링크: ?scene=<id> → 바로 해당 장면
   try{
-    const q=new URLSearchParams(location.search).get('scene');
+    const _qs=new URLSearchParams(location.search);
+    const q=_qs.get('scene');
+    const _ln=parseInt(_qs.get('line'),10);
+    if(!isNaN(_ln)&&_ln>=0) DEEP_LINE=_ln;
     if(q && INDEX.scenes.some(x=>x.id===q)) openScene(q);
   }catch(e){}
 });
@@ -332,7 +345,7 @@ function setCat(c){cat=c;renderCats();renderList();}
 
 
 /* ---- scene ---- */
-let PROG={},MYREC={};
+let PROG={},MYREC={},KEEP={},DEEP_LINE=null;
 async function openScene(id){
   try{
     const _m=(INDEX&&INDEX.scenes||[]).find(x=>x.id===id);
@@ -346,6 +359,7 @@ async function openScene(id){
   }
   SCENE=sc; fi=0; layer=1; looping=false; speed=1;
   PROG=(await kvGet(`prog|${sc.id}`))||{};
+  KEEP=(await kvGet(`keep|${sc.id}`))||{};
   MYREC={};
   $("home").classList.add("hidden"); $("scene").classList.remove("hidden");
   $("scTitle").textContent='“'+sc.title+'”';
@@ -369,7 +383,12 @@ async function openScene(id){
       }
     });
   }
-  showLayer(1);
+  if(DEEP_LINE!=null && SCENE.sentences && SCENE.sentences.length){
+    fi=Math.max(0,Math.min(SCENE.sentences.length-1,DEEP_LINE)); DEEP_LINE=null;
+    showLayer(2);
+    setTimeout(()=>{const c=document.querySelector('.fcardX');
+      if(c){c.classList.add('keephl');setTimeout(()=>c.classList.remove('keephl'),1900);}},80);
+  } else showLayer(1);
   window.scrollTo(0,0);
 }
 function goHome(){ stopSeg(); $("scene").classList.add("hidden"); $("home").classList.remove("hidden"); renderList(); }
@@ -477,6 +496,7 @@ let blurred=false;
 function renderFocus(){
   const s=SCENE.sentences[fi], n=SCENE.sentences.length;
   const hasSeg=!!(vid() && s.end>s.start);
+  const kept=!!(KEEP[fi]&&!KEEP[fi].del);
   $("focus").innerHTML=`
     <div class="fnav">
       <button ${fi===0?'disabled':''} onclick="nav(-1)">‹ Prev</button>
@@ -485,6 +505,7 @@ function renderFocus(){
     </div>
     <div class="fcardX">
       <button class="eyeBtn" onclick="toggleBlur()" id="eye">${blurred?'🙈':'👁'}</button>
+      <button class="keepBtn ${kept?'on':''}" onclick="toggleKeep()" id="keepBtn" title="KEEP — 내 진도에 보관">⚑</button>
       <span class="qm">&ldquo;</span>
       <div class="who">${s.who||'&nbsp;'}</div>
       <div class="en ${blurred?'blur':''}" id="fen">${s.en}</div>
@@ -618,8 +639,23 @@ function playMine(){
   if(a.readyState>=2){ attempt(); }
   else { a.oncanplay=()=>{ a.oncanplay=null; attempt(); }; try{a.load();}catch(e){} setTimeout(()=>{ if(myAudio===a&&a.paused&&!tried) attempt(); },300); }
 }
+async function toggleKeep(){
+  const s=SCENE.sentences[fi];
+  const on=!!(KEEP[fi]&&!KEEP[fi].del);
+  KEEP[fi]=on?{del:1,t:Date.now()}:{en:s.en,ko:s.ko||'',t:Date.now()};
+  await kvSet(`keep|${SCENE.id}`,KEEP);
+  const b=$("keepBtn");
+  if(b){b.classList.toggle('on',!on);b.classList.add('pop');setTimeout(()=>b.classList.remove('pop'),240);}
+  const n=$("note"); if(n)n.textContent=on?'깃발을 내렸어요':'⚑ KEEP — 허브 [내 진도]에 보관됐어요';
+}
 async function markDone(){
   PROG[fi]=true; await kvSet(`prog|${SCENE.id}`,PROG);
+  try{
+    const d=new Date();
+    const ds=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+    const m=(await kvGet('prog|_days'))||{};
+    if(!m[ds]){ m[ds]=true; await kvSet('prog|_days',m); }
+  }catch(e){}
   $("note").textContent=`✓ Line ${fi+1} — practiced`;
 }
 
@@ -683,6 +719,19 @@ openScene=async function(id){
   setTimeout(renderDiffRow,0);
 };
 
+</script>
+<script src="../sync.js"></script>
+<script>
+/* 클라우드 병합 완료 시, 열려 있는 씬의 진도·KEEP 갱신 */
+window.addEventListener('dewb:sync',async()=>{
+  try{
+    if(!(window.SCENE&&SCENE.id))return;
+    PROG=(await kvGet(`prog|${SCENE.id}`))||{};
+    KEEP=(await kvGet(`keep|${SCENE.id}`))||{};
+    const sceneOpen=!document.getElementById('scene').classList.contains('hidden');
+    if(sceneOpen&&layer===2)renderFocus();
+  }catch(e){}
+});
 </script>
 </body>
 </html>

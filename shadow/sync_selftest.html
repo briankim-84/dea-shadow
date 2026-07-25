@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>sync.js 자체 점검</title>
+<style>
+  body{margin:0;background:#0B0B0E;color:#F5F2EC;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;padding:22px;max-width:560px;margin:0 auto;}
+  h1{font-size:18px;margin:0 0 4px;} .sub{color:#8B8892;font-size:12px;margin-bottom:18px;}
+  .card{background:#14141A;border:1px solid rgba(217,188,140,.22);border-radius:12px;padding:14px;margin-bottom:12px;}
+  .card h2{font-size:12px;letter-spacing:2px;color:#E7B43D;margin:0 0 10px;}
+  button{background:#1E1E26;color:#F5F2EC;border:1px solid rgba(245,242,236,.16);border-radius:8px;padding:9px 12px;font-size:13px;margin:0 6px 6px 0;cursor:pointer;}
+  button:active{transform:translateY(1px);}
+  button.g{background:#E7B43D;color:#17140C;border-color:#E7B43D;font-weight:800;}
+  pre{background:#08080A;border-radius:8px;padding:12px;font-size:11.5px;line-height:1.55;white-space:pre-wrap;word-break:break-all;color:#B9B6C0;max-height:280px;overflow:auto;margin:0;}
+  .st{font-size:13px;line-height:1.7;}
+  .ok{color:#57C99B;} .no{color:#E0687C;}
+</style>
+</head>
+<body>
+<h1>sync.js 자체 점검</h1>
+<div class="sub">앱 파일 수정 없이 동기화 모듈만 검증합니다. http.server 로 열어주세요.</div>
+
+<div class="card">
+  <h2>STATUS</h2>
+  <div class="st" id="st">로딩 중…</div>
+</div>
+
+<div class="card">
+  <h2>1 · 연결</h2>
+  <button class="g" onclick="DEWBSync.link()">학생코드 연결/변경</button>
+  <button onclick="DEWBSync.unlink();refresh()">연결 해제</button>
+  <button onclick="DEWBSync.resetGate();location.reload()">게이트 초기화</button>
+</div>
+
+<div class="card">
+  <h2>2 · 진도 쓰기 (kvSet 후킹 확인)</h2>
+  <button onclick="writeProg()">prog|test-scene 에 라인 0,2 완료 기록</button>
+  <button onclick="keepOn()">keep 토글 (라인 1)</button>
+  <button onclick="DEWBSync.flush().then(()=>say('flush 완료 — Firestore 콘솔 확인'))">즉시 업로드(flush)</button>
+</div>
+
+<div class="card">
+  <h2>3 · 로컬 지우고 클라우드에서 복원</h2>
+  <button onclick="wipeLocal()">로컬 prog|·keep| 전부 삭제</button>
+  <button class="g" onclick="DEWBSync.sync().then(()=>{say('클라우드 병합 완료');dump()})">클라우드에서 당겨오기</button>
+</div>
+
+<div class="card">
+  <h2>4 · 현재 로컬 데이터</h2>
+  <button onclick="dump()">새로고침</button>
+  <pre id="out">—</pre>
+</div>
+
+<script>
+/* 앱 엔진과 동일한 kvSet/kvGet — sync.js 가 이걸 후킹합니다 */
+const DBN='dewb_shadow_app', ST='kv';
+function idb(){return new Promise((res,rej)=>{const r=indexedDB.open(DBN,1);
+ r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(ST))r.result.createObjectStore(ST);};
+ r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function kvSet(k,v){try{const d=await idb();return await new Promise(r=>{const t=d.transaction(ST,'readwrite');t.objectStore(ST).put(v,k);t.oncomplete=()=>r(1);t.onerror=()=>r(0);});}catch(e){return 0;}}
+async function kvGet(k){try{const d=await idb();return await new Promise(r=>{const q=d.transaction(ST,'readonly').objectStore(ST).get(k);q.onsuccess=()=>r(q.result||null);q.onerror=()=>r(null);});}catch(e){return null;}}
+async function kvKeys(){const d=await idb();return await new Promise(r=>{const q=d.transaction(ST,'readonly').objectStore(ST).getAllKeys();q.onsuccess=()=>r(q.result||[]);q.onerror=()=>r([]);});}
+async function kvDel(k){const d=await idb();return await new Promise(r=>{const t=d.transaction(ST,'readwrite');t.objectStore(ST).delete(k);t.oncomplete=()=>r(1);t.onerror=()=>r(0);});}
+
+window.DEWB_SYNC_DEBUG = true;
+
+function say(m){ document.getElementById('st').innerHTML = m + '<br>' + statusLine(); }
+function statusLine(){
+  if(!window.DEWBSync) return '<span class="no">sync.js 로드 실패</span>';
+  const s = DEWBSync.student();
+  return 'kvSet 후킹: ' + (kvSet.__dewb ? '<span class="ok">OK</span>' : '<span class="no">미적용</span>')
+       + '<br>연결: ' + (s ? '<span class="ok">' + s.code + (s.name?' ('+s.name+')':'') + '</span>' : '<span class="no">로컬 전용</span>');
+}
+function refresh(){ document.getElementById('st').innerHTML = statusLine(); }
+
+async function writeProg(){ await kvSet('prog|test-scene',{0:true,2:true}); say('기록됨 — 1.5초 뒤 자동 업로드'); dump(); }
+async function keepOn(){
+  const on = await DEWBSync.keepToggle('test-scene',1,{en:"Let's call it a day.",ko:"오늘은 여기까지 하죠."});
+  say('KEEP ' + (on?'추가':'해제')); dump();
+}
+async function wipeLocal(){
+  const ks = await kvKeys();
+  for(const k of ks){ const s=String(k); if(s.startsWith('prog|')||s.startsWith('keep|')) await kvDel(k); }
+  say('로컬 삭제 완료'); dump();
+}
+async function dump(){
+  const ks = await kvKeys(); const o = {};
+  for(const k of ks){ const s=String(k); if(s.startsWith('prog|')||s.startsWith('keep|')) o[s]=await kvGet(k); }
+  document.getElementById('out').textContent = Object.keys(o).length ? JSON.stringify(o,null,2) : '(비어 있음)';
+}
+window.addEventListener('dewb:ready', e=>{ refresh(); dump(); });
+window.addEventListener('dewb:sync',  e=>{ dump(); });
+setTimeout(refresh, 400);
+</script>
+<script src="sync.js"></script>
+</body>
+</html>
