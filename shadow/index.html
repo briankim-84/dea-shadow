@@ -486,6 +486,7 @@ const _DBN='dewb_shadow_app',_ST='kv';
 function _idb(){return new Promise((res,rej)=>{const r=indexedDB.open(_DBN,1);
  r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains(_ST))r.result.createObjectStore(_ST);};
  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+function pd(x){return x===true||!!(x&&!x.del);}  /* 완료 판정: legacy true | {t} 완료, {del:1,t}는 취소 */
 async function kvGet(k){try{const d=await _idb();return await new Promise(r=>{const q=d.transaction(_ST,'readonly').objectStore(_ST).get(k);q.onsuccess=()=>r(q.result||null);q.onerror=()=>r(null);});}catch(e){return null;}}
 async function kvKeys(){try{const d=await _idb();return await new Promise(r=>{const q=d.transaction(_ST,'readonly').objectStore(_ST).getAllKeys();q.onsuccess=()=>r(q.result||[]);q.onerror=()=>r([]);});}catch(e){return [];}}
 async function kvSet(k,v){try{const d=await _idb();return await new Promise(r=>{const t=d.transaction(_ST,'readwrite');t.objectStore(_ST).put(v,k);t.oncomplete=()=>r(1);t.onerror=()=>r(0);});}catch(e){return 0;}}
@@ -497,7 +498,7 @@ async function render(){
   let h='';
   for(const s of out){
     const done=await kvGet(`prog|${s.id}`);
-    const dn=done?Object.values(done).filter(Boolean).length:0;
+    const dn=done?Object.values(done).filter(pd).length:0;
     const pct=s.count?Math.min(100,Math.round(dn/s.count*100)):0;
     h+=`<div class="scard" onclick="location.href='./${s._t}/?scene=${encodeURIComponent(s.id)}'">
       <div class="srow1"><span class="tdot" style="background:${TITLES[s._t].color}"></span><span class="tname">${TITLES[s._t].name}</span>
@@ -541,7 +542,7 @@ async function renderProgress(){
   for(const t of Object.keys(TITLES)) perTitle[t]=[0,0];
   for(const s of ALL){
     const c=s.count||0; totLines+=c;
-    const p=progAll[s.id]||{}; let dn=0; for(const i in p) if(p[i]) dn++;
+    const p=progAll[s.id]||{}; let dn=0; for(const i in p) if(pd(p[i])) dn++;
     dn=Math.min(dn,c);
     doneLines+=dn; if(c&&dn>=c) doneScenes++;
     perTitle[s._t][0]+=dn; perTitle[s._t][1]+=c;

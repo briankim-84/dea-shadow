@@ -223,13 +223,15 @@
   .card .prog .bar i{background:#8E2B21;}
   .hidden{display:none!important;}
 
-  /* ---- KEEP ⚑ (eyeBtn 규칙 상속, 위치만 좌측으로) ---- */
+  /* ---- KEEP ⚑ + Done 상태 ---- */
   .keepBtn{position:absolute;top:12px;right:46px;background:none;border:1px solid var(--line);color:var(--sub);
     width:36px;height:36px;cursor:pointer;font-size:14px;border-radius:10px;}
   .keepBtn{font-size:15px;line-height:1;transition:transform .16s ease,color .16s,border-color .16s;}
   .keepBtn.on{color:var(--gold);border-color:var(--gold);
     background:color-mix(in srgb,var(--gold) 12%,transparent);}
   .keepBtn.pop{transform:scale(1.22);}
+  .pill.dn{color:var(--gold);border-color:var(--gold);
+    background:color-mix(in srgb,var(--gold) 12%,transparent);}
   .fcardX.keephl{animation:keephl 1.8s ease;}
   @keyframes keephl{0%,55%{box-shadow:inset 0 0 0 2px var(--gold);}100%{box-shadow:inset 0 0 0 0 transparent;}}
 </style>
@@ -365,6 +367,7 @@ function setCat(c){cat=c;renderCats();renderList();}
 
 /* ---- scene ---- */
 let PROG={},MYREC={},KEEP={},DEEP_LINE=null;
+function pOn(v){return !!(v&&!v.del);}
 async function openScene(id){
   try{
     const _m=(INDEX&&INDEX.scenes||[]).find(x=>x.id===id);
@@ -515,7 +518,8 @@ let blurred=false;
 function renderFocus(){
   const s=SCENE.sentences[fi], n=SCENE.sentences.length;
   const hasSeg=!!(vid() && s.end>s.start);
-  const kept=!!(KEEP[fi]&&!KEEP[fi].del);
+  const kept=pOn(KEEP[fi]);
+  const doneNow=pOn(PROG[fi]);
   $("focus").innerHTML=`
     <div class="fnav">
       <button ${fi===0?'disabled':''} onclick="nav(-1)">‹ Prev</button>
@@ -543,7 +547,7 @@ function renderFocus(){
       <div class="row">
         <button class="pill recbtn" id="recBtn" onclick="toggleRec()">● Record</button>
         <button class="pill" id="myPlay" disabled onclick="playMine()">▶︎ My voice</button>
-        <button class="pill" onclick="markDone()">✓ Done</button>
+        <button class="pill ${doneNow?'dn':''}" id="doneBtn" onclick="toggleDone()">${doneNow?'✓ Done!':'✓ Done'}</button>
       </div>
       <div class="savednote" id="note"></div>
       <div class="gsent">듣고 → 따라 말하고 → 내 목소리와 비교 — 대사가 내 것이 될 때까지.<br>${hasSeg?'':'(클립 업로드 전에는 문장 읽기·녹음 연습으로 이용하세요)'}</div>
@@ -660,22 +664,28 @@ function playMine(){
 }
 async function toggleKeep(){
   const s=SCENE.sentences[fi];
-  const on=!!(KEEP[fi]&&!KEEP[fi].del);
+  const on=pOn(KEEP[fi]);
   KEEP[fi]=on?{del:1,t:Date.now()}:{en:s.en,ko:s.ko||'',t:Date.now()};
   await kvSet(`keep|${SCENE.id}`,KEEP);
   const b=$("keepBtn");
   if(b){b.classList.toggle('on',!on);b.classList.add('pop');setTimeout(()=>b.classList.remove('pop'),240);}
   const n=$("note"); if(n)n.textContent=on?'깃발을 내렸어요':'⚑ KEEP — 허브 [내 진도]에 보관됐어요';
 }
-async function markDone(){
-  PROG[fi]=true; await kvSet(`prog|${SCENE.id}`,PROG);
-  try{
-    const d=new Date();
-    const ds=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
-    const m=(await kvGet('prog|_days'))||{};
-    if(!m[ds]){ m[ds]=true; await kvSet('prog|_days',m); }
-  }catch(e){}
-  $("note").textContent=`✓ Line ${fi+1} — practiced`;
+async function toggleDone(){
+  const on=pOn(PROG[fi]);
+  PROG[fi]=on?{del:1,t:Date.now()}:{t:Date.now()};
+  await kvSet(`prog|${SCENE.id}`,PROG);
+  const b=$("doneBtn");
+  if(b){b.classList.toggle('dn',!on);b.innerHTML=on?'✓ Done':'✓ Done!';}
+  if(!on){
+    try{
+      const d=new Date();
+      const ds=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+      const m=(await kvGet('prog|_days'))||{};
+      if(!m[ds]){ m[ds]=true; await kvSet('prog|_days',m); }
+    }catch(e){}
+  }
+  $("note").textContent=on?`Line ${fi+1} — 완료를 취소했어요`:`✓ Line ${fi+1} — practiced`;
 }
 
 const ROMAN=['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV'];
@@ -704,7 +714,7 @@ async function renderList(){
   for(const s of items){
     const mi=INDEX.scenes.indexOf(s)+1;
     const done=await kvGet(`prog|${s.id}`);
-    const dn=done?Object.values(done).filter(Boolean).length:0;
+    const dn=done?Object.values(done).filter(v=>v&&!v.del).length:0;
     const pct=s.count?Math.min(100,Math.round(dn/s.count*100)):0;
     h+=`<div class="card" onclick="openScene('${s.id}')">${EXTRA_CARD}
       <div class="chead"><span class="mlog">${LABEL(mi)}</span><span class="cmeta">${s.sub||''}</span></div>

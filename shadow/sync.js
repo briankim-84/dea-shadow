@@ -246,12 +246,24 @@
   }
 
   /* ───────────────────────── 병합 로직 ───────────────────────── */
-  // prog: {lineIdx:bool} 합집합 (true 우선)
+  // prog: true(구버전, t=0 취급) 또는 {v:1|0,t} — t 큰 쪽이 이김. v:0 = 완료 취소(전파용)
+  /* prog 항목 포맷: true(legacy 완료) | {t} 완료 | {del:1,t} 완료취소 — t 큰 쪽 승자 */
+  function pnorm(e) {
+    if (e === true) return { t: 0 };
+    if (e && typeof e === 'object') return e;
+    return null;
+  }
   function mergeProg(local, remote) {
-    var out = {}, k;
+    var out = {}, keys = {}, k, l, r, w;
     local = local || {}; remote = remote || {};
-    for (k in local) if (local[k]) out[k] = true;
-    for (k in remote) if (remote[k]) out[k] = true;
+    for (k in local) keys[k] = 1;
+    for (k in remote) keys[k] = 1;
+    for (k in keys) {
+      l = pnorm(local[k]); r = pnorm(remote[k]);
+      if (!l && !r) continue;
+      w = (l && r) ? (stampOf(l) >= stampOf(r) ? l : r) : (l || r);
+      out[k] = (!w.del && !(w.t > 0)) ? true : w;
+    }
     return out;
   }
   // keep: {lineIdx:{en,ko,t}} / 삭제 표식 {del:1,t} — t(타임스탬프) 큰 쪽이 이김
@@ -311,13 +323,11 @@
       var has = Object.keys(upload.prog).length || Object.keys(upload.keep).length;
       if (!has) return;
       return ensureDb().then(function (db) {
-        return db.collection('progress').doc(state.code).set({
-          code: state.code,
-          name: state.name || '',
-          prog: upload.prog,
-          keep: upload.keep,
-          updatedAt: Date.now()
-        }, { merge: true });
+        var doc = { code: state.code, name: state.name || '', updatedAt: Date.now() };
+        /* 빈 맵을 merge에 명시하면 기존 필드가 {}로 덮일 수 있음 — 내용 있는 맵만 포함 */
+        if (Object.keys(upload.prog).length) doc.prog = upload.prog;
+        if (Object.keys(upload.keep).length) doc.keep = upload.keep;
+        return db.collection('progress').doc(state.code).set(doc, { merge: true });
       });
     }).then(function () {
       lsSet(K_MIGRATED, state.code);
@@ -436,8 +446,9 @@
         .forEach(function (k) {
           chain = chain.then(function () {
             return rawGet(k).then(function (v) {
-              var clean = {}, n = 0, i;
-              for (i in (v || {})) if (v[i]) { clean[i] = true; n++; }
+              var clean = {}, n = 0, i, e;
+              for (i in (v || {})) { e = v[i];
+                if (e === true || (e && !e.del)) { clean[i] = true; n++; } }
               if (n) out[String(k).slice(5)] = clean;
             });
           });
