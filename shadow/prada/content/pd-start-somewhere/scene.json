@@ -1,0 +1,92 @@
+{
+ "id": "pd-start-somewhere",
+ "title": "you gotta start somewhere",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "You gotta start somewhere",
+ "meaning": "시작은 어디서든 해야지",
+ "video": "start_somewhere.mp4",
+ "sentences": [
+  {
+   "start": 0.18,
+   "end": 3.56,
+   "who": "DOUG",
+   "en": "Miranda Priestly is famous for being unpredictable.",
+   "ko": "미란다 프리슬리는 예측불허로 유명해.",
+   "star": false
+  },
+  {
+   "start": 3.62,
+   "end": 6.42,
+   "who": "ANDY",
+   "en": "Okay, Doug. How is it that you know who she is and I didn't?",
+   "ko": "더그, 어떻게 넌 그 사람을 알고 난 몰랐던 거야?",
+   "star": false
+  },
+  {
+   "start": 6.48,
+   "end": 8.9,
+   "who": "DOUG",
+   "en": "I'm actually a girl. -Oh!",
+   "ko": "실은 내가 여자거든. —오!",
+   "star": false
+  },
+  {
+   "start": 8.96,
+   "end": 11.46,
+   "who": "ANDY",
+   "en": "That would explain so much.",
+   "ko": "그럼 많은 게 설명되네.",
+   "star": false
+  },
+  {
+   "start": 11.52,
+   "end": 12.88,
+   "who": "DOUG",
+   "en": "Look, seriously. Miranda Priestly is a huge deal.",
+   "ko": "진지하게, 미란다 프리슬리는 거물이야.",
+   "star": false
+  },
+  {
+   "start": 12.94,
+   "end": 15.14,
+   "who": "DOUG",
+   "en": "I bet a million girls would kill for that job.",
+   "ko": "그 자리라면 다들 목숨 걸걸.",
+   "star": false
+  },
+  {
+   "start": 15.2,
+   "end": 18.3,
+   "who": "ANDY",
+   "en": "Yeah, great. The thing is I'm not one of them.",
+   "ko": "그래, 좋지. 문제는 난 그중 하나가 아니라는 거야.",
+   "star": false
+  },
+  {
+   "start": 18.76,
+   "end": 19.4,
+   "who": "LILY",
+   "en": "Look, you gotta start somewhere, right?",
+   "ko": "야, 시작은 어디서든 해야 하는 거잖아?",
+   "star": true
+  },
+  {
+   "start": 20.58,
+   "end": 22.28,
+   "who": "LILY",
+   "en": "I mean, look at this dump Nate works in.",
+   "ko": "네이트가 일하는 이 후진 데를 봐.",
+   "star": false
+  },
+  {
+   "start": 22.66,
+   "end": 25.28,
+   "who": "LILY",
+   "en": "I mean, come on. Paper napkins? Hello.",
+   "ko": "아니 진짜, 종이 냅킨이라니. 실화냐.",
+   "star": false
+  }
+ ]
+}

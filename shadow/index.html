@@ -87,6 +87,14 @@ h1 .thin{color:var(--stamp)}
 .gg .tdesc{color:#9a948d}
 .gg .cta{color:#14110C;background:#D9BC8C}
 .gg .tri{border-left:9px solid #14110C}
+.pd{background:#FDFCFA}
+.pd .eyebrow{color:#8d8680}.pd .eyebrow .sp{color:#C1121F;font-weight:800}
+.pd h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:26px;color:#16130F}
+.pd h2 b{color:#C1121F;font-weight:500}
+.pd .xo{font-family:var(--serif);font-style:italic;color:#C1121F;font-size:13px;margin-top:6px}
+.pd .tdesc{color:#8d8680}
+.pd .cta{color:#FDFCFA;background:#C1121F}
+.pd .tri{border-left:9px solid #FDFCFA}
 
 .it{background:#0A0E1A;color:#ECF1F8}
 .it::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;
@@ -402,7 +410,20 @@ footer{margin:40px 22px 0 46px;padding-top:14px;border-top:1.5px solid var(--ink
       <div class="sprocket"></div></div>
     </div>
 
-    <div class="soon">NEXT REELS — THE OFFICE · DEVIL WEARS PRADA · YOUNG SHELDON</div>
+    <div class="reel">
+      <div class="reelno"><span class="rn">REEL 09</span><span class="rl"></span><span class="rc">9 SCENES · <b>NEW</b></span></div>
+      <div class="frame"><div class="sprocket"></div>
+        <a class="tcard pd" href="./prada/" onclick="mark('prada')">
+          <span class="still"><img src="./posters/prada.jpg" alt="" loading="lazy"></span>
+          <div class="eyebrow"><span class="sp">&#9670; RUNWAY MAGAZINE</span></div>
+          <h2>the devil wears <b>prada</b></h2>
+          <div class="xo">that&rsquo;s all</div>
+          <div class="tfoot"><div class="tdesc">런웨이의 속도로 배우는 회의·전화·격식 영어</div><span class="cta"><span class="tri"></span>입장 &rarr;</span></div>
+        </a>
+      <div class="sprocket"></div></div>
+    </div>
+
+    <div class="soon">NEXT REELS — THE OFFICE · YOUNG SHELDON</div>
   </div>
 
   <div id="lib" class="hidden">
@@ -426,6 +447,7 @@ const TITLES={
  nottinghill:{name:"NOTTING HILL",color:"#3E6FA3"},
  harrypotter:{name:"HARRY POTTER",color:"#E3A43C"},
  intern:{name:"THE INTERN",color:"#7A4E2D"},
+ prada:{name:"PRADA",color:"#C1121F"},
 };
 const CATS=["전체","일상대화","감정·리액션","연애·관계","유머·티키타카","회의·업무","전화·컨콜","면접·격식"];
 function mark(t){ try{localStorage.setItem('ls_last',JSON.stringify({t,label:TITLES[t].name,id:'',expr:''}));}catch(e){} }

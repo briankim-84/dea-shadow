@@ -1,0 +1,84 @@
+{
+ "id": "pd-take-this",
+ "title": "I have to take this",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "전화·컨콜",
+ "difficulty": 2,
+ "expression": "I'm sorry, I have to take this",
+ "meaning": "미안, 이 전화는 받아야 해",
+ "video": "i_have_to_take_this.mp4",
+ "sentences": [
+  {
+   "start": 4.22,
+   "end": 6.1,
+   "who": "ANDY",
+   "en": "This is... my boss.",
+   "ko": "…제 상사예요.",
+   "star": false
+  },
+  {
+   "start": 8.88,
+   "end": 11.48,
+   "who": "ANDY",
+   "en": "I'm sorry, Dad. I have to take this. -Take it. Take it.",
+   "ko": "죄송해요, 아빠. 이 전화는 받아야 해요. —받아, 받아.",
+   "star": true
+  },
+  {
+   "start": 11.54,
+   "end": 15.38,
+   "who": "ANDY",
+   "en": "Hello. Miranda? -My flight has been canceled.",
+   "ko": "여보세요. 미란다? —내 항공편이 취소됐어.",
+   "star": true
+  },
+  {
+   "start": 15.44,
+   "end": 18.36,
+   "who": "MIRANDA",
+   "en": "It's some absurd weather problem.",
+   "ko": "말도 안 되는 날씨 문제라나.",
+   "star": false
+  },
+  {
+   "start": 18.42,
+   "end": 21.62,
+   "who": "MIRANDA",
+   "en": "I need to get home tonight. The twins have a recital tomorrow morning at school.",
+   "ko": "오늘 밤엔 집에 가야 해. 쌍둥이가 내일 아침 학교 발표회가 있어.",
+   "star": false
+  },
+  {
+   "start": 23.76,
+   "end": 25.38,
+   "who": "ANDY",
+   "en": "Absolutely. Let me see what I can do.",
+   "ko": "물론이죠. 제가 방법을 알아볼게요.",
+   "star": true
+  },
+  {
+   "start": 26.4,
+   "end": 29.34,
+   "who": "ANDY",
+   "en": "Hi. Um, I know this is totally last minute,",
+   "ko": "안녕하세요. 저, 갑작스러운 부탁인 건 아는데요,",
+   "star": true
+  },
+  {
+   "start": 29.4,
+   "end": 32.16,
+   "who": "ANDY",
+   "en": "but I was hoping that you could maybe get a flight for my boss",
+   "ko": "혹시 제 상사가 탈 항공편을 구해주실 수 있을까 해서요.",
+   "star": false
+  },
+  {
+   "start": 32.22,
+   "end": 34.04,
+   "who": "ANDY",
+   "en": "from Miami to New York tonight?",
+   "ko": "오늘 밤 마이애미에서 뉴욕으로요.",
+   "star": false
+  }
+ ]
+}

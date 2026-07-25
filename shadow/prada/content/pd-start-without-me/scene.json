@@ -1,0 +1,52 @@
+{
+ "id": "pd-start-without-me",
+ "title": "start without me",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "Better start without me",
+ "meaning": "먼저 시작해",
+ "video": "start_without_me.mp4",
+ "sentences": [
+  {
+   "start": 0.5,
+   "end": 2.95,
+   "who": "ANDY",
+   "en": "Look, you better just start without me, okay?",
+   "ko": "먼저 시작하는 게 낫겠어, 알았지?",
+   "star": true
+  },
+  {
+   "start": 3.0,
+   "end": 5.85,
+   "who": "ANDY",
+   "en": "I'll get there as soon as I can. -Andy, come on, it's his birth--",
+   "ko": "최대한 빨리 갈게. —앤디, 왜 이래, 걔 생일—",
+   "star": true
+  },
+  {
+   "start": 6.9,
+   "end": 10.05,
+   "who": "LILY",
+   "en": "Okay, but hurry.",
+   "ko": "알았어, 근데 서둘러.",
+   "star": false
+  },
+  {
+   "start": 10.1,
+   "end": 13.9,
+   "who": "ANDY",
+   "en": "Oh, please, believe me, I will. This is the last thing that I wanna--",
+   "ko": "정말이야, 서두를게. 나도 이러고 싶지 않—",
+   "star": false
+  },
+  {
+   "start": 14.1,
+   "end": 17.1,
+   "who": "ANDY",
+   "en": "Uh, I'll call you the second I'm leaving, okay?",
+   "ko": "나오는 즉시 전화할게, 알았지?",
+   "star": true
+  }
+ ]
+}

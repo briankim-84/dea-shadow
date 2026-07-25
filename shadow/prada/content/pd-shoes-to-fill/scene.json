@@ -1,0 +1,28 @@
+{
+ "id": "pd-shoes-to-fill",
+ "title": "large shoes to fill",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "회의·업무",
+ "difficulty": 3,
+ "expression": "You have some very large shoes to fill",
+ "meaning": "네 전임자 자리가 아주 커",
+ "video": "shoes_to_fill.mp4",
+ "sentences": [
+  {
+   "start": 0.43,
+   "end": 4.85,
+   "who": "MIRANDA",
+   "en": "You have some very large shoes to fill.",
+   "ko": "네가 채워야 할 신발이 아주 크단다. (전임자 자리가 크다)",
+   "star": true
+  },
+  {
+   "start": 4.93,
+   "end": 7.6,
+   "who": "MIRANDA",
+   "en": "I hope you know that.",
+   "ko": "그건 알아두렴.",
+   "star": false
+  }
+ ]
+}

@@ -388,6 +388,9 @@ async function openScene(id){
     v.addEventListener('timeupdate',updateCap);
     v.addEventListener('seeked',updateCap);
     v.addEventListener('pause',updateCap);
+    /* iOS: 영상 재생이 오디오 세션을 가로채면 살아있는 마이크가 '조용히' 무음화됨(track은 live로 보임)
+       → 재생 시작 시 마이크 반납, 다음 녹음에서 새로 획득 (영상 정지 후 획득 경로는 v1에서 검증됨) */
+    v.addEventListener('play',()=>{ try{ if(!recording) releaseMic(); }catch(e){} });
     /* LINE BY LINE(layer 2): 영상 자체 재생 버튼을 눌러도 현재 라인 구간만 */
     v.addEventListener('play',()=>{
       if(layer===2 && !segTimer){
@@ -563,7 +566,7 @@ function toggleLoop(){ looping=!looping; $("loopBtn").classList.toggle('on',loop
 
 /* ---- 내 녹음 (blob URL 재생 — iOS 안정) ---- */
 let sharedMic=null,recorder=null,recording=false;
-function micAlive(m){try{return !!m&&m.getAudioTracks().some(t=>t.readyState==='live');}catch(e){return false;}}
+function micAlive(m){try{return !!m&&m.getAudioTracks().some(t=>t.readyState==='live'&&!t.muted);}catch(e){return false;}}
 async function getMic(){
   /* iOS: 살아있는 마이크는 재사용(재획득 직후 빈 녹음 방지). 죽었을 때만 새로 획득 */
   if(micAlive(sharedMic)) return sharedMic;
@@ -577,11 +580,11 @@ function recKey(){ return `rec|${SCENE.id}|${fi}`; }
 async function toggleRec(){
   const btn=$("recBtn");
   if(recording){ if(recorder&&recorder.state==='recording'){try{recorder.requestData&&recorder.requestData();}catch(e){} recorder.stop();} return; }
-  const mic=await getMic(); if(!mic)return;
-  /* iOS: 영상·기존 재생이 오디오 세션을 잡고 있으면 녹음이 실패/무음 → 모두 정지 */
+  /* iOS: 영상·기존 재생이 오디오 세션을 잡고 있으면 녹음 실패/무음 → 먼저 전부 정지하고 마이크 획득 */
   stopSeg(); syncPlayBtn(false);
   const v=vid(); if(v){ try{ v.pause(); }catch(e){} }
   if(myAudio){ try{ myAudio.pause(); }catch(e){} }
+  const mic=await getMic(); if(!mic)return;
   let chunks=[]; const mt=pickMime();
   try{ recorder=mt?new MediaRecorder(mic,{mimeType:mt}):new MediaRecorder(mic); }
   catch(e){ try{ recorder=new MediaRecorder(mic); }catch(e2){ $("note").textContent='이 기기에서는 녹음이 지원되지 않아요'; return; } }
@@ -631,6 +634,8 @@ function playMine(){
   stopSeg(); syncPlayBtn(false);
   const v=vid(); if(v){ try{ v.pause(); }catch(e){} }
   if(typeof lineStopTimer!=='undefined') clearInterval(lineStopTimer);
+  /* iOS: 내 녹음 재생도 세션을 가져가므로 마이크 반납 */
+  try{ if(!recording) releaseMic(); }catch(e){}
   /* 이전 재생 정리 */
   if(myAudio){ try{ myAudio.pause(); myAudio.src=''; }catch(e){} myAudio=null; }
   /* iOS 사파리: blob URL이 만료/미준비일 수 있어 blob에서 매번 새 URL 생성 (사용자 제스처 안에서 즉시) */
@@ -752,7 +757,7 @@ window.addEventListener('dewb:sync',async()=>{
     PROG=(await kvGet(`prog|${SCENE.id}`))||{};
     KEEP=(await kvGet(`keep|${SCENE.id}`))||{};
     const sceneOpen=!document.getElementById('scene').classList.contains('hidden');
-    if(sceneOpen&&layer===2)renderFocus();
+    if(sceneOpen&&layer===2&&!recording)renderFocus();
   }catch(e){}
 });
 </script>

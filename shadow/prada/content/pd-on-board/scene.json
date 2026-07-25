@@ -1,0 +1,60 @@
+{
+ "id": "pd-on-board",
+ "title": "I'm on board",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "회의·업무",
+ "difficulty": 2,
+ "expression": "I'm on board",
+ "meaning": "저는 찬성이에요",
+ "video": "im_on_board.mp4",
+ "sentences": [
+  {
+   "start": 0.56,
+   "end": 3.28,
+   "who": "NIGEL",
+   "en": "We have some pieces from Banana Republic. -We need more, don't we?",
+   "ko": "바나나 리퍼블릭 제품이 좀 있어요. —더 필요하죠?",
+   "star": false
+  },
+  {
+   "start": 3.38,
+   "end": 6.94,
+   "who": "STAFF",
+   "en": "Oh. This is-- This might be-- What do you think of--",
+   "ko": "아, 이건— 이게 괜찮을— 어떻게 생각하세요—",
+   "star": false
+  },
+  {
+   "start": 7.0,
+   "end": 8.82,
+   "who": "NIGEL",
+   "en": "Yeah. Well, you know me.",
+   "ko": "뭐, 나야 알잖아.",
+   "star": false
+  },
+  {
+   "start": 8.88,
+   "end": 12.34,
+   "who": "NIGEL",
+   "en": "Give me a full ballerina skirt and a hint of saloon and I'm on board.",
+   "ko": "풀 발레리나 스커트에 살룬 느낌만 살짝 얹어주면, 난 찬성이야.",
+   "star": true
+  },
+  {
+   "start": 12.4,
+   "end": 15.88,
+   "who": "STAFF",
+   "en": "But do you think it's too much like-- -Like the Lacroix from July?",
+   "ko": "근데 너무 비슷하지 않아요— —7월의 라크루아처럼?",
+   "star": false
+  },
+  {
+   "start": 15.94,
+   "end": 17.72,
+   "who": "NIGEL",
+   "en": "I thought that, but no, not with the right accessories.",
+   "ko": "나도 그 생각 했는데, 액세서리만 잘 맞추면 괜찮아.",
+   "star": false
+  }
+ ]
+}

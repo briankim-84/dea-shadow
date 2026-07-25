@@ -1,0 +1,122 @@
+{
+ "hero": "hero.jpg",
+ "scenes": [
+  {
+   "id": "pd-million-girls",
+   "title": "a million girls would kill for this job",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "면접·격식",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 2,
+   "expression": "A million girls would kill for this job",
+   "meaning": "다들 목숨 걸 자리야",
+   "count": 6
+  },
+  {
+   "id": "pd-945-sharp",
+   "title": "9:45 sharp",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "회의·업무",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 2,
+   "expression": "pick me up at 9:45 sharp",
+   "meaning": "9시 45분 정각에",
+   "count": 15
+  },
+  {
+   "id": "pd-start-somewhere",
+   "title": "you gotta start somewhere",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "일상대화",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 2,
+   "expression": "You gotta start somewhere",
+   "meaning": "시작은 어디서든 해야지",
+   "count": 10
+  },
+  {
+   "id": "pd-on-board",
+   "title": "I'm on board",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "회의·업무",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 2,
+   "expression": "I'm on board",
+   "meaning": "저는 찬성이에요",
+   "count": 6
+  },
+  {
+   "id": "pd-take-this",
+   "title": "I have to take this",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "전화·컨콜",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 2,
+   "expression": "I'm sorry, I have to take this",
+   "meaning": "미안, 이 전화는 받아야 해",
+   "count": 9
+  },
+  {
+   "id": "pd-hanging-thread",
+   "title": "hanging by a thread",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "감정·리액션",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 3,
+   "expression": "hanging by a thread",
+   "meaning": "풍전등화야",
+   "count": 7
+  },
+  {
+   "id": "pd-start-without-me",
+   "title": "start without me",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "일상대화",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 2,
+   "expression": "Better start without me",
+   "meaning": "먼저 시작해",
+   "count": 5
+  },
+  {
+   "id": "pd-favor-to-ask",
+   "title": "I have a favor to ask you",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "전화·컨콜",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 2,
+   "expression": "Don't hang up. I have a favor to ask you",
+   "meaning": "끊지 마. 부탁이 하나 있어",
+   "count": 12
+  },
+  {
+   "id": "pd-shoes-to-fill",
+   "title": "large shoes to fill",
+   "sub": "THE DEVIL WEARS PRADA",
+   "category": "회의·업무",
+   "tags": [
+    "PRADA"
+   ],
+   "difficulty": 3,
+   "expression": "You have some very large shoes to fill",
+   "meaning": "네 전임자 자리가 아주 커",
+   "count": 2
+  }
+ ]
+}

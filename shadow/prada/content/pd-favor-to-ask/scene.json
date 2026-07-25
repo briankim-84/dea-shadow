@@ -1,0 +1,108 @@
+{
+ "id": "pd-favor-to-ask",
+ "title": "I have a favor to ask you",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "전화·컨콜",
+ "difficulty": 2,
+ "expression": "Don't hang up. I have a favor to ask you",
+ "meaning": "끊지 마. 부탁이 하나 있어",
+ "video": "favor_to_ask.mp4",
+ "sentences": [
+  {
+   "start": 2.24,
+   "end": 4.46,
+   "who": "EMILY",
+   "en": "Miranda Priestly's office.",
+   "ko": "미란다 프리슬리 사무실입니다.",
+   "star": false
+  },
+  {
+   "start": 4.52,
+   "end": 5.98,
+   "who": "ANDY",
+   "en": "Hey, Emily, it's Andy.",
+   "ko": "에밀리, 나 앤디야.",
+   "star": false
+  },
+  {
+   "start": 6.22,
+   "end": 9.38,
+   "who": "ANDY",
+   "en": "Don't hang up. I have a favor to ask you.",
+   "ko": "끊지 마. 부탁이 하나 있어.",
+   "star": true
+  },
+  {
+   "start": 9.44,
+   "end": 11.38,
+   "who": "EMILY",
+   "en": "You have a favor to ask of me?",
+   "ko": "네가 나한테 부탁이 있다고?",
+   "star": false
+  },
+  {
+   "start": 11.44,
+   "end": 15.64,
+   "who": "ANDY",
+   "en": "Yeah. The thing is, I have all these clothes from Paris,",
+   "ko": "응. 실은 파리에서 받은 옷이 잔뜩 있는데,",
+   "star": false
+  },
+  {
+   "start": 15.88,
+   "end": 17.71,
+   "who": "ANDY",
+   "en": "and I don't have anyplace to wear them,",
+   "ko": "입고 갈 데가 없어서,",
+   "star": false
+  },
+  {
+   "start": 17.77,
+   "end": 21.72,
+   "who": "ANDY",
+   "en": "so I was wondering if you could take them off my hands.",
+   "ko": "네가 좀 맡아줄 수 있을까 해서.",
+   "star": true
+  },
+  {
+   "start": 26.1,
+   "end": 29.42,
+   "who": "EMILY",
+   "en": "Well, I don't know. It's a huge imposition.",
+   "ko": "글쎄, 모르겠네. 엄청난 민폐인데.",
+   "star": false
+  },
+  {
+   "start": 30.3,
+   "end": 33.22,
+   "who": "EMILY",
+   "en": "And I'll have to get them taken in. I mean, they'll drown me.",
+   "ko": "수선도 해야 할 거고. 나한텐 헐렁할 테니까.",
+   "star": false
+  },
+  {
+   "start": 34.76,
+   "end": 36.4,
+   "who": "EMILY",
+   "en": "But I suppose I could help you out.",
+   "ko": "뭐, 도와줄 수는 있겠지.",
+   "star": false
+  },
+  {
+   "start": 36.46,
+   "end": 38.9,
+   "who": "EMILY",
+   "en": "I will have Roy pick them up this afternoon.",
+   "ko": "로이 시켜서 오후에 가지러 갈게.",
+   "star": false
+  },
+  {
+   "start": 39.3,
+   "end": 44.06,
+   "who": "ANDY",
+   "en": "Thanks, Em. I appreciate it. Good luck.",
+   "ko": "고마워, 엠. 진심이야. 행운을 빌어.",
+   "star": false
+  }
+ ]
+}

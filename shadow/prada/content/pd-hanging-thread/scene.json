@@ -1,0 +1,68 @@
+{
+ "id": "pd-hanging-thread",
+ "title": "hanging by a thread",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "감정·리액션",
+ "difficulty": 3,
+ "expression": "hanging by a thread",
+ "meaning": "풍전등화야",
+ "video": "hanging_by_a_thread.mp4",
+ "sentences": [
+  {
+   "start": 0.32,
+   "end": 2.8,
+   "who": "NIGEL",
+   "en": "Excuse me. Can we adjust the attitude? -I'm sorry.",
+   "ko": "잠깐. 그 태도 좀 고칠까? —죄송해요.",
+   "star": false
+  },
+  {
+   "start": 2.86,
+   "end": 4.48,
+   "who": "NIGEL",
+   "en": "Don't make me feed you to one of the models.",
+   "ko": "널 모델들 먹이로 던져주게 만들지 마.",
+   "star": false
+  },
+  {
+   "start": 4.54,
+   "end": 7.82,
+   "who": "ANDY",
+   "en": "I'm sorry. It's a busy day.",
+   "ko": "죄송해요. 바쁜 날이라서요.",
+   "star": false
+  },
+  {
+   "start": 7.88,
+   "end": 10.18,
+   "who": "ANDY",
+   "en": "My personal life is hanging by a thread, that's all.",
+   "ko": "제 사생활이 지금 풍전등화라서 그래요.",
+   "star": true
+  },
+  {
+   "start": 10.24,
+   "end": 14.06,
+   "who": "NIGEL",
+   "en": "Join the club. That's what happens when you start doing well at work, darling.",
+   "ko": "나도 마찬가지야. 일이 잘 풀리기 시작하면 다 그렇게 돼.",
+   "star": true
+  },
+  {
+   "start": 14.5,
+   "end": 16.58,
+   "who": "NIGEL",
+   "en": "Let me know when your whole life goes up in smoke.",
+   "ko": "인생 전체가 연기처럼 사라지거든 알려줘.",
+   "star": false
+  },
+  {
+   "start": 16.8,
+   "end": 19.48,
+   "who": "NIGEL",
+   "en": "That means it's time for a promotion.",
+   "ko": "그건 승진할 때가 됐다는 뜻이니까.",
+   "star": true
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "id": "pd-945-sharp",
+ "title": "9:45 sharp",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "회의·업무",
+ "difficulty": 2,
+ "expression": "pick me up at 9:45 sharp",
+ "meaning": "9시 45분 정각에",
+ "video": "nine_forty_five_sharp.mp4",
+ "sentences": [
+  {
+   "start": 0.0,
+   "end": 3.2,
+   "who": "MIRANDA",
+   "en": "I don't understand why it's so difficult to confirm an appointment.",
+   "ko": "약속 하나 확인하는 게 왜 이렇게 어려운지 이해가 안 되네.",
+   "star": false
+  },
+  {
+   "start": 3.26,
+   "end": 5.98,
+   "who": "EMILY",
+   "en": "I know. I'm so sorry, Miranda. I actually did confirm last night.",
+   "ko": "죄송해요, 미란다. 어젯밤에 분명히 확인했는데요.",
+   "star": false
+  },
+  {
+   "start": 6.04,
+   "end": 7.93,
+   "who": "MIRANDA",
+   "en": "Details of your incompetence do not interest me.",
+   "ko": "네 무능의 구체적인 사정엔 관심 없어.",
+   "star": false
+  },
+  {
+   "start": 7.99,
+   "end": 9.48,
+   "who": "MIRANDA",
+   "en": "Tell Simone I'm not going to approve that girl",
+   "ko": "시몬에게 전해, 그 모델은 승인 안 한다고.",
+   "star": false
+  },
+  {
+   "start": 9.54,
+   "end": 12.08,
+   "who": "MIRANDA",
+   "en": "that she sent me for the Brazilian layout.",
+   "ko": "브라질 화보에 보낸 그 애 말이야.",
+   "star": false
+  },
+  {
+   "start": 12.24,
+   "end": 15.98,
+   "who": "MIRANDA",
+   "en": "I asked for clean, athletic, smiling. She sent me dirty, tired and paunchy.",
+   "ko": "깔끔하고 건강하고 웃는 얼굴을 달랬더니, 꾀죄죄하고 지치고 배 나온 애를 보냈어.",
+   "star": false
+  },
+  {
+   "start": 16.04,
+   "end": 18.0,
+   "who": "MIRANDA",
+   "en": "And RSVP yes to the Michael Kors party.",
+   "ko": "마이클 코어스 파티엔 참석한다고 답해.",
+   "star": false
+  },
+  {
+   "start": 18.06,
+   "end": 22.12,
+   "who": "MIRANDA",
+   "en": "I want the driver to drop me off at 9:30 and pick me up at 9:45 sharp.",
+   "ko": "기사더러 9시 30분에 내려주고, 9시 45분 정각에 픽업하라고 해.",
+   "star": true
+  },
+  {
+   "start": 22.18,
+   "end": 23.98,
+   "who": "EMILY",
+   "en": "9:45 sharp. -Call Natalie at Glorious Foods,",
+   "ko": "9시 45분 정각. —글로리어스 푸드의 나탈리한테 전화해서,",
+   "star": false
+  },
+  {
+   "start": 24.04,
+   "end": 25.48,
+   "who": "MIRANDA",
+   "en": "tell her no for the 40th time. No, I don't want dacquoise.",
+   "ko": "마흔 번째로 거절해. 다쿠아즈는 싫다니까.",
+   "star": false
+  },
+  {
+   "start": 27.24,
+   "end": 29.44,
+   "who": "MIRANDA",
+   "en": "I want tortes filled with warm rhubarb compote.",
+   "ko": "따뜻한 루바브 콩포트를 채운 토르테로 해.",
+   "star": false
+  },
+  {
+   "start": 29.5,
+   "end": 31.24,
+   "who": "MIRANDA",
+   "en": "Then call my ex-husband and remind him",
+   "ko": "그리고 전남편에게 전화해서",
+   "star": false
+  },
+  {
+   "start": 31.3,
+   "end": 33.14,
+   "who": "MIRANDA",
+   "en": "the parent-teacher conference is at Dalton tonight.",
+   "ko": "오늘 밤 달튼에서 학부모 면담 있다고 알려줘.",
+   "star": false
+  },
+  {
+   "start": 33.2,
+   "end": 35.18,
+   "who": "MIRANDA",
+   "en": "Then call my husband, ask him to meet me for dinner",
+   "ko": "그다음 남편에게 전화해서 저녁 같이 하자고 해.",
+   "star": false
+  },
+  {
+   "start": 35.78,
+   "end": 37.48,
+   "who": "MIRANDA",
+   "en": "at that place I went to with Massimo.",
+   "ko": "마시모랑 갔던 그 식당에서.",
+   "star": false
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "id": "pd-million-girls",
+ "title": "a million girls would kill for this job",
+ "sub": "THE DEVIL WEARS PRADA",
+ "category": "면접·격식",
+ "difficulty": 2,
+ "expression": "A million girls would kill for this job",
+ "meaning": "다들 목숨 걸 자리야",
+ "video": "a_million_girls.mp4",
+ "sentences": [
+  {
+   "start": 0.0,
+   "end": 2.36,
+   "who": "EMILY",
+   "en": "Who's Miranda?",
+   "ko": "…미란다가 누구냐고요?",
+   "star": false
+  },
+  {
+   "start": 2.34,
+   "end": 4.9,
+   "who": "EMILY",
+   "en": "Oh, my God. I will pretend you did not just ask me that.",
+   "ko": "세상에. 방금 그 질문은 못 들은 걸로 할게요.",
+   "star": false
+  },
+  {
+   "start": 4.88,
+   "end": 8.5,
+   "who": "EMILY",
+   "en": "She's the editor in chief of Runway, not to mention a legend.",
+   "ko": "런웨이 편집장이에요. 전설이고요.",
+   "star": false
+  },
+  {
+   "start": 8.48,
+   "end": 11.74,
+   "who": "EMILY",
+   "en": "You work a year for her, and you can get a job at any magazine you want.",
+   "ko": "1년만 버티면 어느 잡지사든 골라 갈 수 있어요.",
+   "star": false
+  },
+  {
+   "start": 11.72,
+   "end": 14.0,
+   "who": "EMILY",
+   "en": "A million girls would kill for this job.",
+   "ko": "이 자리라면 다들 목숨 걸걸요.",
+   "star": true
+  },
+  {
+   "start": 13.98,
+   "end": 19.2,
+   "who": "ANDY",
+   "en": "It sounds like a great opportunity. I'd love to be considered.",
+   "ko": "좋은 기회네요. 꼭 검토되고 싶습니다.",
+   "star": true
+  }
+ ]
+}
