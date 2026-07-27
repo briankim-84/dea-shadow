@@ -1,0 +1,100 @@
+{
+ "id": "ys2-been-through-this",
+ "title": "we've been through this",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "We've been through this",
+ "meaning": "이 얘기 전에 했잖아",
+ "video": "been_through_this.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 1.2,
+   "who": "SHELDON",
+   "en": "Mom?",
+   "ko": "엄마?",
+   "star": false
+  },
+  {
+   "start": 1.65,
+   "end": 2.55,
+   "who": "MARY",
+   "en": "Yes, honey?",
+   "ko": "응, 아가?",
+   "star": false
+  },
+  {
+   "start": 2.7,
+   "end": 3.27,
+   "who": "SHELDON",
+   "en": "Can I come in?",
+   "ko": "들어가도 돼요?",
+   "star": false
+  },
+  {
+   "start": 3.32,
+   "end": 7.9,
+   "who": "MARY",
+   "en": "Of course. What's up, sweetie?",
+   "ko": "물론이지. 무슨 일이야?",
+   "star": false
+  },
+  {
+   "start": 8.17,
+   "end": 11.09,
+   "who": "SHELDON",
+   "en": "I was wondering when I could continue my rocketry hobby.",
+   "ko": "제 로켓 취미를 언제 다시 할 수 있을까 해서요.",
+   "star": false
+  },
+  {
+   "start": 11.14,
+   "end": 12.56,
+   "who": "MARY",
+   "en": "Uh, Sheldon, we've been through this.",
+   "ko": "셸든, 이 얘긴 전에 했잖니.",
+   "star": true
+  },
+  {
+   "start": 13.53,
+   "end": 15.3,
+   "who": "MARY",
+   "en": "You can build them. You just can't launch them.",
+   "ko": "만드는 건 돼. 발사만 안 되는 거야.",
+   "star": false
+  },
+  {
+   "start": 15.35,
+   "end": 17.23,
+   "who": "SHELDON",
+   "en": "But launching them is the fun part.",
+   "ko": "근데 발사가 재미있는 부분인데요.",
+   "star": false
+  },
+  {
+   "start": 17.41,
+   "end": 19.47,
+   "who": "MARY",
+   "en": "Tell that to the family of squirrels who died in the fire.",
+   "ko": "그 불로 죽은 다람쥐 가족한테 그렇게 말해보렴.",
+   "star": false
+  },
+  {
+   "start": 20.49,
+   "end": 23.31,
+   "who": "SHELDON",
+   "en": "Okay. It was just something I was hoping to do with my new friend.",
+   "ko": "알겠어요. 그냥 새 친구랑 같이 해보고 싶었던 것뿐이에요.",
+   "star": false
+  },
+  {
+   "start": 23.85,
+   "end": 26.99,
+   "who": "MARY",
+   "en": "Hang on. Uh, yes. It's fine. Ban is lifted.",
+   "ko": "잠깐만. 어, 그래. 괜찮아. 금지 해제야.",
+   "star": false
+  }
+ ]
+}

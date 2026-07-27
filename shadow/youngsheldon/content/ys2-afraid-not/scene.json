@@ -1,0 +1,132 @@
+{
+ "id": "ys2-afraid-not",
+ "title": "I'm afraid not",
+ "sub": "YOUNG SHELDON",
+ "category": "감정·리액션",
+ "difficulty": 2,
+ "expression": "I'm afraid not",
+ "meaning": "아쉽지만 아니에요",
+ "video": "im_afraid_not.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 1.49,
+   "who": "TAM",
+   "en": "Is that any good?",
+   "ko": "그 책 괜찮아?",
+   "star": false
+  },
+  {
+   "start": 1.54,
+   "end": 3.75,
+   "who": "SHELDON",
+   "en": "I'm afraid not. I failed to make a single friend.",
+   "ko": "아쉽지만 아니야. 친구 한 명도 못 사귀었어.",
+   "star": true
+  },
+  {
+   "start": 5.49,
+   "end": 8.29,
+   "who": "TAM",
+   "en": "That sucks. I have a tough time making friends, too.",
+   "ko": "안됐다. 나도 친구 사귀는 게 힘들어.",
+   "star": false
+  },
+  {
+   "start": 8.55,
+   "end": 10.97,
+   "who": "SHELDON",
+   "en": "The worst part is, it was important to my mom.",
+   "ko": "제일 안 좋은 건, 엄마한테 중요한 일이었다는 거야.",
+   "star": false
+  },
+  {
+   "start": 11.25,
+   "end": 13.99,
+   "who": "TAM",
+   "en": "My parents pressure me about making friends all the time.",
+   "ko": "우리 부모님도 친구 사귀라고 늘 압박하셔.",
+   "star": false
+  },
+  {
+   "start": 14.35,
+   "end": 16.15,
+   "who": "SHELDON",
+   "en": "So you understand what I'm going through.",
+   "ko": "그럼 내가 겪는 걸 이해하는구나.",
+   "star": true
+  },
+  {
+   "start": 17.89,
+   "end": 19.43,
+   "who": "TAM",
+   "en": "Oh, I read that book. It's excellent.",
+   "ko": "아, 나 그 책 읽었어. 아주 좋아.",
+   "star": false
+  },
+  {
+   "start": 20.21,
+   "end": 21.43,
+   "who": "TAM",
+   "en": "Are you into rocketry?",
+   "ko": "너 로켓 좋아해?",
+   "star": false
+  },
+  {
+   "start": 21.71,
+   "end": 25.4,
+   "who": "SHELDON",
+   "en": "I started with water propulsion, worked my way up to solid fuel,",
+   "ko": "물 추진으로 시작해서 고체 연료까지 올라갔다가,",
+   "star": false
+  },
+  {
+   "start": 25.45,
+   "end": 27.73,
+   "who": "SHELDON",
+   "en": "then went back to water after I set our garage on fire.",
+   "ko": "차고에 불을 내고 다시 물로 돌아왔어.",
+   "star": false
+  },
+  {
+   "start": 27.78,
+   "end": 28.28,
+   "who": "TAM",
+   "en": "Nice.",
+   "ko": "멋진데.",
+   "star": false
+  },
+  {
+   "start": 29.65,
+   "end": 34.25,
+   "who": "SHELDON",
+   "en": "I also tried to get some uranium and build an atomic engine, but that stuff's hard to find.",
+   "ko": "우라늄을 구해서 원자력 엔진도 만들어보려 했는데, 그건 구하기가 어렵더라.",
+   "star": false
+  },
+  {
+   "start": 35.61,
+   "end": 36.97,
+   "who": "TAM",
+   "en": "Probably for the best.",
+   "ko": "그게 나을 거야.",
+   "star": true
+  },
+  {
+   "start": 37.41,
+   "end": 39.08,
+   "who": "TAM",
+   "en": "Well, good luck on your quest to find a friend.",
+   "ko": "그럼, 친구 찾기 잘되길 빌어.",
+   "star": false
+  },
+  {
+   "start": 39.13,
+   "end": 40.56,
+   "who": "SHELDON",
+   "en": "You, too.",
+   "ko": "너도.",
+   "star": false
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "id": "ys2-what-can-i-get",
+ "title": "what can I get for you?",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 1,
+ "expression": "What can I get for you today?",
+ "meaning": "오늘은 뭘 도와드릴까요?",
+ "video": "what_can_i_get_for_you.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 3.49,
+   "who": "HUTCHINS",
+   "en": "Hey there, Sheldon. What can I get for you today?",
+   "ko": "안녕, 셸든. 오늘은 뭘 찾아줄까?",
+   "star": true
+  },
+  {
+   "start": 4.21,
+   "end": 8.18,
+   "who": "HUTCHINS",
+   "en": "Chemistry? Quantum mechanics? Astronomy?",
+   "ko": "화학? 양자역학? 천문학?",
+   "star": false
+  },
+  {
+   "start": 8.23,
+   "end": 11.19,
+   "who": "SHELDON",
+   "en": "No, nothing fun today. I need to learn how to make a friend.",
+   "ko": "아뇨, 오늘은 재미있는 건 됐어요. 친구 사귀는 법을 배워야 해서요.",
+   "star": false
+  },
+  {
+   "start": 11.59,
+   "end": 13.63,
+   "who": "HUTCHINS",
+   "en": "Aw, honey, you having a hard time adjusting to high school?",
+   "ko": "저런, 고등학교 적응이 힘드니?",
+   "star": true
+  },
+  {
+   "start": 14.89,
+   "end": 16.89,
+   "who": "SHELDON",
+   "en": "I'm having a hard time adjusting to Earth.",
+   "ko": "전 지구 적응이 힘든데요.",
+   "star": false
+  },
+  {
+   "start": 17.13,
+   "end": 19.03,
+   "who": "HUTCHINS",
+   "en": "Yeah. You and me both.",
+   "ko": "그래. 나도 마찬가지야.",
+   "star": false
+  },
+  {
+   "start": 22.31,
+   "end": 26.14,
+   "who": "HUTCHINS",
+   "en": "Try this. It's been around a while, but it's still quite popular.",
+   "ko": "이걸 한번 봐. 나온 지는 좀 됐지만 여전히 인기가 많아.",
+   "star": false
+  },
+  {
+   "start": 26.19,
+   "end": 29.32,
+   "who": "HUTCHINS",
+   "en": "Unlike me, who's just been around a while.",
+   "ko": "나온 지만 오래된 나랑은 다르게 말이야.",
+   "star": false
+  }
+ ]
+}

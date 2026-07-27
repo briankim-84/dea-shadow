@@ -1,0 +1,68 @@
+{
+ "id": "ys2-have-the-floor",
+ "title": "you have the floor",
+ "sub": "YOUNG SHELDON",
+ "category": "회의·업무",
+ "difficulty": 3,
+ "expression": "You have the floor",
+ "meaning": "말씀하세요 (발언권을 넘김)",
+ "video": "you_have_the_floor.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 1.87,
+   "who": "SHELDON",
+   "en": "Hello, Billy Sparks.",
+   "ko": "안녕, 빌리 스파크스.",
+   "star": false
+  },
+  {
+   "start": 1.92,
+   "end": 2.56,
+   "who": "BILLY",
+   "en": "Hey, Sheldon.",
+   "ko": "안녕, 셸든.",
+   "star": false
+  },
+  {
+   "start": 4.11,
+   "end": 8.2,
+   "who": "SHELDON",
+   "en": "I am genuinely interested in you and would like to encourage you to talk about yourself.",
+   "ko": "난 너한테 진심으로 관심이 있고, 네 얘기를 들려주면 좋겠어.",
+   "star": false
+  },
+  {
+   "start": 8.25,
+   "end": 10.61,
+   "who": "SHELDON",
+   "en": "Billy Sparks.",
+   "ko": "빌리 스파크스.",
+   "star": false
+  },
+  {
+   "start": 10.66,
+   "end": 11.73,
+   "who": "BILLY",
+   "en": "Thank you.",
+   "ko": "고마워.",
+   "star": false
+  },
+  {
+   "start": 17.35,
+   "end": 19.19,
+   "who": "SHELDON",
+   "en": "You have the floor.",
+   "ko": "자, 말해봐. (발언권은 너한테)",
+   "star": true
+  },
+  {
+   "start": 19.31,
+   "end": 20.06,
+   "who": "BILLY",
+   "en": "Thank you.",
+   "ko": "고마워.",
+   "star": false
+  }
+ ]
+}

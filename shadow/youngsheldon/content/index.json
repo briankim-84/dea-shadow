@@ -7,7 +7,8 @@
    "sub": "YOUNG SHELDON",
    "category": "일상대화",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 1,
    "expression": "That's enough",
@@ -20,7 +21,8 @@
    "sub": "YOUNG SHELDON",
    "category": "일상대화",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "That's a big deal",
@@ -33,7 +35,8 @@
    "sub": "YOUNG SHELDON",
    "category": "일상대화",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "I'll take it",
@@ -46,7 +49,8 @@
    "sub": "YOUNG SHELDON",
    "category": "일상대화",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "Keep your voice down",
@@ -59,7 +63,8 @@
    "sub": "YOUNG SHELDON",
    "category": "유머·티키타카",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "She's not wrong",
@@ -72,7 +77,8 @@
    "sub": "YOUNG SHELDON",
    "category": "유머·티키타카",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "We'll see about that",
@@ -85,7 +91,8 @@
    "sub": "YOUNG SHELDON",
    "category": "일상대화",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "I'll pick you up after school",
@@ -98,7 +105,8 @@
    "sub": "YOUNG SHELDON",
    "category": "면접·격식",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "I will take that into account",
@@ -111,7 +119,8 @@
    "sub": "YOUNG SHELDON",
    "category": "회의·업무",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "Why don't we all just take a deep breath?",
@@ -124,7 +133,8 @@
    "sub": "YOUNG SHELDON",
    "category": "회의·업무",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "You gave it a shot",
@@ -137,7 +147,8 @@
    "sub": "YOUNG SHELDON",
    "category": "감정·리액션",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "Your dad is having a bad day",
@@ -150,7 +161,8 @@
    "sub": "YOUNG SHELDON",
    "category": "유머·티키타카",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 1,
    "expression": "Am I in trouble?",
@@ -163,7 +175,8 @@
    "sub": "YOUNG SHELDON",
    "category": "일상대화",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "It's kind of complicated",
@@ -176,12 +189,209 @@
    "sub": "YOUNG SHELDON",
    "category": "감정·리액션",
    "tags": [
-    "SHELDON"
+    "SHELDON",
+    "EP01"
    ],
    "difficulty": 2,
    "expression": "Are you sad that you got fired?",
    "meaning": "해고돼서 슬퍼요?",
    "count": 11
+  },
+  {
+   "id": "ys2-think-this-through",
+   "title": "think this through",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "Think this through",
+   "meaning": "잘 좀 생각해봐",
+   "count": 7
+  },
+  {
+   "id": "ys2-tiny-favor",
+   "title": "a little tiny favor",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 1,
+   "expression": "Would you do me a little tiny favor?",
+   "meaning": "부탁 하나만 들어줄래?",
+   "count": 7
+  },
+  {
+   "id": "ys2-what-to-tell-you",
+   "title": "I don't know what to tell you",
+   "sub": "YOUNG SHELDON",
+   "category": "감정·리액션",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "I don't know what to tell you",
+   "meaning": "뭐라고 해야 할지 모르겠네",
+   "count": 7
+  },
+  {
+   "id": "ys2-what-can-i-get",
+   "title": "what can I get for you?",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 1,
+   "expression": "What can I get for you today?",
+   "meaning": "오늘은 뭘 도와드릴까요?",
+   "count": 8
+  },
+  {
+   "id": "ys2-get-back-to-you",
+   "title": "I'll get back to you",
+   "sub": "YOUNG SHELDON",
+   "category": "회의·업무",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "I'll get back to you",
+   "meaning": "나중에 다시 얘기할게",
+   "count": 8
+  },
+  {
+   "id": "ys2-have-the-floor",
+   "title": "you have the floor",
+   "sub": "YOUNG SHELDON",
+   "category": "회의·업무",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 3,
+   "expression": "You have the floor",
+   "meaning": "말씀하세요 (발언권을 넘김)",
+   "count": 7
+  },
+  {
+   "id": "ys2-no-trouble",
+   "title": "don't go to any trouble",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "You don't have to go to any trouble for me",
+   "meaning": "나 때문에 애쓰지 마",
+   "count": 16
+  },
+  {
+   "id": "ys2-by-any-chance",
+   "title": "are you by any chance",
+   "sub": "YOUNG SHELDON",
+   "category": "면접·격식",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "Are you by any chance ~?",
+   "meaning": "혹시 ~이신가요?",
+   "count": 9
+  },
+  {
+   "id": "ys2-to-be-clear",
+   "title": "so to be clear",
+   "sub": "YOUNG SHELDON",
+   "category": "회의·업무",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "So to be clear, ...?",
+   "meaning": "확실히 하자면, ~라는 거죠?",
+   "count": 6
+  },
+  {
+   "id": "ys2-afraid-not",
+   "title": "I'm afraid not",
+   "sub": "YOUNG SHELDON",
+   "category": "감정·리액션",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "I'm afraid not",
+   "meaning": "아쉽지만 아니에요",
+   "count": 15
+  },
+  {
+   "id": "ys2-been-through-this",
+   "title": "we've been through this",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "We've been through this",
+   "meaning": "이 얘기 전에 했잖아",
+   "count": 11
+  },
+  {
+   "id": "ys2-invite-over",
+   "title": "invite him over for dinner",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "Why don't you invite him over for dinner?",
+   "meaning": "저녁에 초대하지 그래?",
+   "count": 6
+  },
+  {
+   "id": "ys2-what-brings-you",
+   "title": "what brings you to Texas?",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "What brings you to ~?",
+   "meaning": "어떻게 ~에 오시게 됐어요?",
+   "count": 5
+  },
+  {
+   "id": "ys2-sorry-to-bother",
+   "title": "sorry to bother you",
+   "sub": "YOUNG SHELDON",
+   "category": "면접·격식",
+   "tags": [
+    "SHELDON",
+    "EP02"
+   ],
+   "difficulty": 2,
+   "expression": "Sorry to bother you",
+   "meaning": "실례합니다 / 번거롭게 해서 죄송해요",
+   "count": 4
   }
  ]
 }

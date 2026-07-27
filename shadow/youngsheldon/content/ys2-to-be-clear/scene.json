@@ -1,0 +1,60 @@
+{
+ "id": "ys2-to-be-clear",
+ "title": "so to be clear",
+ "sub": "YOUNG SHELDON",
+ "category": "회의·업무",
+ "difficulty": 2,
+ "expression": "So to be clear, ...?",
+ "meaning": "확실히 하자면, ~라는 거죠?",
+ "video": "so_to_be_clear.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 1.0,
+   "who": "MACELROY",
+   "en": "And you know why?",
+   "ko": "이유가 뭔지 아니?",
+   "star": false
+  },
+  {
+   "start": 1.05,
+   "end": 3.94,
+   "who": "MACELROY",
+   "en": "Because Victoria MacElroy is not a man!",
+   "ko": "빅토리아 맥엘로이는 남자가 아니거든!",
+   "star": false
+  },
+  {
+   "start": 6.49,
+   "end": 8.74,
+   "who": "SHELDON",
+   "en": "So to be clear, you're not interested in making friends?",
+   "ko": "그럼 확실히 하자면, 친구 사귀는 데는 관심이 없으신 거죠?",
+   "star": true
+  },
+  {
+   "start": 8.79,
+   "end": 16.29,
+   "who": "MACELROY",
+   "en": "What I'm interested in is in living long enough to see women no longer treated like second-class citizens.",
+   "ko": "내 관심사는 여자가 이류 시민 취급받지 않는 걸 볼 때까지 오래 사는 거야.",
+   "star": false
+  },
+  {
+   "start": 16.65,
+   "end": 21.31,
+   "who": "SHELDON",
+   "en": "Well if your goal is a long life, that chili cheeseburger is a step in the wrong direction.",
+   "ko": "오래 사는 게 목표시라면, 그 칠리 치즈버거는 방향이 잘못됐는데요.",
+   "star": false
+  },
+  {
+   "start": 21.93,
+   "end": 23.97,
+   "who": "MACELROY",
+   "en": "Food is all I have.",
+   "ko": "나한텐 음식밖에 없어.",
+   "star": false
+  }
+ ]
+}

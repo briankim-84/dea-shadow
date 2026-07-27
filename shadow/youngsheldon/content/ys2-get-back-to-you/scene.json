@@ -1,0 +1,76 @@
+{
+ "id": "ys2-get-back-to-you",
+ "title": "I'll get back to you",
+ "sub": "YOUNG SHELDON",
+ "category": "회의·업무",
+ "difficulty": 2,
+ "expression": "I'll get back to you",
+ "meaning": "나중에 다시 얘기할게",
+ "video": "get_back_to_you.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 4.47,
+   "who": "SHELDON",
+   "en": "Do you feel complimented when I say your name, George?",
+   "ko": "내가 이름을 불러주면 칭찬받는 기분이 들어, 조지?",
+   "star": false
+  },
+  {
+   "start": 4.79,
+   "end": 6.92,
+   "who": "SHELDON",
+   "en": "The book says you should. George.",
+   "ko": "책에서는 그래야 한대. 조지.",
+   "star": false
+  },
+  {
+   "start": 6.97,
+   "end": 10.31,
+   "who": "GEORGIE",
+   "en": "I suppose. Kind of overdoing it a little.",
+   "ko": "그런 것 같기도 하고. 근데 좀 오버하는 것 같은데.",
+   "star": true
+  },
+  {
+   "start": 10.36,
+   "end": 10.81,
+   "who": "GEORGIE",
+   "en": "Sheldon.",
+   "ko": "셸든.",
+   "star": false
+  },
+  {
+   "start": 12.37,
+   "end": 13.89,
+   "who": "SHELDON",
+   "en": "Well, thank you for your criticism.",
+   "ko": "음, 비판 고마워.",
+   "star": false
+  },
+  {
+   "start": 14.57,
+   "end": 17.87,
+   "who": "SHELDON",
+   "en": "It also says I should praise any improvements that you've made.",
+   "ko": "책에선 네가 나아진 점을 칭찬하라고도 하네.",
+   "star": false
+  },
+  {
+   "start": 19.11,
+   "end": 24.21,
+   "who": "GEORGIE",
+   "en": "Okay. I'll get back to you.",
+   "ko": "알았어. 그건 나중에 다시 얘기하자.",
+   "star": true
+  },
+  {
+   "start": 24.33,
+   "end": 24.78,
+   "who": "SHELDON",
+   "en": "George.",
+   "ko": "조지.",
+   "star": false
+  }
+ ]
+}

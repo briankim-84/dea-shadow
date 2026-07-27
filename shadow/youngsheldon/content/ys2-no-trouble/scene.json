@@ -1,0 +1,140 @@
+{
+ "id": "ys2-no-trouble",
+ "title": "don't go to any trouble",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "You don't have to go to any trouble for me",
+ "meaning": "나 때문에 애쓰지 마",
+ "video": "no_trouble_for_me.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 3.29,
+   "who": "MARY",
+   "en": "So your father tells me you've been reading a new book?",
+   "ko": "아빠한테 들으니 새 책을 읽고 있다면서?",
+   "star": false
+  },
+  {
+   "start": 4.19,
+   "end": 5.63,
+   "who": "SHELDON",
+   "en": "I am. It's about how to make friends.",
+   "ko": "맞아요. 친구 사귀는 법에 관한 책이에요.",
+   "star": false
+  },
+  {
+   "start": 6.71,
+   "end": 7.79,
+   "who": "MARY",
+   "en": "Is that something you're interested in?",
+   "ko": "그게 네가 관심 있는 거니?",
+   "star": false
+  },
+  {
+   "start": 8.33,
+   "end": 12.48,
+   "who": "SHELDON",
+   "en": "Not really, but Missy told me it makes you sad that I don't have any.",
+   "ko": "딱히요. 근데 미시가 그러는데 제가 친구 없는 게 엄마를 슬프게 한대요.",
+   "star": false
+  },
+  {
+   "start": 12.53,
+   "end": 15.13,
+   "who": "MARY",
+   "en": "I got to sew that girl's mouth shut.",
+   "ko": "저 애 입을 꿰매버려야지.",
+   "star": false
+  },
+  {
+   "start": 15.18,
+   "end": 16.64,
+   "who": "MARY",
+   "en": "So how's it going?",
+   "ko": "그래서, 좀 어때?",
+   "star": false
+  },
+  {
+   "start": 19.45,
+   "end": 22.05,
+   "who": "SHELDON",
+   "en": "Well, the principles in the book didn't work for me at all.",
+   "ko": "음, 책에 나온 원칙들은 저한텐 전혀 안 통했어요.",
+   "star": false
+  },
+  {
+   "start": 22.61,
+   "end": 27.37,
+   "who": "SHELDON",
+   "en": "Although Dad does like being called George over and over again, so you might give that a try.",
+   "ko": "아빠는 조지라고 계속 불러주는 걸 좋아하시더라고요. 엄마도 한번 해보세요.",
+   "star": true
+  },
+  {
+   "start": 27.73,
+   "end": 30.03,
+   "who": "MARY",
+   "en": "Baby, you don't have to go to any trouble for me.",
+   "ko": "아가, 엄마 때문에 그렇게 애쓸 필요 없어.",
+   "star": true
+  },
+  {
+   "start": 30.49,
+   "end": 33.13,
+   "who": "SHELDON",
+   "en": "But I like doing things for you. You're a nice lady.",
+   "ko": "근데 전 엄마를 위해 뭔가 하는 게 좋아요. 좋은 분이시잖아요.",
+   "star": false
+  },
+  {
+   "start": 33.69,
+   "end": 35.32,
+   "who": "MARY",
+   "en": "But if the book's not working--",
+   "ko": "근데 그 책이 효과가 없다면--",
+   "star": false
+  },
+  {
+   "start": 35.37,
+   "end": 41.69,
+   "who": "SHELDON",
+   "en": "It isn't. But I realized if I find the other people who checked out the book, they'd be looking for friends, too.",
+   "ko": "없죠. 근데 그 책을 빌려 간 다른 사람들을 찾으면, 그 사람들도 친구를 찾고 있을 거라는 걸 깨달았어요.",
+   "star": false
+  },
+  {
+   "start": 42.31,
+   "end": 43.83,
+   "who": "MARY",
+   "en": "That's really smart.",
+   "ko": "진짜 똑똑한데.",
+   "star": false
+  },
+  {
+   "start": 44.15,
+   "end": 45.34,
+   "who": "SHELDON",
+   "en": "Missy thought of it.",
+   "ko": "미시가 생각해냈어요.",
+   "star": false
+  },
+  {
+   "start": 45.43,
+   "end": 45.89,
+   "who": "MARY",
+   "en": "You're kidding.",
+   "ko": "말도 안 돼.",
+   "star": true
+  },
+  {
+   "start": 47.11,
+   "end": 48.29,
+   "who": "SHELDON",
+   "en": "I'm as surprised as you are.",
+   "ko": "저도 엄마만큼 놀랐어요.",
+   "star": true
+  }
+ ]
+}

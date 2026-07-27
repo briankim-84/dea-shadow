@@ -1,0 +1,68 @@
+{
+ "id": "ys2-think-this-through",
+ "title": "think this through",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "Think this through",
+ "meaning": "잘 좀 생각해봐",
+ "video": "think_this_through.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 1.61,
+   "who": "MARY",
+   "en": "I'm gonna keep him company.",
+   "ko": "내가 옆에 앉아줘야겠어.",
+   "star": false
+  },
+  {
+   "start": 1.66,
+   "end": 3.23,
+   "who": "GEORGE",
+   "en": "Hey, hey, hey, Mary. Mary. Think this through.",
+   "ko": "이봐, 메리. 메리. 잘 좀 생각해봐.",
+   "star": true
+  },
+  {
+   "start": 4.71,
+   "end": 6.27,
+   "who": "GEORGE",
+   "en": "Right now the kids are just ignoring Sheldon.",
+   "ko": "지금은 애들이 셸든을 그냥 무시하는 정도야.",
+   "star": false
+  },
+  {
+   "start": 6.67,
+   "end": 8.69,
+   "who": "GEORGE",
+   "en": "What happens if he's sitting with his mommy?",
+   "ko": "엄마랑 같이 앉아 있으면 어떻게 되겠어?",
+   "star": false
+  },
+  {
+   "start": 8.74,
+   "end": 10.95,
+   "who": "MARY",
+   "en": "They could mistake me for a senior.",
+   "ko": "애들이 날 졸업반으로 볼 수도 있잖아.",
+   "star": false
+  },
+  {
+   "start": 12.69,
+   "end": 14.25,
+   "who": "GEORGE",
+   "en": "Well, I look younger than you.",
+   "ko": "그럼 나는 당신보다 어려 보이겠네.",
+   "star": false
+  },
+  {
+   "start": 14.37,
+   "end": 17.84,
+   "who": "GEORGE",
+   "en": "Just give this time, all right? It'll work itself out.",
+   "ko": "일단 시간을 좀 줘. 알아서 풀릴 거야.",
+   "star": true
+  }
+ ]
+}

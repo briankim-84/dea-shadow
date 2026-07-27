@@ -1,0 +1,68 @@
+{
+ "id": "ys2-what-to-tell-you",
+ "title": "I don't know what to tell you",
+ "sub": "YOUNG SHELDON",
+ "category": "감정·리액션",
+ "difficulty": 2,
+ "expression": "I don't know what to tell you",
+ "meaning": "뭐라고 해야 할지 모르겠네",
+ "video": "what_to_tell_you.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 2.51,
+   "who": "MISSY",
+   "en": "Nice going. You're making Mom a nervous wreck.",
+   "ko": "잘~ 한다. 엄마 완전 예민해지셨잖아.",
+   "star": false
+  },
+  {
+   "start": 2.83,
+   "end": 3.4,
+   "who": "SHELDON",
+   "en": "What did I do?",
+   "ko": "내가 뭘 했다고?",
+   "star": false
+  },
+  {
+   "start": 5.13,
+   "end": 7.65,
+   "who": "MISSY",
+   "en": "You don't have any friends, and she is beside herself.",
+   "ko": "넌 친구가 하나도 없고, 엄만 안절부절못하시잖아.",
+   "star": false
+  },
+  {
+   "start": 8.07,
+   "end": 9.45,
+   "who": "SHELDON",
+   "en": "But I'm fine without friends.",
+   "ko": "난 친구 없어도 괜찮은데.",
+   "star": false
+  },
+  {
+   "start": 9.75,
+   "end": 11.17,
+   "who": "MISSY",
+   "en": "I don't know what to tell you, Sheldon.",
+   "ko": "나도 뭐라고 해야 할지 모르겠네, 셸든.",
+   "star": true
+  },
+  {
+   "start": 11.31,
+   "end": 12.43,
+   "who": "MISSY",
+   "en": "She said it's your fault.",
+   "ko": "엄마가 네 탓이래.",
+   "star": false
+  },
+  {
+   "start": 13.55,
+   "end": 14.33,
+   "who": "MISSY",
+   "en": "I'm going to watch ALF.",
+   "ko": "난 알프 보러 갈래.",
+   "star": false
+  }
+ ]
+}

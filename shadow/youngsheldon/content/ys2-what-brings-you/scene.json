@@ -1,0 +1,52 @@
+{
+ "id": "ys2-what-brings-you",
+ "title": "what brings you to Texas?",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "What brings you to ~?",
+ "meaning": "어떻게 ~에 오시게 됐어요?",
+ "video": "what_brings_you.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 2.39,
+   "who": "MARY",
+   "en": "So, Tam, tell us about your family.",
+   "ko": "탐, 가족 얘기 좀 들려주렴.",
+   "star": false
+  },
+  {
+   "start": 2.45,
+   "end": 2.99,
+   "who": "MARY",
+   "en": "What brings y'all to Texas?",
+   "ko": "어떻게 텍사스까지 오게 됐니?",
+   "star": true
+  },
+  {
+   "start": 3.45,
+   "end": 6.0,
+   "who": "TAM",
+   "en": "Well, after the American War...",
+   "ko": "음, 미국 전쟁이 끝나고 나서요...",
+   "star": false
+  },
+  {
+   "start": 6.05,
+   "end": 6.93,
+   "who": "GEORGE",
+   "en": "You mean the Vietnam War.",
+   "ko": "베트남 전쟁 말이지.",
+   "star": false
+  },
+  {
+   "start": 7.47,
+   "end": 8.83,
+   "who": "TAM",
+   "en": "We call it the American War.",
+   "ko": "저희는 미국 전쟁이라고 불러요.",
+   "star": false
+  }
+ ]
+}
