@@ -95,6 +95,14 @@ h1 .thin{color:var(--stamp)}
 .pd .tdesc{color:#8d8680}
 .pd .cta{color:#FDFCFA;background:#C1121F}
 .pd .tri{border-left:9px solid #FDFCFA}
+.ys{background:#A8C0D8}
+.ys .eyebrow{color:#4A5C6E}.ys .eyebrow .sp{color:#9B3F14;font-weight:800}
+.ys h2{font-family:var(--serif);font-style:normal;font-weight:600;font-size:26px;color:#2B2318}
+.ys h2 b{color:#C4551F;font-weight:600}
+.ys .xo{font-family:var(--serif);font-style:italic;color:#9B3F14;font-size:13px;margin-top:6px}
+.ys .tdesc{color:#4A5C6E}
+.ys .cta{color:#FBF6EC;background:#C4551F}
+.ys .tri{border-left:9px solid #FBF6EC}
 
 .it{background:#0A0E1A;color:#ECF1F8}
 .it::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;
@@ -423,7 +431,20 @@ footer{margin:40px 22px 0 46px;padding-top:14px;border-top:1.5px solid var(--ink
       <div class="sprocket"></div></div>
     </div>
 
-    <div class="soon">NEXT REELS — THE OFFICE · YOUNG SHELDON</div>
+    <div class="reel">
+      <div class="reelno"><span class="rn">REEL 10</span><span class="rl"></span><span class="rc">14 SCENES · <b>NEW</b></span></div>
+      <div class="frame"><div class="sprocket"></div>
+        <a class="tcard ys" href="./youngsheldon/" onclick="mark('youngsheldon')">
+          <span class="still"><img src="./posters/youngsheldon.jpg" alt="" loading="lazy"></span>
+          <div class="eyebrow"><span class="sp">&#9670; MEDFORD, TEXAS &middot; 1989</span></div>
+          <h2>young <b>sheldon</b></h2>
+          <div class="xo">think, monkey, think</div>
+          <div class="tfoot"><div class="tdesc">텍사스 가족 식탁에서 배우는 생활·감정 영어</div><span class="cta"><span class="tri"></span>입장 &rarr;</span></div>
+        </a>
+      <div class="sprocket"></div></div>
+    </div>
+
+    <div class="soon">NEXT REELS — THE OFFICE · DEVIL WEARS PRADA 2</div>
   </div>
 
   <div id="lib" class="hidden">
@@ -448,6 +469,7 @@ const TITLES={
  harrypotter:{name:"HARRY POTTER",color:"#E3A43C"},
  intern:{name:"THE INTERN",color:"#7A4E2D"},
  prada:{name:"PRADA",color:"#C1121F"},
+ youngsheldon:{name:"YOUNG SHELDON",color:"#C4551F"},
 };
 const CATS=["전체","일상대화","감정·리액션","연애·관계","유머·티키타카","회의·업무","전화·컨콜","면접·격식"];
 function mark(t){ try{localStorage.setItem('ls_last',JSON.stringify({t,label:TITLES[t].name,id:'',expr:''}));}catch(e){} }

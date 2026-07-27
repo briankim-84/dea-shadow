@@ -1,0 +1,100 @@
+{
+ "id": "ys-a-little-sad",
+ "title": "maybe a little sad",
+ "sub": "YOUNG SHELDON",
+ "category": "감정·리액션",
+ "difficulty": 2,
+ "expression": "Are you sad that you got fired?",
+ "meaning": "해고돼서 슬퍼요?",
+ "video": "a_little_sad.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 1.53,
+   "who": "SHELDON",
+   "en": "And you told on them?",
+   "ko": "그래서 고자질하셨어요?",
+   "star": false
+  },
+  {
+   "start": 1.81,
+   "end": 3.55,
+   "who": "GEORGE",
+   "en": "Yeah. You know what happened?",
+   "ko": "그래. 그다음에 어떻게 됐게?",
+   "star": false
+  },
+  {
+   "start": 3.97,
+   "end": 6.23,
+   "who": "SHELDON",
+   "en": "Justice descended upon the rule breakers?",
+   "ko": "규칙 위반자들에게 정의가 내려왔나요?",
+   "star": false
+  },
+  {
+   "start": 7.83,
+   "end": 9.29,
+   "who": "GEORGE",
+   "en": "I got fired, Sheldon.",
+   "ko": "아빠가 잘렸어, 셸든.",
+   "star": false
+  },
+  {
+   "start": 10.33,
+   "end": 11.47,
+   "who": "GEORGE",
+   "en": "And I got a bad reputation.",
+   "ko": "평판도 나빠졌고.",
+   "star": false
+  },
+  {
+   "start": 12.81,
+   "end": 15.11,
+   "who": "SHELDON",
+   "en": "Oh. That's why you drink so much beer.",
+   "ko": "아. 그래서 맥주를 그렇게 많이 드시는군요.",
+   "star": false
+  },
+  {
+   "start": 18.69,
+   "end": 24.71,
+   "who": "GEORGE",
+   "en": "Just do yourself a favor. Okay? Go to school tomorrow, and mind your own business.",
+   "ko": "그러니 너 스스로를 위해서, 알았지? 내일 학교 가면 네 일에만 신경 써.",
+   "star": true
+  },
+  {
+   "start": 25.27,
+   "end": 26.07,
+   "who": "GEORGE",
+   "en": "All right?",
+   "ko": "알았지?",
+   "star": false
+  },
+  {
+   "start": 29.77,
+   "end": 32.52,
+   "who": "SHELDON",
+   "en": "Dad. Are you sad that you got fired?",
+   "ko": "아빠. 해고돼서 슬프세요?",
+   "star": true
+  },
+  {
+   "start": 35.77,
+   "end": 36.92,
+   "who": "GEORGE",
+   "en": "Mostly angry.",
+   "ko": "화가 나지, 주로는.",
+   "star": false
+  },
+  {
+   "start": 39.37,
+   "end": 43.62,
+   "who": "GEORGE",
+   "en": "But yeah. Maybe a little sad.",
+   "ko": "근데 그래. 조금 슬프기도 하고.",
+   "star": false
+  }
+ ]
+}

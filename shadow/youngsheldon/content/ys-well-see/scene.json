@@ -1,0 +1,84 @@
+{
+ "id": "ys-well-see",
+ "title": "we'll see about that",
+ "sub": "YOUNG SHELDON",
+ "category": "유머·티키타카",
+ "difficulty": 2,
+ "expression": "We'll see about that",
+ "meaning": "그건 두고 보면 알지",
+ "video": "well_see_about_that.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 2.8,
+   "who": "SHELDON",
+   "en": "Professor Proton wears a bowtie!",
+   "ko": "프로페서 프로톤도 나비넥타이 매는데!",
+   "star": false
+  },
+  {
+   "start": 3.85,
+   "end": 7.3,
+   "who": "MARY",
+   "en": "George Junior, give me back that bowtie right now!",
+   "ko": "조지 주니어, 당장 그 나비넥타이 내놔!",
+   "star": false
+  },
+  {
+   "start": 7.45,
+   "end": 8.51,
+   "who": "GEORGIE",
+   "en": "I didn't take it!",
+   "ko": "제가 안 가져갔어요!",
+   "star": false
+  },
+  {
+   "start": 8.57,
+   "end": 9.17,
+   "who": "MARY",
+   "en": "Don't you lie to me!",
+   "ko": "엄마한테 거짓말하지 마!",
+   "star": false
+  },
+  {
+   "start": 9.37,
+   "end": 10.43,
+   "who": "GEORGIE",
+   "en": "I'm not lying!",
+   "ko": "거짓말 아니라니까요!",
+   "star": false
+  },
+  {
+   "start": 10.95,
+   "end": 12.4,
+   "who": "MARY",
+   "en": "We'll see about that.",
+   "ko": "그건 두고 보면 알겠지.",
+   "star": true
+  },
+  {
+   "start": 13.05,
+   "end": 14.29,
+   "who": "GEORGIE",
+   "en": "Stay out of my room!",
+   "ko": "제 방에 들어가지 마세요!",
+   "star": false
+  },
+  {
+   "start": 14.87,
+   "end": 16.49,
+   "who": "MISSY",
+   "en": "She's gonna find your dirty magazines.",
+   "ko": "오빠 야한 잡지 다 들키겠다.",
+   "star": false
+  },
+  {
+   "start": 16.93,
+   "end": 17.43,
+   "who": "GEORGIE",
+   "en": "Shut up!",
+   "ko": "닥쳐!",
+   "star": false
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "id": "ys-thats-enough",
+ "title": "that's enough",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 1,
+ "expression": "That's enough",
+ "meaning": "그만해 / 됐어",
+ "video": "thats_enough.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 3.0,
+   "who": "GEORGE",
+   "en": "The hell were you doing out there?",
+   "ko": "대체 밖에서 뭘 하고 있었던 거냐?",
+   "star": false
+  },
+  {
+   "start": 3.1,
+   "end": 3.72,
+   "who": "MARY",
+   "en": "George, language.",
+   "ko": "여보, 말조심.",
+   "star": false
+  },
+  {
+   "start": 4.2,
+   "end": 5.5,
+   "who": "GEORGE",
+   "en": "What language? So?",
+   "ko": "무슨 말? 그래서?",
+   "star": false
+  },
+  {
+   "start": 5.98,
+   "end": 7.92,
+   "who": "SHELDON",
+   "en": "I was exploring dimensional kinematics.",
+   "ko": "차원 운동학을 탐구하고 있었어요.",
+   "star": false
+  },
+  {
+   "start": 7.95,
+   "end": 9.65,
+   "who": "GEORGIE",
+   "en": "Admit it... he's adopted.",
+   "ko": "인정하세요… 쟤 입양된 거죠.",
+   "star": false
+  },
+  {
+   "start": 9.84,
+   "end": 12.14,
+   "who": "SHELDON",
+   "en": "How can I be adopted when I have a twin sister?",
+   "ko": "쌍둥이 누나가 있는데 어떻게 입양이야?",
+   "star": false
+  },
+  {
+   "start": 12.75,
+   "end": 14.15,
+   "who": "SHELDON",
+   "en": "Think, monkey, think.",
+   "ko": "생각을 해, 원숭아, 생각을.",
+   "star": false
+  },
+  {
+   "start": 14.44,
+   "end": 15.96,
+   "who": "MARY",
+   "en": "That's enough. No one's adopted.",
+   "ko": "그만해. 입양된 사람 없어.",
+   "star": true
+  },
+  {
+   "start": 16.32,
+   "end": 17.2,
+   "who": "MISSY",
+   "en": "I wish I was.",
+   "ko": "내가 입양이었으면 좋겠다.",
+   "star": false
+  },
+  {
+   "start": 17.28,
+   "end": 18.3,
+   "who": "GEORGE",
+   "en": "That can still be arranged.",
+   "ko": "그건 지금이라도 해줄 수 있는데.",
+   "star": true
+  },
+  {
+   "start": 19.18,
+   "end": 19.88,
+   "who": "MARY",
+   "en": "Now, let's pray.",
+   "ko": "자, 기도하자.",
+   "star": false
+  },
+  {
+   "start": 19.9,
+   "end": 21.3,
+   "who": "SHELDON",
+   "en": "A moment, please.",
+   "ko": "잠시만요.",
+   "star": false
+  },
+  {
+   "start": 21.3,
+   "end": 26.86,
+   "who": "GEORGE",
+   "en": "Leave him be. He can hold hands with his family. It won't kill him.",
+   "ko": "내버려 둬. 가족이랑 손잡는다고 안 죽어.",
+   "star": false
+  },
+  {
+   "start": 27.62,
+   "end": 28.65,
+   "who": "SHELDON",
+   "en": "We don't know that.",
+   "ko": "그건 모르는 일이죠.",
+   "star": false
+  },
+  {
+   "start": 28.7,
+   "end": 32.15,
+   "who": "MARY",
+   "en": "Georgie, did you wash your hands before dinner? Or even this week?",
+   "ko": "조지, 저녁 먹기 전에 손 씻었니? 아니, 이번 주에 씻긴 했어?",
+   "star": false
+  },
+  {
+   "start": 32.4,
+   "end": 33.45,
+   "who": "GEORGIE",
+   "en": "None of your business.",
+   "ko": "엄마가 알 바 아니잖아요.",
+   "star": true
+  },
+  {
+   "start": 33.6,
+   "end": 34.9,
+   "who": "SHELDON",
+   "en": "Hence the mittens.",
+   "ko": "그래서 제가 벙어리장갑을 낀 거예요.",
+   "star": false
+  }
+ ]
+}

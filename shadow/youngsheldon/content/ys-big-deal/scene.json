@@ -1,0 +1,68 @@
+{
+ "id": "ys-big-deal",
+ "title": "that's a big deal",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "That's a big deal",
+ "meaning": "그거 중요한 일이야",
+ "video": "big_deal.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 2.29,
+   "who": "MARY",
+   "en": "Everybody excited to start school Monday?",
+   "ko": "월요일에 개학인데 다들 설레니?",
+   "star": false
+  },
+  {
+   "start": 2.73,
+   "end": 3.19,
+   "who": "SHELDON",
+   "en": "I am.",
+   "ko": "전 설레요.",
+   "star": false
+  },
+  {
+   "start": 3.57,
+   "end": 4.19,
+   "who": "MISSY",
+   "en": "I guess so.",
+   "ko": "뭐, 그런 것 같아요.",
+   "star": false
+  },
+  {
+   "start": 5.35,
+   "end": 7.93,
+   "who": "MARY",
+   "en": "Georgie? Freshman year, that's a big deal.",
+   "ko": "조지? 고등학교 1학년, 그거 중요한 일이잖아.",
+   "star": true
+  },
+  {
+   "start": 8.23,
+   "end": 11.03,
+   "who": "GEORGIE",
+   "en": "How can I be excited when he's gonna be in the same grade as me?",
+   "ko": "쟤랑 같은 학년인데 어떻게 설레요?",
+   "star": false
+  },
+  {
+   "start": 11.03,
+   "end": 13.65,
+   "who": "SHELDON",
+   "en": "Don't worry, Georgie, I'm not planning on being in the ninth grade for very long.",
+   "ko": "걱정 마, 형. 9학년에 오래 있을 생각 없으니까.",
+   "star": false
+  },
+  {
+   "start": 15.33,
+   "end": 18.47,
+   "who": "MISSY",
+   "en": "All I know is he's not in the same grade as me anymore, and I'm thrilled.",
+   "ko": "난 쟤랑 더는 같은 학년이 아니라는 것만으로 완전 신나.",
+   "star": false
+  }
+ ]
+}

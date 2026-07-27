@@ -1,0 +1,187 @@
+{
+ "hero": "hero.jpg",
+ "scenes": [
+  {
+   "id": "ys-thats-enough",
+   "title": "that's enough",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 1,
+   "expression": "That's enough",
+   "meaning": "그만해 / 됐어",
+   "count": 17
+  },
+  {
+   "id": "ys-big-deal",
+   "title": "that's a big deal",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "That's a big deal",
+   "meaning": "그거 중요한 일이야",
+   "count": 7
+  },
+  {
+   "id": "ys-ill-take-it",
+   "title": "I'll take it",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "I'll take it",
+   "meaning": "그거면 됐어 (받아들일게)",
+   "count": 6
+  },
+  {
+   "id": "ys-voice-down",
+   "title": "keep your voice down",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "Keep your voice down",
+   "meaning": "목소리 좀 낮춰",
+   "count": 11
+  },
+  {
+   "id": "ys-shes-not-wrong",
+   "title": "she's not wrong",
+   "sub": "YOUNG SHELDON",
+   "category": "유머·티키타카",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "She's not wrong",
+   "meaning": "틀린 말은 아니지",
+   "count": 10
+  },
+  {
+   "id": "ys-well-see",
+   "title": "we'll see about that",
+   "sub": "YOUNG SHELDON",
+   "category": "유머·티키타카",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "We'll see about that",
+   "meaning": "그건 두고 보면 알지",
+   "count": 9
+  },
+  {
+   "id": "ys-pick-you-up",
+   "title": "I'll pick you up",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "I'll pick you up after school",
+   "meaning": "하교 때 데리러 올게",
+   "count": 9
+  },
+  {
+   "id": "ys-into-account",
+   "title": "take that into account",
+   "sub": "YOUNG SHELDON",
+   "category": "면접·격식",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "I will take that into account",
+   "meaning": "참고하겠습니다",
+   "count": 6
+  },
+  {
+   "id": "ys-deep-breath",
+   "title": "take a deep breath",
+   "sub": "YOUNG SHELDON",
+   "category": "회의·업무",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "Why don't we all just take a deep breath?",
+   "meaning": "다들 일단 진정하시죠",
+   "count": 9
+  },
+  {
+   "id": "ys-gave-it-a-shot",
+   "title": "you gave it a shot",
+   "sub": "YOUNG SHELDON",
+   "category": "회의·업무",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "You gave it a shot",
+   "meaning": "시도는 해봤잖아요",
+   "count": 12
+  },
+  {
+   "id": "ys-bad-day",
+   "title": "having a bad day",
+   "sub": "YOUNG SHELDON",
+   "category": "감정·리액션",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "Your dad is having a bad day",
+   "meaning": "아빠가 오늘 힘든 날이야",
+   "count": 13
+  },
+  {
+   "id": "ys-in-trouble",
+   "title": "am I in trouble?",
+   "sub": "YOUNG SHELDON",
+   "category": "유머·티키타카",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 1,
+   "expression": "Am I in trouble?",
+   "meaning": "저 혼나는 거예요?",
+   "count": 10
+  },
+  {
+   "id": "ys-complicated",
+   "title": "kind of complicated",
+   "sub": "YOUNG SHELDON",
+   "category": "일상대화",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "It's kind of complicated",
+   "meaning": "좀 복잡한 얘기야",
+   "count": 7
+  },
+  {
+   "id": "ys-a-little-sad",
+   "title": "maybe a little sad",
+   "sub": "YOUNG SHELDON",
+   "category": "감정·리액션",
+   "tags": [
+    "SHELDON"
+   ],
+   "difficulty": 2,
+   "expression": "Are you sad that you got fired?",
+   "meaning": "해고돼서 슬퍼요?",
+   "count": 11
+  }
+ ]
+}

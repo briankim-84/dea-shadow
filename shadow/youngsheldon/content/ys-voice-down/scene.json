@@ -1,0 +1,100 @@
+{
+ "id": "ys-voice-down",
+ "title": "keep your voice down",
+ "sub": "YOUNG SHELDON",
+ "category": "일상대화",
+ "difficulty": 2,
+ "expression": "Keep your voice down",
+ "meaning": "목소리 좀 낮춰",
+ "video": "keep_your_voice_down.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 2.71,
+   "who": "MARY",
+   "en": "What am I supposed to do? His feet are growing.",
+   "ko": "나더러 어쩌라고? 애 발이 크는 걸.",
+   "star": false
+  },
+  {
+   "start": 2.76,
+   "end": 4.02,
+   "who": "GEORGE",
+   "en": "Why can't he wear Georgie's old shoes?",
+   "ko": "조지 헌 신발 신기면 되잖아?",
+   "star": false
+  },
+  {
+   "start": 4.07,
+   "end": 7.21,
+   "who": "MARY",
+   "en": "He won't hold your hand. You think he's gonna put his feet in his brother's smelly shoes?",
+   "ko": "당신 손도 안 잡는 애야. 형 냄새나는 신발에 발을 넣겠어?",
+   "star": false
+  },
+  {
+   "start": 8.71,
+   "end": 10.43,
+   "who": "GEORGE",
+   "en": "Well, we damn well better cut back somewhere.",
+   "ko": "어디서든 지출을 줄여야 한다고.",
+   "star": false
+  },
+  {
+   "start": 10.63,
+   "end": 11.95,
+   "who": "MARY",
+   "en": "Will you please keep your voice down?",
+   "ko": "제발 목소리 좀 낮춰줄래?",
+   "star": true
+  },
+  {
+   "start": 13.19,
+   "end": 14.81,
+   "who": "MISSY",
+   "en": "They're fighting about you again.",
+   "ko": "또 너 때문에 싸우신다.",
+   "star": false
+  },
+  {
+   "start": 15.55,
+   "end": 19.27,
+   "who": "SHELDON",
+   "en": "They're fighting about money. It's a common argument in marriages.",
+   "ko": "돈 때문에 싸우시는 거야. 결혼생활에서 흔한 말다툼이지.",
+   "star": false
+  },
+  {
+   "start": 22.69,
+   "end": 24.41,
+   "who": "MARY",
+   "en": "Lights out. Big day tomorrow.",
+   "ko": "불 끄자. 내일 중요한 날이잖아.",
+   "star": false
+  },
+  {
+   "start": 26.85,
+   "end": 30.27,
+   "who": "SHELDON",
+   "en": "Mom? Do we have financial problems?",
+   "ko": "엄마? 우리 집 경제적으로 어려워요?",
+   "star": false
+  },
+  {
+   "start": 31.99,
+   "end": 34.41,
+   "who": "MARY",
+   "en": "Don't you worry about that. We are fine.",
+   "ko": "그런 건 걱정하지 마. 우린 괜찮아.",
+   "star": true
+  },
+  {
+   "start": 35.25,
+   "end": 35.93,
+   "who": "MARY",
+   "en": "Now, go to sleep.",
+   "ko": "이제 자렴.",
+   "star": false
+  }
+ ]
+}

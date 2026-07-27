@@ -1,0 +1,84 @@
+{
+ "id": "ys-deep-breath",
+ "title": "take a deep breath",
+ "sub": "YOUNG SHELDON",
+ "category": "회의·업무",
+ "difficulty": 2,
+ "expression": "Why don't we all just take a deep breath?",
+ "meaning": "다들 일단 진정하시죠",
+ "video": "take_a_deep_breath.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 4.29,
+   "who": "INGRAM",
+   "en": "This is a stupid idea. This boy does not belong in our school.",
+   "ko": "말도 안 되는 생각이에요. 그 애는 우리 학교에 맞지 않아요.",
+   "star": false
+  },
+  {
+   "start": 4.51,
+   "end": 7.91,
+   "who": "PETERSEN",
+   "en": "Come on Vicky, it's just the first day. Why don't we all just take a deep breath here?",
+   "ko": "비키, 이제 겨우 첫날이잖아요. 다들 일단 심호흡부터 하시죠?",
+   "star": true
+  },
+  {
+   "start": 7.96,
+   "end": 12.03,
+   "who": "HUBERT",
+   "en": "The hell with that. Five minutes into my math class, he questioned my credentials.",
+   "ko": "무슨 소리예요. 수학 수업 5분 만에 제 자격을 문제 삼았다고요.",
+   "star": false
+  },
+  {
+   "start": 12.09,
+   "end": 15.75,
+   "who": "HUBERT",
+   "en": "How am I supposed to control a classroom when a kid accuses me of being in breach of the hygiene code?",
+   "ko": "애가 저더러 위생 규정 위반이라는데 어떻게 수업을 통제합니까?",
+   "star": false
+  },
+  {
+   "start": 15.95,
+   "end": 18.29,
+   "who": "PETERSEN",
+   "en": "Well, Hubert, it wouldn't kill you to shower a little more often.",
+   "ko": "글쎄요, 휴버트, 샤워 좀 자주 한다고 죽진 않아요.",
+   "star": false
+  },
+  {
+   "start": 18.43,
+   "end": 19.87,
+   "who": "PETERSEN",
+   "en": "George, you want to weigh in here?",
+   "ko": "조지, 의견 좀 내보실래요?",
+   "star": true
+  },
+  {
+   "start": 20.21,
+   "end": 20.69,
+   "who": "GEORGE",
+   "en": "Well...",
+   "ko": "그게…",
+   "star": false
+  },
+  {
+   "start": 20.71,
+   "end": 23.26,
+   "who": "INGRAM",
+   "en": "Oral Roberts University is a wonderful school.",
+   "ko": "오럴 로버츠 대학교는 아주 훌륭한 학교예요.",
+   "star": false
+  },
+  {
+   "start": 23.46,
+   "end": 28.05,
+   "who": "INGRAM",
+   "en": "He said I was intimidated by his intelligence, and then, he offered to be my \"leader.\"",
+   "ko": "자기 지능에 제가 위축됐다면서, 자기가 제 '리더'가 되어주겠대요.",
+   "star": false
+  }
+ ]
+}

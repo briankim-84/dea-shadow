@@ -1,0 +1,92 @@
+{
+ "id": "ys-in-trouble",
+ "title": "am I in trouble?",
+ "sub": "YOUNG SHELDON",
+ "category": "유머·티키타카",
+ "difficulty": 1,
+ "expression": "Am I in trouble?",
+ "meaning": "저 혼나는 거예요?",
+ "video": "am_i_in_trouble.mp4",
+ "sentences": [
+  {
+   "start": 0.55,
+   "end": 3.49,
+   "who": "SHELDON",
+   "en": "Hey, he was about to power a clock with a potato.",
+   "ko": "저기요, 방금 감자로 시계를 켜려던 참이었는데요.",
+   "star": false
+  },
+  {
+   "start": 3.97,
+   "end": 4.61,
+   "who": "GEORGE",
+   "en": "Not possible.",
+   "ko": "그건 불가능해.",
+   "star": false
+  },
+  {
+   "start": 5.15,
+   "end": 5.61,
+   "who": "GEORGE",
+   "en": "Now, listen--",
+   "ko": "자, 들어봐--",
+   "star": false
+  },
+  {
+   "start": 5.66,
+   "end": 6.52,
+   "who": "SHELDON",
+   "en": "Am I in trouble?",
+   "ko": "저 혼나는 거예요?",
+   "star": true
+  },
+  {
+   "start": 7.35,
+   "end": 7.63,
+   "who": "GEORGE",
+   "en": "No.",
+   "ko": "아니.",
+   "star": false
+  },
+  {
+   "start": 9.07,
+   "end": 10.69,
+   "who": "GEORGE",
+   "en": "Maybe. Just listen.",
+   "ko": "…글쎄다. 일단 들어.",
+   "star": false
+  },
+  {
+   "start": 12.71,
+   "end": 16.35,
+   "who": "GEORGE",
+   "en": "You're not gonna make it in this school if you keep ratting people out.",
+   "ko": "계속 사람들을 고자질하고 다니면 이 학교에서 못 버틴다.",
+   "star": false
+  },
+  {
+   "start": 16.4,
+   "end": 17.93,
+   "who": "SHELDON",
+   "en": "But they were breaking the grooming codes and the dress codes.",
+   "ko": "하지만 그 사람들이 용모 규정과 복장 규정을 어겼는걸요.",
+   "star": false
+  },
+  {
+   "start": 19.37,
+   "end": 24.17,
+   "who": "SHELDON",
+   "en": "I saw one boy with a T-shirt that said... \"Bite me.\"",
+   "ko": "어떤 남자애 티셔츠엔… '물어봐라(Bite me)'라고 쓰여 있었어요.",
+   "star": false
+  },
+  {
+   "start": 24.27,
+   "end": 26.72,
+   "who": "GEORGE",
+   "en": "Yeah. That-that's terrible.",
+   "ko": "그래. 그거 참… 큰일이구나.",
+   "star": false
+  }
+ ]
+}
