@@ -561,11 +561,17 @@ function pickMime(){ const c=['audio/mp4','audio/mp4;codecs=mp4a.40.2','audio/aa
 function recKey(){ return `rec|${SCENE.id}|${fi}`; }
 async function toggleRec(){
   const btn=$("recBtn");
-  if(recording){ if(recorder&&recorder.state==='recording'){try{recorder.requestData&&recorder.requestData();}catch(e){} recorder.stop();} return; }
+  if(recording){ if(recorder&&recorder.state==='recording'){ const _r=recorder;
+      try{_r.requestData&&_r.requestData();}catch(e){}
+      /* v4: iOS에서 requestData 직후 stop 시 마지막 조각이 유실 → 한 틱 여유 */
+      setTimeout(()=>{ try{ if(_r.state==='recording') _r.stop(); }catch(e){} },80);
+    } return; }
   /* iOS: 영상·기존 재생이 오디오 세션을 잡고 있으면 녹음 실패/무음 → 먼저 전부 정지하고 마이크 획득 */
   stopSeg(); syncPlayBtn(false);
   const v=vid(); if(v){ try{ v.pause(); }catch(e){} }
   if(myAudio){ try{ myAudio.pause(); }catch(e){} }
+  /* v4: 재생용 AudioContext가 세션을 잡고 있으면 녹음 방해 → 정지 */
+  try{ if(window.__dewbAC&&window.__dewbAC.state==='running') window.__dewbAC.suspend(); }catch(e){}
   const mic=await getMic(); if(!mic)return;
   let chunks=[]; const mt=pickMime();
   try{ recorder=mt?new MediaRecorder(mic,{mimeType:mt}):new MediaRecorder(mic); }
@@ -576,6 +582,8 @@ async function toggleRec(){
   recorder.onerror=()=>{ recording=false; btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음 오류 — 다시 시도해 주세요'; };
   recorder.onstop=()=>{
     recording=false;
+    /* v4: stop 이후 도착하는 마지막 dataavailable을 기다린 뒤 blob 생성 */
+    setTimeout(()=>{
     const blob=new Blob(chunks,{type:(recorder&&recorder.mimeType)||mt||'audio/mp4'});
     /* iOS에서 간혹 빈 blob → 안내 후 중단 */
     if(!blob||blob.size<200){ btn.classList.remove('recording'); btn.innerHTML='● Record'; $("note").textContent='녹음이 너무 짧아요 — 다시 눌러 말해보세요'; return; }
@@ -589,6 +597,7 @@ async function toggleRec(){
       const mp=$("myPlay"); if(mp)mp.disabled=false;
       $("note").textContent='✓ Saved — My voice로 들어보세요';
     }
+    },70);
   };
   /* timeslice(100ms) 지정: iOS에서 stop 시 데이터 누락 방지 */
   try{ recorder.start(100); }catch(e){ try{recorder.start();}catch(e2){} }
@@ -623,25 +632,58 @@ function playMine(){
   /* iOS 사파리: blob URL이 만료/미준비일 수 있어 blob에서 매번 새 URL 생성 (사용자 제스처 안에서 즉시) */
   let url=rec.url;
   try{ if(rec.blob){ if(rec.url) URL.revokeObjectURL(rec.url); url=URL.createObjectURL(rec.blob); rec.url=url; } }catch(e){}
-  const a=new Audio();
-  a.preload='auto';
-  a.setAttribute('playsinline','');
-  myAudio=a;
-  let tried=false;
-  const attempt=()=>{
-    const p=a.play();
-    if(p&&p.catch){ p.then(()=>{ if(note)note.textContent='▶︎ 내 목소리 재생 중'; })
-      .catch(()=>{
-        if(!tried){ tried=true; try{a.load();}catch(e){} setTimeout(attempt,120); }
-        else if(note){ note.textContent='재생하려면 한 번 더 눌러주세요 (무음 스위치 해제 확인)'; }
-      });
-    }
+  /* v4: iOS의 timeslice mp4에는 전체 길이 정보가 없어 <audio>가 끝을 못 찾고 일찍 멈춤
+     → Web Audio로 디코드해 샘플 전체를 재생. 실패 시 기존 <audio> 경로로 폴백 */
+  const playViaElement=()=>{
+    const a=new Audio();
+    a.preload='auto';
+    a.setAttribute('playsinline','');
+    myAudio=a;
+    let tried=false;
+    const attempt=()=>{
+      const p=a.play();
+      if(p&&p.catch){ p.then(()=>{ if(note)note.textContent='▶︎ 내 목소리 재생 중'; })
+        .catch(()=>{
+          if(!tried){ tried=true; try{a.load();}catch(e){} setTimeout(attempt,120); }
+          else if(note){ note.textContent='재생하려면 한 번 더 눌러주세요 (무음 스위치 해제 확인)'; }
+        });
+      }
+    };
+    a.onended=()=>{ if(note)note.textContent='✓ 다시 들으려면 My voice를 누르세요'; };
+    a.onerror=()=>{ if(note)note.textContent='재생 오류 — 다시 녹음해 주세요'; };
+    a.src=url;
+    if(a.readyState>=2){ attempt(); }
+    else { a.oncanplay=()=>{ a.oncanplay=null; attempt(); }; try{a.load();}catch(e){} setTimeout(()=>{ if(myAudio===a&&a.paused&&!tried) attempt(); },300); }
   };
-  a.onended=()=>{ if(note)note.textContent='✓ 다시 들으려면 My voice를 누르세요'; };
-  a.onerror=()=>{ if(note)note.textContent='재생 오류 — 다시 녹음해 주세요'; };
-  a.src=url;
-  if(a.readyState>=2){ attempt(); }
-  else { a.oncanplay=()=>{ a.oncanplay=null; attempt(); }; try{a.load();}catch(e){} setTimeout(()=>{ if(myAudio===a&&a.paused&&!tried) attempt(); },300); }
+  let _ac=null;
+  try{
+    const AC=window.AudioContext||window.webkitAudioContext;
+    if(AC){ if(!window.__dewbAC) window.__dewbAC=new AC(); _ac=window.__dewbAC;
+      if(_ac.state!=='running'){ try{ _ac.resume(); }catch(e){} } }
+  }catch(e){ _ac=null; }
+  if(!_ac||!rec.blob){ playViaElement(); return; }
+  const fr=new FileReader();
+  fr.onerror=()=>playViaElement();
+  fr.onload=()=>{
+    let done=false;
+    const fail=()=>{ if(!done){ done=true; playViaElement(); } };
+    const ok=(buf)=>{
+      if(done)return; done=true;
+      try{
+        const src=_ac.createBufferSource();
+        src.buffer=buf; src.connect(_ac.destination);
+        src.onended=()=>{ if(note)note.textContent='✓ 다시 들으려면 My voice를 누르세요'; };
+        myAudio={pause(){try{src.stop();}catch(e){}},src:''};
+        src.start(0);
+        if(note)note.textContent='▶︎ 내 목소리 재생 중';
+      }catch(e){ done=false; fail(); }
+    };
+    try{
+      const p=_ac.decodeAudioData(fr.result, ok, fail);
+      if(p&&p.then) p.then(ok,fail);
+    }catch(e){ fail(); }
+  };
+  try{ fr.readAsArrayBuffer(rec.blob); }catch(e){ playViaElement(); }
 }
 async function toggleKeep(){
   const s=SCENE.sentences[fi];
