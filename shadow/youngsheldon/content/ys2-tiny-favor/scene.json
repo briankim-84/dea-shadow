@@ -9,56 +9,56 @@
  "video": "tiny_favor.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 3.13,
+   "start": 0.63,
+   "end": 3.27,
    "who": "MARY",
    "en": "Georgie. Would you do me a little tiny favor?",
    "ko": "조지. 엄마 부탁 하나만 들어줄래?",
    "star": true
   },
   {
-   "start": 3.18,
-   "end": 3.63,
+   "start": 3.3,
+   "end": 3.6,
    "who": "GEORGIE",
    "en": "Like what?",
    "ko": "뭔데요?",
    "star": false
   },
   {
-   "start": 4.67,
-   "end": 7.22,
+   "start": 4.8,
+   "end": 7.08,
    "who": "MARY",
    "en": "Tomorrow at lunch, would you mind sitting with your brother?",
    "ko": "내일 점심에 동생이랑 같이 앉아줄 수 있을까?",
    "star": true
   },
   {
-   "start": 7.27,
-   "end": 7.72,
+   "start": 7.11,
+   "end": 7.49,
    "who": "MISSY",
    "en": "Don't do it, Georgie.",
    "ko": "하지 마, 오빠.",
    "star": false
   },
   {
-   "start": 7.72,
-   "end": 9.91,
+   "start": 7.74,
+   "end": 10.29,
    "who": "MARY",
    "en": "You stay out of this.",
    "ko": "넌 빠져.",
    "star": false
   },
   {
-   "start": 9.96,
-   "end": 13.58,
+   "start": 10.32,
+   "end": 13.77,
    "who": "GEORGIE",
    "en": "I ate with him in second grade. It really hurt my social life.",
    "ko": "2학년 때 같이 먹었는데, 제 사회생활 완전 망했어요.",
    "star": false
   },
   {
-   "start": 14.41,
-   "end": 16.01,
+   "start": 14.87,
+   "end": 16.33,
    "who": "GEORGIE",
    "en": "Sorry, Mom. Can't do it.",
    "ko": "죄송해요, 엄마. 못 하겠어요.",

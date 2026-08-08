@@ -9,72 +9,72 @@
  "video": "gave_it_a_shot.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 2.11,
+   "start": 0.22,
+   "end": 2.27,
    "who": "PETERSEN",
    "en": "George, you got any thoughts here?",
    "ko": "조지, 생각 있으세요?",
    "star": false
   },
   {
-   "start": 2.77,
-   "end": 6.29,
+   "start": 2.8,
+   "end": 6.51,
    "who": "GEORGE",
    "en": "I certainly do. Mary, tell him.",
    "ko": "물론 있죠. 여보, 말해.",
    "star": false
   },
   {
-   "start": 7.57,
-   "end": 9.17,
+   "start": 7.7,
+   "end": 9.49,
    "who": "MARY",
    "en": "It's simple. We don't have a choice.",
    "ko": "간단해요. 우린 선택지가 없어요.",
    "star": false
   },
   {
-   "start": 9.73,
-   "end": 12.29,
+   "start": 9.77,
+   "end": 13.35,
    "who": "PETERSEN",
    "en": "Well, you gave it a shot. We wish you luck with Sheldon elsewhere--",
    "ko": "뭐, 시도는 해보셨잖아요. 셸든이 다른 곳에서 잘되길 빌--",
    "star": true
   },
   {
-   "start": 13.33,
-   "end": 17.53,
+   "start": 13.38,
+   "end": 17.68,
    "who": "MARY",
    "en": "No, no, no. We don't have a choice. He's got to stay here.",
    "ko": "아뇨, 아뇨. 선택지가 없다니까요. 얘는 여기 다녀야 해요.",
    "star": false
   },
   {
-   "start": 18.13,
-   "end": 19.59,
+   "start": 18.08,
+   "end": 19.46,
    "who": "MARY",
    "en": "We can't afford private school.",
    "ko": "사립학교 보낼 형편이 안 돼요.",
    "star": false
   },
   {
-   "start": 19.79,
-   "end": 22.44,
+   "start": 19.49,
+   "end": 22.62,
    "who": "MARY",
    "en": "I sure can't homeschool him. He's doing calculus and Euclidean something or other.",
    "ko": "홈스쿨링은 더 못 하죠. 애가 미적분에 유클리드 뭐시기까지 하는걸요.",
    "star": false
   },
   {
-   "start": 22.49,
-   "end": 25.95,
+   "start": 22.65,
+   "end": 26.12,
    "who": "SHELDON",
    "en": "Euclidean geometry. Guess where I learned that.",
    "ko": "유클리드 기하학이요. 어디서 배웠게요.",
    "star": false
   },
   {
-   "start": 25.95,
-   "end": 27.73,
+   "start": 26.38,
+   "end": 27.98,
    "who": "MARY",
    "en": "Yeah, yeah, we know.",
    "ko": "그래, 그래, 알아.",
@@ -82,23 +82,23 @@
   },
   {
    "start": 29.11,
-   "end": 34.63,
+   "end": 34.59,
    "who": "MARY",
    "en": "All I care about is that my son gets the education he deserves, so you all are gonna have to figure this out.",
    "ko": "중요한 건 우리 아들이 마땅한 교육을 받는 것뿐이에요. 그러니 여러분이 방법을 찾아내셔야죠.",
    "star": false
   },
   {
-   "start": 34.65,
-   "end": 36.27,
+   "start": 34.62,
+   "end": 36.5,
    "who": "PETERSEN",
    "en": "Coach, can you help me out here, please? 'Cause I'm dyin'.",
    "ko": "코치님, 저 좀 도와주시죠? 죽겠거든요.",
    "star": true
   },
   {
-   "start": 41.61,
-   "end": 42.61,
+   "start": 41.82,
+   "end": 42.34,
    "who": "GEORGE",
    "en": "I'd rather not.",
    "ko": "사양하겠습니다.",

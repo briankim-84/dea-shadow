@@ -9,48 +9,48 @@
  "video": "invite_over_for_dinner.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 3.98,
+   "start": 0.98,
+   "end": 3.9,
    "who": "MARY",
    "en": "Hey, here's an idea. Why don't you invite your new buddy over for dinner?",
    "ko": "좋은 생각이 있어. 새 친구를 저녁에 초대하지 그러니?",
    "star": true
   },
   {
-   "start": 4.03,
-   "end": 4.53,
+   "start": 4.01,
+   "end": 4.61,
    "who": "SHELDON",
    "en": "Why?",
    "ko": "왜요?",
    "star": false
   },
   {
-   "start": 5.25,
-   "end": 8.73,
+   "start": 5.37,
+   "end": 9.16,
    "who": "MARY",
    "en": "Well, honey, um, that is what friends do.",
    "ko": "그게, 아가, 친구끼리는 원래 그러는 거란다.",
    "star": false
   },
   {
-   "start": 9.61,
-   "end": 12.85,
+   "start": 9.51,
+   "end": 12.89,
    "who": "SHELDON",
    "en": "My mother asked me to ask you if you'd like to join us for dinner.",
    "ko": "우리 엄마가 너한테 저녁 같이 하겠냐고 물어보라셔.",
    "star": true
   },
   {
-   "start": 12.9,
-   "end": 13.35,
+   "start": 13.6,
+   "end": 14.07,
    "who": "TAM",
    "en": "Why?",
    "ko": "왜?",
    "star": false
   },
   {
-   "start": 14.93,
-   "end": 16.17,
+   "start": 14.82,
+   "end": 16.25,
    "who": "SHELDON",
    "en": "I was hoping you'd know.",
    "ko": "그건 네가 알까 했는데.",

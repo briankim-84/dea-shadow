@@ -9,16 +9,16 @@
  "video": "take_that_into_account.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 1.65,
+   "start": 0.9,
+   "end": 1.74,
    "who": "MACELROY",
    "en": "Yes, Sheldon?",
    "ko": "그래, 셸든?",
    "star": false
   },
   {
-   "start": 2.2,
-   "end": 6.2,
+   "start": 2.15,
+   "end": 6.36,
    "who": "SHELDON",
    "en": "Per the student dress and grooming code, this boy's hair is too long,",
    "ko": "학생 복장·용모 규정에 따르면, 이 남학생은 머리가 너무 길고요,",
@@ -26,31 +26,31 @@
   },
   {
    "start": 6.45,
-   "end": 9.7,
+   "end": 10.21,
    "who": "SHELDON",
    "en": "this boy is wearing sports attire outside of a designated area",
    "ko": "이 남학생은 지정 구역 밖에서 운동복을 입고 있고요,",
    "star": false
   },
   {
-   "start": 10.35,
-   "end": 14.2,
+   "start": 10.45,
+   "end": 14.42,
    "who": "SHELDON",
    "en": "and this girl's blouse is diaphanous, which means I can see her brassiere.",
    "ko": "이 여학생 블라우스는 비치는 소재예요. 속옷이 보인다는 뜻이죠.",
    "star": false
   },
   {
-   "start": 16.25,
-   "end": 18.85,
+   "start": 16.68,
+   "end": 19.13,
    "who": "MACELROY",
    "en": "Thank you. I will take that into account.",
    "ko": "고맙구나. 참고하도록 하마.",
    "star": true
   },
   {
-   "start": 19.85,
-   "end": 24.3,
+   "start": 19.84,
+   "end": 24.72,
    "who": "MACELROY",
    "en": "All right. We have a few minutes before first period. I need y'all to fill out these forms.",
    "ko": "자, 1교시 전에 시간이 좀 있으니 다들 이 서류를 작성하렴.",

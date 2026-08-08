@@ -9,56 +9,56 @@
  "video": "kind_of_complicated.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 2.15,
+   "start": 0.78,
+   "end": 2.29,
    "who": "GEORGE",
    "en": "Sheldon, let me tell you a little story.",
    "ko": "셸든, 아빠가 얘기 하나 해줄게.",
    "star": false
   },
   {
-   "start": 2.2,
-   "end": 3.82,
+   "start": 2.68,
+   "end": 4.75,
    "who": "GEORGE",
    "en": "Did you ever wonder why we moved from Galveston to Medford?",
    "ko": "우리가 왜 갤버스턴에서 메드퍼드로 이사 왔는지 궁금했던 적 있니?",
    "star": false
   },
   {
-   "start": 5.19,
-   "end": 6.91,
+   "start": 5.29,
+   "end": 6.86,
    "who": "SHELDON",
    "en": "No. I tend to wonder about the bigger questions.",
    "ko": "아뇨. 전 더 큰 질문들을 궁금해하는 편이라서요.",
    "star": false
   },
   {
-   "start": 8.51,
-   "end": 10.35,
+   "start": 9.12,
+   "end": 10.32,
    "who": "GEORGE",
    "en": "Okay, well, here's why.",
    "ko": "그래, 이유는 이거야.",
    "star": false
   },
   {
-   "start": 10.35,
-   "end": 14.83,
+   "start": 11.15,
+   "end": 16.06,
    "who": "GEORGE",
    "en": "Your dad had a real good coaching job and I saw some grown-ups breaking rules.",
    "ko": "아빠가 괜찮은 코치 자리에 있었는데, 어른들이 규칙 어기는 걸 봤거든.",
    "star": false
   },
   {
-   "start": 16.41,
-   "end": 17.15,
+   "start": 16.46,
+   "end": 17.3,
    "who": "SHELDON",
    "en": "What'd they do?",
    "ko": "뭘 했는데요?",
    "star": false
   },
   {
-   "start": 17.25,
-   "end": 24.6,
+   "start": 17.33,
+   "end": 25.25,
    "who": "GEORGE",
    "en": "I-It's kind of complicated, but... football coaches aren't allowed to recruit kids from other high schools to play on their teams.",
    "ko": "좀… 복잡한 얘기인데, 풋볼 코치는 다른 학교 애들을 자기 팀으로 스카우트하면 안 되거든.",

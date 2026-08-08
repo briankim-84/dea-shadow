@@ -9,72 +9,72 @@
  "video": "by_any_chance.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 2.09,
+   "start": 0.24,
+   "end": 2.02,
    "who": "SHELDON",
    "en": "Excuse me, Ms. Ingram?",
    "ko": "실례합니다, 인그램 선생님?",
    "star": false
   },
   {
-   "start": 2.15,
-   "end": 5.95,
+   "start": 2.42,
+   "end": 6.07,
    "who": "INGRAM",
    "en": "Sheldon, it's recess. Go outside, see what it's like.",
    "ko": "셸든, 쉬는 시간이야. 밖에 나가서 좀 놀아보렴.",
    "star": false
   },
   {
-   "start": 6.11,
-   "end": 8.17,
+   "start": 6.17,
+   "end": 8.32,
    "who": "SHELDON",
    "en": "Are you by any chance Evelyn Ingram?",
    "ko": "혹시 에벌린 인그램 선생님이신가요?",
    "star": true
   },
   {
-   "start": 8.22,
-   "end": 8.97,
+   "start": 8.35,
+   "end": 9.03,
    "who": "INGRAM",
    "en": "Yes.",
    "ko": "그런데.",
    "star": false
   },
   {
-   "start": 10.75,
-   "end": 13.21,
+   "start": 10.87,
+   "end": 13.34,
    "who": "SHELDON",
    "en": "The same Evelyn Ingram who checked out this book?",
    "ko": "이 책을 빌려 가셨던 그 에벌린 인그램이요?",
    "star": false
   },
   {
-   "start": 13.26,
-   "end": 14.92,
+   "start": 13.37,
+   "end": 15.72,
    "who": "INGRAM",
    "en": "And why is that your business?",
    "ko": "그게 네가 알 바니?",
    "star": false
   },
   {
-   "start": 15.99,
-   "end": 18.21,
+   "start": 15.95,
+   "end": 18.29,
    "who": "SHELDON",
    "en": "I just assumed you were looking to make a friend.",
    "ko": "친구를 찾고 계셨나 보다 했죠.",
    "star": true
   },
   {
-   "start": 19.69,
-   "end": 21.95,
+   "start": 18.69,
+   "end": 22.23,
    "who": "INGRAM",
    "en": "Oh. Well, that was a long time ago.",
    "ko": "아. 뭐, 그건 아주 오래전 일이야.",
    "star": false
   },
   {
-   "start": 22.03,
-   "end": 25.53,
+   "start": 22.26,
+   "end": 26.06,
    "who": "INGRAM",
    "en": "I had just gotten out of a very difficult relationship.",
    "ko": "아주 힘든 관계를 막 정리했을 때였거든.",

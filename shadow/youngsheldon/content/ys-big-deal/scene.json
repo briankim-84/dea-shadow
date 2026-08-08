@@ -9,56 +9,56 @@
  "video": "big_deal.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 2.29,
+   "start": 0.0,
+   "end": 2.62,
    "who": "MARY",
    "en": "Everybody excited to start school Monday?",
    "ko": "월요일에 개학인데 다들 설레니?",
    "star": false
   },
   {
-   "start": 2.73,
-   "end": 3.19,
+   "start": 2.65,
+   "end": 3.39,
    "who": "SHELDON",
    "en": "I am.",
    "ko": "전 설레요.",
    "star": false
   },
   {
-   "start": 3.57,
-   "end": 4.19,
+   "start": 3.42,
+   "end": 4.28,
    "who": "MISSY",
    "en": "I guess so.",
    "ko": "뭐, 그런 것 같아요.",
    "star": false
   },
   {
-   "start": 5.35,
-   "end": 7.93,
+   "start": 5.27,
+   "end": 8.1,
    "who": "MARY",
    "en": "Georgie? Freshman year, that's a big deal.",
    "ko": "조지? 고등학교 1학년, 그거 중요한 일이잖아.",
    "star": true
   },
   {
-   "start": 8.23,
-   "end": 11.03,
+   "start": 8.19,
+   "end": 11.07,
    "who": "GEORGIE",
    "en": "How can I be excited when he's gonna be in the same grade as me?",
    "ko": "쟤랑 같은 학년인데 어떻게 설레요?",
    "star": false
   },
   {
-   "start": 11.03,
-   "end": 13.65,
+   "start": 11.43,
+   "end": 13.97,
    "who": "SHELDON",
    "en": "Don't worry, Georgie, I'm not planning on being in the ninth grade for very long.",
    "ko": "걱정 마, 형. 9학년에 오래 있을 생각 없으니까.",
    "star": false
   },
   {
-   "start": 15.33,
-   "end": 18.47,
+   "start": 15.21,
+   "end": 18.8,
    "who": "MISSY",
    "en": "All I know is he's not in the same grade as me anymore, and I'm thrilled.",
    "ko": "난 쟤랑 더는 같은 학년이 아니라는 것만으로 완전 신나.",

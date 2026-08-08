@@ -9,56 +9,56 @@
  "video": "what_to_tell_you.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 2.51,
+   "start": 0.98,
+   "end": 2.89,
    "who": "MISSY",
    "en": "Nice going. You're making Mom a nervous wreck.",
    "ko": "잘~ 한다. 엄마 완전 예민해지셨잖아.",
    "star": false
   },
   {
-   "start": 2.83,
-   "end": 3.4,
+   "start": 2.92,
+   "end": 3.37,
    "who": "SHELDON",
    "en": "What did I do?",
    "ko": "내가 뭘 했다고?",
    "star": false
   },
   {
-   "start": 5.13,
-   "end": 7.65,
+   "start": 5.18,
+   "end": 7.84,
    "who": "MISSY",
    "en": "You don't have any friends, and she is beside herself.",
    "ko": "넌 친구가 하나도 없고, 엄만 안절부절못하시잖아.",
    "star": false
   },
   {
-   "start": 8.07,
-   "end": 9.45,
+   "start": 8.22,
+   "end": 9.26,
    "who": "SHELDON",
    "en": "But I'm fine without friends.",
    "ko": "난 친구 없어도 괜찮은데.",
    "star": false
   },
   {
-   "start": 9.75,
-   "end": 11.17,
+   "start": 9.66,
+   "end": 11.3,
    "who": "MISSY",
    "en": "I don't know what to tell you, Sheldon.",
    "ko": "나도 뭐라고 해야 할지 모르겠네, 셸든.",
    "star": true
   },
   {
-   "start": 11.31,
-   "end": 12.43,
+   "start": 11.33,
+   "end": 12.22,
    "who": "MISSY",
    "en": "She said it's your fault.",
    "ko": "엄마가 네 탓이래.",
    "star": false
   },
   {
-   "start": 13.55,
-   "end": 14.33,
+   "start": 13.33,
+   "end": 14.68,
    "who": "MISSY",
    "en": "I'm going to watch ALF.",
    "ko": "난 알프 보러 갈래.",

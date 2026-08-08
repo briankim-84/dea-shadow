@@ -9,80 +9,80 @@
  "video": "shes_not_wrong.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 4.75,
+   "start": 0.9,
+   "end": 4.44,
    "who": "MISSY",
    "en": "Everybody's gonna know he's your brother. It's gonna be awful for you.",
    "ko": "쟤가 오빠 동생인 거 다들 알게 될걸. 끔찍할 거야.",
    "star": false
   },
   {
-   "start": 4.8,
-   "end": 6.63,
+   "start": 4.63,
+   "end": 5.76,
    "who": "GEORGIE",
    "en": "Tell her to shut up.",
    "ko": "쟤 입 좀 다물라고 해요.",
    "star": false
   },
   {
-   "start": 6.75,
-   "end": 7.29,
+   "start": 6.62,
+   "end": 7.52,
    "who": "GEORGE",
    "en": "She's not wrong.",
    "ko": "틀린 말은 아니잖니.",
    "star": true
   },
   {
-   "start": 9.01,
-   "end": 10.21,
+   "start": 9.53,
+   "end": 10.46,
    "who": "MARY",
    "en": "It's got to be here.",
    "ko": "여기 어딘가 있을 거야.",
    "star": false
   },
   {
-   "start": 10.31,
-   "end": 11.56,
+   "start": 10.49,
+   "end": 12.09,
    "who": "SHELDON",
    "en": "It's not. It's not!",
    "ko": "없어요. 없다고요!",
    "star": false
   },
   {
-   "start": 11.87,
-   "end": 13.63,
+   "start": 12.12,
+   "end": 13.49,
    "who": "MARY",
    "en": "Shelly, stay calm. We'll find it.",
    "ko": "셸리, 침착해. 찾을 수 있어.",
    "star": true
   },
   {
-   "start": 13.87,
-   "end": 15.89,
+   "start": 13.85,
+   "end": 15.63,
    "who": "SHELDON",
    "en": "My tie is gone! My tie is gone!",
    "ko": "내 넥타이가 없어졌어요!",
    "star": false
   },
   {
-   "start": 15.97,
-   "end": 17.45,
+   "start": 15.66,
+   "end": 17.62,
    "who": "MARY",
    "en": "Shelly, you don't really need a tie.",
    "ko": "셸리, 넥타이 꼭 안 매도 돼.",
    "star": false
   },
   {
-   "start": 17.63,
-   "end": 20.47,
+   "start": 17.65,
+   "end": 20.7,
    "who": "SHELDON",
    "en": "I have to find my tie. I have to find my tie.",
    "ko": "넥타이를 찾아야 해요. 찾아야 한다고요.",
    "star": false
   },
   {
-   "start": 20.99,
-   "end": 21.77,
+   "start": 21.09,
+   "end": 21.87,
    "who": "MARY",
    "en": "Be right back.",
    "ko": "금방 올게.",

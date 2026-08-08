@@ -9,32 +9,32 @@
  "video": "sorry_to_bother_you.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 2.23,
+   "start": 1.35,
+   "end": 2.33,
    "who": "MARY",
    "en": "Can I help you?",
    "ko": "무슨 일이시죠?",
    "star": false
   },
   {
-   "start": 2.47,
-   "end": 3.33,
+   "start": 2.62,
+   "end": 3.59,
    "who": "FBI",
    "en": "Sorry to bother you, ma'am. FBI.",
    "ko": "번거롭게 해서 죄송합니다, 부인. FBI입니다.",
    "star": true
   },
   {
-   "start": 5.07,
-   "end": 6.26,
+   "start": 5.05,
+   "end": 6.34,
    "who": "FBI",
    "en": "We're looking for a Sheldon Lee Cooper.",
    "ko": "셸든 리 쿠퍼를 찾고 있습니다.",
    "star": false
   },
   {
-   "start": 6.31,
-   "end": 7.14,
+   "start": 6.37,
+   "end": 6.69,
    "who": "MARY",
    "en": "George!",
    "ko": "여보!",

@@ -9,48 +9,48 @@
  "video": "ill_take_it.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 1.61,
+   "start": 0.79,
+   "end": 1.84,
    "who": "SHELDON",
    "en": "I'll go with you, Mom.",
    "ko": "제가 엄마랑 갈게요.",
    "star": false
   },
   {
-   "start": 1.66,
-   "end": 4.15,
+   "start": 2.58,
+   "end": 4.18,
    "who": "MISSY",
    "en": "Why are you going? You don't believe in God.",
    "ko": "네가 왜 가? 넌 신도 안 믿잖아.",
    "star": false
   },
   {
-   "start": 4.2,
-   "end": 5.84,
+   "start": 4.21,
+   "end": 6.57,
    "who": "SHELDON",
    "en": "No, but I believe in Mom.",
    "ko": "안 믿지. 근데 엄마는 믿어.",
    "star": false
   },
   {
-   "start": 6.97,
-   "end": 8.15,
+   "start": 6.85,
+   "end": 8.29,
    "who": "MARY",
    "en": "I'll take it. Missy?",
    "ko": "그거면 됐어. 미시는?",
    "star": true
   },
   {
-   "start": 8.2,
-   "end": 9.76,
+   "start": 8.54,
+   "end": 9.73,
    "who": "MISSY",
    "en": "Can't, Heather asked me to--",
    "ko": "안 돼요, 헤더가 부탁을—",
    "star": false
   },
   {
-   "start": 9.81,
-   "end": 10.46,
+   "start": 9.76,
+   "end": 10.4,
    "who": "MARY",
    "en": "You're goin'.",
    "ko": "넌 가는 거야.",

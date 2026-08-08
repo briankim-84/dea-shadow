@@ -9,72 +9,72 @@
  "video": "well_see_about_that.mp4",
  "sentences": [
   {
-   "start": 0.55,
-   "end": 2.8,
+   "start": 0.48,
+   "end": 3.24,
    "who": "SHELDON",
    "en": "Professor Proton wears a bowtie!",
    "ko": "프로페서 프로톤도 나비넥타이 매는데!",
    "star": false
   },
   {
-   "start": 3.85,
-   "end": 7.3,
+   "start": 3.9,
+   "end": 7.57,
    "who": "MARY",
    "en": "George Junior, give me back that bowtie right now!",
    "ko": "조지 주니어, 당장 그 나비넥타이 내놔!",
    "star": false
   },
   {
-   "start": 7.45,
-   "end": 8.51,
+   "start": 7.6,
+   "end": 8.34,
    "who": "GEORGIE",
    "en": "I didn't take it!",
    "ko": "제가 안 가져갔어요!",
    "star": false
   },
   {
-   "start": 8.57,
-   "end": 9.17,
+   "start": 8.37,
+   "end": 9.31,
    "who": "MARY",
    "en": "Don't you lie to me!",
    "ko": "엄마한테 거짓말하지 마!",
    "star": false
   },
   {
-   "start": 9.37,
-   "end": 10.43,
+   "start": 9.34,
+   "end": 10.65,
    "who": "GEORGIE",
    "en": "I'm not lying!",
    "ko": "거짓말 아니라니까요!",
    "star": false
   },
   {
-   "start": 10.95,
-   "end": 12.4,
+   "start": 11.39,
+   "end": 12.8,
    "who": "MARY",
    "en": "We'll see about that.",
    "ko": "그건 두고 보면 알겠지.",
    "star": true
   },
   {
-   "start": 13.05,
-   "end": 14.29,
+   "start": 13.22,
+   "end": 14.47,
    "who": "GEORGIE",
    "en": "Stay out of my room!",
    "ko": "제 방에 들어가지 마세요!",
    "star": false
   },
   {
-   "start": 14.87,
-   "end": 16.49,
+   "start": 14.86,
+   "end": 16.68,
    "who": "MISSY",
    "en": "She's gonna find your dirty magazines.",
    "ko": "오빠 야한 잡지 다 들키겠다.",
    "star": false
   },
   {
-   "start": 16.93,
-   "end": 17.43,
+   "start": 16.71,
+   "end": 17.57,
    "who": "GEORGIE",
    "en": "Shut up!",
    "ko": "닥쳐!",
