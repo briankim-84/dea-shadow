@@ -502,15 +502,34 @@ tabP.onclick=async()=>{swTab(2); if(!ALL.length) await loadAll(); renderProgress
 
 /* 라이브러리 */
 let ALL=[],fc="전체",fd=0;
-async function loadAll(){
-  const jobs=Object.keys(TITLES).map(async t=>{
+let LOAD_FAIL=[];                       /* 이번 로딩에서 끝내 못 받은 타이틀 */
+const CACHE_TTL=24*60*60*1000;          /* 캐시 폴백 유효기간 */
+async function fetchTitle(t){
+  for(let i=0;i<2;i++){
     try{
       const r=await fetch(`./${t}/content/index.json`,{cache:'no-store'});
-      if(!r.ok) return [];
-      const j=await r.json();
-      return (j.scenes||[]).map(s=>({...s,_t:t}));
-    }catch(e){ return []; }
-  });
+      if(r.ok){
+        const j=await r.json();
+        const scenes=(j.scenes||[]).map(s=>({...s,_t:t}));
+        try{ localStorage.setItem('ls_cache|'+t, JSON.stringify({t:Date.now(),s:scenes})); }catch(e){}
+        return scenes;
+      }
+    }catch(e){}
+    if(i===0) await new Promise(r=>setTimeout(r,400));
+  }
+  try{
+    const raw=localStorage.getItem('ls_cache|'+t);
+    if(raw){
+      const c=JSON.parse(raw);
+      if(c&&c.s&&c.t&&(Date.now()-c.t)<CACHE_TTL) return c.s;
+    }
+  }catch(e){}
+  LOAD_FAIL.push(t);
+  return [];
+}
+async function loadAll(){
+  LOAD_FAIL=[];
+  const jobs=Object.keys(TITLES).map(fetchTitle);
   ALL=(await Promise.all(jobs)).flat();
   try{ document.getElementById('stat').textContent=`— 미드·영화 한 장면 섀도잉 · ${Object.keys(TITLES).length} TITLES · ${ALL.length} SCENES`; }catch(e){}
   renderChips(); render();
@@ -575,6 +594,12 @@ async function unkeep(sid,li){
 window.unkeep=unkeep;
 async function renderProgress(){
   const el=document.getElementById('prog');
+  const warn = LOAD_FAIL.length
+    ? `<div class="pempty" style="border:1px solid #C9A432;border-radius:10px;padding:12px;margin-bottom:12px">
+         일부 자료를 불러오지 못했어요. 진도와 보관한 라인이 실제보다 적게 보일 수 있습니다.<br>
+         <b>새로고침</b>하면 대부분 정상으로 돌아옵니다. (기록은 안전하게 저장되어 있어요)
+       </div>`
+    : '';
   const nm={1:'① 기초',2:'② 중급',3:'③ 고급'},dc={1:'var(--d1)',2:'var(--d2)',3:'var(--d3)'};
   const progAll=await scanIDB('prog|'), keepAll=await scanIDB('keep|');
   const days=progAll['_days']||{}; delete progAll['_days'];
@@ -622,12 +647,13 @@ async function renderProgress(){
   /* KEEP */
   const krows=[];
   for(const sid in keepAll){
-    const m=keepAll[sid]||{}, sc=meta[sid]; if(!sc) continue;
+    const m=keepAll[sid]||{};
+    const sc=meta[sid] || {id:sid,_t:null,title:'(불러오지 못한 장면)',count:0};
     for(const li in m){ const e=m[li];
       if(e&&!e.del) krows.push({t:sc._t,sid,li:+li,en:e.en||'',ko:e.ko||'',ts:e.t||0,sc}); }
   }
   krows.sort((a,b)=>b.ts-a.ts);
-  const kByT={}; for(const k of krows) kByT[k.t]=(kByT[k.t]||0)+1;
+  const kByT={}; for(const k of krows){ if(!k.t||!TITLES[k.t]) continue; kByT[k.t]=(kByT[k.t]||0)+1; }
   let kchips=`<button class="kchip ${KFILT==='전체'?'on':''}" onclick="setKF('전체')">전체 ${krows.length}</button>`;
   for(const t in kByT) kchips+=`<button class="kchip ${KFILT===t?'on':''}" onclick="setKF('${t}')">${TITLES[t].name} ${kByT[t]}</button>`;
   const kshow=krows.filter(k=>KFILT==='전체'||k.t===KFILT);
@@ -656,7 +682,7 @@ async function renderProgress(){
   const resumeHref=(last&&last.t&&TITLES[last.t])?(last.id?`./${last.t}/?scene=${encodeURIComponent(last.id)}`:`./${last.t}/`):null;
   const lastLabel=(last&&last.t&&TITLES[last.t])?`${TITLES[last.t].name}${last.expr?' — <b>&ldquo;'+last.expr+'&rdquo;</b>':''}`:'—';
 
-  el.innerHTML=`
+  el.innerHTML=warn+`
     <div class="ticket">
       <div class="ring">
         <svg width="86" height="86"><circle class="bgc" cx="43" cy="43" r="38.1"/><circle class="fgc" cx="43" cy="43" r="38.1" style="stroke-dashoffset:${(239.4*(1-pct/100)).toFixed(1)}"/></svg>
