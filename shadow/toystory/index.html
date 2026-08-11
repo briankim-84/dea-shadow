@@ -304,6 +304,17 @@ function idb(){return new Promise((res,rej)=>{const r=indexedDB.open(DBN,1);
  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
 async function kvSet(k,v){try{const d=await idb();return await new Promise(r=>{const t=d.transaction(ST,'readwrite');t.objectStore(ST).put(v,k);t.oncomplete=()=>r(1);t.onerror=()=>r(0);});}catch(e){return 0;}}
 async function kvGet(k){try{const d=await idb();return await new Promise(r=>{const q=d.transaction(ST,'readonly').objectStore(ST).get(k);q.onsuccess=()=>r(q.result||null);q.onerror=()=>r(null);});}catch(e){return null;}}
+/* 저장된 녹음 목록 읽기 — openScene에서 MYREC 복원용 */
+async function kvKeysAll(){try{const d=await idb();return await new Promise(r=>{const q=d.transaction(ST,'readonly').objectStore(ST).getAllKeys();q.onsuccess=()=>r(q.result||[]);q.onerror=()=>r([]);});}catch(e){return [];}}
+async function loadRecs(sid){
+  const out={}; const pre=`rec|${sid}|`;
+  try{
+    const keys=await kvKeysAll();
+    for(const k of keys){ const s=String(k);
+      if(s.indexOf(pre)===0){ const v=await kvGet(s); if(v) out[s]=v; } }
+  }catch(e){}
+  return out;
+}
 
 /* ---- boot ---- */
 window.addEventListener('load',async()=>{
@@ -355,7 +366,7 @@ async function openScene(id){
   SCENE=sc; fi=0; layer=1; looping=false; speed=1;
   PROG=(await kvGet(`prog|${sc.id}`))||{};
   KEEP=(await kvGet(`keep|${sc.id}`))||{};
-  MYREC={};
+  MYREC=await loadRecs(sc.id);   /* 저장된 녹음 복원 (이전엔 비워둬서 My voice가 항상 비활성) */
   $("home").classList.add("hidden"); $("scene").classList.remove("hidden");
   $("scTitle").textContent='“'+sc.title+'”';
   $("scSub").textContent=sc.sub||sc.category||'';
