@@ -9,8 +9,8 @@
  "video": "thats_enough.mp4",
  "sentences": [
   {
-   "start": 1.46,
-   "end": 2.85,
+   "start": 1.12,
+   "end": 2.52,
    "who": "GEORGE",
    "en": "The hell were you doing out there?",
    "ko": "대체 밖에서 뭘 하고 있었던 거냐?",
@@ -41,8 +41,8 @@
    "star": false
   },
   {
-   "start": 7.84,
-   "end": 9.59,
+   "start": 8.34,
+   "end": 9.32,
    "who": "GEORGIE",
    "en": "Admit it... he's adopted.",
    "ko": "인정하세요… 쟤 입양된 거죠.",
@@ -50,15 +50,15 @@
   },
   {
    "start": 9.73,
-   "end": 12.47,
+   "end": 12.29,
    "who": "SHELDON",
    "en": "How can I be adopted when I have a twin sister?",
    "ko": "쌍둥이 누나가 있는데 어떻게 입양이야?",
    "star": false
   },
   {
-   "start": 12.67,
-   "end": 14.3,
+   "start": 12.32,
+   "end": 13.72,
    "who": "SHELDON",
    "en": "Think, monkey, think.",
    "ko": "생각을 해, 원숭아, 생각을.",

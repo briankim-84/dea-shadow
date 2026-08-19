@@ -10,15 +10,15 @@
  "sentences": [
   {
    "start": 0.43,
-   "end": 1.46,
+   "end": 1.36,
    "who": "MARY",
    "en": "I'm gonna keep him company.",
    "ko": "내가 옆에 앉아줘야겠어.",
    "star": false
   },
   {
-   "start": 1.49,
-   "end": 3.07,
+   "start": 1.39,
+   "end": 3.82,
    "who": "GEORGE",
    "en": "Hey, hey, hey, Mary. Mary. Think this through.",
    "ko": "이봐, 메리. 메리. 잘 좀 생각해봐.",

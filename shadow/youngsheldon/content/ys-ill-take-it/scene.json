@@ -34,23 +34,23 @@
   },
   {
    "start": 6.85,
-   "end": 8.29,
+   "end": 8.12,
    "who": "MARY",
    "en": "I'll take it. Missy?",
    "ko": "그거면 됐어. 미시는?",
    "star": true
   },
   {
-   "start": 8.54,
-   "end": 9.73,
+   "start": 8.15,
+   "end": 9.8,
    "who": "MISSY",
    "en": "Can't, Heather asked me to--",
    "ko": "안 돼요, 헤더가 부탁을—",
    "star": false
   },
   {
-   "start": 9.76,
-   "end": 10.4,
+   "start": 9.84,
+   "end": 10.48,
    "who": "MARY",
    "en": "You're goin'.",
    "ko": "넌 가는 거야.",

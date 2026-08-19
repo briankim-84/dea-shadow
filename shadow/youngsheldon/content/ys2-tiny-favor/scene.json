@@ -17,8 +17,8 @@
    "star": true
   },
   {
-   "start": 3.3,
-   "end": 3.6,
+   "start": 3.88,
+   "end": 4.38,
    "who": "GEORGIE",
    "en": "Like what?",
    "ko": "뭔데요?",
@@ -26,22 +26,22 @@
   },
   {
    "start": 4.8,
-   "end": 7.08,
+   "end": 7.55,
    "who": "MARY",
    "en": "Tomorrow at lunch, would you mind sitting with your brother?",
    "ko": "내일 점심에 동생이랑 같이 앉아줄 수 있을까?",
    "star": true
   },
   {
-   "start": 7.11,
-   "end": 7.49,
+   "start": 7.73,
+   "end": 8.24,
    "who": "MISSY",
    "en": "Don't do it, Georgie.",
    "ko": "하지 마, 오빠.",
    "star": false
   },
   {
-   "start": 7.74,
+   "start": 8.27,
    "end": 10.29,
    "who": "MARY",
    "en": "You stay out of this.",

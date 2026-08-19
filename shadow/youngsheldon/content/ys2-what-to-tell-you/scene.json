@@ -10,15 +10,15 @@
  "sentences": [
   {
    "start": 0.98,
-   "end": 2.89,
+   "end": 3.35,
    "who": "MISSY",
    "en": "Nice going. You're making Mom a nervous wreck.",
    "ko": "잘~ 한다. 엄마 완전 예민해지셨잖아.",
    "star": false
   },
   {
-   "start": 2.92,
-   "end": 3.37,
+   "start": 4.02,
+   "end": 4.92,
    "who": "SHELDON",
    "en": "What did I do?",
    "ko": "내가 뭘 했다고?",
@@ -42,15 +42,15 @@
   },
   {
    "start": 9.66,
-   "end": 11.3,
+   "end": 11.27,
    "who": "MISSY",
    "en": "I don't know what to tell you, Sheldon.",
    "ko": "나도 뭐라고 해야 할지 모르겠네, 셸든.",
    "star": true
   },
   {
-   "start": 11.33,
-   "end": 12.22,
+   "start": 11.28,
+   "end": 13.05,
    "who": "MISSY",
    "en": "She said it's your fault.",
    "ko": "엄마가 네 탓이래.",
